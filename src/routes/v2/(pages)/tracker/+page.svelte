@@ -110,7 +110,7 @@
 		</p>
 		<p>
 			You can also read our blog article about <a
-				href="https://torrust.com/benchmarking-the-torrust-bittorrent-tracker"
+				href="benchmarking-the-torrust-bittorrent-tracker"
 				>"benchmarking for the tracker"</a
 			>.
 		</p>
@@ -204,7 +204,7 @@
 			</ul>
 			<p>
 				There is a tutorial to install the Tracker and Index on a Digital Ocean droplet: <a
-					href="https://torrust.com/deploying-torrust-to-production"
+					href="deploying-torrust-to-production"
 					>Deploying Torrust to Production</a
 				>
 			</p>

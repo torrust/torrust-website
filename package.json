@@ -15,7 +15,7 @@
 		"story:build": "histoire build",
 		"story:preview": "histoire preview",
 		"optimize-images": "image-transmutation --run --sourceFolder './build/images' --targetFolder './build/images' --inputFormats 'jpg' --inputFormats 'jpeg' --inputFormats 'png' --outputFormats 'png' --outputFormats 'webp' --outputFormats 'avif'",
-		"postbuild": "npm run optimize-images && svelte-sitemap --domain https://torrust.com/"
+		"postbuild": "npm run optimize-images && svelte-sitemap --domain https://v2.torrust.com/"
 	},
 	"devDependencies": {
 		"@histoire/plugin-svelte": "^0.17.17",

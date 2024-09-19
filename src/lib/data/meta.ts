@@ -2,7 +2,7 @@
 // So they can be added as suffixes on different pages
 // Via <svelte:head>
 
-export const siteBaseUrl = 'https://torrust.com';
+export const siteBaseUrl = 'https://v2.torrust.com';
 
 export const keywords = ['Torrust', 'Torrent', 'Rust', 'Torrent Tracker', 'Torrent Index', 'FOSS'];
 
