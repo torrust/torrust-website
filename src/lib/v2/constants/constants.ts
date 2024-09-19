@@ -1,23 +1,23 @@
 export const indexTitleArr1 = [
 	'High quality and modern Rust codebase',
-	'<a href="https://docs.rs/torrust-index/latest/torrust_index/">Documentation</a> generated from code comments',
-	'<a href="https://app.codecov.io/gh/torrust/torrust-index">Comprehensive suite</a> of functional tests',
+	'<a style="color: black;" href="https://docs.rs/torrust-index/latest/torrust_index/">Documentation</a> generated from code comments',
+	'<a style="color: black;" href="https://app.codecov.io/gh/torrust/torrust-index">Comprehensive suite</a> of functional tests',
 	'Good performance in busy conditions',
 	'Native IPv4 and IPv6 support',
 	'Persistent SQLite3 or MySQL databases',
-	'Comprehensive API <a href="https://docs.rs/torrust-index/latest/torrust_index/web/api/v1/">https://docs.rs/torrust-index/latest/torrust_index/web/api/v1/</a>'
+	'Comprehensive API <a style="color: black;" href="https://docs.rs/torrust-index/latest/torrust_index/web/api/v1/">https://docs.rs/torrust-index/latest/torrust_index/web/api/v1/</a>'
 ];
 
 export const trackerTitleArr1 = [
 	'High quality and modern Rust codebase',
-	'<a href="https://docs.rs/torrust-tracker/latest/torrust_tracker/">Documentation</a> generated from code comments',
-	'<a href="https://app.codecov.io/gh/torrust/torrust-tracker">Comprehensive suite</a> of unit and functional tests',
+	'<a style="color: black;" href="https://docs.rs/torrust-tracker/latest/torrust_tracker/">Documentation</a> generated from code comments',
+	'<a style="color: black;" href="https://app.codecov.io/gh/torrust/torrust-tracker">Comprehensive suite</a> of unit and functional tests',
 	'Good performance in busy conditions',
 	'Support for UDP, HTTP, and TLS sockets',
 	'Native IPv4 and IPv6 support',
 	'Private & whitelisted mode',
 	'Tracker management API',
-	'Support <a href="https://newtrackon.com/">newTrackon</a> checks',
+	'Support <a style="color: black;" href="https://newtrackon.com/">newTrackon</a> checks',
 	'Native IPv4 and IPv6 support',
 	'Persistent SQLite3 or MySQL databases'
 ];
