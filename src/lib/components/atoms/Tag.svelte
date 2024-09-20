@@ -45,8 +45,8 @@
 		white-space: nowrap;
 
 		&.primary {
-			background-color: var(--color--primary-tint);
-			color: var(--color--primary);
+			background-color: rgba(245, 245, 245, 0.96);
+			color: rgba(255, 49, 0, 0.96);
 		}
 		&.secondary {
 			background-color: var(--color--secondary-tint);

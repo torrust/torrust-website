@@ -53,6 +53,7 @@
 			align-items: center;
 			text-align: center;
 			gap: 15px;
+			color: rgba(245, 245, 245, 0.96);
 
 			.text {
 				display: flex;

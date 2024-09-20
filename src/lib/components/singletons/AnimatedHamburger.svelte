@@ -19,22 +19,20 @@
 	.burger {
 		height: 30px;
 		aspect-ratio: 1;
-		border: 2px solid var(--burger-border-color);
+		border: none;
 		background-color: transparent;
-		border-radius: 5px;
-		margin-right: 1rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		cursor: pointer;
-		color: var(--color--text);
+		color: white;
 		transition: all 300ms ease-in-out;
 	}
 
 	.burger > div {
-		height: 3px;
-		width: 15px;
-		background-color: var(--burger-bar-background-color);
+		height: 1px;
+		width: 20px;
+		background-color: white;
 		position: absolute;
 		transition: all 300ms ease-in-out;
 	}
