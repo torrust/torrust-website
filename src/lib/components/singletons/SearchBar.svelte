@@ -9,7 +9,7 @@
 	export let posts: BlogPost[] = [];
 
 	const dispatch = createEventDispatcher();
-	let showInput = false;
+	let showInput = true;
 	let searchInput: HTMLInputElement;
 
 	interface SearchResult {
@@ -56,7 +56,7 @@
 				icon="heroicons:magnifying-glass-16-solid"
 				width="28"
 				height="28"
-				style="color: #000000"
+				style="color: rgba(255, 49, 0, 1);"
 			/>
 		{/if}
 	</button>
@@ -66,7 +66,7 @@
 				icon="heroicons:magnifying-glass-16-solid"
 				width="28"
 				height="28"
-				style="color: #000000"
+				style="color: #000000;"
 			/>
 			<input
 				type="text"
@@ -125,11 +125,10 @@
 	@import '$lib/scss/_mixins.scss';
 	.search-bar-container {
 		position: relative;
-		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		background-color: transparent;
+		background-color: white;
 	}
 
 	.icon-wrapper {
@@ -145,7 +144,7 @@
 		border-radius: 5px;
 		padding: 0.5rem;
 		border: none;
-		background-color: #fff0eb;
+		background-color: transparent;
 	}
 
 	.input-wrapper input {
@@ -154,7 +153,7 @@
 		flex-grow: 1;
 		padding: 0.1rem;
 		font-size: 1rem;
-		background-color: #fff0eb;
+		background-color: transparent;
 	}
 
 	.clear-button {

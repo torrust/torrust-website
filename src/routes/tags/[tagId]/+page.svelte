@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import type { BlogPost } from '$lib/utils/types';
-	import BlogPostCard from '$lib/components/molecules/BlogPostCard.svelte';
+	import TagCard from '$lib/components/molecules/TagCard.svelte';
 	import ContentSection from '$lib/components/organisms/ContentSection.svelte';
 
 	let currentUrl: string | undefined = '';
@@ -27,7 +27,7 @@
 			{#each posts as post}
 				{#if post.tags && post.tags.includes(splitUrl)}
 					<div class="grid">
-						<BlogPostCard
+						<TagCard
 							title={post.title}
 							coverImage={post.coverImage}
 							excerpt={post.excerpt}

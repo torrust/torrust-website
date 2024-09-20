@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
 	import { siteBaseUrl } from '$lib/data/meta';
-	import ShareUrl from './ShareUrl.svelte';
+	import ShareUrl from '$lib/components/singletons/ShareUrl.svelte';
 
 	export let slug: string;
 	export let title: string;
@@ -28,12 +28,12 @@
 		{
 			icon: 'ri:twitter-x-fill',
 			href: `https://twitter.com/share?url=${siteBaseUrl}/${encodedSlug}&text=${title}`,
-			color: '#000000'
+			color: '#ffffff'
 		},
 		{
 			icon: 'ic:outline-mail',
 			href: `mailto:?subject=${encodedSubject}&body=${encodedBody}`,
-			color: '#1877f2'
+			color: '#ffffff'
 		}
 	];
 </script>

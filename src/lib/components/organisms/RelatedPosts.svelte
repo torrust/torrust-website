@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { BlogPost } from '$lib/utils/types';
-	import BlogPostCard from '$lib/components/molecules/BlogPostCard.svelte';
+	import RelatedPostCard from '$lib/components/molecules/RelatedPostCard.svelte';
 	import ContentSection from '$lib/components/organisms/ContentSection.svelte';
 
 	export let posts: BlogPost[];
@@ -9,13 +9,12 @@
 <ContentSection id="related-posts" title="Related Posts">
 	<div class="simple-grid">
 		{#each posts as post}
-			<BlogPostCard
+			<RelatedPostCard
 				slug={post.slug}
 				title={post.title}
 				excerpt={post.excerpt}
 				tags={post.tags}
 				readingTime={post.readingTime}
-				showImage={false}
 				date={post.date}
 			/>
 		{/each}

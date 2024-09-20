@@ -1,6 +1,4 @@
 <script>
-	import Waves from '$lib/components/singletons/Waves.svelte';
-
 	import { description, image, keywords, title, siteBaseUrl } from '$lib/data/meta';
 </script>
 
@@ -22,8 +20,12 @@
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
-<Waves />
-
 <main>
 	<slot />
 </main>
+
+<style lang="scss">
+	main {
+		background-color: rgba(26, 26, 26, 1);
+	}
+</style>

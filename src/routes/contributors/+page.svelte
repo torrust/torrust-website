@@ -1,6 +1,6 @@
 <div class="contributors">
 	<div class="contributor">
-		<a href="/jose-celano">
+		<a href="/contributor/jose-celano">
 			<img
 				src="/images/contributors/jose-celano.jpeg"
 				class="contributor-image"
@@ -10,7 +10,7 @@
 		</a>
 	</div>
 	<div class="contributor">
-		<a href="/constantin-bosse">
+		<a href="/contributor/constantin-bosse">
 			<img
 				src="/images/contributors/constantin-bosse.jpeg"
 				class="contributor-image"
@@ -19,7 +19,7 @@
 		>
 	</div>
 	<div class="contributor">
-		<a href="/mario-melchor">
+		<a href="/contributor/mario-melchor">
 			<img
 				src="/images/contributors/unknown-person-icon.png"
 				class="contributor-image"
@@ -29,7 +29,7 @@
 		</a>
 	</div>
 	<div class="contributor">
-		<a href="/cameron-garnham"
+		<a href="/contributor/cameron-garnham"
 			><img
 				src="/images/contributors/unknown-person-icon.png"
 				class="contributor-image"
@@ -39,7 +39,7 @@
 		</a>
 	</div>
 	<div class="contributor">
-		<a href="/graeme-byrne">
+		<a href="/contributor/graeme-byrne">
 			<img
 				src="/images/contributors/graeme-byrne.jpg"
 				class="contributor-image"
@@ -49,7 +49,7 @@
 		</a>
 	</div>
 	<div class="contributor">
-		<a href="/mick-van-dijke">
+		<a href="/contributor/mick-van-dijke">
 			<img
 				src="/images/contributors/unknown-person-icon.png"
 				class="contributor-image"

@@ -27,7 +27,12 @@
 		{#if prevPost}
 			<a href="/{prevPost.slug}">{prevPost.title}</a>
 			<div class="arrow arrowPrevious">
-				<Icon icon="material-symbols:arrow-left" width="44" height="44" style="color: #650000" />
+				<Icon
+					icon="material-symbols:arrow-left"
+					width="44"
+					height="44"
+					style="color: rgba(255, 49, 0, 0.96)"
+				/>
 				<p>Previous Post</p>
 			</div>
 		{:else}
@@ -40,7 +45,12 @@
 			<a href="/{nextPost.slug}">{nextPost.title}</a>
 			<div class="arrow arrowNext">
 				<p>Next Post</p>
-				<Icon icon="material-symbols:arrow-right" width="44" height="44" style="color: #650000" />
+				<Icon
+					icon="material-symbols:arrow-right"
+					width="44"
+					height="44"
+					style="color: rgba(255, 49, 0, 0.96)"
+				/>
 			</div>
 		{:else}
 			<h3 class="inactive">You're up to date. More to come soon!</h3>

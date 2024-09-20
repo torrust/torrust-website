@@ -1,15 +1,7 @@
 <script lang="ts">
-	import Logo from '$lib/components/singletons/Logo.svelte';
-	import ThemeToggle from '$lib/components/molecules/ThemeToggle.svelte';
-	import RssLink from '$lib/components/atoms/RssLink.svelte';
-	import Socials from '$lib/components/molecules/Socials.svelte';
+	import { page } from '$app/stores';
 	import AnimatedHamburger from '$lib/components/singletons/AnimatedHamburger.svelte';
-	import Strap from '$lib/components/singletons/Strap.svelte';
-	import SearchBar from '$lib/components/singletons/SearchBar.svelte';
-	import type { BlogPost } from '$lib/utils/types';
-
-	export let showBackground = false;
-	export let posts: BlogPost[];
+	import Header from '$lib/icons/header.svelte';
 
 	let isMenuOpen = false;
 
@@ -17,49 +9,55 @@
 		isMenuOpen = !isMenuOpen;
 	}
 
-	function closeMenu() {
-		isMenuOpen = false;
-	}
-
-	function handleLinkClick() {
-		isMenuOpen = false;
-	}
-
-	let searchTerm = '';
+	$: currentPath = $page.url.pathname;
 </script>
 
-<Strap />
-<header class:has-background={showBackground}>
-	<div class="navbar">
-		<a class="logo" href="/" aria-label="Site logo">
-			<Logo />
-		</a>
-		<AnimatedHamburger {isMenuOpen} {toggleMenu}>
-			<div class="links-wrapper">
-				<ul class="links">
-					<li>
-						<SearchBar {searchTerm} on:linkClick={handleLinkClick} {posts} />
-					</li>
-					<li>
-						<a href="/blog">Blog</a>
-					</li>
-					<li>
-						<button on:click={closeMenu}>
-							<Socials />
-						</button>
-					</li>
-					<li>
-						<button on:click={closeMenu}>
-							<RssLink />
-						</button>
-					</li>
-					<li>
-						<ThemeToggle />
-					</li>
-				</ul>
-			</div>
-		</AnimatedHamburger>
-	</div>
+<header>
+	<a class="logo" href="/" aria-label="Site logo">
+		<Header />
+	</a>
+	<AnimatedHamburger {isMenuOpen} {toggleMenu}>
+		<div class="links-wrapper">
+			<ul class="links">
+				<li>
+					<a href="/index" class={currentPath === '/v2/index' ? 'active' : ''} on:click={toggleMenu}
+						>Index</a
+					>
+				</li>
+				<li>
+					<a
+						href="/tracker"
+						class={currentPath === '/v2/tracker' ? 'active' : ''}
+						on:click={toggleMenu}>Tracker</a
+					>
+				</li>
+				<li>
+					<a
+						href="/self-host"
+						class={currentPath === '/v2/self-host' ? 'active' : ''}
+						on:click={toggleMenu}>Self&#8209;host</a
+					>
+				</li>
+				<li>
+					<a
+						href="/community"
+						class={currentPath === '/v2/community' ? 'active' : ''}
+						on:click={toggleMenu}>Community</a
+					>
+				</li>
+				<li>
+					<a href="/blog" class={currentPath === '/v2/blog' ? 'active' : ''} on:click={toggleMenu}
+						>Blog</a
+					>
+				</li>
+				<li>
+					<a href="/about" class={currentPath === '/v2/about' ? 'active' : ''} on:click={toggleMenu}
+						>About</a
+					>
+				</li>
+			</ul>
+		</div>
+	</AnimatedHamburger>
 </header>
 
 <style lang="scss">
@@ -69,22 +67,20 @@
 		position: relative;
 		padding: 1rem;
 		z-index: 1000;
-
-		.navbar {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			position: relative;
-		}
+		background-color: rgba(255, 49, 0, 1);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
 
 		ul {
 			display: flex;
 			flex-direction: row;
-			align-items: end;
+			align-items: center;
 			justify-content: end;
 			gap: 5vh;
-			margin-top: 2vh;
-			margin-bottom: 4vh;
+			margin-top: 2.2vh;
+			margin-bottom: 1vh;
 			list-style: none;
 			font-size: 1.1rem;
 		}
@@ -93,79 +89,47 @@
 		li > a {
 			display: inline-block;
 			transition: all 200ms ease-in-out;
+			color: rgba(245, 245, 245, 0.8);
 		}
 
-		li > a:hover {
-			transform: scale(0.9);
-		}
-
-		li > a:active {
-			transform: scale(0.9);
-		}
-
-		button {
-			background-color: transparent;
-			border: none;
-			max-width: 40px;
+		.active {
+			border-bottom: 2px solid white;
+			color: white;
 		}
 
 		@include for-phone-only {
 			.links-wrapper {
-				background-color: #fbefe5;
 				padding: 3rem;
-				margin: 3rem 1rem;
+				margin: 3.5rem 0rem;
 				opacity: 1;
-				border-radius: 10px;
-
-				:global(:root[data-theme='dark']) & {
-					background-color: #5d5f65;
-				}
 			}
 
 			ul {
-				margin: 0;
 				flex-direction: column;
 				gap: 2vw;
 			}
 		}
 
-		&.has-background {
-			background: linear-gradient(
-				60deg,
-				var(--color--waves-start) 0%,
-				var(--color--waves-end) 100%
-			);
-		}
-
-		.logo {
-			height: 44px;
-			flex: 1;
-		}
-
-		a {
-			color: var(--color--text);
-		}
-
-		.links {
+		.links-wrapper {
 			display: flex;
 			align-items: center;
-			justify-content: flex-end;
+			justify-content: center;
+			text-align: justify;
 			gap: 30px;
+			background-color: rgba(255, 49, 0, 1);
 
 			a {
 				text-decoration: none;
+				text-align: center;
 
 				&:hover {
-					color: var(--color--primary);
 					filter: drop-shadow(0px 0px 3px var(--color--primary));
 				}
 			}
 		}
-	}
 
-	@include for-desktop-up {
-		header {
-			padding-inline: 3rem;
+		@include for-desktop-up {
+			padding-inline: 9rem;
 		}
 	}
 </style>

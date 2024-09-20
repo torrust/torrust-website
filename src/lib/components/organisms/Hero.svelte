@@ -1,83 +1,181 @@
 <script lang="ts">
-	import FeaturesIcon from '$lib/icons/features.svelte';
-	import BlogIcon from '$lib/icons/blog.svelte';
-	import Button from '$lib/components/atoms/Button.svelte';
-	import Icon from '@iconify/svelte';
-
-	export let hasFeatures: boolean;
-	export let hasPosts: boolean;
+	import MiniLogo from '$lib/icons/miniLogo.svelte';
 </script>
 
-<section id="hero">
-	<h1 class="hello">Modern and Private BitTorrent Index and Tracker</h1>
-	<p class="intro">
-		<!-- Built with Rust -->
-		<!-- <span class="left">Open Source</span>
-		<span class="right">and built with Rust.</span> -->
-	</p>
-	<div class="ctas">
-		{#if hasFeatures}
-			<Button href="#features">
-				<FeaturesIcon slot="icon" />
-				Features
-			</Button>
-		{/if}
-		{#if hasPosts}
-			<Button color="secondary" href="#recent-posts">
-				<BlogIcon slot="icon" />
-				Get Started
-			</Button>
-		{/if}
-		<Button href="https://index.torrust-demo.com">
-			<span>
-				<Icon icon="formkit:arrowright" color="white" />
-			</span>
-			Live Demo
-		</Button>
+<div class="svg-container">
+	<div class="svg-content">
+		<h1 class="hero-heading">Modern BitTorrent index and tracker</h1>
+		<p class="hero-para">
+			Torrust is an open source project that aims to provide you with the tools you need to host
+			your own torrent indexes with ease.
+		</p>
+		<div class="details">
+			<div class="details-card">
+				<div class="details-info">
+					<div>
+						<MiniLogo />
+						<p>index</p>
+					</div>
+					<p class="version">v 3.0.0</p>
+				</div>
+				<p>
+					The Index is a feature-rich torrent indexing site split between an API (backend) built
+					with Rust, and our reference web app that consumes the API, built with Vue 3.
+				</p>
+				<div class="details-info">
+					<button>Live demo</button>
+					<button class="learn-btn">Learn more</button>
+				</div>
+			</div>
+			<div class="details-card">
+				<div class="details-info">
+					<div>
+						<MiniLogo />
+						<p>tracker</p>
+					</div>
+					<p class="version">v 3.0.0</p>
+				</div>
+				<p>
+					A lightweight Rust-based BitTorrent tracker for efficient torrent serving to many peers
+					with high performance, robustness, security, and community support.
+				</p>
+				<div class="details-info">
+					<button>Live demo</button>
+					<button class="learn-btn">Learn more</button>
+				</div>
+			</div>
+		</div>
 	</div>
-</section>
+</div>
 
 <style lang="scss">
 	@import '$lib/scss/breakpoints.scss';
 
-	#hero {
+	.svg-container {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 15px;
-		position: relative;
-		padding: 80px 0;
+		text-align: center;
+		background-color: rgba(255, 49, 0, 1);
+		color: rgba(245, 245, 245, 0.96);
+		padding: 0;
+	}
 
-		@include for-phone-only {
-			padding: 40px 0 50px;
-		}
+	.svg-container {
+		width: 100%;
+		background-image: url("data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width='768' height='480' viewBox='0 0 768 480' fill='rgb(254, 74, 30)'><path d='M1005.2 123.646C1027.43 11.7464 953.881 -97.3506 843.527 -126.92L138.041 -315.954C40.5775 -342.07 -63.6767 -288.152 -91.5498 -191.16C-119.946 -92.2144 -61.7805 10.2473 37.2454 36.7812L306.002 108.794L55.7571 263.014C-106.71 363.089 -70.6249 608.894 113.559 658.246C170.006 673.371 230.427 665.068 280.715 635.209L900.796 267.959C954.822 237.428 993.036 184.656 1005.25 123.451L1005.2 123.646Z' fill='rgb(254, 74, 30)' fill-opacity='1'/></svg>");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: rgb(255, 50, 1);
+		color: white;
+		padding-inline: 1.5rem;
 
-		.hello {
-			text-align: center;
-			max-width: 30ch;
-		}
+		@include for-tablet-portrait-up {
+			.hero-heading,
+			.hero-para {
+				width: 640px;
+				margin: 0 auto;
+			}
 
-		.intro {
-			font-weight: 400;
-			font-size: 1.4rem;
-			width: min(100%, 440px);
-			display: flex;
-			flex-direction: column;
-			text-align: center;
+			.hero-heading {
+				padding-top: 4rem;
+			}
 
-			@include for-phone-only {
-				display: none;
+			.hero-para {
+				padding-top: 1.5rem;
 			}
 		}
+	}
 
-		.ctas {
+	.svg-content {
+		text-align: center;
+
+		h1 {
+			font-size: 48px;
+			margin-top: 4rem;
+		}
+
+		p {
+			margin-top: 1.5rem;
+		}
+	}
+
+	.details {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		text-align: left;
+		align-items: stretch;
+		margin-block: 4rem;
+
+		div {
+			flex: 1;
+			border-radius: 1.5rem;
+		}
+
+		p {
+			margin-top: 0.5rem;
+		}
+
+		@include for-tablet-portrait-up {
+			flex-direction: row;
+			max-width: 1050px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@include for-desktop-up {
+			margin-inline: auto;
+		}
+	}
+
+	.details-card {
+		background-color: rgba(26, 26, 26, 0.48);
+		padding: 1.5rem;
+	}
+
+	.details-card > p:nth-child(2) {
+		margin-top: 28px;
+	}
+
+	.details-info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-block: 1.5rem;
+		flex-wrap: nowrap;
+
+		div {
 			display: flex;
-			flex-wrap: wrap;
+			flex-direction: row;
 			align-items: center;
-			justify-content: center;
-			gap: 10px;
-			width: 100%;
+		}
+
+		div p {
+			font-size: 32px;
+		}
+
+		.version {
+			border: 1px solid rgba(245, 245, 245, 0.96);
+			padding: 4px 12px;
+			border-radius: 1.5rem;
+		}
+
+		button {
+			border: 1px solid rgba(245, 245, 245, 0.96);
+			border-radius: 1.5rem;
+			background-color: rgba(255, 49, 0, 1);
+			color: rgba(245, 245, 245, 0.96);
+			padding: 12px 16px;
+			white-space: nowrap;
+		}
+
+		.learn-btn {
+			background-color: transparent;
+			border: none;
+			padding-left: 6px;
+			text-decoration: underline;
+			white-space: nowrap;
 		}
 	}
 </style>
