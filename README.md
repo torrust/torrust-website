@@ -4,8 +4,6 @@
 
 This is the website for the Torrust project, containing information about the project, and in the future, some guides and tutorials.
 
-![Screenshot](static/images/site-screenshot.png)
-
 It was built with a few goals in mind:
 
 - Responsive design: the website looks and behaves well on screens of all sizes;
