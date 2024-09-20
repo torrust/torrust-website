@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	import Button from '$lib/components/atoms/Button.svelte';
-	import BlogPostCard from '$lib/components/molecules/BlogPostCard.svelte';
+	import RelatedPostCard from '$lib/components/molecules/RelatedPostCard.svelte';
 	import ContentSection from '$lib/components/organisms/ContentSection.svelte';
 	import type { BlogPost } from '$lib/utils/types';
 
@@ -31,7 +31,16 @@
 		<ContentSection title="All Blog Posts">
 			<div class="grid">
 				{#each posts as post}
-					{#if post.contributorSlug === splitUrl}{/if}
+					{#if post.contributorSlug === splitUrl}
+						<RelatedPostCard
+							title={post.title}
+							excerpt={post.excerpt}
+							readingTime={post.readingTime}
+							slug={post.slug}
+							tags={post.tags}
+							date={post.date}
+						/>
+					{/if}
 				{/each}
 			</div>
 		</ContentSection>

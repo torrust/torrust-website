@@ -315,7 +315,7 @@
 				<li>Support other databases.</li>
 				<li>Support for PostgreSQL.</li>
 			</ul>
-			<h2>Performance</h2>
+			<h2 id="performance">Performance</h2>
 			<ul>
 				<li>Concurrent write torrents repository (DashMap)</li>
 			</ul>
