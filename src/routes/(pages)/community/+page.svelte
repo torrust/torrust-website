@@ -59,10 +59,18 @@
 			<h2 id="whyContribute">Why Contribute to our Project?</h2>
 
 			<p>
-				Short intro. Eu proin ultricies nunc turpis purus dui ultrices mattis. Amet platea fames
-				orci adipiscing pharetra auctor eget arcu adipiscing. Aliquam ipsum mattis ipsum malesuada
-				aliquet ipsum. Convallis tortor rhoncus cursus porttitor tellus sed.
+				At Torrust, we believe in building a strong, decentralized 
+				ecosystem where users and developers can collaboratively 
+				contribute to our vision of a transparent and accessible 
+				BitTorrent infrastructure. Whether you’re passionate about 
+				open-source software, enjoy working with Rust, or are simply 
+				looking to be part of a growing community, there’s a place for 
+				you here. By contributing to Torrust, you’re not just adding 
+				code—you’re shaping the future of a platform built on trust, 
+				performance, and innovation. Join us as we redefine file-sharing 
+				technology for the modern web.
 			</p>
+			
 			<ul class="list">
 				<li>Rust</li>
 				<li>Good documentation</li>
