@@ -38,20 +38,28 @@
 <div class="container">
 	<div class="inner-container">
 		<h2>Key Features</h2>
-		<p>
-			Sapien malesuada massa quam gravida ipsum iaculis nisl massa id. Sit tortor morbi in aenean
-			lectus vel nulla dolor. Facilisis rhoncus viverra consequat dictum. Lobortis venenatis morbi
-			et tortor feugiat.
-		</p>
-		<div>
+			<ul>
+			  <li><b>Efficient and Reliable:</b> The Torrust Tracker is built to handle 
+			  high loads while ensuring reliable and accurate tracking of peers 
+			  and torrents.</li>
+			  <li><b>Customizable:</b> Offers flexible configurations to support different 
+			  use cases, from private trackers to large public ones.</li>
+			  <li><b>Scalable Persistence:</b> Choose between SQLite and MySQL for 
+			  persistence, allowing the Tracker to scale according to your needs.</li>
+			  <li><b>Written in Rust:</b> Benefit from the performance and safety features 
+			  of Rust, which powers both the REST API and the HTTP tracker.</li>
+			</ul>
+	<div>
 			<Slider titleArr={trackerTitleArr1} />
 		</div>
 	</div>
 	<div class="inner-container">
 		<h2>Stack</h2>
 		<p>
-			Torrust Tracker supports SQLite and MySQL and leverages the strength of Rust (Axum) for the
-			REST API and the HTTP tracker.
+			Torrust Tracker uses SQLite or MySQL for persistence and is built 
+			with Rust using the Axum framework for its REST API and HTTP tracker. 
+			This combination allows for high-performance and secure operations, 
+			giving developers flexibility in deployment options.
 		</p>
 		<div class="stack-icons">
 			<div>
@@ -64,9 +72,10 @@
 	<div class="inner-container">
 		<h2>Comparison to other products</h2>
 		<p>
-			Sapien malesuada massa quam gravida ipsum iaculis nisl massa id. Sit tortor morbi in aenean
-			lectus vel nulla dolor. Facilisis rhoncus viverra consequat dictum. Lobortis venenatis morbi
-			et tortor feugiat.
+			Unlike other trackers, Torrust Tracker balances speed with feature 
+			richness. While some trackers prioritize minimalism at the cost of 
+			flexibility, Torrust focuses on offering extensive functionality 
+			with only a small compromise in speed.
 		</p>
 		<Table tableHeading={trackerTableHeadings} tableData={indexTableData} />
 	</div>

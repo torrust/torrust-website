@@ -63,44 +63,28 @@
 				index in different servers. You just need to spits the docker compose configuration and
 				change the tracker configiration in the index to connect to the external tracker.
 			</p>
+
 			<h2 id="buildSources">Build from sources (Rust)</h2>
+
 			<p>
-				Commodo ullamcorper blandit massa odio mauris odio ornare. Adipiscing imperdiet neque
-				convallis nisl quisque quisque. Fringilla bibendum sit lectus tellus ut urna condimentum
-				tristique. Nisi lectus malesuada consectetur morbi id fringilla et. Blandit mus senectus a
-				elit nisl.
-			</p>
-			<p>
-				Mauris ut dolor dolor nam. Dolor viverra tincidunt egestas ac vulputate. Phasellus sed massa
-				facilisis rhoncus in. Ipsum fermentum est diam justo nibh quis. Libero rutrum quam donec
-				tellus at et.
-			</p>
-			<p>
-				Sed quis enim amet tempor aliquet eget. Phasellus sem vel tincidunt pellentesque non
-				hendrerit cras magna. Volutpat convallis aliquet non lectus quam enim. Nunc ut augue urna
-				vitae venenatis. Pellentesque congue blandit facilisi lectus ac libero.
-			</p>
+				TODO
 			<h2 id="docker">Docker</h2>
 
 			<p>
-				Interdum augue mattis tortor ornare in. Feugiat phasellus integer massa mauris. Leo sit
-				tempus leo eu tellus feugiat malesuada purus. Metus erat eleifend ante sed sem gravida nunc
-				lobortis et. Arcu elit faucibus eget egestas aliquet vivamus consectetur.
+				TODO
 			</p>
-			<p>
-				Laoreet id nisl pharetra sed ut massa dis interdum. Eget eu lacus fringilla sem dignissim
-				cras ridiculus. Potenti cras diam nunc ultricies. Ut metus amet faucibus quam nibh mattis
-				at. Cras in rhoncus ipsum ut id sit id.
-			</p>
+
 			<h2 id="tutorials">Tutorials</h2>
 
 			<p>
-				Nisi interdum iaculis cursus tellus tincidunt pharetra turpis arcu eget. Nibh in
-				pellentesque risus vestibulum. Dolor interdum dictum ac feugiat nulla gravida scelerisque
-				tellus. Sit diam vestibulum eu quis. Curabitur lectus porta nisi convallis.
+				TODO
 			</p>
 
 			<h2 id="torrustTracker">Torrust tracker</h2>
+
+			<p>
+				TODO
+			</p>			
 		</PostBody>
 	</PostContainer>
 </div>

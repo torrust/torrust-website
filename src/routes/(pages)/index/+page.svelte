@@ -40,9 +40,13 @@
 	<div class="inner-container">
 		<h2>Key Features</h2>
 		<p>
-			Sapien malesuada massa quam gravida ipsum iaculis nisl massa id. Sit tortor morbi in aenean
-			lectus vel nulla dolor. Facilisis rhoncus viverra consequat dictum. Lobortis venenatis morbi
-			et tortor feugiat.
+			Torrust Index provides a highly optimized and scalable platform for 
+			organizing torrent metadata. With fast search capabilities and a 
+			robust backend powered by Rust, the index ensures efficient 
+			performance for even the most demanding use cases. Designed with 
+			privacy and decentralization in mind, it allows users to manage 
+			their content freely while upholding strong data integrity 
+			principles.
 		</p>
 	</div>
 	<div>
@@ -68,9 +72,12 @@
 	<div class="inner-container">
 		<h2>Comparison to other products</h2>
 		<p>
-			Sapien malesuada massa quam gravida ipsum iaculis nisl massa id. Sit tortor morbi in aenean
-			lectus vel nulla dolor. Facilisis rhoncus viverra consequat dictum. Lobortis venenatis morbi
-			et tortor feugiat.
+			Compared to other torrent indexing solutions, Torrust Index offers a 
+			unique blend of speed, security, and scalability. By leveraging 
+			modern technologies like Rust and SQLite, it outperforms many 
+			competitors in resource efficiency and ease of use. Its open-source 
+			nature ensures transparency, allowing contributors to shape the 
+			future development of the platform based on community needs.
 		</p>
 		<Table tableHeading={indexTableHeadings} tableData={indexTableData} />
 	</div>
@@ -146,31 +153,11 @@
 			<p>You can install the Index from sources or using docker.</p>
 			<h2 id="buildSources">Build from sources (Rust)</h2>
 			<p>
-				Commodo ullamcorper blandit massa odio mauris odio ornare. Adipiscing imperdiet neque
-				convallis nisl quisque quisque. Fringilla bibendum sit lectus tellus ut urna condimentum
-				tristique. Nisi lectus malesuada consectetur morbi id fringilla et. Blandit mus senectus a
-				elit nisl.
-			</p>
-			<p>
-				Mauris ut dolor dolor nam. Dolor viverra tincidunt egestas ac vulputate. Phasellus sed massa
-				facilisis rhoncus in. Ipsum fermentum est diam justo nibh quis. Libero rutrum quam donec
-				tellus at et.
-			</p>
-			<p>
-				Sed quis enim amet tempor aliquet eget. Phasellus sem vel tincidunt pellentesque non
-				hendrerit cras magna. Volutpat convallis aliquet non lectus quam enim. Nunc ut augue urna
-				vitae venenatis. Pellentesque congue blandit facilisi lectus ac libero.
+				TODO
 			</p>
 			<h2 id="docker">Docker</h2>
 			<p>
-				Interdum augue mattis tortor ornare in. Feugiat phasellus integer massa mauris. Leo sit
-				tempus leo eu tellus feugiat malesuada purus. Metus erat eleifend ante sed sem gravida nunc
-				lobortis et. Arcu elit faucibus eget egestas aliquet vivamus consectetur.
-			</p>
-			<p>
-				Laoreet id nisl pharetra sed ut massa dis interdum. Eget eu lacus fringilla sem dignissim
-				cras ridiculus. Potenti cras diam nunc ultricies. Ut metus amet faucibus quam nibh mattis
-				at. Cras in rhoncus ipsum ut id sit id.
+				TODO
 			</p>
 			<h2 id="licenses">Licenses</h2>
 			<h2 id="copyright">Copyright (c) 2023 The Torrust Developers.</h2>
