@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Cards from '$lib/components/atoms/Cards.svelte';
-	import Image from '$lib/components/atoms/Image.svelte';
 	import { formatDate } from '$lib/utils/date';
 
 	export let title: string;
@@ -15,15 +14,10 @@
 </script>
 
 <Cards
-	href="/{slug}"
+	href={`/${slug}`}
 	target="_self"
 	additionalClass="blog-post-card {!showImage || !coverImage ? 'no-image' : ''}"
 >
-	<div class="image" slot="image">
-		{#if coverImage}
-			<Image src={coverImage} alt="Cover image of this blog post" />
-		{/if}
-	</div>
 	<div class="content" slot="content">
 		<h3 class="title">
 			{title}
