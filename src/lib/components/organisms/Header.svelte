@@ -20,38 +20,38 @@
 		<div class="links-wrapper">
 			<ul class="links">
 				<li>
-					<a href="/index" class={currentPath === '/v2/index' ? 'active' : ''} on:click={toggleMenu}
+					<a href="/index" class={currentPath === '/index' ? 'active' : ''} on:click={toggleMenu}
 						>Index</a
 					>
 				</li>
 				<li>
 					<a
 						href="/tracker"
-						class={currentPath === '/v2/tracker' ? 'active' : ''}
+						class={currentPath === '/tracker' ? 'active' : ''}
 						on:click={toggleMenu}>Tracker</a
 					>
 				</li>
 				<li>
 					<a
 						href="/self-host"
-						class={currentPath === '/v2/self-host' ? 'active' : ''}
+						class={currentPath === '/self-host' ? 'active' : ''}
 						on:click={toggleMenu}>Self&#8209;host</a
 					>
 				</li>
 				<li>
 					<a
 						href="/community"
-						class={currentPath === '/v2/community' ? 'active' : ''}
+						class={currentPath === '/community' ? 'active' : ''}
 						on:click={toggleMenu}>Community</a
 					>
 				</li>
 				<li>
-					<a href="/blog" class={currentPath === '/v2/blog' ? 'active' : ''} on:click={toggleMenu}
+					<a href="/blog" class={currentPath === '/blog' ? 'active' : ''} on:click={toggleMenu}
 						>Blog</a
 					>
 				</li>
 				<li>
-					<a href="/about" class={currentPath === '/v2/about' ? 'active' : ''} on:click={toggleMenu}
+					<a href="/about" class={currentPath === '/about' ? 'active' : ''} on:click={toggleMenu}
 						>About</a
 					>
 				</li>
@@ -65,13 +65,17 @@
 
 	header {
 		position: relative;
-		padding: 1rem;
 		z-index: 1000;
 		background-color: rgba(255, 49, 0, 1);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		position: relative;
+		padding-inline: 1.5rem;
+
+		@include for-phone-only {
+			height: 64px;
+		}
 
 		ul {
 			display: flex;
@@ -90,11 +94,22 @@
 			display: inline-block;
 			transition: all 200ms ease-in-out;
 			color: rgba(245, 245, 245, 0.8);
+			font-size: 1rem;
 		}
 
 		.active {
-			border-bottom: 2px solid white;
+			position: relative;
 			color: white;
+		}
+
+		.active::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -16px;
+			height: 4px;
+			background-color: white;
 		}
 
 		@include for-phone-only {
@@ -107,6 +122,11 @@
 			ul {
 				flex-direction: column;
 				gap: 2vw;
+			}
+
+			.active::after {
+				bottom: -2px;
+				height: 1px;
 			}
 		}
 
@@ -126,10 +146,6 @@
 					filter: drop-shadow(0px 0px 3px var(--color--primary));
 				}
 			}
-		}
-
-		@include for-desktop-up {
-			padding-inline: 9rem;
 		}
 	}
 </style>

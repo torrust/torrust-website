@@ -15,12 +15,11 @@
 		grid-template-rows: repeat(5, 1fr);
 		grid-column-gap: 10px;
 		grid-row-gap: 0px;
-		padding-top: 4rem;
+		padding-top: 64px;
 	}
 
 	.flex {
 		display: flex;
 		flex-direction: column;
-		padding-top: 4rem;
 	}
 </style>

@@ -42,7 +42,7 @@
 		}
 
 		@include for-desktop-up {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr;
 		}
 	}
 </style>

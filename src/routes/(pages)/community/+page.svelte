@@ -26,6 +26,7 @@
 </script>
 
 <div class="container">
+	<h1>Community</h1>
 	<PostContainer>
 		{#if $isLargeScreen}
 			<PostTable>
@@ -40,18 +41,22 @@
 			<PostTable>
 				<ul class="toc">
 					<li><a href="#whyContribute">Why Contribute to our Project?</a></li>
-					<li><a href="#embraceRust">Embrace Rust: a language of choice</a></li>
-					<li><a href="#codeQuality">Code quality above all</a></li>
-					<li><a href="#welcomingCommunity">A welcoming community for newcomers</a></li>
-					<li><a href="#influenceDirection">Influence the project’s direction</a></li>
-					<li><a href="#joinUs">Join us today</a></li>
+					<ul>
+						<li><a href="#embraceRust">Embrace Rust: a language of choice</a></li>
+						<li><a href="#codeQuality">Code quality above all</a></li>
+						<li><a href="#welcomingCommunity">A welcoming community for newcomers</a></li>
+						<li><a href="#influenceDirection">Influence the project’s direction</a></li>
+						<li><a href="#joinUs">Join us today</a></li>
+					</ul>
 					<li><a href="#howContribute">How to contribute?</a></li>
-					<li><a href="#knowledgeBase">Knowledge Base</a></li>
-					<li><a href="#whatAreTorrents">What Are Torrents</a></li>
-					<li><a href="#whatIsTracker">What Is a Tracker</a></li>
-					<li><a href="#whatIsTorrentIndex">What Is a Torrent Index</a></li>
-					<li><a href="#listOfProjects">List of projects using BitTorrent</a></li>
-					<li><a href="#resources">Resources</a></li>
+					<ul>
+						<li><a href="#knowledgeBase">Knowledge Base</a></li>
+						<li><a href="#whatAreTorrents">What Are Torrents</a></li>
+						<li><a href="#whatIsTracker">What Is a Tracker</a></li>
+						<li><a href="#whatIsTorrentIndex">What Is a Torrent Index</a></li>
+						<li><a href="#listOfProjects">List of projects using BitTorrent</a></li>
+						<li><a href="#resources">Resources</a></li>
+					</ul>
 				</ul>
 			</PostTable>
 		{/if}
@@ -215,6 +220,12 @@
 
 <style lang="scss">
 	@import '$lib/scss/breakpoints.scss';
+
+	h1 {
+		font-size: 36px;
+		padding-top: 64px;
+		margin-inline: 1rem;
+	}
 
 	.list li {
 		list-style-type: disc;

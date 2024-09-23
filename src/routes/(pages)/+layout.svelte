@@ -9,7 +9,6 @@
 	div {
 		background: rgba(26, 26, 26, 1);
 		padding: 0;
-		background: rgba(26, 26, 26, 1);
 		color: rgba(245, 245, 245, 0.96);
 	}
 </style>

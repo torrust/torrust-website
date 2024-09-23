@@ -7,6 +7,6 @@
 
 	div {
 		grid-area: 1 / 3 / 6 / 7;
-		margin-inline: 2rem;
+		margin-inline: 1rem;
 	}
 </style>

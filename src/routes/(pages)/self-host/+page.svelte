@@ -26,6 +26,7 @@
 </script>
 
 <div class="container">
+	<h1>Self-host</h1>
 	<PostContainer>
 		{#if $isLargeScreen}
 			<PostTable>
@@ -91,6 +92,12 @@
 
 <style lang="scss">
 	@import '$lib/scss/breakpoints.scss';
+
+	h1 {
+		font-size: 36px;
+		padding-top: 64px;
+		margin-inline: 1rem;
+	}
 
 	h2,
 	p {
