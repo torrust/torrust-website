@@ -4,10 +4,27 @@
 	export let additionalClass: string | undefined = undefined;
 
 	export let href: string | undefined = undefined;
-	export let backgroundImage: string | undefined = undefined;
 	const isExternalLink = !!href && HttpRegex.test(href);
 	export let target: '_self' | '_blank' = isExternalLink ? '_blank' : '_self';
 	export let rel = isExternalLink ? 'noopener noreferrer' : undefined;
+
+	function getRandomColor() {
+		const letters = '0123456789ABCDEF';
+		let color = '#';
+		for (let i = 0; i < 6; i++) {
+			color += letters[Math.floor(Math.random() * 16)];
+		}
+		return color;
+	}
+
+	function getRandomGradient() {
+		const color1 = getRandomColor();
+		const color2 = getRandomColor();
+		const randomDegree = Math.floor(Math.random() * 360);
+		return `linear-gradient(${randomDegree}deg, ${color1}, ${color2})`;
+	}
+
+	$: randomGradientBackground = getRandomGradient();
 
 	$: tag = href ? 'a' : 'article';
 	$: linkProps = {
@@ -23,12 +40,8 @@
 	{...linkProps}
 	data-sveltekit-preload-data
 	{...$$restProps}
+	style="background: {randomGradientBackground};"
 >
-	{#if $$slots.image || backgroundImage}
-		<div class="image" style="background-image: url({backgroundImage});">
-			<slot name="image" />
-		</div>
-	{/if}
 	<div class="body">
 		<div class="content">
 			<slot name="content" />

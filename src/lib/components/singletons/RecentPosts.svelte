@@ -11,10 +11,8 @@
 			<BlogPostCard
 				slug={post.slug}
 				title={post.title}
-				showImage={true}
 				date={post.date}
 				contributor={post.contributor}
-				coverImage={post.coverImage}
 			/>
 		{/each}
 	</div>
