@@ -50,39 +50,26 @@
 </script>
 
 <div class="search-bar-container">
-	<button class="icon-wrapper" on:click={() => (showInput = true)} class:show-input={showInput}>
-		{#if !showInput}
-			<Icon
-				icon="heroicons:magnifying-glass-16-solid"
-				width="28"
-				height="28"
-				style="color: rgba(255, 49, 0, 1);"
-			/>
-		{/if}
-	</button>
 	{#if showInput}
 		<div class="input-wrapper">
-			<Icon
-				icon="heroicons:magnifying-glass-16-solid"
-				width="28"
-				height="28"
-				style="color: #000000;"
-			/>
-			<input
-				type="text"
-				placeholder="Search"
-				bind:this={searchInput}
-				bind:value={searchTerm}
-				on:input={handleInput}
-			/>
-			{#if searchTerm}
-				<button class="clear-button" on:click={clearSearch}>
-					<Icon icon="material-symbols:close" width="24" height="24" style="color: #000000" />
-				</button>
-			{/if}
+			<div>
+				<input
+					type="text"
+					placeholder="Type to filter articles..."
+					bind:this={searchInput}
+					bind:value={searchTerm}
+					on:input={handleInput}
+				/>
+			</div>
+			<div>
+				<Icon
+					icon="heroicons:magnifying-glass-16-solid"
+					width="28"
+					height="28"
+					style="color: rgba(245, 245, 245, 0.08);"
+				/>
+			</div>
 		</div>
-	{:else}
-		<div class="input-placeholder"></div>
 	{/if}
 
 	{#if search === 'ready' && searchTerm}
@@ -128,22 +115,19 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		background-color: white;
-	}
-
-	.icon-wrapper {
-		cursor: pointer;
-		padding: 0.5rem;
 		background-color: transparent;
-		border: none;
+		border: 1px solid rgba(245, 245, 245, 0.08);
+		border-radius: 1.5rem;
 	}
 
 	.input-wrapper {
 		display: flex;
-		align-items: center;
+		justify-content: space-between;
+		width: 360px;
 		border-radius: 5px;
 		padding: 0.5rem;
 		border: none;
+		color: white;
 		background-color: transparent;
 	}
 
@@ -151,19 +135,13 @@
 		border: none;
 		outline: none;
 		flex-grow: 1;
-		padding: 0.1rem;
 		font-size: 1rem;
 		background-color: transparent;
+		color: rgba(245, 245, 245, 0.96);
 	}
 
-	.clear-button {
-		border: none;
-		background-color: transparent;
-		cursor: pointer;
-	}
-
-	.input-placeholder {
-		height: 3.2rem;
+	.input-wrapper > * {
+		padding-inline: 1rem;
 	}
 
 	.dropdown {
@@ -197,7 +175,7 @@
 
 	.dropdown a {
 		text-decoration: none;
-		color: #ffffff;
+		color: rgba(245, 245, 245, 0.96);
 		display: block;
 		display: flex;
 		flex-direction: column;

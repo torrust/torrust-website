@@ -89,16 +89,12 @@
 		padding: 1.5rem;
 		background: rgba(0, 0, 0, 0.5);
 		color: #fff;
+		width: 100%;
 		height: 100%;
 		z-index: 1;
 
 		&:hover {
 			background: rgba(0, 0, 0, 0.1);
 		}
-	}
-
-	.content {
-		padding: 1rem;
-		background: rgba(0, 0, 0, 0.5);
 	}
 </style>

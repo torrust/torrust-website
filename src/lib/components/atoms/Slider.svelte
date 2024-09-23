@@ -19,7 +19,6 @@
 		gap: 1rem;
 		scroll-behavior: smooth;
 		padding-bottom: 1rem;
-		padding-inline: 1.5rem;
 
 		div {
 			flex: 0 0 300px;

@@ -26,6 +26,7 @@
 </script>
 
 <div class="container">
+	<h1>About</h1>
 	<PostContainer>
 		{#if $isLargeScreen}
 			<PostTable>
@@ -34,8 +35,9 @@
 					--toc-active-color="rgba(255, 49, 0, 0.96)"
 					--toc-li-hover-color="rgba(255, 49, 0, 0.96)"
 					--toc-active-bg="transparent"
+					--toc-breakpoint="1000"
 				>
-					<ul>
+					<ul class="list">
 						<li><a href="#bitTorrent">Why BitTorrent?</a></li>
 						<ul>
 							<li>
@@ -288,13 +290,19 @@
 <style lang="scss">
 	@import '$lib/scss/breakpoints.scss';
 
+	h1 {
+		font-size: 36px;
+		padding-top: 64px;
+		margin-inline: 1rem;
+	}
+
 	h2,
 	p {
 		padding-top: 1.2rem;
 	}
 
-	a {
-		color: rgba(255, 49, 0, 0.96);
+	.list li {
+		list-style-type: disc;
 	}
 
 	.toc li a {
@@ -302,6 +310,10 @@
 	}
 
 	.toc li a:hover {
+		color: rgba(255, 49, 0, 0.96);
+	}
+
+	a {
 		color: rgba(255, 49, 0, 0.96);
 	}
 </style>

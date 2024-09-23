@@ -17,7 +17,6 @@
 	onMount(() => {
 		currentUrl = $page.url.pathname;
 		splitUrl = decodeURIComponent(currentUrl.split('/').pop()! || '');
-		console.log(splitUrl);
 	});
 </script>
 

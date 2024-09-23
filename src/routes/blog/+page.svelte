@@ -14,7 +14,7 @@
 
 <div class="container">
 	<div class="header">
-		<h1>All Blog Posts</h1>
+		<h1>Blog</h1>
 		<SearchBar {searchTerm} {posts} />
 	</div>
 	{#if posts && posts.length}
@@ -38,6 +38,7 @@
 
 		h1 {
 			padding-bottom: 1rem;
+			font-size: 36px;
 
 			@include for-tablet-portrait-up {
 				padding-bottom: 0px;

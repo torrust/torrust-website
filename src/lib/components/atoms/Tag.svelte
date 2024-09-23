@@ -37,21 +37,12 @@
 		align-items: center;
 		justify-content: center;
 		gap: 5px;
-		padding: 5px 15px;
+		padding-right: 15px;
 		border-radius: 10px;
 		font-weight: 500;
 		font-size: 0.85rem;
 		width: fit-content;
 		white-space: nowrap;
-
-		&.primary {
-			background-color: rgba(245, 245, 245, 0.96);
-			color: rgba(255, 49, 0, 0.96);
-		}
-		&.secondary {
-			background-color: var(--color--secondary-tint);
-			color: var(--color--secondary);
-		}
 	}
 
 	.icon {
@@ -61,10 +52,11 @@
 		height: 20px;
 	}
 
-	a.tag {
+	a {
 		text-decoration-thickness: 1px;
-		&:not(:hover) {
-			text-decoration-color: transparent;
+		color: white;
+		&:hover {
+			color: rgba(255, 49, 0, 1);
 		}
 	}
 </style>

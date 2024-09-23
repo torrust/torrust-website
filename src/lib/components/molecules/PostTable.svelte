@@ -40,6 +40,5 @@
 	div {
 		grid-area: 1 / 1 / 6 / 3;
 		background-color: transparent;
-		padding: 10px;
 	}
 </style>

@@ -27,3 +27,14 @@
 		{/if}
 	</div>
 </Cards>
+
+<style lang="scss">
+	.title {
+		font-size: 1.5rem;
+	}
+
+	.date {
+		padding-top: 0.5rem;
+		font-size: 14px;
+	}
+</style>

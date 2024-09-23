@@ -349,7 +349,6 @@
 
 	.inner-container {
 		text-align: center;
-		margin-top: 4rem;
 
 		h2 {
 			margin-top: 4rem;
@@ -378,9 +377,10 @@
 		flex: 1;
 		display: flex;
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: center;
 		align-items: center;
 		margin-top: 3rem;
+		gap: 1.5rem;
 	}
 
 	.stack-icons div:nth-of-type(2) {

@@ -261,7 +261,6 @@
 
 	.inner-container {
 		text-align: center;
-		margin-top: 4rem;
 
 		h2 {
 			margin-top: 4rem;
