@@ -20,8 +20,10 @@
 		<div class="links-wrapper">
 			<ul class="links">
 				<li>
-					<a href="/torrent-index" class={currentPath === '/torrent-index' ? 'active' : ''} on:click={toggleMenu}
-						>Index</a
+					<a
+						href="/torrent-index"
+						class={currentPath === '/torrent-index' ? 'active' : ''}
+						on:click={toggleMenu}>Index</a
 					>
 				</li>
 				<li>

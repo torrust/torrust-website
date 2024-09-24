@@ -67,25 +67,18 @@
 
 			<h2 id="buildSources">Build from sources (Rust)</h2>
 
-			<p>
-				TODO
+			<p>TODO</p>
 			<h2 id="docker">Docker</h2>
 
-			<p>
-				TODO
-			</p>
+			<p>TODO</p>
 
 			<h2 id="tutorials">Tutorials</h2>
 
-			<p>
-				TODO
-			</p>
+			<p>TODO</p>
 
 			<h2 id="torrustTracker">Torrust tracker</h2>
 
-			<p>
-				TODO
-			</p>			
+			<p>TODO</p>
 		</PostBody>
 	</PostContainer>
 </div>

@@ -97,25 +97,21 @@
 			<h2 id="bitTorrent">Why BitTorrent?</h2>
 
 			<p>
-				In a world driven by digital content, the BitTorrent protocol 
-				remains a cornerstone for decentralized, efficient file sharing. 
-				While newer technologies such as IPFS and cloud storage 
-				solutions have emerged, BitTorrent continues to serve a 
-				critical role in enabling large-scale data distribution with 
-				unparalleled efficiency and scalability.
+				In a world driven by digital content, the BitTorrent protocol remains a cornerstone for
+				decentralized, efficient file sharing. While newer technologies such as IPFS and cloud
+				storage solutions have emerged, BitTorrent continues to serve a critical role in enabling
+				large-scale data distribution with unparalleled efficiency and scalability.
 			</p>
 
 			<h2 id="bitTorrentProtocol">Why does the BitTorrent protocol still matter?</h2>
 
 			<p>
-			Despite the rise of centralized alternatives and new distributed 
-			systems, the BitTorrent protocol remains a key player in the digital 
-			landscape. Its decentralized nature ensures that users maintain 
-			control over data distribution, making it a critical tool in today's 
-			interconnected world. The focus on distributing content without 
-			over-reliance on a single server continues to make BitTorrent 
-			relevant for various use cases, from media sharing to large-scale 
-			software updates.
+				Despite the rise of centralized alternatives and new distributed systems, the BitTorrent
+				protocol remains a key player in the digital landscape. Its decentralized nature ensures
+				that users maintain control over data distribution, making it a critical tool in today's
+				interconnected world. The focus on distributing content without over-reliance on a single
+				server continues to make BitTorrent relevant for various use cases, from media sharing to
+				large-scale software updates.
 			</p>
 
 			<p>
@@ -280,17 +276,13 @@
 				BitTorrent remains a vital part of the internet's infrastructure.
 			</p>
 			<h2 id="team">The Team</h2>
-			
-			<p>
-				TODO
-			</p>
+
+			<p>TODO</p>
 
 			<h2 id="collaborators">Collaborators</h2>
 
-			<p>
-				TODO
-			</p>
-						
+			<p>TODO</p>
+
 			<h2 id="sponsors">Sponsors</h2>
 			<p>
 				Nautilus Cyberneering is dedicated to creating new Open Source Ecosystems. They define Open
