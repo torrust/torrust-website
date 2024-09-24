@@ -8,14 +8,12 @@
 	<div class="contribute-container">
 		<h2>Why Contribute to Our Project?</h2>
 		<p>
-			Our project is designed to push the boundaries of decentralized 
-			technology, providing a robust, open-source BitTorrent tracker and 
-			index. By contributing, you’re helping build tools that empower 
-			communities, enable file-sharing freedom, and promote digital 
-			collaboration. Your input helps shape the future of the platform, 
-			ensuring it remains free, transparent, and accessible to all. 
-			Together, we can create a platform that upholds the values of 
-			privacy, security, and decentralized infrastructure.
+			Our project is designed to push the boundaries of decentralized technology, providing a
+			robust, open-source BitTorrent tracker and index. By contributing, you’re helping build tools
+			that empower communities, enable file-sharing freedom, and promote digital collaboration. Your
+			input helps shape the future of the platform, ensuring it remains free, transparent, and
+			accessible to all. Together, we can create a platform that upholds the values of privacy,
+			security, and decentralized infrastructure.
 		</p>
 	</div>
 	<div class="card-container">

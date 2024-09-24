@@ -40,13 +40,11 @@
 	<div class="inner-container">
 		<h2>Key Features</h2>
 		<p>
-			Torrust Index provides a highly optimized and scalable platform for 
-			organizing torrent metadata. With fast search capabilities and a 
-			robust backend powered by Rust, the index ensures efficient 
-			performance for even the most demanding use cases. Designed with 
-			privacy and decentralization in mind, it allows users to manage 
-			their content freely while upholding strong data integrity 
-			principles.
+			Torrust Index provides a highly optimized and scalable platform for organizing torrent
+			metadata. With fast search capabilities and a robust backend powered by Rust, the index
+			ensures efficient performance for even the most demanding use cases. Designed with privacy and
+			decentralization in mind, it allows users to manage their content freely while upholding
+			strong data integrity principles.
 		</p>
 	</div>
 	<div>
@@ -72,12 +70,11 @@
 	<div class="inner-container">
 		<h2>Comparison to other products</h2>
 		<p>
-			Compared to other torrent indexing solutions, Torrust Index offers a 
-			unique blend of speed, security, and scalability. By leveraging 
-			modern technologies like Rust and SQLite, it outperforms many 
-			competitors in resource efficiency and ease of use. Its open-source 
-			nature ensures transparency, allowing contributors to shape the 
-			future development of the platform based on community needs.
+			Compared to other torrent indexing solutions, Torrust Index offers a unique blend of speed,
+			security, and scalability. By leveraging modern technologies like Rust and SQLite, it
+			outperforms many competitors in resource efficiency and ease of use. Its open-source nature
+			ensures transparency, allowing contributors to shape the future development of the platform
+			based on community needs.
 		</p>
 		<Table tableHeading={indexTableHeadings} tableData={indexTableData} />
 	</div>
@@ -152,13 +149,9 @@
 			</p>
 			<p>You can install the Index from sources or using docker.</p>
 			<h2 id="buildSources">Build from sources (Rust)</h2>
-			<p>
-				TODO
-			</p>
+			<p>TODO</p>
 			<h2 id="docker">Docker</h2>
-			<p>
-				TODO
-			</p>
+			<p>TODO</p>
 			<h2 id="licenses">Licenses</h2>
 			<h2 id="copyright">Copyright (c) 2023 The Torrust Developers.</h2>
 			<p>
