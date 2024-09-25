@@ -7,14 +7,22 @@
 	<table>
 		<tr>
 			{#each tableHeading as heading}
-				<th>{heading}</th>
+				<th>{heading.displayName}</th> <!-- Use the display name -->
 			{/each}
 		</tr>
-		<tr>
-			{#each tableData as data}
-				<td>{data}</td>
-			{/each}
-		</tr>
+		{#each tableData as row}
+			<tr>
+				{#each tableHeading as heading}
+					{#if heading.fieldName == 'site'}
+						<td><a href={row[heading.fieldName]}>visit</a></td>
+					{:else if heading.fieldName == 'demo'}
+						<td><a href={row[heading.fieldName]}>visit</a></td>
+					{:else}
+						<td>{row[heading.fieldName]}</td>
+					{/if}
+				{/each}
+			</tr>
+		{/each}
 	</table>
 </div>
 

@@ -28,11 +28,17 @@
 		};
 	});
 
-	import { indexTitleArr1, indexTableHeadings, indexTableData } from '$lib/constants/constants';
 	import TorrustIndexPost from '$lib/components/singletons/TorrustIndexPost.svelte';
+	import {
+		indexTitleArr1,
+		indexBasicTableHeadings,
+		indexFeaturesTableHeadings,
+		indexTableData
+	} from '$lib/constants/constants';
 </script>
 
 <Banner title={'index'} />
+
 <div class="container">
 	<div class="inner-container">
 		<h2>Key Features</h2>
@@ -44,13 +50,15 @@
 			strong data integrity principles.
 		</p>
 	</div>
+
 	<div class="slider-wrapper">
 		<Slider titleArr={indexTitleArr1} />
 	</div>
+
 	<div class="inner-container">
 		<h2>Stack</h2>
 		<p>
-			Torrust Index is powered by SQLite and mySQL, leveraging Rust (Axum) for the REST API and Nuxt
+			Torrust Index is powered by SQLite and MySQL, leveraging Rust (Axum) for the REST API and Nuxt
 			(VUE) for the frontend.
 		</p>
 		<div class="stack-icons">
@@ -64,8 +72,10 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="inner-container">
 		<h2>Comparison to other products</h2>
+
 		<p>
 			Compared to other torrent indexing solutions, Torrust Index offers a unique blend of speed,
 			security, and scalability. By leveraging modern technologies like Rust and SQLite, it
@@ -73,7 +83,18 @@
 			ensures transparency, allowing contributors to shape the future development of the platform
 			based on community needs.
 		</p>
-		<Table tableHeading={indexTableHeadings} tableData={indexTableData} />
+	</div>
+
+	<div class="inner-container">
+		<h2>General information</h2>
+
+		<Table tableHeading={indexBasicTableHeadings} tableData={indexTableData} />
+	</div>
+
+	<div class="inner-container">
+		<h2>Features</h2>
+
+		<Table tableHeading={indexFeaturesTableHeadings} tableData={indexTableData} />
 	</div>
 
 	<TorrustIndexPost />
