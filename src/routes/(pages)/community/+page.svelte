@@ -1,66 +1,33 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { writable } from 'svelte/store';
-	import Toc from 'svelte-toc';
-	import PostContainer from '$lib/components/molecules/PostContainer.svelte';
-	import PostTable from '$lib/components/molecules/PostTable.svelte';
-	import PostBody from '$lib/components/molecules/PostBody.svelte';
+	import TableOfContents from '$lib/components/atoms/TableOfContents.svelte'; // Adjust the path if needed
 
-	let isLargeScreen = writable(false);
+	// Array of section objects with display names and IDs
+	let sections = [
+		{ name: 'Why Contribute to our Project?', id: 'whyContribute' },
+		{ name: 'Embrace Rust: a language of choice', id: 'embraceRust' },
+		{ name: 'Code quality above all', id: 'codeQuality' },
+		{ name: 'A welcoming community for newcomers', id: 'welcomingCommunity' },
+		{ name: 'Influence the project’s direction', id: 'influenceDirection' },
+		{ name: 'Join us today', id: 'joinUs' },
+		{ name: 'How to contribute?', id: 'howContribute' },
+		{ name: 'Knowledge Base', id: 'knowledgeBase' },
+		{ name: 'What Are Torrents', id: 'whatAreTorrents' },
+		{ name: 'What Is a Tracker', id: 'whatIsTracker' },
+		{ name: 'What Is a Torrent Index', id: 'whatIsTorrentIndex' },
+		{ name: 'List of projects using BitTorrent', id: 'listOfProjects' },
+		{ name: 'Resources', id: 'resources' }
+	];
 
-	onMount(() => {
-		const mediaQueryList = window.matchMedia('(min-width: 1000px)');
-
-		isLargeScreen.set(mediaQueryList.matches);
-
-		const updateScreenSize = (event: MediaQueryListEvent) => {
-			isLargeScreen.set(event.matches);
-		};
-
-		mediaQueryList.addEventListener('change', updateScreenSize);
-
-		return () => {
-			mediaQueryList.removeEventListener('change', updateScreenSize);
-		};
-	});
+	let activeSection = '';
 </script>
 
-<div class="container">
+<div>
 	<h1>Community</h1>
-	<PostContainer>
-		{#if $isLargeScreen}
-			<PostTable>
-				<Toc
-					title=""
-					--toc-active-color="rgba(255, 49, 0, 0.96)"
-					--toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-					--toc-active-bg="transparent"
-				/>
-			</PostTable>
-		{:else}
-			<PostTable>
-				<ul class="toc">
-					<li><a href="#whyContribute">Why Contribute to our Project?</a></li>
-					<ul>
-						<li><a href="#embraceRust">Embrace Rust: a language of choice</a></li>
-						<li><a href="#codeQuality">Code quality above all</a></li>
-						<li><a href="#welcomingCommunity">A welcoming community for newcomers</a></li>
-						<li><a href="#influenceDirection">Influence the project’s direction</a></li>
-						<li><a href="#joinUs">Join us today</a></li>
-					</ul>
-					<li><a href="#howContribute">How to contribute?</a></li>
-					<ul>
-						<li><a href="#knowledgeBase">Knowledge Base</a></li>
-						<li><a href="#whatAreTorrents">What Are Torrents</a></li>
-						<li><a href="#whatIsTracker">What Is a Tracker</a></li>
-						<li><a href="#whatIsTorrentIndex">What Is a Torrent Index</a></li>
-						<li><a href="#listOfProjects">List of projects using BitTorrent</a></li>
-						<li><a href="#resources">Resources</a></li>
-					</ul>
-				</ul>
-			</PostTable>
-		{/if}
-		<PostBody>
+	<div class="layout">
+		<div>
+			<TableOfContents {sections} {activeSection} />
+		</div>
+		<div class="content">
 			<h2 id="whyContribute">Why Contribute to our Project?</h2>
 
 			<p>
@@ -211,37 +178,59 @@
 				</ul>
 			</ul>
 			<h2 id="resources">Resources</h2>
-		</PostBody>
-	</PostContainer>
+		</div>
+	</div>
 </div>
 
 <style lang="scss">
 	@import '$lib/scss/breakpoints.scss';
 
+	h1,
+	.layout {
+		padding-inline: 1.5rem;
+	}
+
+	.layout {
+		margin-top: 4rem;
+	}
+
+	.content {
+		margin-top: 3rem;
+	}
+
 	h1 {
-		font-size: 36px;
-		padding-top: 64px;
-		margin-inline: 1rem;
+		padding-top: 4rem;
+		font-size: 2.25rem;
 	}
 
-	.list li {
-		list-style-type: disc;
+	h2 {
+		font-size: 1.875rem;
 	}
 
-	.toc li a {
-		color: white;
+	h2:not(:first-of-type) {
+		padding-top: 1.5rem; /* Add top padding to all h2 elements except the first one */
 	}
 
-	.toc li a:hover {
-		color: rgba(255, 49, 0, 0.96);
-	}
-
-	a {
-		color: rgba(255, 49, 0, 0.96);
-	}
-
-	h2,
 	p {
-		padding-top: 1.2rem;
+		font-size: 1rem;
+		padding-top: 1.5rem;
+		color: rgba(245, 245, 245, 0.8);
+	}
+
+	@include for-desktop-up {
+		h1,
+		.layout {
+			display: flex;
+			padding-inline: 9.25rem;
+			gap: 2rem;
+		}
+
+		.content {
+			margin-top: 0rem;
+		}
+
+		h1 {
+			padding-top: 8rem;
+		}
 	}
 </style>

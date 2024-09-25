@@ -25,15 +25,14 @@
 <div class="container">
 	<div class="previousPost">
 		{#if prevPost}
-			<a href="/{prevPost.slug}">{prevPost.title}</a>
 			<div class="arrow arrowPrevious">
 				<Icon
-					icon="material-symbols:arrow-left"
-					width="44"
-					height="44"
-					style="color: rgba(255, 49, 0, 0.96)"
+					icon="ic:baseline-arrow-back"
+					width="24"
+					height="24"
+					style="color: rgba(245, 245, 245, 0.92)"
 				/>
-				<p>Previous Post</p>
+				<a href="/{prevPost.slug}">{prevPost.title}</a>
 			</div>
 		{:else}
 			<h3 class="inactive">You are reading our first post.</h3>
@@ -42,14 +41,13 @@
 
 	<div class="nextPost">
 		{#if nextPost}
-			<a href="/{nextPost.slug}">{nextPost.title}</a>
 			<div class="arrow arrowNext">
-				<p>Next Post</p>
+				<a href="/{nextPost.slug}">{nextPost.title}</a>
 				<Icon
-					icon="material-symbols:arrow-right"
-					width="44"
-					height="44"
-					style="color: rgba(255, 49, 0, 0.96)"
+					icon="ic:outline-arrow-forward"
+					width="24"
+					height="24"
+					style="color: rgba(245, 245, 245, 0.92)"
 				/>
 			</div>
 		{:else}
@@ -62,8 +60,9 @@
 	.container {
 		display: flex;
 		justify-content: space-between;
-		border-top: 1px solid #979797;
-		border-bottom: 1px solid #979797;
+		font-size: 16px;
+		margin-inline: 1.5rem;
+		border: 1px solid rgba(245, 245, 245, 0.08);
 	}
 
 	.nextPost,
@@ -74,7 +73,6 @@
 	}
 
 	.nextPost {
-		border-left: 1px solid #979797;
 		text-align: right;
 	}
 
@@ -85,6 +83,15 @@
 	.arrow {
 		display: flex;
 		align-items: center;
+		gap: 8px;
+	}
+
+	.arrow a {
+		color: rgba(245, 245, 245, 0.96);
+	}
+
+	.arrow a:hover {
+		color: rgba(255, 49, 0, 1);
 	}
 
 	.arrowNext {
@@ -97,5 +104,6 @@
 
 	.inactive {
 		color: gray;
+		font-size: 16px;
 	}
 </style>

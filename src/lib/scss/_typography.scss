@@ -1,5 +1,5 @@
 a {
-	color: rgba(255, 49, 0, 0.96);
+	color: rgba(245, 245, 245, 0.96);
 	text-decoration: none;
 	text-underline-offset: 0.1em;
 	text-decoration-thickness: 2px;
@@ -7,6 +7,7 @@ a {
 
 	&:hover {
 		text-decoration: underline;
+		color: rgba(255, 49, 0, 0.96);
 	}
 }
 
@@ -24,15 +25,14 @@ strong,
 b {
 	font-weight: 700;
 }
+
 em,
 i {
 	font-style: italic;
 }
 
-li {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+ul li::marker {
+	color: rgba(255, 49, 0, 0.96); /* Change the bullet color to red */
 }
 
 // #region Titles

@@ -5,7 +5,6 @@
 
 	import { keywords, siteBaseUrl, title } from '$lib/data/meta';
 	import type { BlogPost } from '$lib/utils/types';
-	import RelatedPosts from '$lib/components/organisms/RelatedPosts.svelte';
 	import Image from '$lib/components/atoms/Image.svelte';
 	import PrevNextPost from '$lib/components/singletons/PrevNextPost.svelte';
 	import { allPosts } from '$lib/data/blog-posts';
@@ -64,13 +63,17 @@
 					<h1>{post.title}</h1>
 					<p>{post.excerpt}</p>
 					<div class="note">
-						{#if post.contributor}
-							<a class="author" href={'/contributor/' + post.contributorSlug}>{post.contributor}</a>
-							-
-						{/if}
-						{formatDate(post.date)}
+						<div>
+							{#if post.contributor}
+								<a class="author" href={'/contributor/' + post.contributorSlug}
+									>{post.contributor}</a
+								>
+								-
+							{/if}
+							{formatDate(post.date)}
+						</div>
+						<ShareButton slug={post.slug} title={post.title} />
 					</div>
-					<ShareButton slug={post.slug} title={post.title} />
 				{/if}
 			</div>
 			{#if post && post.coverImage}
@@ -84,12 +87,6 @@
 		</article>
 
 		<PrevNextPost currentPost={post} {allPosts} />
-
-		{#if post.relatedPosts && post.relatedPosts.length > 0}
-			<div class="container">
-				<RelatedPosts posts={post.relatedPosts} />
-			</div>
-		{/if}
 	</main>
 </div>
 
@@ -155,6 +152,10 @@
 			}
 
 			.note {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
 				font-size: 90%;
 				color: rgba(245, 245, 245, 0.96);
 			}

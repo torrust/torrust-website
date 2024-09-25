@@ -1,99 +1,37 @@
-<script lang="ts">
-	import { onMount } from 'svelte';
-	import { writable } from 'svelte/store';
-	import Toc from 'svelte-toc';
-	import PostContainer from '$lib/components/molecules/PostContainer.svelte';
-	import PostTable from '$lib/components/molecules/PostTable.svelte';
-	import PostBody from '$lib/components/molecules/PostBody.svelte';
+<script>
+	import TableOfContents from '$lib/components/atoms/TableOfContents.svelte'; // Adjust the path if needed
 
-	let isLargeScreen = writable(false);
+	// Array of section objects with display names and IDs
+	let sections = [
+		{ name: 'Why BitTorrent?', id: 'bitTorrent' },
+		{ name: 'Why does the BitTorrent protocol still matter?', id: 'bitTorrentProtocol' },
+		{ name: 'Efficiency and scalability', id: 'efficiency' },
+		{ name: 'Current use cases', id: 'currentUses' },
+		{ name: 'Future use cases', id: 'futureUses' },
+		{ name: 'BT vs. IPFS', id: 'btIpfs' },
+		{ name: 'BT vs. centralized solutions', id: 'btCs' },
+		{ name: 'Conclusion', id: 'conclusion' },
+		{ name: 'Why Torrust', id: 'whyTorrust' },
+		{ name: 'Performance & Efficiency', id: 'performanceEfficiency' },
+		{ name: 'Security & Reliability', id: 'securityReliability' },
+		{ name: 'User Experience & Accessibility', id: 'userExperience' },
+		{ name: 'Future-Proofing & Innovation', id: 'futureProofing' },
+		{ name: 'Integration & Interoperability', id: 'integration' },
+		{ name: 'The Team', id: 'team' },
+		{ name: 'Collaborators', id: 'collaborators' },
+		{ name: 'Sponsors', id: 'sponsors' }
+	];
 
-	onMount(() => {
-		const mediaQueryList = window.matchMedia('(min-width: 1000px)');
-
-		isLargeScreen.set(mediaQueryList.matches);
-
-		const updateScreenSize = (event: MediaQueryListEvent) => {
-			isLargeScreen.set(event.matches);
-		};
-
-		mediaQueryList.addEventListener('change', updateScreenSize);
-
-		return () => {
-			mediaQueryList.removeEventListener('change', updateScreenSize);
-		};
-	});
+	let activeSection = '';
 </script>
 
-<div class="container">
+<div>
 	<h1>About</h1>
-	<PostContainer>
-		{#if $isLargeScreen}
-			<PostTable>
-				<Toc
-					title=""
-					--toc-active-color="rgba(255, 49, 0, 0.96)"
-					--toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-					--toc-active-bg="transparent"
-					--toc-breakpoint="1000"
-				>
-					<ul class="list">
-						<li><a href="#bitTorrent">Why BitTorrent?</a></li>
-						<ul>
-							<li>
-								<a href="#bitTorrentProtocol">Why does the BitTorrent protocol still matter?</a>
-							</li>
-							<li><a href="#efficiency">Efficiency and scalability</a></li>
-							<li><a href="#currentUses">Current use cases</a></li>
-							<li><a href="#futureUses">Future use cases</a></li>
-							<li><a href="#btIpfs">BT vs. IPFS</a></li>
-							<li><a href="#btCs">BT vs. centralized solutions</a></li>
-							<li><a href="#conclusion">Conclusion</a></li>
-						</ul>
-						<li><a href="#whyTorrust">Why Torrust?</a></li>
-						<ul>
-							<li><a href="#performanceEfficiency">Performance & Efficiency</a></li>
-							<li><a href="#securityReliability">Security & Reliability</a></li>
-							<li><a href="#userExperience">User Experience & Accessibility</a></li>
-							<li><a href="#futureProofing">Future-Proofing and Innovation</a></li>
-							<li><a href="#integration">Integration & Interoperability</a></li>
-						</ul>
-						<li><a href="#team">The Team</a></li>
-						<li><a href="#collaborators">Collaborators</a></li>
-						<li><a href="#sponsors">Sponsors</a></li>
-					</ul>
-				</Toc>
-			</PostTable>
-		{:else}
-			<PostTable>
-				<ul class="toc">
-					<li><a href="#bitTorrent">Why BitTorrent?</a></li>
-					<ul class="toc">
-						<li>
-							<a href="#bitTorrentProtocol">Why does the BitTorrent protocol still matter?</a>
-						</li>
-						<li><a href="#efficiency">Efficiency and scalability</a></li>
-						<li><a href="#currentUses">Current use cases</a></li>
-						<li><a href="#futureUses">Future use cases</a></li>
-						<li><a href="#btIpfs">BT vs. IPFS</a></li>
-						<li><a href="#btCs">BT vs. centralized solutions</a></li>
-						<li><a href="#conclusion">Conclusion</a></li>
-					</ul>
-					<li><a href="#whyTorrust">Why Torrust?</a></li>
-					<ul class="toc">
-						<li><a href="#performanceEfficiency">Performance & Efficiency</a></li>
-						<li><a href="#securityReliability">Security & Reliability</a></li>
-						<li><a href="#userExperience">User Experience & Accessibility</a></li>
-						<li><a href="#futureProofing">Future-Proofing and Innovation</a></li>
-						<li><a href="#integration">Integration & Interoperability</a></li>
-					</ul>
-					<li><a href="#team">The Team</a></li>
-					<li><a href="#collaborators">Collaborators</a></li>
-					<li><a href="#sponsors">Sponsors</a></li>
-				</ul>
-			</PostTable>
-		{/if}
-		<PostBody>
+	<div class="layout">
+		<div class="toc">
+			<TableOfContents {sections} {activeSection} />
+		</div>
+		<div class="content">
 			<h2 id="bitTorrent">Why BitTorrent?</h2>
 
 			<p>
@@ -299,37 +237,59 @@
 				Cyberneering's approach combines innovation in the cybernetic field with open source
 				philosophy, fostering environments where collaborative development can thrive.
 			</p>
-		</PostBody>
-	</PostContainer>
+		</div>
+	</div>
 </div>
 
 <style lang="scss">
 	@import '$lib/scss/breakpoints.scss';
 
+	h1,
+	.layout {
+		padding-inline: 1.5rem;
+	}
+
+	.layout {
+		margin-top: 4rem;
+	}
+
+	.content {
+		margin-top: 3rem;
+	}
+
 	h1 {
-		font-size: 36px;
-		padding-top: 64px;
-		margin-inline: 1rem;
+		padding-top: 4rem;
+		font-size: 2.25rem;
 	}
 
-	h2,
+	h2 {
+		font-size: 1.875rem;
+	}
+
+	h2:not(:first-of-type) {
+		padding-top: 1.5rem; /* Add top padding to all h2 elements except the first one */
+	}
+
 	p {
-		padding-top: 1.2rem;
+		font-size: 1rem;
+		padding-top: 1.5rem;
+		color: rgba(245, 245, 245, 0.8);
 	}
 
-	.list li {
-		list-style-type: disc;
-	}
+	@include for-desktop-up {
+		h1,
+		.layout {
+			display: flex;
+			gap: 2rem;
+			padding-inline: 9.25rem;
+		}
 
-	.toc li a {
-		color: white;
-	}
+		.content {
+			margin-top: 0rem;
+		}
 
-	.toc li a:hover {
-		color: rgba(255, 49, 0, 0.96);
-	}
-
-	a {
-		color: rgba(255, 49, 0, 0.96);
+		h1 {
+			padding-top: 8rem;
+		}
 	}
 </style>

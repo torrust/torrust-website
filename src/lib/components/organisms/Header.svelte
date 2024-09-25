@@ -29,7 +29,7 @@
 				<li>
 					<a
 						href="/torrent-tracker"
-						class={currentPath === '/tracker' ? 'active' : ''}
+						class={currentPath === '/torrent-tracker' ? 'active' : ''}
 						on:click={toggleMenu}>Tracker</a
 					>
 				</li>
@@ -84,7 +84,7 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: end;
-			gap: 5vh;
+			gap: 1rem;
 			margin-top: 2.2vh;
 			margin-bottom: 1vh;
 			list-style: none;
@@ -97,6 +97,10 @@
 			transition: all 200ms ease-in-out;
 			color: rgba(245, 245, 245, 0.8);
 			font-size: 1rem;
+		}
+
+		li > a:hover {
+			color: white;
 		}
 
 		.active {

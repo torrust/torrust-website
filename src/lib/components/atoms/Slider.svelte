@@ -15,21 +15,26 @@
 	.slider-container {
 		display: flex;
 		overflow-x: auto;
-		margin-top: 3rem;
+		width: 100vw;
+		margin: 3rem 0 0 0;
 		gap: 1rem;
 		scroll-behavior: smooth;
 		padding-bottom: 1rem;
+		box-sizing: border-box;
+		position: relative;
+		left: 0;
 
 		div {
-			flex: 0 0 300px;
+			flex: 0 0 auto;
+			width: 280px;
+			height: 280px;
 			display: flex;
 			flex-direction: column;
 			text-align: left;
-			height: 280px;
-			width: 500px;
 			padding: 1.5rem;
 			border-radius: 1.5rem;
 			background-color: rgba(255, 49, 0, 0.8);
+			box-sizing: border-box;
 		}
 
 		div:hover {
@@ -38,6 +43,8 @@
 
 		p {
 			margin-top: auto;
+			font-weight: 500;
+			font-size: 20px;
 		}
 	}
 </style>

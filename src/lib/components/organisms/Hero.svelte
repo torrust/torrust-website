@@ -1,5 +1,5 @@
 <script lang="ts">
-	import MiniLogo from '$lib/icons/miniLogo.svelte';
+	import HeroCard from '$lib/components/atoms/HeroCard.svelte';
 </script>
 
 <div class="svg-container">
@@ -10,40 +10,20 @@
 			your own torrent indexes with ease.
 		</p>
 		<div class="details">
-			<div class="details-card">
-				<div class="details-info">
-					<div>
-						<MiniLogo />
-						<p>index</p>
-					</div>
-					<p class="version">v 3.0.0</p>
-				</div>
-				<p>
-					The Index is a feature-rich torrent indexing site split between an API (backend) built
-					with Rust, and our reference web app that consumes the API, built with Vue 3.
-				</p>
-				<div class="details-info">
-					<button>Live demo</button>
-					<button class="learn-btn">Learn more</button>
-				</div>
-			</div>
-			<div class="details-card">
-				<div class="details-info">
-					<div>
-						<MiniLogo />
-						<p>tracker</p>
-					</div>
-					<p class="version">v 3.0.0</p>
-				</div>
-				<p>
-					A lightweight Rust-based BitTorrent tracker for efficient torrent serving to many peers
-					with high performance, robustness, security, and community support.
-				</p>
-				<div class="details-info">
-					<button>Live demo</button>
-					<button class="learn-btn">Learn more</button>
-				</div>
-			</div>
+			<HeroCard
+				title={'index'}
+				details={'The Index is a feature-rich torrent indexing site split between an API (backend) built with Rust, and our reference web app that consumes the API, built with Vue 3.'}
+				version={'https://github.com/torrust/torrust-index/releases'}
+				liveDemo={'https://index.torrust-demo.com/torrents'}
+				learnMore={'/torrent-index'}
+			/>
+			<HeroCard
+				title={'tracker'}
+				details={'A lightweight Rust-based BitTorrent tracker for efficient torrent serving to many peers with high performance, robustness, security, and community support.'}
+				version={'https://github.com/torrust/torrust-tracker/releases'}
+				liveDemo={'https://index.torrust-demo.com/torrents'}
+				learnMore={'/torrent-tracker'}
+			/>
 		</div>
 	</div>
 </div>
@@ -108,15 +88,6 @@
 		align-items: stretch;
 		margin-block: 4rem;
 
-		div {
-			flex: 1;
-			border-radius: 1.5rem;
-		}
-
-		p {
-			margin-top: 0.5rem;
-		}
-
 		@include for-tablet-portrait-up {
 			flex-direction: row;
 			max-width: 1050px;
@@ -126,56 +97,6 @@
 
 		@include for-desktop-up {
 			margin-inline: auto;
-		}
-	}
-
-	.details-card {
-		background-color: rgba(26, 26, 26, 0.48);
-		padding: 1.5rem;
-	}
-
-	.details-card > p:nth-child(2) {
-		margin-top: 28px;
-	}
-
-	.details-info {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-block: 1.5rem;
-		flex-wrap: nowrap;
-
-		div {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-		}
-
-		div p {
-			font-size: 32px;
-		}
-
-		.version {
-			border: 1px solid rgba(245, 245, 245, 0.96);
-			padding: 4px 12px;
-			border-radius: 1.5rem;
-		}
-
-		button {
-			border: 1px solid rgba(245, 245, 245, 0.96);
-			border-radius: 1.5rem;
-			background-color: rgba(255, 49, 0, 1);
-			color: rgba(245, 245, 245, 0.96);
-			padding: 12px 16px;
-			white-space: nowrap;
-		}
-
-		.learn-btn {
-			background-color: transparent;
-			border: none;
-			padding-left: 6px;
-			text-decoration: underline;
-			white-space: nowrap;
 		}
 	}
 </style>

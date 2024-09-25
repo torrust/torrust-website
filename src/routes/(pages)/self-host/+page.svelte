@@ -1,56 +1,25 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { writable } from 'svelte/store';
-	import Toc from 'svelte-toc';
-	import PostContainer from '$lib/components/molecules/PostContainer.svelte';
-	import PostTable from '$lib/components/molecules/PostTable.svelte';
-	import PostBody from '$lib/components/molecules/PostBody.svelte';
+	import TableOfContents from '$lib/components/atoms/TableOfContents.svelte'; // Adjust the path if needed
 
-	let isLargeScreen = writable(false);
+	// Array of section objects with display names and IDs
+	let sections = [
+		{ name: 'Torrent solution (Index + Tracker)', id: 'torrustSolution' },
+		{ name: 'Build from sources (Rust)', id: 'buildSources' },
+		{ name: 'Docker', id: 'docker' },
+		{ name: 'Tutorials', id: 'tutorials' },
+		{ name: 'Torrust tracker', id: 'torrustTracker' }
+	];
 
-	onMount(() => {
-		const mediaQueryList = window.matchMedia('(min-width: 1000px)');
-
-		isLargeScreen.set(mediaQueryList.matches);
-
-		const updateScreenSize = (event: MediaQueryListEvent) => {
-			isLargeScreen.set(event.matches);
-		};
-
-		mediaQueryList.addEventListener('change', updateScreenSize);
-
-		return () => {
-			mediaQueryList.removeEventListener('change', updateScreenSize);
-		};
-	});
+	let activeSection = '';
 </script>
 
-<div class="container">
+<div>
 	<h1>Self-host</h1>
-	<PostContainer>
-		{#if $isLargeScreen}
-			<PostTable>
-				<Toc
-					title=""
-					--toc-active-color="rgba(255, 49, 0, 0.96)"
-					--toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-					--toc-active-bg="transparent"
-				/>
-			</PostTable>
-		{:else}
-			<PostTable>
-				<ul class="toc">
-					<li>
-						<a href="#torrustSolution">Torrent solution (Index + Tracker)</a>
-					</li>
-					<li><a href="#buildSources">Build from sources (Rust)</a></li>
-					<li><a href="#docker">Docker</a></li>
-					<li><a href="#tutorials">Tutorials</a></li>
-					<li><a href="#torrustTracker">Torrust tracker</a></li>
-				</ul>
-			</PostTable>
-		{/if}
-		<PostBody>
+	<div class="layout">
+		<div>
+			<TableOfContents {sections} {activeSection} />
+		</div>
+		<div class="content">
 			<h2 id="torrustSolution">Torrent solution (Index + Tracker)</h2>
 
 			<p>
@@ -79,29 +48,59 @@
 			<h2 id="torrustTracker">Torrust tracker</h2>
 
 			<p>TODO</p>
-		</PostBody>
-	</PostContainer>
+		</div>
+	</div>
 </div>
 
 <style lang="scss">
 	@import '$lib/scss/breakpoints.scss';
 
+	h1,
+	.layout {
+		padding-inline: 1.5rem;
+	}
+
+	.layout {
+		margin-top: 4rem;
+	}
+
+	.content {
+		margin-top: 3rem;
+	}
+
 	h1 {
-		font-size: 36px;
-		padding-top: 64px;
-		margin-inline: 1rem;
+		padding-top: 4rem;
+		font-size: 2.25rem;
 	}
 
-	h2,
+	h2 {
+		font-size: 1.875rem;
+	}
+
+	h2:not(:first-of-type) {
+		padding-top: 1.5rem; /* Add top padding to all h2 elements except the first one */
+	}
+
 	p {
-		padding-top: 1.2rem;
+		font-size: 1rem;
+		padding-top: 1.5rem;
+		color: rgba(245, 245, 245, 0.8);
 	}
 
-	.toc li a {
-		color: white;
-	}
+	@include for-desktop-up {
+		h1,
+		.layout {
+			display: flex;
+			padding-inline: 9.25rem;
+			gap: 2rem;
+		}
 
-	.toc li a:hover {
-		color: rgba(255, 49, 0, 0.96);
+		.content {
+			margin-top: 0rem;
+		}
+
+		h1 {
+			padding-top: 8rem;
+		}
 	}
 </style>
