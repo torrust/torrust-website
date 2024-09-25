@@ -1,6 +1,8 @@
 adduser
 Ajeet
 appuser
+Arrs
+Autoclassifier
 autoclean
 bencoded
 Bencoding
@@ -56,10 +58,12 @@ libhwloc
 libsqlite
 libtorrent
 libz
+Livewire
 mailcatcher
 mdsvex
 Metainfo
 mickvandijke
+Multiuser
 nojekyll
 nologin
 Nuxt
@@ -93,12 +97,14 @@ tlsv
 TMDB
 torrenting
 Torrust
+Torznab
 Troubleshoting
 Tzou
 usermod
 valgrind
 Verstappen
 Vitaly
+Webfeed
 webp
 webroot
 Werror
