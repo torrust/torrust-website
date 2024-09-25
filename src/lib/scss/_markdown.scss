@@ -63,9 +63,9 @@
 		}
 
 		code:not([class^='language-']) {
-			background: var(--color--code-inline-background);
-			padding: 5px 10px;
-			border-radius: 5px;
+			background: rgba(46, 46, 46, 1);
+			color: rgba(255, 255, 255, 1);
+			padding: 0px 4px;
 		}
 
 		code {
@@ -77,6 +77,23 @@
 		color: var(--color--primary);
 		text-decoration: none;
 		margin-right: 10px;
+
+		::before {
+			content: ''; // Remove the default `#` symbol before the heading
+		}
+	}
+
+	h2,
+	h3,
+	h4 {
+		position: relative;
+	}
+
+	h2 a,
+	h3 a,
+	h4 a {
+		position: absolute;
+		left: -9999px; // Hide the anchor link visually
 	}
 
 	img {

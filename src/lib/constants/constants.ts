@@ -1,11 +1,11 @@
 export const indexTitleArr1 = [
 	'High quality and modern Rust codebase',
 	'<a style="color: black;" href="https://docs.rs/torrust-index/latest/torrust_index/">Documentation</a> generated from code comments',
-	'<a style="color: black;" href="https://app.codecov.io/gh/torrust/torrust-index">Comprehensive suite</a> of functional tests',
+	'<a style="color: black;" href="https://app.codecov.io/gh/torrust/torrust-index">Comprehensive suite</a> of unit and functional tests',
 	'Good performance in busy conditions',
 	'Native IPv4 and IPv6 support',
 	'Persistent SQLite3 or MySQL databases',
-	'Comprehensive API <a style="color: black;" href="https://docs.rs/torrust-index/latest/torrust_index/web/api/">https://docs.rs/torrust-index/latest/torrust_index/web/api/</a>'
+	'Comprehensive <a style="color: black;" href="https://docs.rs/torrust-index/latest/torrust_index/web/api/">API</a>'
 ];
 
 export const trackerTitleArr1 = [
@@ -19,7 +19,7 @@ export const trackerTitleArr1 = [
 	'Tracker management API',
 	'Support <a style="color: black;" href="https://newtrackon.com/">newTrackon</a> checks',
 	'Native IPv4 and IPv6 support',
-	'Persistent SQLite3 or MySQL databases'
+	'Persistent SQLite3 or MySQL databases (optional)'
 ];
 
 export const contribute = [
