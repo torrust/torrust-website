@@ -4,7 +4,7 @@
 
 <div class="svg-container">
 	<div class="svg-content">
-		<h1 class="hero-heading">Modern BitTorrent<br/>index and tracker</h1>
+		<h1 class="hero-heading">Modern BitTorrent<br />index and tracker</h1>
 		<p class="hero-para">
 			Torrust is an open source project that aims to provide you with the tools you need to host
 			your own torrent indexes with ease.
