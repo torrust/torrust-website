@@ -6,7 +6,7 @@
 
 <div class="container">
 	<div class="contribute-container">
-		<h2>Why Contribute to Our Project?</h2>
+		<h2>Why to contribute?</h2>
 		<p>
 			Our project is designed to push the boundaries of decentralized technology, providing a
 			robust, open-source BitTorrent tracker and index. By contributing, you’re helping build tools
