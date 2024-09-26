@@ -13,9 +13,7 @@
 		{#each tableData as row}
 			<tr>
 				{#each tableHeading as heading}
-					{#if heading.fieldName == 'site'}
-						<td><a href={row[heading.fieldName]}>visit</a></td>
-					{:else if heading.fieldName == 'demo'}
+					{#if ['site', 'demo', 'repo', 'useCase'].includes(heading.fieldName)}
 						<td><a href={row[heading.fieldName]}>visit</a></td>
 					{:else}
 						<td>{row[heading.fieldName]}</td>

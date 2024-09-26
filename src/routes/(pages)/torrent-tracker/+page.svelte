@@ -27,7 +27,12 @@
 		};
 	});
 
-	import { trackerTitleArr1, trackerTableHeadings, indexTableData } from '$lib/constants/constants';
+	import {
+		trackerTitleArr1,
+		trackerBasicTableHeadings,
+		trackerFeaturesTableHeadings,
+		trackerTableData
+	} from '$lib/constants/constants';
 	import TorrustTrackerPost from '$lib/components/singletons/TorrustTrackerPost.svelte';
 </script>
 
@@ -57,6 +62,7 @@
 			<Slider titleArr={trackerTitleArr1} />
 		</div>
 	</div>
+
 	<div class="inner-container">
 		<h2>Stack</h2>
 		<p>
@@ -72,14 +78,27 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="inner-container">
 		<h2>Comparison to other products</h2>
+
 		<p>
 			Unlike other trackers, Torrust Tracker balances speed with feature richness. While some
 			trackers prioritize minimalism at the cost of flexibility, Torrust focuses on offering
 			extensive functionality with only a small compromise in speed.
 		</p>
-		<Table tableHeading={trackerTableHeadings} tableData={indexTableData} />
+	</div>
+
+	<div class="inner-container">
+		<h2>General information</h2>
+
+		<Table tableHeading={trackerBasicTableHeadings} tableData={trackerTableData} />
+	</div>
+
+	<div class="inner-container">
+		<h2>Features</h2>
+
+		<Table tableHeading={trackerFeaturesTableHeadings} tableData={trackerTableData} />
 	</div>
 
 	<div class="inner-container">

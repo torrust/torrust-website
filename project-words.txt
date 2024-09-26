@@ -63,6 +63,7 @@ mailcatcher
 mdsvex
 Metainfo
 mickvandijke
+mika
 Multiuser
 nojekyll
 nologin
@@ -74,6 +75,7 @@ postbuild
 postmarkapp
 println
 privkey
+privtracker
 problably
 proto
 Radeon
@@ -99,6 +101,7 @@ torrenting
 Torrust
 Torznab
 Troubleshoting
+Ttorrent
 Tzou
 usermod
 valgrind
