@@ -43,11 +43,13 @@
 	<div class="inner-container">
 		<h2>Key Features</h2>
 		<p>
-			Torrust Index provides a highly optimized and scalable platform for organizing torrent
-			metadata. With fast search capabilities and a robust backend powered by Rust, the index
-			ensures efficient performance for even the most demanding use cases. Designed with privacy and
-			decentralization in mind, it allows users to manage their content freely while upholding
-			strong data integrity principles.
+			Torrust Index provides a highly optimized and scalable platform for 
+			organizing torrent metadata. With fast search capabilities and a 
+			robust backend powered by Rust, the index ensures efficient 
+			performance for even the most demanding use cases. Designed with 
+			privacy 
+			in mind, it allows users to manage their content freely while 
+			upholding strong data integrity principles.
 		</p>
 	</div>
 
@@ -82,6 +84,10 @@
 			outperforms many competitors in resource efficiency and ease of use. Its open-source nature
 			ensures transparency, allowing contributors to shape the future development of the platform
 			based on community needs.
+		</p>
+
+		<p>
+			If you want to include your Index on the following tables or update data for any of them, please open a <a href="https://github.com/torrust/torrust-website-v2">PR</a>.
 		</p>
 	</div>
 

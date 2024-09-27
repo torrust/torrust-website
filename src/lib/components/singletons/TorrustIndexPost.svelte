@@ -1,5 +1,6 @@
 <script lang="ts">
 	import TableOfContents from '$lib/components/atoms/TableOfContents.svelte'; // Adjust the path if needed
+	import CodeBlock from '$lib/components/molecules/CodeBlock.svelte';
 
 	// Array of section objects with display names and IDs
 	let sections = [
@@ -23,31 +24,77 @@
 	</div>
 	<div class="content">
 		<h2 id="installation">Installation</h2>
+
 		<p>
-			Massa sit tempor massa blandit suscipit. Vestibulum in faucibus suspendisse enim at sit. Velit
-			eget at cursus vel adipiscing. Tristique feugiat aliquam risus etiam. Auctor scelerisque
-			dignissim facilisi faucibus.
+			We have made the installation of the Index as easy and enjoyable as 
+			possible. First at all, offering different ways to run it. You can 
+			<b>compile from sources</b> or use the <b><a href="https://hub.docker.com/r/torrust/index/tags">pre-built container images</a></b>.
+			 We have also taken into consideration cloud environments, making it easy to 
+			deploy the index to multiple hosting providers (using either VMs or 
+			containers).
 		</p>
+
+		<p>
+			We have also taken into consideration cloud environments, making it easy to 
+			deploy the index to multiple hosting providers (using either VMs or 
+			containers). We run a <a href="https://index.torrust-demo.com/torrents">demo site</a> 
+			on Digital Ocean to collect direct feedback about how easy it is to
+			manage the application on production. Our goal is to make sure sysadmins can:
+		</p>			
+
+		<ul>
+			<li>Easily backup the database or app configuration.</li>
+			<li>Collect logs to check if the application is running without errors.</li>
+			<li>Access the running services.</li>
+			<li>Monitor services with automatic healthchecks.</li>
+		</ul>
+
+		<p>
+			Besides that, the application also provides two ways to inject the 
+			configuration, via TOML files or environment variables. We've make 
+			an extra effort to make it clear, easy to change and provide the 
+			admin concise error messages when is wrong.
+		</p>		
+
 		<h2 id="softwareRequirements">Software requirements</h2>
+		
 		<ul>
 			<li>SQLite 3 or MySQL 8.0.</li>
 			<li>Rust Stable 1.68 if you compile from sources.</li>
 			<li>
-				A running Torrust Tracker. You can check the Tracker page for installation instructions.
+				A running Torrust Tracker. You can check the <a href="#torrust-tracker">Tracker</a> page for installation instructions.
 			</li>
 		</ul>
+
 		<p>
-			See <a href="https://docs.rs/torrust-index/latest/torrust_index/#prerequisites">here</a> for details.
+			Check <a href="https://docs.rs/torrust-index/latest/torrust_index/#prerequisites">the latest documentation</a> 
+			for more details about installations and requirements.
 		</p>
-		<p>You can install the Index from sources or using docker.</p>
-		<h2 id="buildSources">Build from sources (Rust)</h2>
-		<p>TODO</p>
+
+		<h2 id="buildSources">Build from sources</h2>
+		
+		<p>You can easily build the Rust app with cargo.</p>
+
+		<CodeBlock lang="terminal">
+			git clone git@github.com:torrust/torrust-index.git && cd torrust-index && cargo build --release && mkdir -p ./storage/database
+		</CodeBlock>
+
+		Then you can run it with:
+
+		<CodeBlock lang="terminal">
+			./target/release/torrust-index
+		</CodeBlock>		
+
 		<h2 id="docker">Docker</h2>
+		
 		<p>TODO</p>
+		
 		<h2 id="licenses">Licenses</h2>
+		
 		<h2 id="copyright">Copyright (c) 2023 The Torrust Developers.</h2>
+		
 		<p>
-			This program is free software: you can redistribute it and/or modify it under the terms ofthe <a
+			This program is free software: you can redistribute it and/or modify it under the terms of the <a
 				href="https://github.com/torrust/torrust-index/blob/develop/docs/licenses/LICENSE-AGPL_3_0"
 				>GNU Affero General Public License</a
 			>

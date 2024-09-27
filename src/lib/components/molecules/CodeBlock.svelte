@@ -38,7 +38,7 @@
 	</button>
 	<div class="code-content">
 		<slot />
-	</div>
+    </div>
 </div>
 
 <style lang="scss">
