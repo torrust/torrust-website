@@ -1,4 +1,3 @@
-<!-- TableOfContents.svelte -->
 <script lang="ts">
 	import { onMount } from 'svelte';
 
@@ -10,30 +9,31 @@
 	export let sections: Section[] = [];
 	export let activeSection = '';
 
-	const handleScroll = () => {
-		const scrollPosition = window.scrollY + 0; // Adjust based on offset
-
-		sections.forEach((section) => {
-			const sectionElement = document.getElementById(section.id);
-			if (sectionElement) {
-				const offsetTop = sectionElement.offsetTop;
-				const offsetHeight = sectionElement.offsetHeight;
-
-				if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-					activeSection = section.id;
-				}
-			}
-		});
-	};
-
 	onMount(() => {
 		if (sections.length > 0) {
 			activeSection = sections[0].id;
 		}
 
-		window.addEventListener('scroll', handleScroll);
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						activeSection = entry.target.id;
+					}
+				});
+			},
+			{ threshold: 0.5 }
+		);
+
+		sections.forEach((section) => {
+			const sectionElement = document.getElementById(section.id);
+			if (sectionElement) {
+				observer.observe(sectionElement);
+			}
+		});
+
 		return () => {
-			window.removeEventListener('scroll', handleScroll);
+			observer.disconnect();
 		};
 	});
 </script>
@@ -53,20 +53,29 @@
 
 	.sticky-nav {
 		background: rgba(26, 26, 26, 1);
-		width: 350px; /* Set width for the nav */
-		padding-inline: 0; /* Padding around nav */
-		position: sticky; /* Keep it sticky within the viewport */
-		top: 40px; /* Adjust this to control when it becomes sticky */
-		z-index: 900; /* Ensure it stays on top */
+		width: 350px;
+		padding-inline: 0;
+		position: sticky;
+		top: 40px;
+		z-index: 900;
 	}
 
 	.sticky-nav ul {
-		list-style: none; /* Remove default list styling */
-		padding: 0; /* Remove padding */
-		margin: 0; /* Remove margin */
+		list-style: none;
+		padding: 0;
+		margin: 0;
 	}
 
 	.active {
-		font-weight: bold; /* Highlight the active section */
+		font-weight: bold;
+	}
+
+	a {
+		color: rgba(245, 245, 245, 0.96);
+		font-size: 0.875rem;
+
+		&:hover {
+			color: rgba(255, 49, 0, 0.96);
+		}
 	}
 </style>

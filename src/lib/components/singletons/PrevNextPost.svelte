@@ -61,7 +61,6 @@
 		display: flex;
 		justify-content: space-between;
 		font-size: 16px;
-		margin-inline: 1.5rem;
 		border: 1px solid rgba(245, 245, 245, 0.08);
 	}
 

@@ -8,6 +8,7 @@
 	import Image from '$lib/components/atoms/Image.svelte';
 	import PrevNextPost from '$lib/components/singletons/PrevNextPost.svelte';
 	import { allPosts } from '$lib/data/blog-posts';
+	import RelatedPosts from '$lib/components/organisms/RelatedPosts.svelte';
 
 	export let data: { post: BlogPost; allPosts: BlogPost[] };
 	let post: BlogPost;
@@ -87,6 +88,13 @@
 		</article>
 
 		<PrevNextPost currentPost={post} {allPosts} />
+
+		{#if post.relatedPosts && post.relatedPosts.length > 0}
+			<div class="container-related-articles">
+				<h2>Related articles</h2>
+				<RelatedPosts posts={post.relatedPosts} />
+			</div>
+		{/if}
 	</main>
 </div>
 
@@ -207,6 +215,13 @@
 			align-items: flex-start;
 			justify-content: flex-start;
 			flex-wrap: wrap;
+		}
+	}
+
+	.container-related-articles {
+		h2 {
+			margin-block: 64px 48px;
+			text-align: center;
 		}
 	}
 </style>

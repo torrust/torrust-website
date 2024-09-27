@@ -1,25 +1,79 @@
 export const indexTitleArr1 = [
-	'High quality and modern Rust codebase',
-	'<a style="color: black;" href="https://docs.rs/torrust-index/latest/torrust_index/">Documentation</a> generated from code comments',
-	'<a style="color: black;" href="https://app.codecov.io/gh/torrust/torrust-index">Comprehensive suite</a> of unit and functional tests',
-	'Good performance in busy conditions',
-	'Native IPv4 and IPv6 support',
-	'Persistent SQLite3 or MySQL databases',
-	'<a style="color: black;" href="https://docs.rs/torrust-index/latest/torrust_index/web/api/">Comprehensive API</a>'
+	{
+		title: 'High quality and modern Rust codebase',
+		link: ''
+	},
+	{
+		title: 'Documentation generated from code comments',
+		link: 'https://docs.rs/torrust-index/latest/torrust_index/'
+	},
+	{
+		title: 'Comprehensive suite of unit and functional tests',
+		link: 'https://app.codecov.io/gh/torrust/torrust-index'
+	},
+	{
+		title: 'Good performance in busy conditions',
+		link: ''
+	},
+	{
+		title: 'Native IPv4 and IPv6 support',
+		link: ''
+	},
+	{
+		title: 'Persistent SQLite3 or MySQL databases',
+		link: ''
+	},
+	{
+		title: 'Comprehensive API',
+		link: 'https://docs.rs/torrust-index/latest/torrust_index/web/api/'
+	}
 ];
 
 export const trackerTitleArr1 = [
-	'High quality and modern Rust codebase',
-	'<a style="color: black;" href="https://docs.rs/torrust-tracker/latest/torrust_tracker/">Documentation</a> generated from code comments',
-	'<a style="color: black;" href="https://app.codecov.io/gh/torrust/torrust-tracker">Comprehensive suite</a> of unit and functional tests',
-	'Good performance in busy conditions',
-	'Support for UDP, HTTP, and TLS sockets',
-	'Native IPv4 and IPv6 support',
-	'Private & whitelisted mode',
-	'Tracker management API',
-	'Support <a style="color: black;" href="https://newtrackon.com/">newTrackon</a> checks',
-	'Native IPv4 and IPv6 support',
-	'Persistent SQLite3 or MySQL databases (optional)'
+	{
+		title: 'High quality and modern Rust codebase',
+		link: ''
+	},
+	{
+		title: 'Documentation generated from code comments',
+		link: 'https://docs.rs/torrust-tracker/latest/torrust_tracker/'
+	},
+	{
+		title: 'Comprehensive suite of unit and functional tests',
+		link: 'https://app.codecov.io/gh/torrust/torrust-tracker'
+	},
+	{
+		title: 'Good performance in busy conditions',
+		link: ''
+	},
+	{
+		title: 'Support for UDP, HTTP, and TLS sockets',
+		link: ''
+	},
+	{
+		title: 'Native IPv4 and IPv6 support',
+		link: ''
+	},
+	{
+		title: 'Private & whitelisted mode',
+		link: ''
+	},
+	{
+		title: 'Tracker management API',
+		link: ''
+	},
+	{
+		title: 'Support newTrackon checks',
+		link: 'https://newtrackon.com/'
+	},
+	{
+		title: 'Native IPv4 and IPv6 support',
+		link: ''
+	},
+	{
+		title: 'Persistent SQLite3 or MySQL databases (optional)',
+		link: ''
+	}
 ];
 
 export const contribute = [

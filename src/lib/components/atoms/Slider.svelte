@@ -1,17 +1,30 @@
 <script lang="ts">
-	export let titleArr: string[];
+	interface TitleObj {
+		title: string;
+		link: string;
+	}
+
+	export let titleArr: TitleObj[] = [];
 </script>
 
 <div class="slider-container">
-	{#each titleArr as title}
-		<div>
-			<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-			<p>{@html title}</p>
+	{#each titleArr as item}
+		<div class={item.link ? 'has-link' : ''}>
+			<!-- Render title and wrap with a link if available -->
+			{#if item.link}
+				<a href={item.link} target="_blank" rel="noopener noreferrer">
+					<p>{item.title}</p>
+				</a>
+			{:else}
+				<p>{item.title}</p>
+			{/if}
 		</div>
 	{/each}
 </div>
 
 <style lang="scss">
+	@import '$lib/scss/breakpoints.scss';
+
 	.slider-container {
 		display: flex;
 		overflow-x: auto;
@@ -24,6 +37,10 @@
 		position: relative;
 		left: 0;
 
+		@media (min-width: 2080px) {
+			justify-content: center;
+		}
+
 		div {
 			flex: 0 0 auto;
 			width: 280px;
@@ -35,9 +52,16 @@
 			border-radius: 1.5rem;
 			background-color: rgba(255, 49, 0, 0.8);
 			box-sizing: border-box;
+			border: 1px solid transparent;
+
+			a {
+				color: rgba(245, 245, 245, 0.96);
+				margin-top: auto;
+			}
 		}
 
-		div:hover {
+		div.has-link:hover {
+			border: 1px solid rgba(245, 245, 245, 0.92);
 			cursor: pointer;
 		}
 

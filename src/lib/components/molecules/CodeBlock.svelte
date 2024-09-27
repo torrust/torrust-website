@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-	export let filename: string;
+	export let filename: string | undefined = undefined;
 	export let lang: string;
 	export let fullBleed: boolean | undefined = undefined;
 	let codeBlockElement: HTMLDivElement;

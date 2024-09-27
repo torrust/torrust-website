@@ -84,8 +84,7 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: end;
-			gap: 1rem;
-			margin-top: 2.2vh;
+			gap: 16px;
 			margin-bottom: 1vh;
 			list-style: none;
 			font-size: 1.1rem;

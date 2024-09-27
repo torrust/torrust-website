@@ -57,7 +57,6 @@
 		flex-direction: column;
 		align-items: flex-end;
 		height: 312px;
-		margin: 1.5rem;
 		position: relative;
 		border-radius: 1.5rem;
 		overflow: hidden;
@@ -69,17 +68,6 @@
 			background: rgba(0, 0, 0, 0.2);
 			box-shadow: 0 0 0 3px rgba(255, 49, 0, 1);
 		}
-	}
-
-	.image {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
 	}
 
 	.body {
