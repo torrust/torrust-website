@@ -53,8 +53,9 @@
 	}
 
 	a {
-		text-decoration-thickness: 1px;
-		color: white;
+		color: rgba(245, 245, 245, 0.64);
+		text-transform: uppercase;
+		font-size: 12px;
 		&:hover {
 			color: rgba(255, 49, 0, 1);
 		}

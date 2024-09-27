@@ -42,38 +42,17 @@
 </script>
 
 <div class="dropdown-container">
-	<button on:click={toggleDropdown} class="dropdown-button" class:active={showDropdown}>
+	<button on:click={toggleDropdown} class="dropdown-button {showDropdown ? 'active' : ''}">
 		<svg
-			class="share-icon"
+			xmlns="http://www.w3.org/2000/svg"
+			class="hover-icon {showDropdown ? 'active' : ''}"
 			width="16"
 			height="16"
-			viewBox="0 0 16 16"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			{...$$props}
 		>
 			<path
-				d="M2.66666 8V13.3333C2.66666 13.687 2.80714 14.0261 3.05719 14.2761C3.30724 14.5262 3.64638 14.6667 4 14.6667H12C12.3536 14.6667 12.6928 14.5262 12.9428 14.2761C13.1929 14.0261 13.3333 13.687 13.3333 13.3333V8"
-				stroke="#F5F5F5"
-				stroke-opacity="0.08"
-				stroke-width="1.5"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-			<path
-				d="M10.6667 3.99998L8 1.33331L5.33334 3.99998"
-				stroke="#F5F5F5"
-				stroke-opacity="0.08"
-				stroke-width="1.5"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-			<path
-				d="M8 1.33331V9.99998"
-				stroke="#F5F5F5"
-				stroke-opacity="0.08"
-				stroke-width="1.5"
-				stroke-linecap="round"
-				stroke-linejoin="round"
+				d="M11 16V7.85l-2.6 2.6L7 9l5-5l5 5l-1.4 1.45l-2.6-2.6V16zm-5 4q-.825 0-1.412-.587T4 18v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 20z"
 			/>
 		</svg>
 		Share
@@ -91,9 +70,9 @@
 </div>
 
 <style lang="scss">
-	.dropdown-container {
-		position: relative;
-		display: inline-block;
+	.hover-icon path {
+		fill: rgba(245, 245, 245, 0.48); /* Default color */
+		transition: fill 0.3s ease;
 	}
 
 	.dropdown-button {
@@ -106,17 +85,29 @@
 		border: 1px solid rgba(245, 245, 245, 0.48);
 		cursor: pointer;
 		border-radius: 1.5rem;
-		font-size: 1rem;
+		font-size: 14px;
+		transition:
+			color 0.3s ease,
+			border 0.3s ease;
+		position: relative;
 	}
 
-	.dropdown-button.active {
-		border: 1px solid rgba(245, 245, 245, 0.8);
-		color: rgba(245, 245, 245, 0.8);
+	/* Active state for button and SVG icon */
+	.dropdown-button.active,
+	.hover-icon.active path {
+		color: rgba(245, 245, 245, 0.8); /* Red color for the text */
+		fill: rgba(245, 245, 245, 0.8); /* Red color for the SVG */
+		border-color: rgba(245, 245, 245, 0.8); /* Red border */
+	}
+
+	.dropdown-container {
+		position: relative; /* Ensure the dropdown is positioned relative to the container */
+		display: inline-block;
 	}
 
 	.dropdown-menu {
 		position: absolute;
-		top: calc(100% + 0.5rem);
+		top: calc(100% + 0.5rem); /* Position the dropdown below the button */
 		right: 0;
 		width: 350px;
 		background-color: rgba(36, 36, 36, 1);
@@ -126,6 +117,12 @@
 		display: flex;
 		flex-direction: column;
 		padding: 1rem;
+		z-index: 100; /* Ensure the dropdown stays above other elements */
+		opacity: 1;
+		visibility: visible;
+		transition:
+			opacity 0.3s ease,
+			visibility 0.3s ease;
 	}
 
 	.dropdown-menu a {
@@ -136,5 +133,11 @@
 
 	.dropdown-menu a:hover {
 		color: rgba(255, 49, 0, 1);
+	}
+
+	/* When the dropdown is hidden */
+	.dropdown-menu.hidden {
+		opacity: 0;
+		visibility: hidden;
 	}
 </style>

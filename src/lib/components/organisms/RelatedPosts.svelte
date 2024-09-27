@@ -1,41 +1,39 @@
 <script lang="ts">
+	import BlogPostCard from '$lib/components/molecules/BlogPostCard.svelte';
 	import type { BlogPost } from '$lib/utils/types';
-	import RelatedPostCard from '$lib/components/molecules/RelatedPostCard.svelte';
-	import ContentSection from '$lib/components/organisms/ContentSection.svelte';
 
 	export let posts: BlogPost[];
 </script>
 
-<ContentSection id="related-posts" title="Related Posts">
-	<div class="simple-grid">
+<div class="container">
+	<div class="grid">
 		{#each posts as post}
-			<RelatedPostCard
+			<BlogPostCard
 				slug={post.slug}
 				title={post.title}
-				excerpt={post.excerpt}
-				tags={post.tags}
-				readingTime={post.readingTime}
 				date={post.date}
+				contributor={post.contributor}
 			/>
 		{/each}
 	</div>
-</ContentSection>
+</div>
 
 <style lang="scss">
 	@import '$lib/scss/breakpoints.scss';
 
-	.simple-grid {
+	.container {
+		color: rgba(245, 245, 245, 0.8);
+		background: rgba(26, 26, 26, 1);
+	}
+
+	.grid {
 		width: 100%;
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		grid-gap: 20px;
 
-		@media (max-width: 1070px) {
-			grid-template-columns: 1fr 1fr;
-		}
-
-		@include for-tablet-portrait-down {
-			grid-template-columns: 1fr;
+		@include for-desktop-up {
+			grid-template-columns: 1fr 1fr 1fr;
 		}
 	}
 </style>
