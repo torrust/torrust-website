@@ -254,16 +254,26 @@
 	}
 
 	.content {
-		margin-top: 3rem;
+		margin-top: 2rem;
 	}
 
 	h1 {
-		padding-top: 4rem;
+		padding-top: 1rem;
 		font-size: 2.25rem;
 	}
 
 	h2 {
-		font-size: 1.875rem;
+		padding-top: 0.5rem;
+		font-size: 1.8rem;
+	}
+
+	h2:not(:first-of-type) {
+		padding-top: 1.5rem; /* Add top padding to all h2 elements except the first one */
+	}
+
+	h3 {
+		padding-top: 2rem;
+		font-size: 1.3rem;
 	}
 
 	h2:not(:first-of-type) {

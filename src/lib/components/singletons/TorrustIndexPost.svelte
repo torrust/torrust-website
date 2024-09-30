@@ -63,7 +63,7 @@
 			<li>SQLite 3 or MySQL 8.0.</li>
 			<li>Rust Stable 1.68 if you compile from sources.</li>
 			<li>
-				A running Torrust Tracker. You can check the <a href="#torrust-tracker">Tracker</a> page for
+				A running Torrust Tracker. You can check the <a href="/torrent-tracker">Tracker</a> page for
 				installation instructions.
 			</li>
 		</ul>
@@ -245,15 +245,26 @@ cd /tmp \
 	}
 
 	.content {
-		margin-top: 3rem;
+		margin-top: 2rem;
+	}
+
+	h1 {
+		padding-top: 1rem;
+		font-size: 2.25rem;
 	}
 
 	h2 {
-		font-size: 1.875rem;
+		padding-top: 0.5rem;
+		font-size: 1.8rem;
 	}
 
 	h2:not(:first-of-type) {
 		padding-top: 1.5rem; /* Add top padding to all h2 elements except the first one */
+	}
+
+	h3 {
+		padding-top: 2rem;
+		font-size: 1.3rem;
 	}
 
 	p {
