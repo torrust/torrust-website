@@ -7,6 +7,7 @@ autoclean
 bencoded
 Bencoding
 binstall
+bitmagnet
 Bragilevsky
 Bram
 buildtime
@@ -36,6 +37,7 @@ flamegraphs
 fontsource
 fullchain
 HEALTHCHECK
+healthchecks
 heaptrack
 Heiko
 Helpdesk
@@ -97,6 +99,7 @@ struct
 themoviedb
 tlsv
 TMDB
+tornnab
 torrenting
 Torrust
 Torznab

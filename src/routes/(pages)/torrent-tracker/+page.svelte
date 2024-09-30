@@ -87,6 +87,11 @@
 			trackers prioritize minimalism at the cost of flexibility, Torrust focuses on offering
 			extensive functionality with only a small compromise in speed.
 		</p>
+
+		<p>
+			If you want to include your Index on the following tables or update data for any of them,
+			please open a <a href="https://github.com/torrust/torrust-website-v2">PR</a>.
+		</p>
 	</div>
 
 	<div class="inner-container">
