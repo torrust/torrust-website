@@ -89,7 +89,8 @@
 		</p>
 
 		<p>
-			If you want to include your Index on the following tables or update data for any of them, please open a <a href="https://github.com/torrust/torrust-website-v2">PR</a>.
+			If you want to include your Index on the following tables or update data for any of them,
+			please open a <a href="https://github.com/torrust/torrust-website-v2">PR</a>.
 		</p>
 	</div>
 

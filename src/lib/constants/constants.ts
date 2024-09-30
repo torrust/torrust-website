@@ -374,7 +374,7 @@ export const trackerTableData = [
 		whitelist: 'Yes',
 		integrations: 'No',
 		highAvailability: 'No',
-		tls: 'Yes',  
+		tls: 'Yes',
 		ipv6: 'Yes',
 		databases: 'Optional: Sqlite,MysQL',
 		docker: 'Yes',
