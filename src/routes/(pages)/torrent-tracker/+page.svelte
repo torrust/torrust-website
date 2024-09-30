@@ -40,24 +40,17 @@
 <div class="container">
 	<div class="inner-container">
 		<h2>Key Features</h2>
+
 		<div>
 			<p>
-				<b>Efficient and Reliable:</b> The Torrust Tracker is built to handle high loads while ensuring
-				reliable and accurate tracking of peers and torrents.
-			</p>
-			<p>
-				<b>Customizable:</b> Offers flexible configurations to support different use cases, from private
-				trackers to large public ones.
-			</p>
-			<p>
-				<b>Scalable Persistence:</b> Choose between SQLite and MySQL for persistence, allowing the Tracker
-				to scale according to your needs.
-			</p>
-			<p>
-				<b>Written in Rust:</b> Benefit from the performance and safety features of Rust, which powers
-				both the REST API and the HTTP tracker.
+				The Torrust Tracker is built to handle high loads while ensuring
+				<b>reliable</b> and <b>accurate</b> tracking of peers and torrents. It also offers flexible
+				configurations to support different use cases, from private trackers to large public ones.
+				You can benefit from the performance and safety features of <b>Rust</b>, which powers both
+				the REST API and the HTTP tracker.
 			</p>
 		</div>
+
 		<div class="slider-wrapper">
 			<Slider titleArr={trackerTitleArr1} />
 		</div>
@@ -65,11 +58,14 @@
 
 	<div class="inner-container">
 		<h2>Stack</h2>
+
 		<p>
-			Torrust Tracker uses SQLite or MySQL for persistence and is built with Rust using the Axum
-			framework for its REST API and HTTP tracker. This combination allows for high-performance and
-			secure operations, giving developers flexibility in deployment options.
+			Torrust Tracker optionally uses persistence with SQLite3 or Mysql database, and is built with
+			Rust using the <a target="_blank" href="https://github.com/tokio-rs/axum">Axum</a>
+			framework for its REST API and HTTP tracker. This combination allows for high-performance and secure
+			operations, giving developers flexibility in deployment options.
 		</p>
+
 		<div class="stack-icons">
 			<div>
 				<Sqlite />
@@ -89,7 +85,7 @@
 		</p>
 
 		<p>
-			If you want to include your Index on the following tables or update data for any of them,
+			If you want to include your Tracker on the following tables or update data for any of them,
 			please open a <a href="https://github.com/torrust/torrust-website-v2">PR</a>.
 		</p>
 	</div>
@@ -117,19 +113,19 @@
 		<p>Generally, our approach has been:</p>
 		<p>
 			<em>
-				“Accepting a minor reduction in speed for significant gains highlights our dedication to
-				offering a tracker that excels in features and user-friendliness, not just in speed.”
+				Accepting a minor reduction in speed for significant gains highlights our dedication to
+				offering a tracker that excels in features and user-friendliness, not just in speed.
 			</em>
 		</p>
 		<p>
 			We are using the aquatic <a
-				href="https://github.com/greatest-ape/aquatic/tree/master/crates/bencher">"bencher"</a
+				target="_blank"
+				href="https://github.com/greatest-ape/aquatic/tree/master/crates/bencher">bencher</a
 			> tool for benchmarking.
 		</p>
 		<p>
-			You can also read our blog article about <a
-				href="https://torrust.com/benchmarking-the-torrust-bittorrent-tracker"
-				>"benchmarking for the tracker"</a
+			You can also read our blog article about <a href="benchmarking-the-torrust-bittorrent-tracker"
+				>benchmarking for the tracker</a
 			>.
 		</p>
 	</div>

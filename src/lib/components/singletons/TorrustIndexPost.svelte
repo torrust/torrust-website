@@ -19,6 +19,7 @@
 	<div>
 		<TableOfContents {sections} {activeSection} />
 	</div>
+
 	<div class="content">
 		<h2 id="installation">Installation</h2>
 
@@ -71,7 +72,7 @@
 			Check <a href="https://docs.rs/torrust-index/latest/torrust_index/#prerequisites"
 				>the latest documentation</a
 			>
-			for more details about installations and requirements.
+			for more details about installation and requirements.
 		</p>
 
 		<h2 id="buildSources">Build from sources</h2>

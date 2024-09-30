@@ -1,4 +1,6 @@
 <script lang="ts">
+	import GitRepo from '$lib/components/atoms/GitRepo.svelte';
+
 	export let tableHeading;
 	export let tableData;
 </script>
@@ -13,8 +15,18 @@
 		{#each tableData as row}
 			<tr>
 				{#each tableHeading as heading}
-					{#if ['site', 'demo', 'repo', 'useCase'].includes(heading.fieldName)}
-						<td><a href={row[heading.fieldName]}>visit</a></td>
+					{#if ['site', 'demo', 'useCase'].includes(heading.fieldName)}
+						<td
+							>{#if row[heading.fieldName] !== ''}
+								<a href={row[heading.fieldName]}>visit</a>
+							{/if}
+						</td>
+					{:else if heading.fieldName === 'repo'}
+						<td>
+							{#if row[heading.fieldName] !== ''}
+								<a href={row[heading.fieldName]}><GitRepo /></a>
+							{/if}
+						</td>
 					{:else}
 						<td>{row[heading.fieldName]}</td>
 					{/if}
