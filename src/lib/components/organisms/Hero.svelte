@@ -4,7 +4,7 @@
 
 <div class="svg-container">
 	<div class="svg-content">
-		<h1 class="hero-heading">Modern BitTorrent<br />index and tracker</h1>
+		<h1 class="hero-heading">Modern BitTorrent index and tracker</h1>
 		<p class="hero-para">
 			Torrust is an open source project that aims to provide you with the tools you need to host
 			your own torrent indexes with ease.
@@ -53,12 +53,12 @@
 		@include for-tablet-portrait-up {
 			.hero-heading,
 			.hero-para {
-				width: 640px;
+				width: 580px;
 				margin: 0 auto;
 			}
 
 			.hero-heading {
-				padding-top: 4rem;
+				padding-top: 2rem;
 			}
 
 			.hero-para {
@@ -72,7 +72,7 @@
 
 		h1 {
 			font-size: 48px;
-			margin-top: 4rem;
+			margin-top: 2rem;
 		}
 
 		p {
@@ -86,7 +86,7 @@
 		gap: 1.5rem;
 		text-align: left;
 		align-items: stretch;
-		margin-block: 4rem;
+		margin-block: 2rem;
 
 		@include for-tablet-portrait-up {
 			flex-direction: row;
