@@ -248,10 +248,10 @@ cd /tmp \
 		margin-top: 2rem;
 	}
 
-	h1 {
+	/*h1 {
 		padding-top: 1rem;
 		font-size: 2.25rem;
-	}
+	}*/
 
 	h2 {
 		padding-top: 0.5rem;

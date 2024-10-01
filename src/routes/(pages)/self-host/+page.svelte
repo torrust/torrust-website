@@ -147,10 +147,10 @@
 		padding-top: 1.5rem; /* Add top padding to all h2 elements except the first one */
 	}
 
-	h3 {
+	/*h3 {
 		padding-top: 2rem;
 		font-size: 1.3rem;
-	}
+	}*/
 
 	p {
 		font-size: 1rem;
