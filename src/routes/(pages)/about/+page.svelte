@@ -359,6 +359,7 @@
 				<li><a href="https://github.com/pcarles">@pcarles</a></li>
 				<li><a href="https://github.com/postmeback">@postmeback</a></li>
 				<li><a href="https://github.com/ldpr">@ldpr</a></li>
+				<li><a href="https://github.com/ty5e3a45">@ty5e3a45</a></li>
 			</ul>
 
 			and all contributors for their invaluable input—whether in coding, opening issues, submitting
