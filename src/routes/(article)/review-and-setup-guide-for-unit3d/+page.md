@@ -65,7 +65,7 @@ UNIT3D was created from scratch. The first commit was on December 2017.
 
 - **Repo:** <https://github.com/HDInnovations/UNIT3D-Community-Edition>
 - **Contributors:** [116](https://github.com/HDInnovations/UNIT3D-Community-Edition/graphs/contributors)
-- **Starts:** 1.9k.
+- **Stars:** 1.9k.
 - **Production Stats**:
   - Installations: 26
   - Users: 235,041

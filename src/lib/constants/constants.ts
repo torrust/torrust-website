@@ -333,7 +333,7 @@ export const trackerBasicTableHeadings = [
 	{ displayName: 'Repo', fieldName: 'repo' },
 	{ displayName: 'Name', fieldName: 'name' },
 	{ displayName: 'License', fieldName: 'license' },
-	{ displayName: 'Starts', fieldName: 'starts' },
+	{ displayName: 'Stars', fieldName: 'stars' },
 	{ displayName: 'Contributors', fieldName: 'contributors' },
 	{ displayName: 'Type', fieldName: 'type' },
 	{ displayName: 'UDP', fieldName: 'udp' },
