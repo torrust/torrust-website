@@ -364,7 +364,7 @@ export const trackerTableData = [
 	{
 		name: 'Torrust',
 		license: 'AGPL-3.0',
-		starts: '312',
+		stars: '312',
 		contributors: '13',
 		type: 'Mixed',
 		udp: 'Yes',
@@ -389,7 +389,7 @@ export const trackerTableData = [
 	{
 		name: 'opentracker',
 		license: 'beer ware ',
-		starts: '',
+		stars: '',
 		contributors: '',
 		type: 'Open ',
 		udp: 'Yes',
@@ -414,7 +414,7 @@ export const trackerTableData = [
 	{
 		name: 'bittorrent-tracker',
 		license: 'MIT',
-		starts: '1.7k',
+		stars: '1.7k',
 		contributors: '56',
 		type: '?',
 		udp: 'Yes',
@@ -439,7 +439,7 @@ export const trackerTableData = [
 	{
 		name: 'Chihaya',
 		license: 'BSD 2-Clause',
-		starts: '1.4k',
+		stars: '1.4k',
 		contributors: '29',
 		type: 'mixed',
 		udp: 'Yes',
@@ -464,7 +464,7 @@ export const trackerTableData = [
 	{
 		name: 'Ttorrent',
 		license: 'Apache-2.0',
-		starts: '1.4k',
+		stars: '1.4k',
 		contributors: '29',
 		type: 'Mixed',
 		udp: 'No',
@@ -489,7 +489,7 @@ export const trackerTableData = [
 	{
 		name: 'aquatic',
 		license: 'Apache-2.0',
-		starts: '444',
+		stars: '444',
 		contributors: '2',
 		type: 'Open',
 		udp: 'Yes',
@@ -514,7 +514,7 @@ export const trackerTableData = [
 	{
 		name: 'privtracker',
 		license: 'AGPL-3.0',
-		starts: '289',
+		stars: '289',
 		contributors: '3',
 		type: 'Private',
 		udp: 'No',
@@ -539,7 +539,7 @@ export const trackerTableData = [
 	{
 		name: 'XBT',
 		license: 'GPL-3.0?',
-		starts: '171',
+		stars: '171',
 		contributors: '4',
 		type: 'Mixed',
 		udp: 'Yes',
@@ -564,7 +564,7 @@ export const trackerTableData = [
 	{
 		name: 'mika',
 		license: 'MIT',
-		starts: '115',
+		stars: '115',
 		contributors: '2',
 		type: '?',
 		udp: 'No',
@@ -589,7 +589,7 @@ export const trackerTableData = [
 	{
 		name: 'Radiance',
 		license: '?',
-		starts: '73',
+		stars: '73',
 		contributors: '4',
 		type: 'Private',
 		udp: 'Yes',
@@ -614,7 +614,7 @@ export const trackerTableData = [
 	{
 		name: 'Ocelot',
 		license: 'Pending',
-		starts: '21',
+		stars: '21',
 		contributors: '4',
 		type: 'Mixed ',
 		udp: 'Yes',
