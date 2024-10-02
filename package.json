@@ -53,7 +53,7 @@
 		"@fontsource-variable/roboto-slab": "^5.0.20",
 		"feather-icons": "^4.29.2",
 		"flexsearch": "^0.7.43",
-		"shiki": "^1.6.1",
+		"shiki": "^1.16.3",
 		"shiki-es": "^0.14.0",
 		"svelte-toc": "^0.5.9",
 		"tocbot": "^4.29.0",
