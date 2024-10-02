@@ -28,14 +28,14 @@
 <style lang="scss">
 	.details-card {
 		background-color: rgba(26, 26, 26, 0.48);
-		padding: 1.5rem;
+		padding: 1.4rem;
 		border-radius: 1.5rem;
 
 		p {
 			color: rgba(245, 245, 245, 0.8);
 			font-size: 16px;
-			min-height: 100px;
-			margin-top: 28px;
+			margin-block: 28px;
+			line-height: 1.5;
 		}
 	}
 

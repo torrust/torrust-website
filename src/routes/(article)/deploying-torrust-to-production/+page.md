@@ -15,52 +15,71 @@ hidden: false
 ---
 
 <script>
-  import Toc from 'svelte-toc';
   import Callout from "$lib/components/molecules/Callout.svelte";
   import CodeBlock from "$lib/components/molecules/CodeBlock.svelte";
   import Image from "$lib/components/atoms/Image.svelte";
   import PostBody from "$lib/components/molecules/PostBody.svelte";
   import PostContainer from "$lib/components/molecules/PostContainer.svelte";
   import PostTable from "$lib/components/molecules/PostTable.svelte";
+  import TableOfContents from '$lib/components/atoms/TableOfContents.svelte';
+
+  let sections = [
+      { name: "Introduction", id: "introduction" },
+      { name: "Requirements", id: "requirements" },
+      { 
+        name: "Initial Server Setup", 
+        id: "initial-server-setup",
+        subsections: [
+          { name: "Setup SSH Keys", id: "setup-ssh-keys" },
+          { name: "Install Docker", id: "install-docker" },
+          { name: "Install Docker Compose", id: "install-docker-compose" },
+          { name: "Install SQLite", id: "install-sqlite" }
+        ]
+      },
+      { name: "Setup The DNS", id: "setup-the-dns" },
+      { 
+        name: "Install The Application", 
+        id: "install-the-application",
+        subsections: [
+          { name: "Without Certificates", id: "without-certificates" },
+          { name: "Generate Certificates With Let's Encrypt", id: "generate-certificates-with-lets-encrypt" },
+          { name: "Change Nginx Configuration To Use Certificates", id: "change-nginx-configuration-to-use-certificates" },
+          { name: "Setup Cronjob To Renew Certificates", id: "setup-cronjob-to-renew-certificates" }
+        ]
+      },
+      { 
+        name: "Exposed Services", 
+        id: "exposed-services",
+        subsections: [
+          { name: "Firewall", id: "firewall" },
+          { name: "Health checks", id: "health-checks" }
+        ]
+      },
+      { name: "Troubleshooting", id: "troubleshooting" },
+      { 
+        name: "Maintenance", 
+        id: "maintenance",
+        subsections: [
+          { name: "Backups", id: "backups" },
+          { name: "Monitoring", id: "monitoring" }
+        ]
+      },
+      { name: "Cost", id: "cost" },
+      { name: "Other Considerations", id: "other-considerations" },
+      { name: "Links", id: "links" },
+      { name: "Conclusion", id: "conclusion" }
+  ]
+
+  let activeSection = '';
 </script>
 
 <PostContainer>
 <PostTable>
-<Toc
-  title=""
-  --toc-active-color="rgba(255, 49, 0, 0.96)"
-  --toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-  --toc-active-bg="transparent"
->
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Requirements](#requirements)
-- [Initial Server Setup](#initial-server-setup)
-  - [Setup SSH Keys](#setup-ssh-keys)
-  - [Install Docker](#install-docker)
-  - [Install Docker Compose](#install-docker-compose)
-  - [Install SQLite](#install-sqlite)
-- [Setup The DNS](#setup-the-dns)
-- [Install The Application](#install-the-application)
-  - [Without Certificates](#without-certificates)
-  - [Generate Certificates With Let's Encrypt](#generate-certificates-with-lets-encrypt)
-  - [Change Nginx Configuration To Use Certificates](#change-nginx-configuration-to-use-certificates)
-  - [Setup Cronjob To Renew Certificates](#setup-cronjob-to-renew-certificates)
-- [Exposed Services](#exposed-services)
-  - [Firewall](#firewall)
-  - [Health checks](#health-checks)
-- [Troubleshooting](#troubleshooting)
-- [Maintenance](#maintenance)
-  - [Backups](#backups)
-  - [Monitoring](#monitoring)
-- [Cost](#cost)
-- [Other Considerations](#other-considerations)
-- [Links](#links)
-- [Conclusion](#conclusion)
+<TableOfContents {sections} {activeSection} />
 
-</Toc>
 </PostTable>
 
 <PostBody>
@@ -145,7 +164,9 @@ torrust/index-gui   develop           sha256:b30deb84cdee8fa34e4d3783ce2f467542e
 </CodeBlock>
 
 <Callout type="info">
-  We will update them to use a concrete tag v3.0 after releasing it.
+
+We will update them to use a concrete tag v3.0 after releasing it.
+
 </Callout>
 
 ### Domain
@@ -159,8 +180,10 @@ Starting off, we'll set up a virtual server using Ubuntu 22.04. Think of it as p
 This section covers the initial configuration of your Ubuntu 22.04 server, focusing on essential security and performance optimizations.
 
 <Callout type="info">
-  Disclaimer: For the initial server setup we only highlight the main points. We provide the links to Digital Ocean tutorials
-  where you will find detailed information.
+
+Disclaimer: For the initial server setup we only highlight the main points. We provide the links to Digital Ocean tutorials
+where you will find detailed information.
+
 </Callout>
 
 Please refer to [Digital Ocean Documentation](https://docs.digitalocean.com/) for more information about how to create projects and droplets. Projects are the way DO (Digital Ocean) organizes resources (virtual machines, databases, domains, etc.). We have a project called "torrust-demo.com".
@@ -320,7 +343,9 @@ Some useful commands are:
 Before running the application we have to setup the DNS. You can load the application using your domain instead of the droplet IP.
 
 <Callout type="info">
-  The droplet has an IP that can be used to setup the DNS, but we recommend using an reserved IP. You can link the reserved IP to the droplet.
+
+The droplet has an IP that can be used to setup the DNS, but we recommend using an reserved IP. You can link the reserved IP to the droplet.
+
 </Callout>
 
 First at all, you need to change your name servers and use the ones from Digital Ocean. You have to find out how to do that
@@ -452,7 +477,9 @@ jcrmbzlGyeP7z53TUQtXmtltMb5TubsIE9e0DPLnS4Ih29JddQw5JA==
 </CodeBlock>
 
 <Callout type="info">
-  NOTICE: We are not sending emails from the application because user's email validation is disabled on registration for the demo. If you want to enable email validation you will need to provide the SMTP configuration including the password in the `storage/index/etc/index.toml` config file.
+
+NOTICE: We are not sending emails from the application because user's email validation is disabled on registration for the demo. If you want to enable email validation you will need to provide the SMTP configuration including the password in the `storage/index/etc/index.toml` config file.
+
 </Callout>
 
 Now, you should be able to run the application with the following command:
@@ -488,7 +515,9 @@ docker compose run --entrypoint /bin/sh certbot
 </CodeBlock>
 
 <Callout type="info">
-  Notice that the previous command recreates the docker containers so you site will be down for some seconds.
+
+Notice that the previous command recreates the docker containers so you site will be down for some seconds.
+
 </Callout>
 
 Once you are logged in the certbot container you need to execute these certbot commands to generate the staging certificates:
@@ -867,9 +896,11 @@ You can disable both, direct access to the container (without using the Nginx pr
 need to enable a firewall on the server or the Digital Ocean firewall.
 
 <Callout type="info">
-  Notice: The UDP tracker is not available via the proxy. If you want all requests to go through the
-  proxy you need to change the Nginx configuration to set up a UDP proxy. There is a discussion
-  on the Tracker repository on GitHub about how to setup the proxy for the UDP tracker.
+
+Notice: The UDP tracker is not available via the proxy. If you want all requests to go through the
+proxy you need to change the Nginx configuration to set up a UDP proxy. There is a discussion
+on the Tracker repository on GitHub about how to setup the proxy for the UDP tracker.
+
 </Callout>
 
 ### Firewall
@@ -900,7 +931,9 @@ sudo ufw status verbose
 </CodeBlock>
 
 <Callout type="info">
-  However, there is a problem with setting up your own firewall. By default, Docker manipulates iptables to set up network isolation. However, this can interfere with UFW. To fix this, you need to tell Docker not to modify iptables.
+
+However, there is a problem with setting up your own firewall. By default, Docker manipulates iptables to set up network isolation. However, this can interfere with UFW. To fix this, you need to tell Docker not to modify iptables.
+
 </Callout>
 
 ### Health checks
@@ -926,7 +959,9 @@ Direct access:
 - Tracker HTTP: <http://tracker.torrust-demo.com:7070/health_check>
 
 <Callout type="info">
-  These endpoints are very useful to test if your installation is OK.
+
+These endpoints are very useful to test if your installation is OK.
+
 </Callout>
 
 ## Troubleshooting

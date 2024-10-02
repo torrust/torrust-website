@@ -14,38 +14,37 @@ hidden: false
 ---
 
 <script>
-  import Toc from 'svelte-toc';
   import Callout from "$lib/components/molecules/Callout.svelte";
   import CodeBlock from "$lib/components/molecules/CodeBlock.svelte";
   import Image from "$lib/components/atoms/Image.svelte";
   import PostBody from "$lib/components/molecules/PostBody.svelte";
   import PostContainer from "$lib/components/molecules/PostContainer.svelte";
   import PostTable from "$lib/components/molecules/PostTable.svelte";
+  import TableOfContents from '$lib/components/atoms/TableOfContents.svelte';
+
+  let sections = [
+	{ name: "Unraveling the \"Source\" Field", id: "unraveling-the-source-field" },
+	{ name: "\"Source\" field internals", id: "source-field-internals" },
+	{ name: "BitTorrent Documentation: Lost in the Ether?", id: "bittorrent-documentation-lost-in-the-ether" },
+	{ name: "Cross-seeding", id: "cross-seeding" },
+	{ name: "What are the reliable sources for BitTorrent documentation?", id: "what-are-the-reliable-sources-for-bittorrent-documentation" },
+	{ name: "Links", id: "links" },
+	{ name: "Acknowledgments", id: "acknowledgments" },
+	{ name: "Conclusion", id: "conclusion" }
+  ]
+
+  let activeSection = '';
 </script>
 
 The BitTorrent protocol, despite its widespread usage, has often been met with raised eyebrows by the tech community due to its sometimes vague or entirely missing documentation. Today, we'll dive into one such mystery: the "source" field located within the "info" part of torrent files.
 
 <PostContainer>
 <PostTable>
-<Toc
-  title=""
-  --toc-active-color="rgba(255, 49, 0, 0.96)"
-  --toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-  --toc-active-bg="transparent"
->
 
 ## Table of contents
 
-- [Unraveling the "Source" Field](#unraveling-the-source-field)
-- ["Source" field internals](#source-field-internals)
-- [BitTorrent Documentation: Lost in the Ether?](#bittorrent-documentation-lost-in-the-ether)
-- [Cross-seeding](#cross-seeding)
-- [What are the reliable sources for BitTorrent documentation?](#what-are-the-reliable-sources-for-bittorrent-documentation)
-- [Links](#links)
-- [Acknowledgments](#acknowledgments)
-- [Conclusion](#conclusion)
+<TableOfContents {sections} {activeSection} />
 
-</Toc>
 </PostTable>
 
 <PostBody>

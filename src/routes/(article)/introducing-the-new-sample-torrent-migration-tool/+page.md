@@ -14,13 +14,23 @@ hidden: false
 ---
 
 <script>
-  import Toc from 'svelte-toc';
   import Callout from "$lib/components/molecules/Callout.svelte";
   import CodeBlock from "$lib/components/molecules/CodeBlock.svelte";
   import Image from "$lib/components/atoms/Image.svelte";
   import PostBody from "$lib/components/molecules/PostBody.svelte";
   import PostContainer from "$lib/components/molecules/PostContainer.svelte";
   import PostTable from "$lib/components/molecules/PostTable.svelte";
+  import TableOfContents from '$lib/components/atoms/TableOfContents.svelte';
+
+  let sections = [
+    { name: "Why this tool?", id: "why-this-tool" },
+    { name: "Capabilities", id: "capabilities" },
+    { name: "Conclusion", id: "conclusion" },
+    { name: "Links", id: "links" },
+    { name: "Acknowledgments", id: "acknowledgments" }
+  ]
+
+  let activeSection = '';
 </script>
 
 Photo by David Dibert: <https://www.pexels.com/photo/a-flock-of-geese-flying-7177008/>.
@@ -31,22 +41,11 @@ We're always looking for ways to enhance your experience with Torrust, and today
 
 <PostContainer>
 <PostTable>
-<Toc
-  title=""
-  --toc-active-color="rgba(255, 49, 0, 0.96)"
-  --toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-  --toc-active-bg="transparent"
->
 
 ## Table of contents
 
-- [Why this tool?](#why-this-tool)
-- [Capabilities](#capabilities)
-- [Conclusion](#conclusion)
-- [Links](#links)
-- [Acknowledgments](#acknowledgments)
+<TableOfContents {sections} {activeSection} />
 
-</Toc>
 </PostTable>
 
 <PostBody>

@@ -45,7 +45,7 @@
 	.code-block {
 		display: block;
 		position: relative;
-		background-color: var(--color--code-background);
+		background-color: rgba(245, 245, 245, 0.08);
 		color: var(--color--code-text);
 		font-family: var(--font--mono);
 		font-size: 1rem;
@@ -77,7 +77,7 @@
 			position: absolute;
 			right: 0;
 			top: -15px;
-			background: inherit;
+			background-color: rgba(36, 36, 36, 1);
 			border-radius: 8px;
 			padding: 5px 10px;
 			z-index: 2;
@@ -85,7 +85,7 @@
 		}
 
 		.filename {
-			background: inherit;
+			background-color: rgba(245, 245, 245, 0.08);
 			border-top-left-radius: 8px;
 			border-top-right-radius: 8px;
 			margin-bottom: -2px;
@@ -119,7 +119,7 @@
 		}
 
 		.copy-button-gray:hover {
-			background-color: #2d3748;
+			background-color: rgba(245, 245, 245, 0.08);
 		}
 	}
 </style>

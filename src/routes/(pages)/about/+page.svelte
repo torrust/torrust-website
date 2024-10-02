@@ -58,7 +58,7 @@
 	];
 </script>
 
-<div>
+<div class="container">
 	<h1>About</h1>
 	<div class="layout">
 		<div class="toc">
@@ -395,7 +395,13 @@
 		padding-inline: 1.5rem;
 	}
 
+	.container {
+		margin: 0 auto;
+	}
+
 	.layout {
+		display: flex;
+		flex-direction: column;
 		margin-top: 4rem;
 	}
 
@@ -404,7 +410,7 @@
 	}
 
 	h1 {
-		padding-top: 1rem;
+		padding-top: 64px;
 		font-size: 2.25rem;
 	}
 
@@ -414,16 +420,12 @@
 	}
 
 	h2:not(:first-of-type) {
-		padding-top: 1.5rem; /* Add top padding to all h2 elements except the first one */
+		padding-top: 1.5rem;
 	}
 
 	h3 {
 		padding-top: 2rem;
 		font-size: 1.3rem;
-	}
-
-	h2:not(:first-of-type) {
-		padding-top: 1.5rem; /* Add top padding to all h2 elements except the first one */
 	}
 
 	p {
@@ -432,16 +434,34 @@
 		color: rgba(245, 245, 245, 0.8);
 	}
 
-	@include for-desktop-up {
-		h1,
+	#bitTorrentProtocol {
+		border-top: 1px solid rgba(245, 245, 245, 0.08);
+		margin-top: 48px;
+	}
+
+	img {
+		border-radius: 24px;
+	}
+
+	@include for-tablet-portrait-up {
 		.layout {
-			display: flex;
-			gap: 2rem;
-			padding-inline: 9.25rem;
+			flex-direction: column;
 		}
 
 		.content {
-			margin-top: 0rem;
+			margin-top: 2rem;
+		}
+	}
+
+	@include for-desktop-up {
+		.layout {
+			flex-direction: row;
+			gap: 2rem;
+		}
+
+		.content {
+			width: 75%;
+			margin-top: 0;
 		}
 
 		h1 {

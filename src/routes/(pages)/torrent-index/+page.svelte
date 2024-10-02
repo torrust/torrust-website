@@ -52,7 +52,9 @@
 	</div>
 
 	<div class="slider-wrapper">
-		<Slider titleArr={indexTitleArr1} />
+		<div class="slider-content">
+			<Slider titleArr={indexTitleArr1} />
+		</div>
 	</div>
 
 	<div class="inner-container">
@@ -118,6 +120,15 @@
 		width: 100vw;
 		margin-left: calc(50% - 50vw);
 		overflow-x: hidden;
+		display: flex;
+		justify-content: center;
+
+		.slider-content {
+			width: 100%;
+			max-width: 2070px;
+			display: flex;
+			justify-content: center;
+		}
 	}
 
 	.inner-container {

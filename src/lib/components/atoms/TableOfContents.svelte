@@ -4,6 +4,7 @@
 	interface Section {
 		name: string;
 		id: string;
+		subsections?: Section[];
 	}
 
 	export let sections: Section[] = [];
@@ -30,6 +31,14 @@
 			if (sectionElement) {
 				observer.observe(sectionElement);
 			}
+			if (section.subsections) {
+				section.subsections.forEach((subsection) => {
+					const subsectionElement = document.getElementById(subsection.id);
+					if (subsectionElement) {
+						observer.observe(subsectionElement);
+					}
+				});
+			}
 		});
 
 		return () => {
@@ -43,6 +52,15 @@
 		{#each sections as section}
 			<li class={section.id === activeSection ? 'active' : ''}>
 				<a href={'#' + section.id}>{section.name}</a>
+				{#if section.subsections && section.subsections.length > 0}
+					<ul class="sublist">
+						{#each section.subsections as subsection}
+							<li class={subsection.id === activeSection ? 'active' : ''}>
+								<a href={'#' + subsection.id}>{subsection.name}</a>
+							</li>
+						{/each}
+					</ul>
+				{/if}
 			</li>
 		{/each}
 	</ul>
@@ -53,7 +71,7 @@
 
 	.sticky-nav {
 		background: rgba(26, 26, 26, 1);
-		width: 350px;
+		width: 300px;
 		padding-inline: 0;
 		position: sticky;
 		top: 40px;
@@ -64,18 +82,40 @@
 		list-style: none;
 		padding: 0;
 		margin: 0;
-	}
 
-	.active {
-		font-weight: bold;
-	}
+		li {
+			margin-top: 16px;
 
-	a {
-		color: rgba(245, 245, 245, 0.96);
-		font-size: 0.875rem;
+			a {
+				color: rgba(245, 245, 245, 0.96);
+				font-size: 0.875rem;
+				text-decoration: none;
 
-		&:hover {
-			color: rgba(255, 49, 0, 0.96);
+				&:hover {
+					color: rgba(255, 49, 0, 0.96);
+				}
+			}
+
+			&.active a {
+				font-weight: bold;
+				color: rgba(255, 49, 0, 0.96);
+			}
+
+			/* Sublist styling */
+			ul.sublist {
+				margin-left: 20px;
+				list-style-type: none;
+				margin-top: 16px;
+
+				li {
+					margin-top: 8px;
+
+					ul.sublist {
+						margin-left: 20px;
+						list-style-type: circle;
+					}
+				}
+			}
 		}
 	}
 </style>

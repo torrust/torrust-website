@@ -1,5 +1,5 @@
 <script lang="ts">
-	import TableOfContents from '$lib/components/atoms/TableOfContents.svelte'; // Adjust the path if needed
+	import TableOfContents from '$lib/components/atoms/TableOfContents.svelte';
 	import Callout from '$lib/components/molecules/Callout.svelte';
 
 	// Array of section objects with display names and IDs
@@ -12,7 +12,7 @@
 	let activeSection = '';
 </script>
 
-<div>
+<div class="container">
 	<h1>Self-host</h1>
 
 	<div class="layout">
@@ -134,7 +134,7 @@
 	}
 
 	h1 {
-		padding-top: 1rem;
+		padding-top: 64px;
 		font-size: 2.25rem;
 	}
 
@@ -159,10 +159,13 @@
 	}
 
 	@include for-desktop-up {
+		.container {
+			margin: 0 auto;
+		}
+
 		h1,
 		.layout {
 			display: flex;
-			padding-inline: 9.25rem;
 			gap: 2rem;
 		}
 

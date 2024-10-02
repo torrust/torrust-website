@@ -32,23 +32,15 @@
 	@import '$lib/scss/breakpoints.scss';
 
 	.svg-container {
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		background-color: rgba(255, 49, 0, 1);
-		color: rgba(245, 245, 245, 0.96);
-		padding: 0;
-	}
-
-	.svg-container {
-		width: 100%;
-		background-image: url("data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" fill='rgb(254, 74, 30)'><path d='M1005.2 123.646C1027.43 11.7464 953.881 -97.3506 843.527 -126.92L138.041 -315.954C40.5775 -342.07 -63.6767 -288.152 -91.5498 -191.16C-119.946 -92.2144 -61.7805 10.2473 37.2454 36.7812L306.002 108.794L55.7571 263.014C-106.71 363.089 -70.6249 608.894 113.559 658.246C170.006 673.371 230.427 665.068 280.715 635.209L900.796 267.959C954.822 237.428 993.036 184.656 1005.25 123.451L1005.2 123.646Z' fill='rgb(254, 74, 30)' fill-opacity='1'/></svg>");
+		background-image: url('data:image/svg+xml,%3Csvg%20width%3D%221368%22%20height%3D%22680%22%20viewBox%3D%220%200%201368%20680%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1388.04%202.06213C1378.81%20-138.439%201256.27%20-245%201115.27%20-245H213.872C89.3427%20-245%20-17.7176%20-147.423%20-19.9636%20-22.8936C-22.2096%20104.131%2079.8594%20207.698%20206.385%20207.698H549.777L300.718%20471.48C139.005%20642.677%20260.539%20924.178%20495.872%20924.178C567.994%20924.178%20637.371%20894.98%20687.782%20843.321L1309.68%20207.448C1364.33%20153.793%201393.03%2078.6764%201388.04%201.81261V2.06213Z%22%20fill%3D%22%23F5F5F5%22%20fill-opacity%3D%220.12%22/%3E%3C/svg%3E');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-color: rgb(255, 50, 1);
-		color: white;
-		padding-inline: 1.5rem;
+		background-color: rgba(255, 49, 0, 1);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: rgba(245, 245, 245, 0.96);
 
 		@include for-tablet-portrait-up {
 			.hero-heading,
@@ -62,7 +54,7 @@
 			}
 
 			.hero-para {
-				padding-top: 1.5rem;
+				padding-top: 24px;
 			}
 		}
 	}
@@ -73,6 +65,7 @@
 		h1 {
 			font-size: 48px;
 			margin-top: 2rem;
+			line-height: 48px;
 		}
 
 		p {

@@ -14,35 +14,34 @@ hidden: false
 ---
 
 <script>
-  import Toc from 'svelte-toc';
   import Callout from "$lib/components/molecules/Callout.svelte";
   import CodeBlock from "$lib/components/molecules/CodeBlock.svelte";
   import Image from "$lib/components/atoms/Image.svelte";
   import PostBody from "$lib/components/molecules/PostBody.svelte";
   import PostContainer from "$lib/components/molecules/PostContainer.svelte";
   import PostTable from "$lib/components/molecules/PostTable.svelte";
+  import TableOfContents from '$lib/components/atoms/TableOfContents.svelte';
+
+  let sections = [
+    { name: "Hello, Torrust Community!", id: "hello-torrust-community" },
+    { name: "What's New in v3.0.0-alpha.12", id: "whats-new-in-v300-alpha12" },
+    { name: "Release Schedule", id: "release-schedule" },
+    { name: "How to Get Involved", id: "how-to-get-involved" },
+    { name: "Your Feedback Makes Us Better", id: "your-feedback-makes-us-better" },
+    { name: "Important Notice: Demo Availability", id: "important-notice-demo-availability" },
+    { name: "Acknowledgments", id: "acknowledgments" }
+  ]
+
+  let activeSection = '';
 </script>
 
 <PostContainer>
 <PostTable>
-<Toc
-  title=""
-  --toc-active-color="rgba(255, 49, 0, 0.96)"
-  --toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-  --toc-active-bg="transparent"
->
 
 ## Table of contents
 
-- [Hello, Torrust Community!](#hello-torrust-community)
-- [What's New in v3.0.0-alpha.12](#whats-new-in-v300-alpha12)
-- [Release Schedule](#release-schedule)
-- [How to Get Involved](#how-to-get-involved)
-- [Your Feedback Makes Us Better](#your-feedback-makes-us-better)
-- [Important Notice: Demo Availability](#important-notice-demo-availability)
-- [Acknowledgments](#acknowledgments)
+<TableOfContents {sections} {activeSection} />
 
-</Toc>
 </PostTable>
 
 <PostBody>

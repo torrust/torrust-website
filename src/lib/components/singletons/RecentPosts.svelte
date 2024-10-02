@@ -22,8 +22,18 @@
 	@import '$lib/scss/breakpoints.scss';
 
 	.container {
-		color: rgba(245, 245, 245, 0.8);
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		padding-top: 3rem;
 		background: rgba(26, 26, 26, 1);
+		color: rgba(245, 245, 245, 0.96);
+		padding-bottom: 64px;
+		box-sizing: border-box;
+
+		@include for-desktop-up {
+			max-width: 1200px;
+		}
 	}
 
 	.grid {

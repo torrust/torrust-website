@@ -19,35 +19,35 @@ description: Basic explanation of  what a BitTorrent tracker is and the two type
 ---
 
 <script>
-  import Toc from 'svelte-toc';
   import Callout from "$lib/components/molecules/Callout.svelte";
   import CodeBlock from "$lib/components/molecules/CodeBlock.svelte";
   import Image from "$lib/components/atoms/Image.svelte";
   import PostBody from "$lib/components/molecules/PostBody.svelte";
   import PostContainer from "$lib/components/molecules/PostContainer.svelte";
   import PostTable from "$lib/components/molecules/PostTable.svelte";
+	import TableOfContents from '$lib/components/atoms/TableOfContents.svelte';
+
+  let sections = [
+		{ name: 'Introduction', id: 'introduction' },
+		{ name: 'What is a BitTorrent Tracker', id: 'what-is-a-bittorrent-tracker' },
+		{ name: 'Public trackers', id: 'public-trackers' },
+		{ name: 'Private trackers', id: 'private-trackers' },
+		{ name: 'BitTorrent Index vs BitTorrent Tracker', id: 'bittorrent-index-vs-bittorrent-tracker' }
+	];
+
+
+	let activeSection = '';
 </script>
 
 Photo by Alex Andrews: <https://www.pexels.com/photo/shallow-focus-photography-of-black-and-silver-compasses-on-top-of-map-1203808/>.
 
 <PostContainer>
 <PostTable>
-<Toc
-  title=""
-  --toc-active-color="rgba(255, 49, 0, 0.96)"
-  --toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-  --toc-active-bg="transparent"
->
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [What is a BitTorrent Tracker](#what-is-a-bittorrent-tracker)
-- [Public trackers](#public-trackers)
-- [Private trackers](#private-trackers)
-- [BitTorrent Index vs BitTorrent Tracker](#bittorrent-index-vs-bittorrent-tracker)
+<TableOfContents {sections} {activeSection} />
 
-</Toc>
 </PostTable>
 
 <PostBody>

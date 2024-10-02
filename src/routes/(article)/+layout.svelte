@@ -79,7 +79,9 @@
 			</div>
 			{#if post && post.coverImage}
 				<div class="cover-image">
-					<Image src={post.coverImage} alt={post.title} />
+					{#key post.coverImage}
+						<Image src={post.coverImage + '?v=' + post.slug} alt={post.title} />
+					{/key}
 				</div>
 			{/if}
 			<div class="content">

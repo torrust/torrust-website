@@ -36,9 +36,11 @@
 	</table>
 </div>
 
-<style>
+<style lang="scss">
+	@import '$lib/scss/breakpoints.scss';
+
 	.table-container {
-		overflow-x: auto;
+		overflow-x: auto; // Allows horizontal scrolling
 		margin-top: 3rem;
 		padding-inline: 1.5rem;
 	}
@@ -53,27 +55,25 @@
 		border-bottom: 1px solid black;
 		padding: 8px;
 		text-align: left;
-		white-space: nowrap;
+		white-space: normal; // Change from nowrap to normal for better wrapping
+		overflow: hidden; // Hide overflowing content
+		text-overflow: ellipsis; // Add ellipsis for overflowing text
 	}
 
-	/* Scrollbar styles */
-	.table-container::-webkit-scrollbar {
-		height: 12px; /* Adjust the height of the scrollbar */
+	// Media queries for responsiveness
+	@include for-phone-only {
+		th,
+		td {
+			padding: 4px; // Reduce padding for smaller screens
+			font-size: 12px; // Reduce font size for smaller screens
+		}
 	}
 
-	.table-container::-webkit-scrollbar-track {
-		background: #f1f1f1; /* Background of the scrollbar track */
-	}
-
-	.table-container::-webkit-scrollbar-thumb {
-		background-color: rgba(255, 49, 0, 1); /* The sliding part of the scrollbar */
-		border-radius: 10px; /* Rounded corners for the scrollbar */
-		border: 2px solid #f1f1f1; /* Optional: border around the scrollbar thumb */
-	}
-
-	/* Firefox scrollbar styling */
-	.table-container {
-		scrollbar-width: thin; /* For Firefox */
-		scrollbar-color: rgba(255, 49, 0, 1) #f1f1f1; /* Thumb color and track color */
+	@include for-tablet-portrait-up {
+		th,
+		td {
+			padding: 8px; // Normal padding for tablets and up
+			font-size: 14px; // Normal font size for tablets and up
+		}
 	}
 </style>
