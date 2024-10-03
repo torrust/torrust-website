@@ -4,10 +4,15 @@
 
 	// Array of section objects with display names and IDs
 	let sections = [
-		{ name: 'Installation', id: 'installation' },
-		{ name: 'Software requirements', id: 'softwareRequirements' },
-		{ name: 'Build from sources', id: 'buildSources' },
-		{ name: 'Run with docker', id: 'docker' },
+		{
+			name: 'Installation',
+			id: 'installation',
+			subsections: [
+				{ name: 'Software requirements', id: 'softwareRequirements' },
+				{ name: 'Build from sources', id: 'buildSources' },
+				{ name: 'Run with docker', id: 'docker' }
+			]
+		},
 		{ name: 'Roadmap', id: 'roadmap' },
 		{ name: 'License', id: 'license' }
 	];

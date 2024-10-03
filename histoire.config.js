@@ -6,9 +6,9 @@ export default defineConfig({
 	theme: {
 		title: 'Histoire',
 		logo: {
-			square: './static/favicons/favicon.png',
-			light: './static/favicons/favicon.png',
-			dark: './static/favicons/favicon.png'
+			square: './static/favicons/favicon.ico',
+			light: './static/favicons/favicon.ico',
+			dark: './static/favicons/favicon.ico'
 		},
 		favicon: './static/favicons/favicon.ico',
 		colors: {

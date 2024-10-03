@@ -17,36 +17,36 @@ hidden: false
 ---
 
 <script>
-  import Toc from 'svelte-toc';
   import Callout from "$lib/components/molecules/Callout.svelte";
   import CodeBlock from "$lib/components/molecules/CodeBlock.svelte";
   import Image from "$lib/components/atoms/Image.svelte";
   import PostBody from "$lib/components/molecules/PostBody.svelte";
   import PostContainer from "$lib/components/molecules/PostContainer.svelte";
   import PostTable from "$lib/components/molecules/PostTable.svelte";
+
+  import TableOfContents from '$lib/components/atoms/TableOfContents.svelte';
+
+  let sections = [
+    { name: "Introduction", id: "introduction" },
+    { name: "Common Dependencies", id: "common-dependencies" },
+    { name: "Set Up the Torrust Tracker", id: "set-up-the-torrust-tracker" },
+    { name: "Set Up the Torrust Index", id: "set-up-the-torrust-index" },
+    { name: "Set Up the Torrust Index GUI", id: "set-up-the-torrust-index-gui" },
+    { name: "Application Setup", id: "application-setup" },
+    { name: "Development tools", id: "development-tools" },
+    { name: "Conclusion", id: "conclusion" }
+  ]
+
+  let activeSection = '';
 </script>
 
 <PostContainer>
 <PostTable>
-<Toc
-  title=""
-  --toc-active-color="rgba(255, 49, 0, 0.96)"
-  --toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-  --toc-active-bg="transparent"
->
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Common Dependencies](#common-dependencies)
-- [Set Up the Torrust Tracker](#set-up-the-torrust-tracker)
-- [Set Up the Torrust Index](#set-up-the-torrust-index)
-- [Set Up the Torrust Index GUI](#set-up-the-torrust-index-gui)
-- [Application Setup](#application-setup)
-- [Development tools](#development-tools)
-- [Conclusion](#conclusion)
+<TableOfContents {sections} {activeSection} />
 
-</Toc>
 </PostTable>
 
 <PostBody>
@@ -78,7 +78,9 @@ cd torrust
 </CodeBlock>
 
 <Callout type="info">
-  This guide uses bash commands and it has been tested on Ubuntu Ubuntu 23.04. You should not encounter any problem if you are using a different Linux distribution, but there are some reported issues with Windows compilation for the Tracker. The installation scripts are very simple, so you can easily adapt them to your system or run the commands manually.
+
+This guide uses bash commands and it has been tested on Ubuntu Ubuntu 23.04. You should not encounter any problem if you are using a different Linux distribution, but there are some reported issues with Windows compilation for the Tracker. The installation scripts are very simple, so you can easily adapt them to your system or run the commands manually.
+
 </Callout>
 
 ## Common Dependencies
@@ -135,7 +137,9 @@ cargo run
 </CodeBlock>
 
 <Callout type="info">
-  NOTICE: You do not need to change the default values for development.
+
+NOTICE: You do not need to change the default values for development.
+
 </Callout>
 
 After running the Tracker with `cargo run` you should see the following output:
@@ -161,7 +165,9 @@ Loading configuration from default configuration file: `./share/default/config/t
 </CodeBlock>
 
 <Callout type="info">
-  IMPORTANT: Every time you change the configuration you need to restart the service.
+
+IMPORTANT: Every time you change the configuration you need to restart the service.
+
 </Callout>
 
 By default, if you don't specify any `Config.toml` file, the application will use this:
@@ -237,7 +243,9 @@ TORRUST_TRACKER_CONFIG_TOML=`cat share/default/config/tracker.development.sqlite
 </CodeBlock>
 
 <Callout type="info">
-  NOTICE: We load the whole file into the env var. This is not useful for development, but it's a different way to inject the configuration. It's used when running the tracker with docker.
+
+NOTICE: We load the whole file into the env var. This is not useful for development, but it's a different way to inject the configuration. It's used when running the tracker with docker.
+
 </Callout>
 
 The response should be like this:
@@ -386,7 +394,9 @@ To access those pages you need to create an account. You can do it from the sign
 <http://localhost:3000/signup>
 
 <Callout type="info">
-  The first user created will be the <code>admin</code> user.
+
+The first user created will be the <code>admin</code> user.
+
 </Callout>
 
 ## Development tools

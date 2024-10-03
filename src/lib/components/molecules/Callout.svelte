@@ -18,54 +18,38 @@
 			{/if}
 		</div>
 	{/if}
-	<slot />
+	<div class="content">
+		<slot />
+	</div>
 </div>
 
 <style lang="scss">
 	.callout-block {
-		--bg-color: var(--color--page-background);
-		--accent-color: transparent;
-		--text-color: var(--color--text);
-
-		margin: 40px 0 30px;
-		padding: 25px 25px;
-		border-top-right-radius: 10px;
-		border-bottom-right-radius: 10px;
-		background: var(--bg-color);
-		color: var(--text-color);
-		border-left: 4px solid var(--accent-color);
-
-		position: relative;
+		display: flex;
+		gap: 1rem;
+		background: rgba(36, 36, 36, 1);
+		color: rgba(245, 245, 245, 0.96);
+		border: 1px solid rgba(245, 245, 245, 0.08);
+		border-radius: 1.5rem;
+		padding: 24px;
+		margin-block: 1.5rem;
 
 		.icon-wrapper {
-			position: absolute;
-			width: 50px;
-			height: 50px;
-			top: 0;
-			left: 0;
-			transform: translate(calc(-50% - 1.5px), -50%);
-			background: var(--color--post-page-background);
-			padding: 8px;
-			border-radius: 50%;
-			fill: var(--accent-color);
-			color: var(--accent-color);
+			background-color: transparent;
+			flex-shrink: 0;
 		}
 
 		&.info {
-			--bg-color: var(--color--callout-background--info);
-			--accent-color: var(--color--callout-accent--info);
+			background-color: rgba(245, 245, 245, 0.08);
 		}
 		&.warning {
-			--bg-color: var(--color--callout-background--warning);
-			--accent-color: var(--color--callout-accent--warning);
+			background-color: rgba(245, 245, 245, 0.08);
 		}
 		&.error {
-			--bg-color: var(--color--callout-background--error);
-			--accent-color: var(--color--callout-accent--error);
+			background-color: rgba(245, 245, 245, 0.08);
 		}
 		&.success {
-			--bg-color: var(--color--callout-background--success);
-			--accent-color: var(--color--callout-accent--success);
+			background-color: rgba(245, 245, 245, 0.08);
 		}
 	}
 </style>

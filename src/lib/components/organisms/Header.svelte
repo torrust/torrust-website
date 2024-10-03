@@ -13,53 +13,56 @@
 </script>
 
 <header>
-	<a class="logo" href="/" aria-label="Site logo">
-		<Header />
-	</a>
-	<AnimatedHamburger {isMenuOpen} {toggleMenu}>
-		<div class="links-wrapper">
-			<ul class="links">
-				<li>
-					<a
-						href="/torrent-index"
-						class={currentPath === '/torrent-index' ? 'active' : ''}
-						on:click={toggleMenu}>Index</a
-					>
-				</li>
-				<li>
-					<a
-						href="/torrent-tracker"
-						class={currentPath === '/torrent-tracker' ? 'active' : ''}
-						on:click={toggleMenu}>Tracker</a
-					>
-				</li>
-				<li>
-					<a
-						href="/self-host"
-						class={currentPath === '/self-host' ? 'active' : ''}
-						on:click={toggleMenu}>Self&#8209;host</a
-					>
-				</li>
-				<li>
-					<a
-						href="/community"
-						class={currentPath === '/community' ? 'active' : ''}
-						on:click={toggleMenu}>Community</a
-					>
-				</li>
-				<li>
-					<a href="/blog" class={currentPath === '/blog' ? 'active' : ''} on:click={toggleMenu}
-						>Blog</a
-					>
-				</li>
-				<li>
-					<a href="/about" class={currentPath === '/about' ? 'active' : ''} on:click={toggleMenu}
-						>About</a
-					>
-				</li>
-			</ul>
-		</div>
-	</AnimatedHamburger>
+	<div class="header-wrapper">
+		<a class="logo" href="/" aria-label="Site logo">
+			<Header />
+		</a>
+		<AnimatedHamburger {isMenuOpen} {toggleMenu}>
+			<div class="links-wrapper">
+				<ul class="links">
+					<!-- Menu items -->
+					<li>
+						<a
+							href="/torrent-index"
+							class={currentPath === '/torrent-index' ? 'active' : ''}
+							on:click={toggleMenu}>Index</a
+						>
+					</li>
+					<li>
+						<a
+							href="/torrent-tracker"
+							class={currentPath === '/torrent-tracker' ? 'active' : ''}
+							on:click={toggleMenu}>Tracker</a
+						>
+					</li>
+					<li>
+						<a
+							href="/self-host"
+							class={currentPath === '/self-host' ? 'active' : ''}
+							on:click={toggleMenu}>Self&#8209;host</a
+						>
+					</li>
+					<li>
+						<a
+							href="/community"
+							class={currentPath === '/community' ? 'active' : ''}
+							on:click={toggleMenu}>Community</a
+						>
+					</li>
+					<li>
+						<a href="/blog" class={currentPath === '/blog' ? 'active' : ''} on:click={toggleMenu}
+							>Blog</a
+						>
+					</li>
+					<li>
+						<a href="/about" class={currentPath === '/about' ? 'active' : ''} on:click={toggleMenu}
+							>About</a
+						>
+					</li>
+				</ul>
+			</div>
+		</AnimatedHamburger>
+	</div>
 </header>
 
 <style lang="scss">
@@ -69,14 +72,19 @@
 		position: relative;
 		z-index: 1000;
 		background-color: rgba(255, 49, 0, 1);
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		position: relative;
+		width: 100%;
 		padding-inline: 1.5rem;
 
-		@include for-phone-only {
-			height: 64px;
+		.header-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			margin: 0 auto;
+
+			@include for-phone-only {
+				height: 64px;
+			}
 		}
 
 		ul {
@@ -90,7 +98,6 @@
 			font-size: 1.1rem;
 		}
 
-		/* navlink animations */
 		li > a {
 			display: inline-block;
 			transition: all 200ms ease-in-out;

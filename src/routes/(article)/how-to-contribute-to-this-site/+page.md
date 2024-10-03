@@ -11,32 +11,31 @@ hidden: false
 ---
 
 <script>
-  import Toc from 'svelte-toc';
   import Callout from "$lib/components/molecules/Callout.svelte";
   import CodeBlock from "$lib/components/molecules/CodeBlock.svelte";
   import Image from "$lib/components/atoms/Image.svelte";
   import PostBody from "$lib/components/molecules/PostBody.svelte";
   import PostContainer from "$lib/components/molecules/PostContainer.svelte";
   import PostTable from "$lib/components/molecules/PostTable.svelte";
+  import TableOfContents from '$lib/components/atoms/TableOfContents.svelte';
+
+  let sections = [
+    { name: "Processing", id: "processing" },
+    { name: "Creating a new post", id: "creating-a-new-post" },
+    { name: "Managing blog posts", id: "managing-blog-posts" },
+    { name: "RSS", id: "rss" }
+  ]
+
+  let activeSection = '';
 </script>
 
 <PostContainer>
 <PostTable>
-<Toc
-  title=""
-  --toc-active-color="rgba(255, 49, 0, 0.96)"
-  --toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-  --toc-active-bg="transparent"
->
 
 ## Table of Contents
 
-- [Processing](#processing)
-- [Creating a new post](#creating-a-new-post)
-- [Managing blog posts](#managing-blog-posts)
-- [RSS](#rss)
+<TableOfContents {sections} {activeSection} />
 
-</Toc>
 </PostTable>
 
 <PostBody>
@@ -48,7 +47,9 @@ This way, the URL for each blog post is generated with the folder's name. For ex
 All posts are Markdown files, which means you can use the [Markdown syntax](https://www.markdownguide.org/basic-syntax) in them, and it will work out of the box. However, since this projects uses [MDsveX](https://mdsvex.pngwn.io/) to parse Markdown, you can also use Svelte components inside them! This means that the components used in other pages can also be used in blog posts.
 
 <Callout type="info">
-  This is a Svelte component inside a Markdown file!
+
+This is a Svelte component inside a Markdown file!
+
 </Callout>
 
 ## Processing

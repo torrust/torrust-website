@@ -56,10 +56,8 @@
 
 		blockquote {
 			padding: 25px 25px 15px;
-			border-radius: 20px;
-			font-size: 1.1rem;
-			border-left: 4px solid var(--color--primary);
-			background: var(--color--callout-background);
+			border-left: 4px solid rgba(255, 49, 0, 1);
+			background: rgba(36, 36, 36, 1);
 		}
 
 		code:not([class^='language-']) {

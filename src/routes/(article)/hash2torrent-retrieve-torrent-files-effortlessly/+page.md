@@ -17,36 +17,35 @@ hidden: false
 ---
 
 <script>
-  import Toc from 'svelte-toc';
   import Callout from "$lib/components/molecules/Callout.svelte";
   import CodeBlock from "$lib/components/molecules/CodeBlock.svelte";
   import Image from "$lib/components/atoms/Image.svelte";
   import PostBody from "$lib/components/molecules/PostBody.svelte";
   import PostContainer from "$lib/components/molecules/PostContainer.svelte";
   import PostTable from "$lib/components/molecules/PostTable.svelte";
+  import TableOfContents from '$lib/components/atoms/TableOfContents.svelte';
+
+  let sections = [
+    { name: "Why this tool", id: "why-this-tool" },
+    { name: "Implementation", id: "implementation" },
+    { name: "Alternative Methods", id: "alternative-methods" },
+    { name: "Benefits of Using Hash2Torrent", id: "benefits-of-using-hash2torrent" },
+    { name: "Conclusion", id: "conclusion" },
+    { name: "Links", id: "links" },
+    { name: "Acknowledgments", id: "acknowledgments" }
+  ]
+
+  let activeSection = '';
 </script>
 
 <PostContainer>
 
 <PostTable>
-<Toc
-  title=""
-  --toc-active-color="rgba(255, 49, 0, 0.96)"
-  --toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-  --toc-active-bg="transparent"
->
 
 ## Table of contents
 
-- [Why this tool](#why-this-tool)
-- [Implementation](#implementation)
-- [Alternative Methods](#alternative-methods)
-- [Benefits of Using Hash2Torrent](#benefits-of-using-hash2torrent)
-- [Conclusion](#conclusion)
-- [Links](#links)
-- [Acknowledgments](#acknowledgments)
+<TableOfContents {sections} {activeSection} />
 
-</Toc>
 </PostTable>
 
 <PostBody>

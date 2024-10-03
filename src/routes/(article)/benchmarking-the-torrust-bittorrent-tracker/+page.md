@@ -14,41 +14,45 @@ hidden: false
 ---
 
 <script>
-  import Toc from 'svelte-toc';
   import Callout from "$lib/components/molecules/Callout.svelte";
   import CodeBlock from "$lib/components/molecules/CodeBlock.svelte";
   import Image from "$lib/components/atoms/Image.svelte";
   import PostBody from "$lib/components/molecules/PostBody.svelte";
   import PostContainer from "$lib/components/molecules/PostContainer.svelte";
   import PostTable from "$lib/components/molecules/PostTable.svelte";
+  import TableOfContents from '$lib/components/atoms/TableOfContents.svelte';
+
+  let sections = [
+		{ name: 'Introduction', id: 'introduction' },
+		{ name: 'Understating The Tracker', id: 'understating-the-tracker' },
+		{ name: 'Benchmarking Methodology', id: 'benchmarking-methodology' },
+		{ name: 'Internal Repository Benchmarking', id: 'internal-repository-benchmarking' },
+		{ name: 'E2E UDP Benchmarking', id: 'e2e-udp-benchmarking' },
+		{
+			name: 'Comparative UDP Benchmarking With Other Trackers',
+			id: 'comparative-udp-benchmarking-with-other-trackers',
+			subsections: [
+				{ name: 'Setup The Chihaya Tracker', id: 'setup-the-chihaya-tracker' },
+				{ name: 'Setup The Opentracker Tracker', id: 'setup-the-opentracker-tracker' },
+				{ name: 'Setup The Aquatic Tracker', id: 'setup-the-aquatic-tracker' },
+				{ name: 'Running The Bencher', id: 'running-the-bencher' },
+				{ name: 'Bencher Results', id: 'bencher-results' }
+			]
+		},
+		{ name: 'Conclusion', id: 'conclusion' },
+		{ name: 'Links', id: 'links' }
+	];
+
+	let activeSection = '';
 </script>
 
 <PostContainer>
 <PostTable>
-<Toc
-  title=""
-  --toc-active-color="rgba(255, 49, 0, 0.96)"
-  --toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-  --toc-active-bg="transparent"
->
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Understating The Tracker](#understating-the-tracker)
-- [Benchmarking Methodology](#benchmarking-methodology)
-- [Internal Repository Benchmarking](#internal-repository-benchmarking)
-- [E2E UDP Benchmarking](#e2e-udp-benchmarking)
-- [Comparative UDP Benchmarking With Other Trackers](#comparative-udp-benchmarking-with-other-trackers)
-  - [Setup The Chihaya Tracker](#setup-the-chihaya-tracker)
-  - [Setup The Opentracker Tracker](#setup-the-opentracker-tracker)
-  - [Setup The Aquatic Tracker](#setup-the-aquatic-tracker)
-  - [Running The Bencher](#running-the-bencher)
-  - [Bencher Results](#bencher-results)
-- [Conclusion](#conclusion)
-- [Links](#links)
+<TableOfContents {sections} {activeSection} />
 
-</Toc>
 </PostTable>
 
 <PostBody>

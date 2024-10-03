@@ -14,35 +14,34 @@ hidden: false
 ---
 
 <script>
-  import Toc from 'svelte-toc';
   import Callout from "$lib/components/molecules/Callout.svelte";
   import CodeBlock from "$lib/components/molecules/CodeBlock.svelte";
   import Image from "$lib/components/atoms/Image.svelte";
   import PostBody from "$lib/components/molecules/PostBody.svelte";
   import PostContainer from "$lib/components/molecules/PostContainer.svelte";
   import PostTable from "$lib/components/molecules/PostTable.svelte";
+  import TableOfContents from '$lib/components/atoms/TableOfContents.svelte';
+
+  let sections = [
+    { name: "Hello, Torrent Enthusiasts!", id: "hello-torrent-enthusiasts" },
+    { name: "Experience the Beta Demo Today", id: "experience-the-beta-demo-today" },
+    { name: "Your Feedback Makes Us Better", id: "your-feedback-makes-us-better" },
+    { name: "Join the Conversation", id: "join-the-conversation" },
+    { name: "Important Notice: Demo Availability", id: "important-notice-demo-availability" },
+    { name: "A Heartfelt Thank You to Our Contributors", id: "a-heartfelt-thank-you-to-our-contributors" },
+    { name: "Join Us in This Exciting Journey", id: "join-us-in-this-exciting-journey" }
+  ]
+
+  let activeSection = '';
 </script>
 
 <PostContainer>
 <PostTable>
-<Toc
-  title=""
-  --toc-active-color="rgba(255, 49, 0, 0.96)"
-  --toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-  --toc-active-bg="transparent"
->
 
 ## Table of contents
 
-- [Hello, Torrent Enthusiasts!](#hello-torrent-enthusiasts)
-- [Experience the Beta Demo Today](#experience-the-beta-demo-today)
-- [Your Feedback Makes Us Better](#your-feedback-makes-us-better)
-- [Join the Conversation](#join-the-conversation)
-- [Important Notice: Demo Availability](#important-notice-demo-availability)
-- [A Heartfelt Thank You to Our Contributors](#a-heartfelt-thank-you-to-our-contributors)
-- [Join Us in This Exciting Journey](#join-us-in-this-exciting-journey)
+<TableOfContents {sections} {activeSection} />
 
-</Toc>
 </PostTable>
 
 <PostBody>

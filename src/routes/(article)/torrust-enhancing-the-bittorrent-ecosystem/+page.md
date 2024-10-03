@@ -14,35 +14,34 @@ hidden: false
 ---
 
 <script>
-  import Toc from 'svelte-toc';
   import Callout from "$lib/components/molecules/Callout.svelte";
   import CodeBlock from "$lib/components/molecules/CodeBlock.svelte";
   import Image from "$lib/components/atoms/Image.svelte";
   import PostBody from "$lib/components/molecules/PostBody.svelte";
   import PostContainer from "$lib/components/molecules/PostContainer.svelte";
   import PostTable from "$lib/components/molecules/PostTable.svelte";
+  import TableOfContents from '$lib/components/atoms/TableOfContents.svelte';
+
+  let sections = [
+    { name: "Hello World!", id: "hello-world" },
+    { name: "Why is BitTorrent important?", id: "why-is-bittorrent-important" }
+  ]
+
+  let activeSection = '';
 </script>
 
 <PostContainer>
 <PostTable>
-<Toc
-  title=""
-  --toc-active-color="rgba(255, 49, 0, 0.96)"
-  --toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-  --toc-active-bg="transparent"
->
 
 ## Table of contents
 
-- [Hello World](#hello-world)
-- [Why is BitTorrent important?](#why-is-bittorrent-important)
+<TableOfContents {sections} {activeSection} />
 
-</Toc>
 </PostTable>
 
 <PostBody>
 
-## Hello World! <!-- markdownlint-disable MD026 -->
+## Hello World!
 
 We haven't introduced the Torrust Organization in this blog yet, including its vision, mission, and roadmap. This should have been the first post, but after contributing to the BitTorrent ecosystem for over three years, we now have a better understanding of what the BitTorrent protocols offer and how we can enhance the ecosystem.
 

@@ -12,7 +12,7 @@
 	let activeSection = '';
 </script>
 
-<div>
+<div class="container">
 	<h1>Community</h1>
 	<div class="layout">
 		<div>
@@ -226,7 +226,7 @@
 	}
 
 	h1 {
-		padding-top: 1rem;
+		padding-top: 64px;
 		font-size: 2.25rem;
 	}
 
@@ -251,10 +251,13 @@
 	}
 
 	@include for-desktop-up {
+		.container {
+			margin: 0 auto;
+		}
+
 		h1,
 		.layout {
 			display: flex;
-			padding-inline: 9.25rem;
 			gap: 2rem;
 		}
 

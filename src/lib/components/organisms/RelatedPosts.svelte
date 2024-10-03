@@ -24,13 +24,18 @@
 	.container {
 		color: rgba(245, 245, 245, 0.8);
 		background: rgba(26, 26, 26, 1);
+		padding-bottom: 64px;
 	}
 
 	.grid {
 		width: 100%;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr;
 		grid-gap: 20px;
+
+		@include for-tablet-portrait-up {
+			grid-template-columns: 1fr 1fr;
+		}
 
 		@include for-desktop-up {
 			grid-template-columns: 1fr 1fr 1fr;

@@ -16,48 +16,57 @@ hidden: false
 ---
 
 <script>
-  import Toc from 'svelte-toc';
   import Callout from "$lib/components/molecules/Callout.svelte";
   import CodeBlock from "$lib/components/molecules/CodeBlock.svelte";
   import Image from "$lib/components/atoms/Image.svelte";
   import PostBody from "$lib/components/molecules/PostBody.svelte";
   import PostContainer from "$lib/components/molecules/PostContainer.svelte";
   import PostTable from "$lib/components/molecules/PostTable.svelte";
+  import TableOfContents from '$lib/components/atoms/TableOfContents.svelte';
+
+  let sections = [
+    { name: "Introduction", id: "introduction" },
+    { name: "Requirements", id: "requirements" },
+    { name: "We Use Docker (OCI) Containers", id: "we-use-docker-oci-containers" },
+    { name: "Basic Dockerized Rust Application", id: "basic-dockerized-rust-application" },
+    { name: "Use Multi-Stage Builds to Minimize the Image Size", id: "use-multi-stage-builds-to-minimize-the-image-size" },
+    { name: "Image Variants", id: "image-variants" },
+    { name: "Introduction to Docker Layers Cache", id: "introduction-to-docker-layers-cache" },
+    { 
+      name: "Caching Cargo Dependencies", 
+      id: "caching-cargo-dependencies",
+      subsections: [
+        { name: "Demonstration of Caching Cargo Dependencies Using a Custom Solution", id: "demonstration-of-caching-cargo-dependencies-using-a-custom-solution" },
+        { name: "Caching Cargo Dependencies With Cargo Chef", id: "caching-cargo-dependencies-with-cargo-chef" }
+      ]
+    },
+    { name: "Installing Rust Binaries With Cargo Binstall", id: "installing-rust-binaries-with-cargo-binstall" },
+    { name: "Archiving And Reusing Builds With Cargo Nextest", id: "archiving-and-reusing-builds-with-cargo-nextest" },
+    { 
+      name: "Running Container Without Sudo", 
+      id: "running-container-without-sudo",
+      subsections: [
+        { name: "Use The `docker run --user` Argument", id: "use-the-docker-run---user-argument" },
+        { name: "Create The User At Runtime", id: "create-the-user-at-runtime" }
+      ]
+    },
+    { name: "Decomposing the Torrust Tracker Containerfile", id: "decomposing-the-torrust-tracker-containerfile" },
+    { name: "Other Good Practices", id: "other-good-practices" },
+    { name: "Other Considerations", id: "other-considerations" },
+    { name: "Links", id: "links" },
+    { name: "Conclusion", id: "conclusion" }
+  ]
+
+  let activeSection = '';
 </script>
 
 <PostContainer>
 <PostTable>
-<Toc
-  title=""
-  --toc-active-color="rgba(255, 49, 0, 0.96)"
-  --toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-  --toc-active-bg="transparent"
->
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Requirements](#requirements)
-- [We Use Docker (OCI) Containers](#we-use-docker-oci-containers)
-- [Basic Dockerized Rust Application](#basic-dockerized-rust-application)
-- [Use Multi-Stage Builds to Minimize the Image Size](#use-multi-stage-builds-to-minimize-the-image-size)
-- [Image Variants](#image-variants)
-- [Introduction to Docker Layers Cache](#introduction-to-docker-layers-cache)
-- [Caching Cargo Dependencies](#caching-cargo-dependencies)
-  - [Demonstration of Caching Cargo Dependencies Using a Custom Solution](#demonstration-of-caching-cargo-dependencies-using-a-custom-solution)
-  - [Caching Cargo Dependencies With Cargo Chef](#caching-cargo-dependencies-with-cargo-chef)
-- [Installing Rust Binaries With Cargo Binstall](#installing-rust-binaries-with-cargo-binstall)
-- [Archiving And Reusing Builds With Cargo Nextest](#archiving-and-reusing-builds-with-cargo-nextest)
-- [Running Container Without Sudo](#running-container-without-sudo)
-  - [Use The `docker run --user` Argument](#use-the-docker-run---user-argument)
-  - [Create The User At Runtime](#create-the-user-at-runtime)
-- [Decomposing the Torrust Tracker Containerfile](#decomposing-the-torrust-tracker-containerfile)
-- [Other Good Practices](#other-good-practices)
-- [Other Considerations](#other-considerations)
-- [Links](#links)
-- [Conclusion](#conclusion)
+<TableOfContents {sections} {activeSection} />
 
-</Toc>
 </PostTable>
 
 <PostBody>

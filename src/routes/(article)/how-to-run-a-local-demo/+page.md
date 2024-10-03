@@ -15,33 +15,32 @@ hidden: false
 ---
 
 <script>
-  import Toc from 'svelte-toc';
   import Callout from "$lib/components/molecules/Callout.svelte";
   import CodeBlock from "$lib/components/molecules/CodeBlock.svelte";
   import Image from "$lib/components/atoms/Image.svelte";
   import PostBody from "$lib/components/molecules/PostBody.svelte";
   import PostContainer from "$lib/components/molecules/PostContainer.svelte";
   import PostTable from "$lib/components/molecules/PostTable.svelte";
+  import TableOfContents from '$lib/components/atoms/TableOfContents.svelte';
+
+  let sections = [
+    { name: "Requirements", id: "requirements" },
+    { name: "Running the demo", id: "running-the-demo" },
+    { name: "Application Setup", id: "application-setup" },
+    { name: "Advanced Setup", id: "advanced-setup" },
+    { name: "Conclusion", id: "conclusion" }
+  ]
+
+  let activeSection = '';
 </script>
 
 <PostContainer>
 <PostTable>
-<Toc
-  title=""
-  --toc-active-color="rgba(255, 49, 0, 0.96)"
-  --toc-li-hover-color="rgba(255, 49, 0, 0.96)"
-  --toc-active-bg="transparent"
->
 
 ## Table of Contents
 
-- [Requirements](#requirements)
-- [Running the demo](#running-the-demo)
-- [Application Setup](#application-setup)
-- [Advanced Setup](#advanced-setup)
-- [Conclusion](#conclusion)
+<TableOfContents {sections} {activeSection} />
 
-</Toc>
 </PostTable>
 
 <PostBody>
@@ -60,7 +59,9 @@ At the time of writing, we are using Git version `2.39.2` and Docker version `26
 By default, the demo uses SQLite3 as database driver, but you can also use MySQL. If you want to use SQLite3, you do not need to install anything else. If you want to take a look at the internal database structure or data, you can install [DB Browser for SQLite](https://sqlitebrowser.org/).
 
 <Callout type="info">
-  Although we use some small bash scripts, you can run the demo on different operating systems by executing the docker-compose command manually. We have tested it on Linux.
+
+Although we use some small bash scripts, you can run the demo on different operating systems by executing the docker-compose command manually. We have tested it on Linux.
+
 </Callout>
 
 ## Running the demo
@@ -117,7 +118,9 @@ c10ad938b283   dockage/mailcatcher:0.8.2   "entrypoint mailcatcher"   5 seconds 
 </CodeBlock>
 
 <Callout type="info">
-  IMPORTANT! We use the latest commit from the develop branches of the Torrust repositories. If you want to use the latest stable version, you can change the tag for the docker images in the `docker-compose.yml` file.
+
+IMPORTANT! We use the latest commit from the develop branches of the Torrust repositories. If you want to use the latest stable version, you can change the tag for the docker images in the `docker-compose.yml` file.
+
 </Callout>
 
 Once the demo is running, you go to <http://localhost:3000/> to start using it.
@@ -129,7 +132,9 @@ The application has some public pages like the torrent list or torrent details p
 <http://localhost:3000/signup>
 
 <Callout type="info">
-  The first user registered will be the <code>admin</code> user. The application only has one admin user.
+
+The first user registered will be the <code>admin</code> user. The application only has one admin user.
+
 </Callout>
 
 The application is very easy to use but you can find comprehensive documentation in the following links:
