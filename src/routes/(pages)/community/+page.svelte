@@ -3,9 +3,28 @@
 
 	// Array of section objects with display names and IDs
 	let sections = [
-		{ name: 'Why Contribute to our Project?', id: 'whyContribute' },
+		{
+			name: 'Why Contribute to our Project?',
+			id: 'whyContribute',
+			subsections: [
+				{ name: 'Embrace Rust: a language of choice', id: 'embraceRust' },
+				{ name: 'Prioritizing Code Quality', id: 'codeQuality' },
+				{ name: 'A welcoming community for newcomers', id: 'welcomingCommunity' },
+				{ name: 'Influence the Project’s Future', id: 'influenceDirection' },
+				{ name: 'Join us today', id: 'joinUs' }
+			]
+		},
 		{ name: 'How to contribute?', id: 'howContribute' },
-		{ name: 'Torrent Knowledge Base', id: 'knowledgeBase' },
+		{
+			name: 'Torrent Knowledge Base',
+			id: 'knowledgeBase',
+			subsections: [
+				{ name: 'What Are Torrents?', id: 'whatAreTorrents' },
+				{ name: 'What Is a Tracker?', id: 'whatIsTracker' },
+				{ name: 'What Is a Torrent Index?', id: 'whatIsTorrentIndex' },
+				{ name: 'List of projects using BitTorrent', id: 'listOfProjects' }
+			]
+		},
 		{ name: 'Resources', id: 'resources' }
 	];
 

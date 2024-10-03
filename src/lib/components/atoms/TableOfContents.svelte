@@ -23,7 +23,7 @@
 					}
 				});
 			},
-			{ threshold: 0.5 }
+			{ threshold: 0.9 }
 		);
 
 		sections.forEach((section) => {
@@ -90,6 +90,7 @@
 				color: rgba(245, 245, 245, 0.96);
 				font-size: 0.875rem;
 				text-decoration: none;
+				word-break: keep-all;
 
 				&:hover {
 					color: rgba(255, 49, 0, 0.96);

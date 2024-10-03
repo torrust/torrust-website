@@ -34,6 +34,10 @@ body {
 
 a {
 	color: rgba(255, 49, 0, 0.96);
+	word-wrap: break-word;
+	word-break: break-all;
+	overflow-wrap: break-word;
+	white-space: normal;
 }
 
 html {

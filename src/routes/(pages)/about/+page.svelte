@@ -4,8 +4,29 @@
 
 	// Array of section objects with display names and IDs
 	let sections = [
-		{ name: 'Why BitTorrent?', id: 'bitTorrent' },
-		{ name: 'Why Torrust', id: 'whyTorrust' },
+		{
+			name: 'Why BitTorrent?',
+			id: 'bitTorrent',
+			subsections: [
+				{ name: 'Why does the BitTorrent protocol still matter?', id: 'bitTorrentProtocol' },
+				{ name: 'Efficiency and scalability', id: 'efficiency' },
+				{ name: 'Current use cases', id: 'currentUses' },
+				{ name: 'Future use cases', id: 'futureUses' },
+				{ name: 'BT vs. IPFS', id: 'btIpfs' },
+				{ name: 'Conclusion', id: 'conclusion' }
+			]
+		},
+		{
+			name: 'Why Torrust',
+			id: 'whyTorrust',
+			subsections: [
+				{ name: 'Performance & Efficiency', id: 'performanceEfficiency' },
+				{ name: 'Security & Reliability', id: 'securityReliability' },
+				{ name: 'User Experience & Accessibility', id: 'userExperience' },
+				{ name: 'Future use cases', id: 'futureUses' },
+				{ name: 'Integration & Interoperability', id: 'integration' }
+			]
+		},
 		{ name: 'The Team', id: 'team' },
 		{ name: 'Contributors', id: 'contributors' },
 		{ name: 'Sponsors', id: 'sponsors' }
