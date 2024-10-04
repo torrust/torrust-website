@@ -68,8 +68,8 @@
 
 		&.color {
 			&--primary {
-				--main-color: var(--color--primary-rgb);
-				--light-color: var(--color--primary-tint-rgb);
+				--main-color: 255, 49, 0;
+				--light-color: rgba(255, 100, 100, 0.5);
 				--contrast-color: var(--color--primary-contrast);
 			}
 			&--secondary {

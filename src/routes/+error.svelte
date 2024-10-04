@@ -21,16 +21,21 @@
 
 <style lang="scss">
 	.error-page {
-		background: var(--color--page-background);
 		position: relative;
+		background: rgba(245, 245, 245, 0.08);
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	.container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		min-height: 60vh;
+		min-height: 80vh;
 		text-align: center;
+		max-width: 500px;
+		padding-inline: 1.5rem;
 
 		.svg-wrapper {
 			width: 300px;

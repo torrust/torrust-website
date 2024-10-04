@@ -79,6 +79,10 @@
 		text-align: left;
 	}
 
+	a {
+		word-break: keep-all;
+	}
+
 	.arrow {
 		display: flex;
 		align-items: center;

@@ -14,7 +14,14 @@
 			]
 		},
 		{ name: 'Roadmap', id: 'roadmap' },
-		{ name: 'License', id: 'license' }
+		{
+			name: 'License',
+			id: 'license',
+			subsections: [
+				{ name: 'Copyright', id: 'copyright' },
+				{ name: 'Legacy Exception', id: 'legacyException' }
+			]
+		}
 	];
 
 	let activeSection = '';
@@ -193,7 +200,7 @@ cd /tmp \
 
 		<p></p>
 
-		<h3>Copyright</h3>
+		<h3 id="copyright">Copyright</h3>
 
 		<p>
 			This program is free software: you can redistribute it and/or modify it under the terms of the <a
@@ -221,7 +228,7 @@ cd /tmp \
 
 		<p></p>
 
-		<h3>Legacy Exception</h3>
+		<h3 id="legacyException">Legacy Exception</h3>
 
 		<p>
 			For prosperity, versions of Torrust Tracker that are older than five years are automatically

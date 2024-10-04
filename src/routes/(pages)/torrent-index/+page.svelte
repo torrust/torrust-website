@@ -125,7 +125,7 @@
 
 		.slider-content {
 			width: 100%;
-			max-width: 2070px;
+			max-width: 2100px;
 			display: flex;
 			justify-content: center;
 		}
