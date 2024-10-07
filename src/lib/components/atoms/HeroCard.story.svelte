@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Hst as HstType } from '@histoire/plugin-svelte'; // Import the Histoire types
+	import type { Hst as HstType } from '@histoire/plugin-svelte'; // Import the Histoire types
 	import HeroCard from './HeroCard.svelte'; // Import the HeroCard component
 
 	export let Hst: HstType; // This will be provided by Histoire
