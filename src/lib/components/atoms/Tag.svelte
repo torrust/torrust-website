@@ -6,6 +6,7 @@
 
 	export let href: string | undefined = undefined;
 	export let tag: string;
+
 	const isExternalLink = !!href && HttpRegex.test(href);
 	export let target: '_self' | '_blank' = isExternalLink ? '_blank' : '_self';
 	export let rel = isExternalLink ? 'noopener noreferrer' : undefined;
