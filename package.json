@@ -58,7 +58,7 @@
 		"svelte-toc": "^0.5.9",
 		"tocbot": "^4.29.0",
 		"vscode-oniguruma": "^2.0.1",
-		"vscode-textmate": "^9.0.0"
+		"vscode-textmate": "^9.1.0"
 	},
 	"packageManager": "yarn@4.1.0"
 }
