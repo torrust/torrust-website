@@ -1,5 +1,17 @@
 <script lang="ts">
-	import Header from './Header.svelte'; // Adjust the import path as necessary
+	import '$lib/scss/global.scss';
+	import type { Hst as HstType } from '@histoire/plugin-svelte';
+	import Header from './Header.svelte';
+
+	export let Hst: HstType;
 </script>
 
-<Header />
+<svelte:component
+	this={Hst.Story}
+	title="Organisms/Header"
+	layout={{ type: 'single', iframe: true }}
+>
+	<svelte:component this={Hst.Variant} title="Transparent Background">
+		<Header />
+	</svelte:component>
+</svelte:component>

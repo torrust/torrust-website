@@ -1,5 +1,11 @@
 <script lang="ts">
-	import Hero from './Hero.svelte'; // Adjust the import path as necessary
+	import '$lib/scss/global.scss';
+	import type { Hst as HstType } from '@histoire/plugin-svelte';
+	import Hero from './Hero.svelte';
+
+	export let Hst: HstType;
 </script>
 
-<Hero />
+<svelte:component this={Hst.Story} title="Organisms/Hero" layout={{ type: 'single', iframe: true }}>
+	<Hero />
+</svelte:component>
