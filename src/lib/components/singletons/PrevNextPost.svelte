@@ -32,7 +32,7 @@
 					height="24"
 					style="color: rgba(245, 245, 245, 0.92)"
 				/>
-				<a href="/{prevPost.slug}">{prevPost.title}</a>
+				<a href="/blog-post/{prevPost.slug}">{prevPost.title}</a>
 			</div>
 		{:else}
 			<h3 class="inactive">You are reading our first post.</h3>
@@ -42,7 +42,7 @@
 	<div class="nextPost">
 		{#if nextPost}
 			<div class="arrow arrowNext">
-				<a href="/{nextPost.slug}">{nextPost.title}</a>
+				<a href="/blog-post/{nextPost.slug}">{nextPost.title}</a>
 				<Icon
 					icon="ic:outline-arrow-forward"
 					width="24"

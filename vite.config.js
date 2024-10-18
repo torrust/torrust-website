@@ -6,7 +6,7 @@ const config = {
 	plugins: [sveltekit()],
 	resolve: {
 		alias: {
-			$routes: path.resolve('./src/routes')
+			$routes: path.resolve('./src/routes') // Adjust this path based on your project structure
 		}
 	}
 };
