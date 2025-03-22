@@ -1,33 +1,18 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
-
 	import Icon from '@iconify/svelte';
-	import type { BlogPost } from '$lib/utils/types';
-	let { data, currentPage } = $props();
+	import type { BlogMetadata } from '$lib/utils/types';
 
-	let prevPost: BlogPost | null = $state(null);
-	let nextPost: BlogPost | null = $state(null);
+	export let currentPage: string;
+	export let allPosts: BlogMetadata[];
 
-	run(() => {
-		if (currentPage && data.all_posts.length) {
-			const sortedPosts = data.all_posts
-				.slice()
-				.sort(
-					(a: BlogPost, b: BlogPost) =>
-						new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime()
-				);
+	$: sortedPosts = [...allPosts].sort(
+		(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+	);
 
-			const currentIndex = sortedPosts.findIndex(
-				(post: BlogPost) => currentPage === post.meta.slug
-			);
+	$: currentIndex = sortedPosts.findIndex((post) => post.slug === currentPage);
 
-			// Set prevPost and nextPost based on the current index
-			if (currentIndex !== -1) {
-				prevPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null; // Previous post
-				nextPost = currentIndex < sortedPosts.length - 1 ? sortedPosts[currentIndex + 1] : null; // Next post
-			}
-		}
-	});
+	$: prevPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
+	$: nextPost = currentIndex < sortedPosts.length - 1 ? sortedPosts[currentIndex + 1] : null;
 </script>
 
 <div class="container">
@@ -40,7 +25,7 @@
 					height="24"
 					style="color: rgba(245, 245, 245, 0.92)"
 				/>
-				<a href="/blog/{prevPost.meta.slug}">{prevPost?.meta?.title}</a>
+				<a href="/blog/{prevPost.slug}">{prevPost.title}</a>
 			</div>
 		{:else}
 			<h3 class="inactive">You are reading our most recent post.</h3>
@@ -50,7 +35,7 @@
 	<div class="nextPost">
 		{#if nextPost}
 			<div class="arrow arrowNext">
-				<a href="/blog/{nextPost.meta.slug}">{nextPost?.meta?.title}</a>
+				<a href="/blog/{nextPost.slug}">{nextPost.title}</a>
 				<Icon
 					icon="ic:outline-arrow-forward"
 					width="24"
@@ -65,12 +50,21 @@
 </div>
 
 <style lang="scss">
+	@use '$lib/scss/breakpoints.scss' as bp;
+
 	.container {
 		display: flex;
 		justify-content: space-between;
+		flex-direction: column;
 		font-size: 16px;
 		border: 1px solid rgba(245, 245, 245, 0.08);
 		padding-inline: 2.5rem;
+		margin: 0 auto;
+		margin-top: 2rem;
+
+		@include bp.for-tablet-portrait-up {
+			flex-direction: row;
+		}
 	}
 
 	.nextPost,

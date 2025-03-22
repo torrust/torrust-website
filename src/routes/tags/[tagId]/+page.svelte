@@ -18,14 +18,14 @@
 	{#if blogPosts && blogPosts.length}
 		<h1>{tagId}</h1>
 		{#each blogPosts as post}
-			{#if post.meta?.tags}
-				{#if post.meta.tags && post.meta.tags.includes(tagId)}
+			{#if post?.tags}
+				{#if post.tags && post.tags.includes(tagId)}
 					<TagCard
-						title={post.meta?.title || 'Default title'}
-						coverImage={post.meta?.coverImage || 'Default image'}
-						slug={post.meta?.slug || 'Default slug'}
-						excerpt={post.meta?.excerpt || 'Default excerpt'}
-						date={post.meta?.date || 'Default date'}
+						title={post?.title || 'Default title'}
+						coverImage={post?.coverImage || 'Default image'}
+						slug={post?.slug || 'Default slug'}
+						excerpt={post?.excerpt || 'Default excerpt'}
+						date={post?.date || 'Default date'}
 					/>
 				{/if}
 			{/if}

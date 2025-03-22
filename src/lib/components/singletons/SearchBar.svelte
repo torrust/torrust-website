@@ -78,7 +78,7 @@
 				<ul>
 					{#each results as result}
 						<li>
-							<a href="/{result.slug}" on:click={clearSearch}>
+							<a href="/blog/{result.slug}" on:click={clearSearch}>
 								<div>
 									<div>
 										<!-- Displaying result title -->
