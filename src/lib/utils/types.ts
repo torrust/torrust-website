@@ -54,17 +54,6 @@ export type BlogPost = {
 	contributorSlug: string;
 	contributor: string;
 	path: string;
-	meta: {
-		slug: string;
-		title: string;
-		contributor: string;
-		contributorSlug: string;
-		coverImage: string;
-		tags?: string[];
-		readingTime: string;
-		excerpt: string;
-		date: string;
-	};
 };
 
 export type Categories = 'sveltekit' | 'svelte';
@@ -76,4 +65,15 @@ export type Post = {
 	date: string;
 	categories: Categories[];
 	published: boolean;
+};
+
+export type BlogMetadata = {
+	title: string;
+	date: string;
+	coverImage: string;
+	excerpt: string;
+	slug: string;
+	contributor: string;
+	contributorSlug: string;
+	tags: string[];
 };

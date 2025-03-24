@@ -6,38 +6,37 @@
 
 	interface Props {
 		data: {
-			posts: BlogPost[];
+			allPosts: BlogPost[];
 		};
 	}
 
 	let { data }: Props = $props();
-
-	let { posts: blogPosts } = data;
-
+	let { allPosts: blogPosts = [] } = data || {};
 	let searchTerm = $state('');
 
 	type Post = {
-		path: string;
-		meta: {
-			title: string;
-			date: string;
-			contributor: string;
-		};
+		title: string;
+		date: string;
+		contributor: string;
+		slug: string;
 	};
 
-	let posts: Post[] = $derived(
-		$page.data.posts.filter((post: BlogPost) => {
-			const title = post.meta?.title ?? '';
-			const contributor = post.meta?.contributor ?? '';
-			const excerpt = post.meta?.excerpt ?? '';
+	// Default to an empty array if blogPosts is undefined
+	let posts = $state<Post[]>([]);
+
+	if (blogPosts && blogPosts.length > 0) {
+		posts = blogPosts.filter((post: BlogPost) => {
+			const title = post?.title ?? '';
+			const contributor = post?.contributor ?? '';
+			const excerpt = post?.excerpt ?? '';
 
 			return (
 				title.toLowerCase().includes(searchTerm.toLowerCase()) ||
 				contributor.toLowerCase().includes(searchTerm.toLowerCase()) ||
 				excerpt.toLowerCase().includes(searchTerm.toLowerCase())
 			);
-		})
-	);
+		});
+	}
 </script>
 
 <div class="container">
@@ -45,13 +44,16 @@
 		<h1>Blog</h1>
 		<SearchBar bind:searchTerm {blogPosts} />
 	</div>
-	<div class="grid">
-		{#each posts as post}
-			<a href={post.path}>
-				<BlogPreview post_data={post.meta} />
-			</a>
-		{/each}
-	</div>
+
+	{#if posts && posts.length > 0}
+		<div class="grid">
+			{#each posts as post}
+				<a href="/blog/{post.slug}">
+					<BlogPreview post_data={post} />
+				</a>
+			{/each}
+		</div>
+	{/if}
 </div>
 
 <style lang="scss">

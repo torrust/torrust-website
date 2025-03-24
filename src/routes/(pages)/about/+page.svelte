@@ -340,6 +340,7 @@
 		flex-direction: column;
 		gap: 2rem;
 		position: relative;
+		margin-inline: 2rem;
 	}
 
 	.content-preview {

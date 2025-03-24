@@ -15,7 +15,7 @@
 		states: { activeHeadingIdxs, headingsTree }
 	} = createTableOfContents({
 		selector,
-		exclude: [],
+		exclude: ['h3'],
 		activeType: 'highest',
 		pushStateFn: pushState,
 		headingFilterFn: (heading) => !heading.hasAttribute('data-toc-ignore'),
@@ -55,6 +55,7 @@
 			top: 0;
 			z-index: 100;
 			background-color: inherit;
+			max-width: 250px;
 		}
 	}
 </style>

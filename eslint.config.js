@@ -32,6 +32,7 @@ export default [
 			'package-lock.json'
 		],
 		rules: {
+			'@typescript-eslint/require-await': 'off',
 			'prettier/prettier': 'error',
 			'no-sparse-arrays': 'off',
 			'no-undef': 'off',
@@ -41,7 +42,6 @@ export default [
 			'no-unused-vars': 'off',
 			'no-constant-condition': 'off',
 			'no-cond-assign': 'off',
-			'@typescript-eslint/require-await': 'off',
 			'no-control-regex': 'off',
 			'no-case-declarations': 'off',
 			'no-self-assign': 'off',
@@ -51,7 +51,8 @@ export default [
 			'no-redeclare': 'off',
 			'no-extra-boolean-cast': 'off',
 			'no-misleading-character-class': 'off',
-			'no-unused-disable': 'off'
+			'no-unused-disable': 'off',
+			'no-unused-disable-directive': 'off'
 		},
 		plugins: {
 			prettier: eslintPluginPrettier,
@@ -75,8 +76,9 @@ export default [
 			'no-unused-vars': 'off',
 			'no-control-regex': 'off',
 			'no-fallthrough': 'off',
-			'@typescript-eslint/require-await': 'off',
-			'no-unused-labels': 'off'
+			'no-unused-labels': 'off',
+			'no-warning-comments': 'off',
+			'no-unused-disable-directive': 'off'
 		}
 	},
 

@@ -41,6 +41,8 @@
 </TagCard>
 
 <style lang="scss">
+	@use '$lib/scss/breakpoints.scss' as bp;
+
 	.content {
 		display: flex;
 		flex-direction: column;
@@ -76,12 +78,16 @@
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
-		border-radius: 10px 0 0 10px;
 	}
 
 	.image-container img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		border-radius: 10px 10px 0 0;
+
+		@include bp.for-tablet-portrait-up {
+			border-radius: 10px 0 0 10px;
+		}
 	}
 </style>

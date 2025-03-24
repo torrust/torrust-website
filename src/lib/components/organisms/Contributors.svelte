@@ -43,6 +43,7 @@
 		justify-content: center;
 		gap: 20px;
 		padding-top: 2rem;
+		margin-inline: 2rem;
 	}
 
 	h2 {

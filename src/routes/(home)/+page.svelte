@@ -6,25 +6,26 @@
 	import type { BlogPost, Contributor } from '$lib/utils/types';
 
 	export let data: {
-		posts: BlogPost[];
+		allPosts: BlogPost[];
 		allContributors: Contributor[];
 		error: string | null;
 	};
-
-	let filteredPosts = data.posts;
+	let latestPosts = data.allPosts.slice(0, 6);
 </script>
 
 <Hero />
 <WhyContribute />
 <Contributors contributors={data.allContributors} error={data.error} />
 
-{#if filteredPosts && filteredPosts.length > 0}
+{#if latestPosts && latestPosts.length > 0}
 	<div class="container">
 		<h2>Latest articles</h2>
 		<div class="grid">
-			{#each filteredPosts as post}
-				<a href={post.path}>
-					<BlogPreview post_data={post.meta} />
+			{#each latestPosts as post}
+				<a href="/blog/{post.slug}">
+					{#if post.coverImage}
+						<BlogPreview post_data={post} />
+					{/if}
 				</a>
 			{/each}
 		</div>
@@ -68,6 +69,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 24px;
+		margin-inline: 2rem;
 
 		@include bp.for-phone-only {
 			grid-template-columns: 1fr;

@@ -1,6 +1,6 @@
 <script lang="ts">
 	interface Props {
-		heading: string;
+		heading?: string;
 		children?: import('svelte').Snippet;
 	}
 
@@ -22,7 +22,7 @@
 	.para {
 		display: flex;
 		flex-direction: column;
-		max-width: 1100px;
+		max-width: 1200px;
 		margin: 0 auto;
 	}
 
@@ -36,7 +36,6 @@
 		display: flex;
 		flex-direction: column;
 		padding-top: 4rem;
-		padding-inline: 2.5rem;
 	}
 
 	@include bp.for-desktop-up {

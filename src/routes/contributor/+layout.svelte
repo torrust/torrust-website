@@ -20,13 +20,16 @@
 
 	let currentUrl: string | undefined = '';
 	let splitUrl: string | undefined = '';
+	let filteredPosts: BlogPost[] = $state([]);
 	let numberOfPosts: number | undefined = $state();
 
 	onMount(() => {
 		currentUrl = $page.url.pathname;
 		splitUrl = currentUrl.split('/').pop();
 
-		numberOfPosts = posts.filter((post) => post.meta.contributorSlug === splitUrl).length;
+		filteredPosts = posts.filter((post) => post.contributorSlug === splitUrl);
+		numberOfPosts = filteredPosts.length;
+		console.log(numberOfPosts);
 	});
 </script>
 
@@ -36,9 +39,9 @@
 	{#if posts && typeof numberOfPosts !== 'undefined' && numberOfPosts > 0}
 		<ContentSection title="All Blog Posts">
 			<div class="grid">
-				{#each posts as post}
-					<a href={post.path}>
-						<BlogPreview post_data={post.meta} />
+				{#each filteredPosts as post}
+					<a href={`/blog/${post.slug}`}>
+						<BlogPreview post_data={post} />
 					</a>
 				{/each}
 			</div>
@@ -57,6 +60,7 @@
 	.container {
 		background: rgba(26, 26, 26, 1);
 		color: rgba(245, 245, 245, 0.96);
+		margin: 0 auto;
 	}
 
 	.grid {
@@ -66,6 +70,7 @@
 		grid-gap: 24px;
 		max-width: 1200px;
 		margin: 0 auto;
+		margin-inline: 2rem;
 
 		@include bp.for-phone-only {
 			grid-template-columns: 1fr;
