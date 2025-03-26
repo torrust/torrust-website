@@ -80,7 +80,7 @@
 
 		&:hover {
 			background: rgba(0, 0, 0, 0.2);
-			box-shadow: 0 0 0 3px rgba(255, 49, 0, 1);
+			box-shadow: 0 0 0 3px rgba(254, 13, 0, 1);
 		}
 	}
 

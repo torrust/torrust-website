@@ -74,7 +74,7 @@
 	header {
 		position: relative;
 		z-index: 1000;
-		background-color: rgba(255, 49, 0, 1);
+		background-color: rgba(254, 13, 0, 1);
 		width: 100%;
 		padding-inline: 1.5rem;
 
@@ -152,7 +152,7 @@
 			justify-content: center;
 			text-align: justify;
 			gap: 30px;
-			background-color: rgba(255, 49, 0, 1);
+			background-color: rgba(254, 13, 0, 1);
 
 			a {
 				text-decoration: none;

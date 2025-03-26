@@ -45,7 +45,7 @@
 
 <style lang="scss">
 	.content {
-		background: rgba(26, 26, 26, 1);
+		background: rgba(25, 25, 25, 1);
 		overflow-y: scroll;
 	}
 

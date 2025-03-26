@@ -173,6 +173,6 @@
 
 <style>
 	svg:hover path {
-		fill: rgba(255, 49, 0, 1);
+		fill: rgba(254, 13, 0, 1);
 	}
 </style>

@@ -32,7 +32,7 @@
 		margin: 0 auto;
 		text-align: center;
 		color: rgba(245, 245, 245, 0.8);
-		background: rgba(26, 26, 26, 1);
+		background: rgba(25, 25, 25, 1);
 		padding-top: 4rem;
 		padding-inline: 1.5rem;
 		max-width: 1200px;

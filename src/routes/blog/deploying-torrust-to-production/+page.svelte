@@ -1448,7 +1448,7 @@ port = 1025`}
 
 	a {
 		word-break: keep-all;
-		color: rgba(255, 49, 0, 1);
+		color: rgba(254, 13, 0, 1);
 	}
 
 	ul {

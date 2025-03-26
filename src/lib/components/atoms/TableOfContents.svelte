@@ -72,7 +72,7 @@
 
 <style lang="scss">
 	.sticky-nav {
-		background: rgba(26, 26, 26, 1);
+		background: rgba(25, 25, 25, 1);
 		width: 300px;
 		padding-inline: 0;
 		position: sticky;

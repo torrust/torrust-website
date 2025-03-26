@@ -72,7 +72,7 @@
 	}
 
 	.text-container:hover {
-		color: rgba(255, 49, 0, 1);
+		color: rgba(254, 13, 0, 1);
 	}
 
 	.text-container h2 {

@@ -20,11 +20,11 @@
 	@use '$lib/scss/breakpoints.scss' as bp;
 
 	footer {
-		background-color: rgba(26, 26, 26, 1);
+		background-color: rgba(25, 25, 25, 1);
 		color: rgba(245, 245, 245, 0.96);
 		display: flex;
 		justify-content: center;
-		border-bottom: 16px solid rgba(255, 49, 0, 1);
+		border-bottom: 16px solid rgba(254, 13, 0, 1);
 		padding: 2rem 1.5rem;
 
 		.footer-wrapper {

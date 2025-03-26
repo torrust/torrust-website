@@ -815,7 +815,7 @@ Estimated duration: 0 hours, 44 minutes
 
 	a {
 		word-break: keep-all;
-		color: rgba(255, 49, 0, 1);
+		color: rgba(254, 13, 0, 1);
 	}
 
 	ul {

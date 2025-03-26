@@ -31,7 +31,7 @@
 		flex-direction: column;
 		margin: 0 auto;
 		padding-top: 3rem;
-		background: rgba(26, 26, 26, 1);
+		background: rgba(25, 25, 25, 1);
 		color: rgba(245, 245, 245, 0.96);
 		padding-bottom: 64px;
 		box-sizing: border-box;
