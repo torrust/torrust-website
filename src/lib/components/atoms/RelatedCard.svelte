@@ -76,7 +76,7 @@
 		&[onclick] {
 			cursor: pointer;
 			&:hover {
-				border: 1px solid rgba(255, 49, 0, 1);
+				border: 1px solid rgba(254, 13, 0, 1);
 			}
 		}
 	}

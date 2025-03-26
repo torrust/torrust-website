@@ -243,7 +243,7 @@ println!("{output}"); // It prints the JSON string: "spam"`}
 
 	a {
 		word-break: keep-all;
-		color: rgba(255, 49, 0, 1);
+		color: rgba(254, 13, 0, 1);
 	}
 
 	.content-preview > p,

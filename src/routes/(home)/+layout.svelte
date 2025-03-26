@@ -33,7 +33,7 @@
 
 <style lang="scss">
 	main {
-		background-color: rgba(26, 26, 26, 1);
+		background-color: rgba(25, 25, 25, 1);
 		padding-bottom: 64px;
 	}
 </style>

@@ -33,7 +33,7 @@
 		text-transform: uppercase;
 		font-size: 12px;
 		&:hover {
-			color: rgba(255, 49, 0, 1);
+			color: rgba(254, 13, 0, 1);
 		}
 	}
 </style>

@@ -36,7 +36,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-color: rgba(255, 49, 0, 1);
+		background-color: rgba(254, 13, 0, 1);
 		display: flex;
 		align-items: center;
 		justify-content: center;

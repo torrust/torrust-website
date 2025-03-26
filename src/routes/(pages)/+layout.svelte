@@ -12,7 +12,7 @@
 
 <style lang="scss">
 	.layout-container {
-		background: rgba(26, 26, 26, 1);
+		background: rgba(25, 25, 25, 1);
 		padding: 0;
 		color: rgba(245, 245, 245, 0.96);
 		padding-bottom: 64px;

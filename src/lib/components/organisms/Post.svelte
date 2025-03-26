@@ -77,7 +77,7 @@
 	@use '$lib/scss/breakpoints.scss' as bp;
 
 	.container {
-		background: rgba(26, 26, 26, 1);
+		background: rgba(25, 25, 25, 1);
 		color: rgba(245, 245, 245, 0.96);
 		margin: 0 auto;
 		max-width: 1250px;

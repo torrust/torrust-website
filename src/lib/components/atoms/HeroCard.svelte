@@ -80,7 +80,7 @@
 		}
 
 		.live-demo {
-			background-color: rgba(255, 49, 0, 1);
+			background-color: rgba(254, 13, 0, 1);
 		}
 
 		.learn-btn {

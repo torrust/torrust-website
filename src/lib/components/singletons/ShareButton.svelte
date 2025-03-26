@@ -137,7 +137,7 @@
 	}
 
 	.dropdown-menu a:hover {
-		color: rgba(255, 49, 0, 1);
+		color: rgba(254, 13, 0, 1);
 	}
 
 	/* When the dropdown is hidden */
