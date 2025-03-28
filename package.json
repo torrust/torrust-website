@@ -54,7 +54,7 @@
 	},
 	"dependencies": {
 		"@fontsource-variable/roboto-mono": "^5.1.0",
-		"@fontsource-variable/roboto-slab": "^5.1.1",
+		"@fontsource-variable/roboto-slab": "^5.2.5",
 		"@iconify/svelte": "^4.2.0",
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@tailwindcss/forms": "^0.5.9",
