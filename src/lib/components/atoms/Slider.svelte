@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Icon from '@iconify/svelte';
+
 	interface TitleObj {
 		title: string;
 		link: string;
@@ -9,34 +11,80 @@
 	}
 
 	let { titleArr = [] }: Props = $props();
+	let sliderContainer: HTMLElement;
+	let prevButton: HTMLElement;
+	let nextButton: HTMLElement;
+
+	function handlePrevClick() {
+		if (sliderContainer) {
+			sliderContainer.scrollLeft -= sliderContainer.offsetWidth;
+		}
+	}
+
+	function handleNextClick() {
+		if (sliderContainer) {
+			sliderContainer.scrollLeft += sliderContainer.offsetWidth;
+		}
+	}
 </script>
 
-<div class="slider-container">
-	{#each titleArr as item}
-		{#if item.link}
-			<a href={item.link} target="_blank" rel="noopener noreferrer">
-				<div class={item.link ? 'has-link' : ''}>
+<section class="slider">
+	<div class="button-group">
+		<button
+			class="pre-btn"
+			aria-label="Previous slide"
+			bind:this={prevButton}
+			onclick={handlePrevClick}
+		>
+			<Icon icon="fa6-solid:angle-left" />
+		</button>
+
+		<button
+			class="nxt-btn"
+			aria-label="Next slide"
+			bind:this={nextButton}
+			onclick={handleNextClick}
+		>
+			<Icon icon="fa6-solid:angle-right" />
+		</button>
+	</div>
+
+	<div class="slider-container" bind:this={sliderContainer}>
+		{#each titleArr as item (item)}
+			{#if item.link}
+				<a href={item.link} target="_blank" rel="noopener noreferrer">
+					<div class="slider-item has-link">
+						<p>{item.title}</p>
+					</div>
+				</a>
+			{:else}
+				<div class="slider-item">
 					<p>{item.title}</p>
 				</div>
-			</a>
-		{:else}
-			<div class={item.link ? 'has-link' : ''}>
-				<p>{item.title}</p>
-			</div>
-		{/if}
-	{/each}
-</div>
+			{/if}
+		{/each}
+	</div>
+</section>
 
 <style lang="scss">
+	@use '$lib/scss/breakpoints.scss' as bp;
+
+	.slider {
+		position: relative;
+		overflow: hidden;
+		padding: 20px;
+	}
+
 	.slider-container {
+		padding: 0 10vw;
 		display: flex;
-		gap: 1rem;
 		overflow-x: auto;
+		scroll-behavior: smooth;
+		gap: 1rem;
 		width: 100vw;
 		margin: 3rem 0rem 0 0rem;
 		padding-inline: 1.5rem;
 		padding-bottom: 1rem;
-		scroll-behavior: smooth;
 		box-sizing: border-box;
 		position: relative;
 		left: 0;
@@ -71,5 +119,50 @@
 			font-weight: 500;
 			font-size: 20px;
 		}
+	}
+
+	.slider-container::-webkit-scrollbar {
+		display: none;
+	}
+
+	.button-group {
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+		pointer-events: none;
+
+		@include bp.for-desktop-up {
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
+		}
+
+		.slider:hover & {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+
+	.pre-btn,
+	.nxt-btn {
+		border: none;
+		width: 10vw;
+		height: 100%;
+		position: absolute;
+		top: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 0% 100%);
+		cursor: pointer;
+		z-index: 8;
+		font-size: 2em;
+	}
+
+	.pre-btn {
+		left: 0;
+	}
+
+	.nxt-btn {
+		right: 0;
 	}
 </style>
