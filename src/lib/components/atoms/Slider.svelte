@@ -72,7 +72,7 @@
 	.slider {
 		position: relative;
 		overflow: hidden;
-		padding: 20px;
+		padding-block: 20px;
 	}
 
 	.slider-container {
@@ -83,11 +83,16 @@
 		gap: 1rem;
 		width: 100vw;
 		margin: 3rem 0rem 0 0rem;
-		padding-inline: 1.5rem;
+		padding-inline: 0rem;
 		padding-bottom: 1rem;
 		box-sizing: border-box;
 		position: relative;
 		left: 0;
+
+		padding-left: 2rem;
+		transition:
+			margin 0.3s ease-out,
+			padding 0.3s ease-out;
 
 		div {
 			flex: 0 0 auto;
@@ -121,16 +126,46 @@
 		}
 	}
 
-	.slider-container::-webkit-scrollbar {
-		display: none;
+	.slider-container {
+		// Firefox specific styling
+		scrollbar-width: thin;
+		scrollbar-color: rgba(255, 49, 0, 0.8) transparent;
+
+		@include bp.for-tablet-portrait-up {
+			&::-webkit-scrollbar {
+				display: none !important;
+			}
+			scrollbar-width: none !important;
+		}
+
+		&::-webkit-scrollbar {
+			width: 2px !important;
+			min-width: 2px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: rgba(255, 49, 0, 0.8);
+			border-radius: 10px;
+			width: 2px;
+			min-width: 2px;
+		}
+
+		&::-webkit-scrollbar-thumb:hover {
+			background: rgba(255, 49, 0, 0.8);
+		}
 	}
 
 	.button-group {
+		display: none;
 		opacity: 0;
 		transition: opacity 0.3s ease-in-out;
 		pointer-events: none;
 
-		@include bp.for-desktop-up {
+		@include bp.for-tablet-portrait-up {
 			display: flex;
 			justify-content: center;
 			gap: 1rem;
