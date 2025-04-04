@@ -1,29 +1,16 @@
 [
   {
-    "title": "Benchmarking the Torrust BitTorrent Tracker",
-    "slug": "benchmarking-the-torrust-bittorrent-tracker",
+    "title": "Containerizing Rust Applications",
+    "slug": "containerizing-rust-applications-best-practices",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2024-03-19T00:00:00.000Z",
-    "coverImage": "/images/posts/benchmarking-the-torrust-bittorrent-tracker/benchmarking-the-torrust-bittorrent-tracker-banner.webp",
-    "excerpt": "In the ever-evolving landscape of BitTorrent technology, performance and scalability are paramount. Torrust stands at the forefront, offering a suite of open-source software products designed to enhance peer-to-peer file sharing. At the heart of this suite is the Torrust BitTorrent Tracker, a Rust-based engine crafted for efficiency and speed. This post will introduce you to the benchmarking tools we are using at the moment for the tracker.",
+    "date": "2023-11-09T12:08:04.295Z",
+    "coverImage": "/images/posts/rust-crab-carrying-a-shipping-container.jpeg",
+    "excerpt": "Torrust services (Tracker and Index) support docker, we want to ensure that contributors understand our containerfile and we also want to share good practices for containerizing Rust applications.",
     "tags": [
-      "Performance",
-      "Benchmarking"
-    ]
-  },
-  {
-    "title": "Deploying Torrust To Production",
-    "slug": "deploying-torrust-to-production",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-12-20T00:00:00.000Z",
-    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
-    "excerpt": "Dive into our step-by-step tutorial on deploying a BitTorrent Index and Tracker, written in Rust, on a Digital Ocean droplet. From initial server setup to advanced configurations, this guide is designed for both non-developers and tech-savvy users, ensuring a seamless, production-ready deployment.",
-    "tags": [
-      "Tutorial",
-      "Deployment",
-      "Production"
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
     ]
   },
   {
@@ -39,20 +26,6 @@
       "JSON",
       "Converter",
       "Rust"
-    ]
-  },
-  {
-    "title": "Contributor Path",
-    "slug": "contributor-path",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-10-29T09:20:51.608Z",
-    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
-    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
-    "tags": [
-      "Community",
-      "Onboarding",
-      "Contributors"
     ]
   },
   {
@@ -72,17 +45,31 @@
     ]
   },
   {
-    "title": "Containerizing Rust Applications",
-    "slug": "containerizing-rust-applications-best-practices",
+    "title": "Deploying Torrust To Production",
+    "slug": "deploying-torrust-to-production",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2023-11-09T12:08:04.295Z",
-    "coverImage": "/images/posts/rust-crab-carrying-a-shipping-container.jpeg",
-    "excerpt": "Torrust services (Tracker and Index) support docker, we want to ensure that contributors understand our containerfile and we also want to share good practices for containerizing Rust applications.",
+    "date": "2023-12-20T00:00:00.000Z",
+    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
+    "excerpt": "Dive into our step-by-step tutorial on deploying a BitTorrent Index and Tracker, written in Rust, on a Digital Ocean droplet. From initial server setup to advanced configurations, this guide is designed for both non-developers and tech-savvy users, ensuring a seamless, production-ready deployment.",
     "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
+      "Tutorial",
+      "Deployment",
+      "Production"
+    ]
+  },
+  {
+    "title": "Contributor Path",
+    "slug": "contributor-path",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-10-29T09:20:51.608Z",
+    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
+    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
+    "tags": [
+      "Community",
+      "Onboarding",
+      "Contributors"
     ]
   },
   {
@@ -96,6 +83,19 @@
     "tags": [
       "Roadmap",
       "Announcement"
+    ]
+  },
+  {
+    "title": "Benchmarking the Torrust BitTorrent Tracker",
+    "slug": "benchmarking-the-torrust-bittorrent-tracker",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-03-19T00:00:00.000Z",
+    "coverImage": "/images/posts/benchmarking-the-torrust-bittorrent-tracker/benchmarking-the-torrust-bittorrent-tracker-banner.webp",
+    "excerpt": "In the ever-evolving landscape of BitTorrent technology, performance and scalability are paramount. Torrust stands at the forefront, offering a suite of open-source software products designed to enhance peer-to-peer file sharing. At the heart of this suite is the Torrust BitTorrent Tracker, a Rust-based engine crafted for efficiency and speed. This post will introduce you to the benchmarking tools we are using at the moment for the tracker.",
+    "tags": [
+      "Performance",
+      "Benchmarking"
     ]
   },
   {
