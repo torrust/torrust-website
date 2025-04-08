@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
 	import type { BlogPost } from '$lib/utils/types';
-	import { onMount } from 'svelte';
 	import { createPostsIndex, searchPostsIndex } from '$lib/utils/search';
 	import Icon from '@iconify/svelte';
+	import { onMount, onDestroy } from 'svelte';
+	import { tick } from 'svelte';
 
 	export let searchTerm = '';
 	export let blogPosts: BlogPost[] = [];
 
-	const dispatch = createEventDispatcher();
 	let showInput = true;
-	let searchInput: HTMLInputElement;
+	let searchInput: HTMLInputElement | null = null;
+	let dropdownOpen = false;
 
 	interface SearchResult {
 		slug: string;
@@ -25,27 +25,54 @@
 	function handleInput(event: Event) {
 		const input = event.target as HTMLInputElement;
 		searchTerm = input.value;
-		dispatch('search', searchTerm);
+		dropdownOpen = searchTerm.length > 0;
 	}
 
 	function clearSearch() {
 		searchTerm = '';
+		dropdownOpen = false;
 		showInput = false;
+	}
+
+	function handleClickOutside(event: MouseEvent) {
+		if (searchInput && !searchInput.contains(event.target as Node)) {
+			dropdownOpen = false;
+		}
+	}
+
+	function handleKeyDown(event: KeyboardEvent) {
+		if (event.key === 'Escape') {
+			dropdownOpen = false;
+		}
 	}
 
 	onMount(async () => {
 		createPostsIndex(blogPosts);
 		search = 'ready';
+		if (typeof window !== 'undefined') {
+			window.addEventListener('click', handleClickOutside);
+			window.addEventListener('keydown', handleKeyDown);
+		}
+	});
+
+	onDestroy(() => {
+		if (typeof window !== 'undefined') {
+			window.removeEventListener('click', handleClickOutside);
+			window.removeEventListener('keydown', handleKeyDown);
+		}
 	});
 
 	$: {
 		if (showInput && searchInput) {
-			searchInput.focus();
+			tick().then(() => {
+				searchInput?.focus();
+			});
 		}
 	}
 
 	$: if (search === 'ready') {
 		results = searchPostsIndex(searchTerm);
+		dropdownOpen = results.length > 0;
 	}
 </script>
 
@@ -72,7 +99,7 @@
 		</div>
 	{/if}
 
-	{#if search === 'ready' && searchTerm}
+	{#if search === 'ready' && dropdownOpen}
 		<div class="dropdown">
 			{#if results.length > 0}
 				<ul>
@@ -81,22 +108,19 @@
 							<a href="/blog/{result.slug}" on:click={clearSearch}>
 								<div>
 									<div>
-										<!-- Displaying result title -->
 										<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 										{@html result.title}
 									</div>
 									<div>
-										<!-- Displaying result content snippet -->
 										<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 										<p>{@html result.content}</p>
 									</div>
 								</div>
 								<div class="tag-container">
 									{#each result.tags as tag}
-										<!-- Highlight matching tags -->
 										{#if tag.toLowerCase().includes(searchTerm.toLowerCase())}
 											<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-											<p class="tag" style="color: black;">{@html tag}</p>
+											<p class="tag">{@html tag}</p>
 										{/if}
 									{/each}
 								</div>
