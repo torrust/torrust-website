@@ -5,7 +5,7 @@
 <footer>
 	<div class="footer-wrapper">
 		<div>
-			<a href="https://nautilus-cyberneering.de/" target="_blank" class="logo-container">
+			<a href="https://nautilus-cyberneering.dev/" target="_blank" class="logo-container">
 				<Nautilus />
 			</a>
 		</div>
