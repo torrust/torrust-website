@@ -250,7 +250,7 @@
 				<a target="_blank" href="https://github.com/greatest-ape/aquatic">Aquatic</a>
 				repo. Since 2012, <a target="_blank" href="https://github.com/naim94a">@naim94a</a>
 				had been advancing the tracker. In August 2022,
-				<a target="_blank" href="https://nautilus-cyberneering.de"> Nautilus Cyberneering</a> joined
+				<a target="_blank" href="https://nautilus-cyberneering.dev"> Nautilus Cyberneering</a> joined
 				the project, attracted by the community's interest and its alignment with their goals.
 			</p>
 
@@ -313,7 +313,7 @@
 			<h2>Sponsors</h2>
 
 			<p>
-				<a target="_blank" href="https://nautilus-cyberneering.de"> Nautilus Cyberneering</a> is dedicated
+				<a target="_blank" href="https://nautilus-cyberneering.dev"> Nautilus Cyberneering</a> is dedicated
 				to creating new Open Source Ecosystems. They define Open Source Ecosystems as vibrant communities
 				of users and creators who collaboratively develop open source software that is secure, respectful,
 				and adds value for future generations. This approach is what they term Cyberneering. With a focus
