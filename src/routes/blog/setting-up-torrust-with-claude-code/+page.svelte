@@ -39,12 +39,8 @@
 					<li>torrust-index – API backend for torrent indexing (Rust)</li>
 					<li>torrust-index-gui – Web frontend (Nuxt.js/Vue.js)</li>
 				</ul>
+
 				<h2 id="setting-up-torrust-with-claude-code">Setting Up Torrust with Claude Code</h2>
-
-				<h2 id="initial-setup-and-analysis">Initial Setup and Analysis</h2>
-
-				<h2 id="what-claude-code-did-right">What Claude Code Did Right</h2>
-
 				<h4 id="comprehensive-project-analysis">Comprehensive Project Analysis</h4>
 				<p>Claude Code immediately analyzed the project structure and identified all components:</p>
 				<CodeBlock
@@ -134,7 +130,7 @@ touch storage/index/lib/database/sqlite3.db`}
 				<CodeBlock
 					lang="bash"
 					code={`lsof -i :3001
-kill &lt;pid&gt;`}
+kill <pid>`}
 				/>
 
 				<p>✅ Why it worked: Ensured only one instance was listening on each port.</p>
