@@ -11,7 +11,7 @@
 
 	let { title, coverImage = undefined, slug, date, contributor }: Props = $props();
 
-	const formattedDate = formatDate(date);
+	const formattedDate = $derived(formatDate(date));
 </script>
 
 <a href="/blog/{slug}" class="container">

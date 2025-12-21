@@ -1,6 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
-	let { currentPost, allPosts } = data;
+	let currentPost = $derived(data.currentPost);
+	let allPosts = $derived(data.allPosts);
 	import BlogPreview from '$lib/components/molecules/BlogPreview.svelte';
 	import Toc from '$lib/components/atoms/Toc.svelte';
 	import Post from '$lib/components/organisms/Post.svelte';
@@ -431,8 +432,7 @@ CMD ["./target/release/dependencies-cache-with-cargo-chef"]`}
 					>.
 				</p>
 				<p>
-					We are using it to install <code>cargo chef</code> and <code>cargo nextest</code> packages
-					easily.
+					We are using it to install <code>cargo chef</code> and <code>cargo nextest</code> packages easily.
 				</p>
 
 				<CodeBlock
@@ -458,8 +458,8 @@ CMD ["./target/release/app"]`}
 					is useful to separate the &quot;build&quot; phase from the &quot;run&quot; phase.
 				</p>
 				<p>
-					In the <a href="https://nexte.st/book/reusing-builds.html">official documentation</a> they
-					describe some use cases like:
+					In the <a href="https://nexte.st/book/reusing-builds.html">official documentation</a> they describe
+					some use cases like:
 				</p>
 				<ul>
 					<li>
@@ -746,8 +746,8 @@ CMD ["/usr/local/bin/app"]`}
 					The <code>entry.sh</code> script is always called when you run the container because it is
 					defined as an <code>ENTRYPOINT</code>. This &quot;middleware&quot; script creates the user
 					if it does not exist, and then runs the application using the
-					<a href="https://github.com/ncopa/su-exec">su-exec</a> program to change the user ID it is
-					executed with.
+					<a href="https://github.com/ncopa/su-exec">su-exec</a> program to change the user ID it is executed
+					with.
 				</p>
 				<p>
 					<strong
@@ -855,8 +855,8 @@ RUN cargo binstall --no-confirm cargo-chef cargo-nextest`}
 
 				<p>
 					There is nothing really strange here. We use the latest Debian “bookworm” at the time of
-					writing this article. And we also use <code>binstall</code> to install the binaries, since
-					both of these binaries are written in Rust.
+					writing this article. And we also use <code>binstall</code> to install the binaries, since both
+					of these binaries are written in Rust.
 				</p>
 				<p>
 					The next stage is the base Tester Image. It only installs <code>cargo-nextest</code> to
@@ -877,8 +877,8 @@ RUN cargo binstall --no-confirm cargo-nextest`}
 				<p>
 					The following is another stage used just to compile the small program <a
 						href="https://github.com/ncopa/su-exec">su-exec</a
-					> that we use to change the user ID when we run the container. The program is written in C
-					code, so we only need a C compiler.
+					> that we use to change the user ID when we run the container. The program is written in C code,
+					so we only need a C compiler.
 				</p>
 
 				<CodeBlock
@@ -974,8 +974,8 @@ RUN chown -R root:root /app; chmod -R u=rw,go=r,a+X /app; chmod -R a+x /app/bin`
 					minimum &quot;distroless&quot; image variant. We add an entrypoint to setup the
 					application and also to make sure we don&#39;t use the <code>root</code> user to run it.
 					The entrypoint just runs the application provided as an argument, in our case, our
-					application in <code>debug</code> or <code>release</code> mode, depending of which one you
-					want to run.
+					application in <code>debug</code> or <code>release</code> mode, depending of which one you want
+					to run.
 				</p>
 
 				<CodeBlock

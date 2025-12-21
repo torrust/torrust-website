@@ -3,7 +3,7 @@
 
 	let { post_data } = $props();
 
-	const formattedDate = formatDate(post_data.date);
+	const formattedDate = $derived(formatDate(post_data.date));
 </script>
 
 <div class="container">

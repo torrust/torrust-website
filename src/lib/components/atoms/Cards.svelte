@@ -19,10 +19,10 @@
 		...rest
 	}: Props = $props();
 
-	const isExternalLink = !!href && HttpRegex.test(href);
+	const isExternalLink = $derived(!!href && HttpRegex.test(href));
 
-	target = target ?? (isExternalLink ? '_blank' : '_self');
-	rel = rel ?? (isExternalLink ? 'noopener noreferrer' : undefined);
+	const finalTarget = $derived(target ?? (isExternalLink ? '_blank' : '_self'));
+	const finalRel = $derived(rel ?? (isExternalLink ? 'noopener noreferrer' : undefined));
 
 	function getRandomColor() {
 		const letters = '0123456789ABCDEF';
@@ -45,8 +45,8 @@
 	let tag = $derived(href ? 'a' : 'article');
 	let linkProps = $derived({
 		href,
-		target,
-		rel
+		target: finalTarget,
+		rel: finalRel
 	});
 </script>
 

@@ -1,6 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
-	let { currentPost, allPosts } = data;
+	let currentPost = $derived(data.currentPost);
+	let allPosts = $derived(data.allPosts);
 	import BlogPreview from '$lib/components/molecules/BlogPreview.svelte';
 	import Post from '$lib/components/organisms/Post.svelte';
 	import Image from '$lib/components/atoms/Image.svelte';
@@ -27,8 +28,8 @@
 			<div id="toc-contents" class="content-preview">
 				<p>
 					All blog posts are located inside the <code>src/routes/(blog-article)</code> folder. Each
-					folder inside it represents a blog post, and each folder has a <code>+page.md</code> file,
-					which is the file that contains the post's content.
+					folder inside it represents a blog post, and each folder has a <code>+page.md</code> file, which
+					is the file that contains the post's content.
 				</p>
 
 				<p>

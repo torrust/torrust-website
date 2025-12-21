@@ -16,7 +16,7 @@
 
 	let { data, children }: Props = $props();
 
-	let { posts } = data;
+	let posts = $derived(data.posts);
 
 	let currentUrl: string | undefined = '';
 	let splitUrl: string | undefined = '';

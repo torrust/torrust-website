@@ -9,6 +9,17 @@ export default [
 	jsConfigs.configs.recommended,
 
 	{
+		ignores: [
+			'node_modules/',
+			'build/',
+			'.svelte-kit/',
+			'.svelte-kit/output/',
+			'.env',
+			'package-lock.json'
+		]
+	},
+
+	{
 		languageOptions: {
 			parser: typescriptParser,
 			parserOptions: {
@@ -23,14 +34,6 @@ export default [
 				console: 'readonly'
 			}
 		},
-		ignores: [
-			'node_modules/',
-			'build/',
-			'.svelte-kit/',
-			'.svelte-kit/output/',
-			'.env',
-			'package-lock.json'
-		],
 		rules: {
 			'@typescript-eslint/require-await': 'off',
 			'prettier/prettier': 'error',

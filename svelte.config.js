@@ -44,6 +44,14 @@ const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
 	preprocess: sequence([vitePreprocess(), mdsvex(mdsvexOptions), preprocessMeltUI()]),
+	onwarn: (warning, handler) => {
+		// Suppress intentional Toc.svelte warning about selector being captured at initialization
+		// This is required for @melt-ui/svelte's createTableOfContents to work correctly
+		if (warning.code === 'state_referenced_locally' && warning.filename?.includes('Toc.svelte')) {
+			return;
+		}
+		handler(warning);
+	},
 	kit: {
 		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
 		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.

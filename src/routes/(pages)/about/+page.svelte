@@ -35,9 +35,9 @@
 				cornerstone for distributed file sharing. Despite the emergence of newer technologies like
 				the
 				<a href="https://ipfs.tech/">InterPlanetary File System</a>
-				(IPFS) and centralized cloud storage solutions such as Dropbox, Google Drive, and Amazon S3,
-				BitTorrent continues to hold significant relevance. Here's why maintaining and enhancing BitTorrent
-				is not just worthwhile but essential.
+				(IPFS) and centralized cloud storage solutions such as Dropbox, Google Drive, and Amazon S3, BitTorrent
+				continues to hold significant relevance. Here's why maintaining and enhancing BitTorrent is not
+				just worthwhile but essential.
 			</p>
 
 			<p>
@@ -57,8 +57,8 @@
 			<h3>Current use cases</h3>
 
 			<p>
-				<strong>Media Distribution:</strong> Independent creators and open-source projects often use
-				BitTorrent to distribute content without incurring high bandwidth costs.
+				<strong>Media Distribution:</strong> Independent creators and open-source projects often use BitTorrent
+				to distribute content without incurring high bandwidth costs.
 			</p>
 
 			<p>
@@ -80,8 +80,7 @@
 
 			<p>
 				<strong>Blockchain and Cryptocurrency:</strong> Integrating BitTorrent with blockchain technology
-				could lead to innovative content distribution models, rewarding content creators and sharers
-				directly.
+				could lead to innovative content distribution models, rewarding content creators and sharers directly.
 			</p>
 
 			<p>
@@ -149,10 +148,10 @@
 
 			<ul>
 				<li>
-					<strong>High Performance:</strong> Rust offers exceptional speed and efficiency, which can
-					significantly improve the performance of BitTorrent tools. Its focus on concurrency and memory
-					safety allows for the development of high-speed data transmission tools without the common
-					pitfalls of memory leaks and crashes.
+					<strong>High Performance:</strong> Rust offers exceptional speed and efficiency, which can significantly
+					improve the performance of BitTorrent tools. Its focus on concurrency and memory safety allows
+					for the development of high-speed data transmission tools without the common pitfalls of memory
+					leaks and crashes.
 				</li>
 				<li>
 					<strong>Resource Optimization:</strong> Modern devices vary widely in their capabilities. Developing
@@ -181,10 +180,10 @@
 
 			<ul>
 				<li>
-					<strong>Modern Interfaces:</strong> Updating BitTorrent clients with modern, user-friendly
-					interfaces can make the technology more accessible to a broader audience, encouraging adoption.
-					Simplifying the user experience without compromising on advanced features appeals to both novice
-					and experienced users.
+					<strong>Modern Interfaces:</strong> Updating BitTorrent clients with modern, user-friendly interfaces
+					can make the technology more accessible to a broader audience, encouraging adoption. Simplifying
+					the user experience without compromising on advanced features appeals to both novice and experienced
+					users.
 				</li>
 				<li>
 					<strong>Cross-Platform Compatibility:</strong>Developing with modern frameworks and

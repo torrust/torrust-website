@@ -1,6 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
-	let { currentPost, allPosts } = data;
+	let currentPost = $derived(data.currentPost);
+	let allPosts = $derived(data.allPosts);
 	import BlogPreview from '$lib/components/molecules/BlogPreview.svelte';
 	import Toc from '$lib/components/atoms/Toc.svelte';
 	import Post from '$lib/components/organisms/Post.svelte';
@@ -118,9 +119,9 @@
 					second.
 				</p>
 				<p>
-					The <code>announce</code> request is the most important request a tracker needs to handle.
-					Peers get the list of other peers from the tracker by making announce requests. The purpose
-					of that request is:
+					The <code>announce</code> request is the most important request a tracker needs to handle. Peers
+					get the list of other peers from the tracker by making announce requests. The purpose of that
+					request is:
 				</p>
 				<ul>
 					<li>

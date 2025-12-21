@@ -1,6 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
-	let { currentPost, allPosts } = data;
+	let currentPost = $derived(data.currentPost);
+	let allPosts = $derived(data.allPosts);
 	import BlogPreview from '$lib/components/molecules/BlogPreview.svelte';
 	import Post from '$lib/components/organisms/Post.svelte';
 	import Callout from '$lib/components/molecules/Callout.svelte';

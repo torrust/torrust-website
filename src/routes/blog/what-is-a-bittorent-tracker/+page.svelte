@@ -1,6 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
-	let { currentPost, allPosts } = data;
+	let currentPost = $derived(data.currentPost);
+	let allPosts = $derived(data.allPosts);
 	import Toc from '$lib/components/atoms/Toc.svelte';
 	import Post from '$lib/components/organisms/Post.svelte';
 	import PagesWrapper from '$lib/components/atoms/PagesWrapper.svelte';

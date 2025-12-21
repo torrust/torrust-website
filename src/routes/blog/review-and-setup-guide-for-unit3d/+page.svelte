@@ -1,6 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
-	let { currentPost, allPosts } = data;
+	let currentPost = $derived(data.currentPost);
+	let allPosts = $derived(data.allPosts);
 	import BlogPreview from '$lib/components/molecules/BlogPreview.svelte';
 	import Toc from '$lib/components/atoms/Toc.svelte';
 	import Post from '$lib/components/organisms/Post.svelte';
@@ -169,8 +170,8 @@
 					The <a href="https://github.com/HDInnovations/UNIT3D-Community-Edition/wiki"
 						>documentation</a
 					> for UNIT3D system dependencies is comprehensive, covering local development and basic server
-					management. However, there is room for improvement in terms of end user guides, tutorials,
-					examples, installation for production and troubleshooting guides.
+					management. However, there is room for improvement in terms of end user guides, tutorials, examples,
+					installation for production and troubleshooting guides.
 				</p>
 				<h3 id="community-support-and-activity">Community Support and Activity</h3>
 				<p>

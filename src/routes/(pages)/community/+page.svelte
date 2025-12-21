@@ -119,11 +119,11 @@
 				A <strong>torrent</strong> is a small file that contains metadata about the files and folders
 				to be shared and information about the network of computers that share these files. It's used
 				with BitTorrent protocol, which enables fast and efficient distribution of large files over the
-				internet by allowing users to connect directly to each other to download and upload portions
-				of the file simultaneously. This decentralized method of sharing files reduces the load on any
-				single server and can lead to faster download speeds for the users involved. Torrents themselves
-				do not contain the actual content being shared, only the information needed to find and download
-				the content from peers in the BitTorrent network.
+				internet by allowing users to connect directly to each other to download and upload portions of
+				the file simultaneously. This decentralized method of sharing files reduces the load on any single
+				server and can lead to faster download speeds for the users involved. Torrents themselves do not
+				contain the actual content being shared, only the information needed to find and download the
+				content from peers in the BitTorrent network.
 			</p>
 
 			<h3>What Is a Tracker?</h3>
@@ -142,9 +142,9 @@
 			<h3>What Is a Torrent Index?</h3>
 
 			<p>
-				A <strong>BitTorrent index</strong> site is a website that lists torrent files for download.
-				These sites serve as search engines or directories for finding specific files or content within
-				the BitTorrent network. Users can search for and download torrent files based on various categories
+				A <strong>BitTorrent index</strong> site is a website that lists torrent files for download. These
+				sites serve as search engines or directories for finding specific files or content within the
+				BitTorrent network. Users can search for and download torrent files based on various categories
 				such as movies, music, software, games, and more. Each torrent file listed on an index site contains
 				metadata about the content it represents, such as the file name, size, and the address of the
 				tracker managing the distribution of the content.

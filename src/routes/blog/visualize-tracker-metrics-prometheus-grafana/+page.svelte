@@ -1,6 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
-	let { currentPost, allPosts } = data;
+	let currentPost = $derived(data.currentPost);
+	let allPosts = $derived(data.allPosts);
 	import Toc from '$lib/components/atoms/Toc.svelte';
 	import Post from '$lib/components/organisms/Post.svelte';
 	import PagesWrapper from '$lib/components/atoms/PagesWrapper.svelte';
@@ -100,8 +101,8 @@ volumes:
 				</Callout>
 
 				<p>
-					The <code>Nginx</code> service was also changed a little bit to make sure it&#39;s started
-					after the Grafana container. We need that to server Grafana via Nginx (to use HTTPs).
+					The <code>Nginx</code> service was also changed a little bit to make sure it&#39;s started after
+					the Grafana container. We need that to server Grafana via Nginx (to use HTTPs).
 				</p>
 
 				<CodeBlock

@@ -1,6 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
-	let { currentPost, allPosts } = data;
+	let currentPost = $derived(data.currentPost);
+	let allPosts = $derived(data.allPosts);
 	import BlogPreview from '$lib/components/molecules/BlogPreview.svelte';
 	import Toc from '$lib/components/atoms/Toc.svelte';
 	import Post from '$lib/components/organisms/Post.svelte';
@@ -48,9 +49,9 @@
 				</p>
 				<p>
 					We would like to thank <a href="https://github.com/naim94a">@naim94a</a> and
-					<a href="https://github.com/greatest-ape">@greatest-ape</a> and all other contributors for
-					their invaluable contributions in coding, opening issues, PRs, improving documentation, sharing
-					ideas, etc.
+					<a href="https://github.com/greatest-ape">@greatest-ape</a> and all other contributors for their
+					invaluable contributions in coding, opening issues, PRs, improving documentation, sharing ideas,
+					etc.
 				</p>
 				<p>
 					Over the last two years, significant efforts have been made to establish Torrust software
@@ -98,8 +99,8 @@
 						datasets, for researchers, by researchers.
 					</li>
 					<li>
-						<a href="https://help.archive.org/help/archive-bittorrents/">The Internet Archive</a> is
-						also using torrents since 2012.
+						<a href="https://help.archive.org/help/archive-bittorrents/">The Internet Archive</a> is also
+						using torrents since 2012.
 					</li>
 					<li>
 						<a href="https://www.legittorrents.info/">https://www.legittorrents.info/</a> was a collection

@@ -1,6 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
-	let { currentPost, allPosts } = data;
+	let currentPost = $derived(data.currentPost);
+	let allPosts = $derived(data.allPosts);
 	import BlogPreview from '$lib/components/molecules/BlogPreview.svelte';
 	import Toc from '$lib/components/atoms/Toc.svelte';
 	import Post from '$lib/components/organisms/Post.svelte';
@@ -73,8 +74,7 @@
 				</ul>
 				<h2 id="how-you-can-use-it">How You Can Use It</h2>
 				<p>
-					Using <code>bencode2json</code> is straightforward. Here&#39;s a quick guide on how to get
-					started:
+					Using <code>bencode2json</code> is straightforward. Here&#39;s a quick guide on how to get started:
 				</p>
 				<h3 id="installation">Installation</h3>
 				<p>Add the crate to your <code>Cargo.toml</code>:</p>
@@ -183,8 +183,8 @@ println!("{output}"); // It prints the JSON string: "spam"`}
 					<a href="https://github.com/Chocobo1">@Chocobo1</a>.
 				</p>
 				<p>
-					We also want to thank <a href="https://github.com/da2ce7">@da2ce7</a> for his feedback and
-					review that has improved this project significantly.
+					We also want to thank <a href="https://github.com/da2ce7">@da2ce7</a> for his feedback and review
+					that has improved this project significantly.
 				</p>
 				<p>
 					If you have any questions or issues regarding this post, please <a

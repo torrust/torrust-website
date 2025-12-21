@@ -40,9 +40,9 @@
 		return code.replace(/\\n/g, '\n');
 	}
 
-	let normalizedCode = normalizeIndentation(processCodeForDisplay(code));
+	let normalizedCode = $derived(normalizeIndentation(processCodeForDisplay(code)));
 
-	let highlightedCode = hljs.highlight(normalizedCode, { language: lang }).value;
+	let highlightedCode = $derived(hljs.highlight(normalizedCode, { language: lang }).value);
 </script>
 
 <div class="code-block" class:full-bleed={fullBleed} bind:this={codeBlockElement}>

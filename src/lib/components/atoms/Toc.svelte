@@ -10,6 +10,8 @@
 
 	let { class: classes, selector = '#toc-contents' }: Props = $props();
 
+	// Note: selector is intentionally captured at initialization for createTableOfContents.
+	// This library call doesn't support dynamic selector updates, so reactivity isn't needed.
 	const {
 		elements: { item },
 		states: { activeHeadingIdxs, headingsTree }

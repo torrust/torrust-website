@@ -1,6 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
-	let { currentPost, allPosts } = data;
+	let currentPost = $derived(data.currentPost);
+	let allPosts = $derived(data.allPosts);
 	import BlogPreview from '$lib/components/molecules/BlogPreview.svelte';
 	import Toc from '$lib/components/atoms/Toc.svelte';
 	import Post from '$lib/components/organisms/Post.svelte';
@@ -242,11 +243,11 @@
 					files might be related to cross-seeding too.
 				</p>
 				<p>
-					<strong>Cross-seeding</strong> in the BitTorrent context refers to the practice of seeding
-					the same content (files) using two or more different torrent files, typically from different
-					trackers. This is particularly useful when the exact same file or set of files is available
-					on multiple trackers but might have different torrent files associated with them due to differences
-					in metadata, source tags, or directory structures.
+					<strong>Cross-seeding</strong> in the BitTorrent context refers to the practice of seeding the
+					same content (files) using two or more different torrent files, typically from different trackers.
+					This is particularly useful when the exact same file or set of files is available on multiple
+					trackers but might have different torrent files associated with them due to differences in metadata,
+					source tags, or directory structures.
 				</p>
 				<p>
 					BitTorrent clients usually do not allow you to add the same content twice, so
