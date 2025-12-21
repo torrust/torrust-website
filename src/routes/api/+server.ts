@@ -1,6 +1,8 @@
 import { getMetadata } from '$lib/data/metadata'; // Import your getMetadata function
 import { json } from '@sveltejs/kit';
 
+export const prerender = true;
+
 export const GET = async () => {
 	try {
 		// Get metadata using your function
