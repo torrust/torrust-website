@@ -71,8 +71,7 @@
 						href="https://github.com/ikatson/rqbit">rqbit</a
 					>. rqbit has an option to add a torrent to the client in <code>list-only</code> mode, meaning
 					the torrent is not downloaded, but only listed in the client. When you add a new torrent from
-					a magnet-link, the client automatically gets the torrent file from other peers if it&#39;s
-					available.
+					a magnet-link, the client automatically gets the torrent file from other peers if it&#39;s available.
 				</p>
 				<p>
 					The API generates a magnet-link for the info-hash and adds that magnet-link to the client
@@ -93,8 +92,8 @@
 
 				<Callout type="info">
 					<strong>NOTICE:</strong> You need the DHT to find other peers having the torrent. In the future
-					we could also also user to introduce a magnet-link that may contain a list of trackers. In
-					that case, the client could use those tracker to find peers.
+					we could also also user to introduce a magnet-link that may contain a list of trackers. In that
+					case, the client could use those tracker to find peers.
 				</Callout>
 
 				<h2 id="benefits-of-using-hash2torrent">Benefits of Using Hash2Torrent</h2>

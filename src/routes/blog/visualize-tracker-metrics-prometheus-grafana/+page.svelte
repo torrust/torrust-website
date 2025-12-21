@@ -101,8 +101,8 @@ volumes:
 				</Callout>
 
 				<p>
-					The <code>Nginx</code> service was also changed a little bit to make sure it&#39;s started
-					after the Grafana container. We need that to server Grafana via Nginx (to use HTTPs).
+					The <code>Nginx</code> service was also changed a little bit to make sure it&#39;s started after
+					the Grafana container. We need that to server Grafana via Nginx (to use HTTPs).
 				</p>
 
 				<CodeBlock

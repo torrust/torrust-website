@@ -125,19 +125,6 @@
     ]
   },
   {
-    "title": "Introducing the New Sample Torrent Migration Tool",
-    "slug": "introducing-the-new-sample-torrent-migration-tool",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-09-04T13:24:27.241Z",
-    "coverImage": "/images/posts/pexels-david-dibert-7177008.jpg",
-    "excerpt": "Looking to migrate to the Torrust Index? Dive into our Torrents Importer Sample to seamlessly transfer your torrents to Torrust.",
-    "tags": [
-      "Migration Tool",
-      "Sample"
-    ]
-  },
-  {
     "title": "How To Setup The Dev Env",
     "slug": "how-to-setup-the-development-environment",
     "contributor": "Jose Celano",
@@ -149,6 +136,19 @@
       "Torrent",
       "Tracker",
       "BitTorrent"
+    ]
+  },
+  {
+    "title": "Introducing the New Sample Torrent Migration Tool",
+    "slug": "introducing-the-new-sample-torrent-migration-tool",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-09-04T13:24:27.241Z",
+    "coverImage": "/images/posts/pexels-david-dibert-7177008.jpg",
+    "excerpt": "Looking to migrate to the Torrust Index? Dive into our Torrents Importer Sample to seamlessly transfer your torrents to Torrust.",
+    "tags": [
+      "Migration Tool",
+      "Sample"
     ]
   },
   {
@@ -183,19 +183,6 @@
     ]
   },
   {
-    "title": "Released version v3.0.0-beta",
-    "slug": "released-v3-0-0",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-09-03T14:30:38.554Z",
-    "coverImage": "/images/posts/released-v3-0-0-beta/team.png",
-    "excerpt": "We're excited to announce the release of v3.0.0-beta, marking a significant step towards our upcoming major release, v3.0.0. This release solidifies the features and prepares us for the beta phase.",
-    "tags": [
-      "Announcement",
-      "Release"
-    ]
-  },
-  {
     "title": "Released version v3.0.0",
     "slug": "released-v3-0-0-beta",
     "contributor": "Jose Celano",
@@ -224,6 +211,19 @@
     ]
   },
   {
+    "title": "Released version v3.0.0-beta",
+    "slug": "released-v3-0-0",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-09-03T14:30:38.554Z",
+    "coverImage": "/images/posts/released-v3-0-0-beta/team.png",
+    "excerpt": "We're excited to announce the release of v3.0.0-beta, marking a significant step towards our upcoming major release, v3.0.0. This release solidifies the features and prepares us for the beta phase.",
+    "tags": [
+      "Announcement",
+      "Release"
+    ]
+  },
+  {
     "title": "Setting Up Torrust with Claude Code",
     "slug": "setting-up-torrust-with-claude-code",
     "contributor": "Graeme Byrne",
@@ -238,6 +238,19 @@
     ]
   },
   {
+    "title": "Torrust - Enhancing the BitTorrent Ecosystem",
+    "slug": "torrust-enhancing-the-bittorrent-ecosystem",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-05-31T09:33:14.163Z",
+    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
+    "excerpt": "Torrust, an open-source organization, is making significant contributions to the BitTorrent ecosystem by developing robust tools, improving documentation, and fostering community collaboration.",
+    "tags": [
+      "Introduction",
+      "Torrust"
+    ]
+  },
+  {
     "title": "The Enigmatic Torrent \"Source\" Field",
     "slug": "the-enigmatic-torrent-source-field",
     "contributor": "Jose Celano",
@@ -249,19 +262,6 @@
       "Torrent",
       "Tracker",
       "BitTorrent"
-    ]
-  },
-  {
-    "title": "Torrust - Enhancing the BitTorrent Ecosystem",
-    "slug": "torrust-enhancing-the-bittorrent-ecosystem",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-05-31T09:33:14.163Z",
-    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
-    "excerpt": "Torrust, an open-source organization, is making significant contributions to the BitTorrent ecosystem by developing robust tools, improving documentation, and fostering community collaboration.",
-    "tags": [
-      "Introduction",
-      "Torrust"
     ]
   },
   {

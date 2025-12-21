@@ -159,8 +159,8 @@ torrust/index-gui   develop           sha256:b30deb84cdee8fa34e4d3783ce2f467542e
 				<p>
 					Please refer to <a href="https://docs.digitalocean.com/">Digital Ocean Documentation</a> for
 					more information about how to create projects and droplets. Projects are the way DO (Digital
-					Ocean) organizes resources (virtual machines, databases, domains, etc.). We have a project
-					called &quot;torrust-demo.com&quot;.
+					Ocean) organizes resources (virtual machines, databases, domains, etc.). We have a project called
+					&quot;torrust-demo.com&quot;.
 				</p>
 				<p>
 					Once you have created your project and droplet you can follow the <a
@@ -583,8 +583,8 @@ certbot certonly --webroot --webroot-path=/var/www/html --email email@example.co
 
 				<h4 id="update-nginx-configuration">Update Nginx Configuration</h4>
 				<p>
-					Edit the file <code>./storage/proxy/etc/nginx-conf/nginx.conf</code> and uncomment all the
-					commented lines for HTTPs servers:
+					Edit the file <code>./storage/proxy/etc/nginx-conf/nginx.conf</code> and uncomment all the commented
+					lines for HTTPs servers:
 				</p>
 
 				<Callout type="warning">

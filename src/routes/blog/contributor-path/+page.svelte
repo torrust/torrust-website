@@ -242,8 +242,7 @@
 				<ul>
 					<li>Peers authentication and authorization (only for HTTP trackers)</li>
 					<li>
-						Whitelist: the tracker can run in <code>listed</code> mode when only some infohashes are
-						allowed.
+						Whitelist: the tracker can run in <code>listed</code> mode when only some infohashes are allowed.
 					</li>
 					<li>Torrents: the core in-memory data structure which contains all the torrents info.</li>
 				</ul>
@@ -324,10 +323,10 @@
 				<p>
 					Finally, there are many protocol extensions not implement yet. FOr example <a
 						href="https://webtorrent.io/">webtorrent</a
-					> protocol. This enables a lot of cool projects running BitTorrent clients in the browser.
-					Right now it&#39;s not possible to use the Torrust Tracker for those projects. THis feature
-					requires a big effort to understand the protocol and implement it. There is not much information
-					but at least there are other implementation in Rust (for example aquatic).
+					> protocol. This enables a lot of cool projects running BitTorrent clients in the browser. Right
+					now it&#39;s not possible to use the Torrust Tracker for those projects. THis feature requires
+					a big effort to understand the protocol and implement it. There is not much information but
+					at least there are other implementation in Rust (for example aquatic).
 				</p>
 				<p>
 					If you want to limit the scope maybe console clients and tracker clients are a good
