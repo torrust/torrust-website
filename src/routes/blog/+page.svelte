@@ -11,7 +11,7 @@
 	}
 
 	let { data }: Props = $props();
-	let { allPosts: blogPosts = [] } = data || {};
+	let allPosts = $derived(data?.allPosts || []);
 	let searchTerm = $state('');
 
 	type Post = {
@@ -21,11 +21,9 @@
 		slug: string;
 	};
 
-	// Default to an empty array if blogPosts is undefined
-	let posts = $state<Post[]>([]);
-
-	if (blogPosts && blogPosts.length > 0) {
-		posts = blogPosts.filter((post: BlogPost) => {
+	// Filter posts reactively based on searchTerm
+	let posts = $derived(
+		allPosts.filter((post: BlogPost) => {
 			const title = post?.title ?? '';
 			const contributor = post?.contributor ?? '';
 			const excerpt = post?.excerpt ?? '';
@@ -35,14 +33,14 @@
 				contributor.toLowerCase().includes(searchTerm.toLowerCase()) ||
 				excerpt.toLowerCase().includes(searchTerm.toLowerCase())
 			);
-		});
-	}
+		})
+	);
 </script>
 
 <div class="container">
 	<div class="header">
 		<h1>Blog</h1>
-		<SearchBar bind:searchTerm {blogPosts} />
+		<SearchBar bind:searchTerm blogPosts={allPosts} />
 	</div>
 
 	{#if posts && posts.length > 0}

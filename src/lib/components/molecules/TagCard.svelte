@@ -12,7 +12,7 @@
 
 	let { title, coverImage, slug, date, excerpt }: Props = $props();
 
-	const formattedDate = formatDate(date);
+	const formattedDate = $derived(formatDate(date));
 </script>
 
 <TagCard href="/blog/{slug}" target="_self">

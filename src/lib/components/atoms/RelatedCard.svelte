@@ -21,16 +21,16 @@
 		...rest
 	}: Props = $props();
 
-	const isExternalLink = !!href && HttpRegex.test(href);
+	const isExternalLink = $derived(!!href && HttpRegex.test(href));
 
-	target = isExternalLink ? '_blank' : '_self';
-	rel = isExternalLink ? 'noopener noreferrer' : undefined;
+	const finalTarget = $derived(isExternalLink ? '_blank' : '_self');
+	const finalRel = $derived(isExternalLink ? 'noopener noreferrer' : undefined);
 
 	let tag = $derived(href ? 'a' : 'article');
 	let linkProps = $derived({
 		href,
-		target,
-		rel
+		target: finalTarget,
+		rel: finalRel
 	});
 </script>
 

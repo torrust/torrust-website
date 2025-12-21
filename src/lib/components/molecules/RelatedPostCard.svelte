@@ -14,7 +14,7 @@
 
 	let { title, excerpt, slug, tags, readingTime = undefined, date }: Props = $props();
 
-	const formattedDate = formatDate(date);
+	const formattedDate = $derived(formatDate(date));
 </script>
 
 <RelatedCard href="/{slug}" target="_self">
