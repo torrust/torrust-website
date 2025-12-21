@@ -13,18 +13,33 @@
     ]
   },
   {
-    "title": "Bencode to JSON Converter in Rust",
-    "slug": "bencode-to-json-converter-in-rust",
+    "title": "Containerizing Rust Applications",
+    "slug": "containerizing-rust-applications-best-practices",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2024-11-01T11:57:37.926Z",
-    "coverImage": "/images/posts/bencode-to-json-converter-in-rust/bencode-to-json-converter-in-rust.webp",
-    "excerpt": "We're excited to introduce bencode2json, a crate that simplifies converting Bencode data to JSON, benefiting the Rust BitTorrent community.",
+    "date": "2023-11-09T12:08:04.295Z",
+    "coverImage": "/images/posts/rust-crab-carrying-a-shipping-container.jpeg",
+    "excerpt": "Torrust services (Tracker and Index) support docker, we want to ensure that contributors understand our containerfile and we also want to share good practices for containerizing Rust applications.",
     "tags": [
-      "Bencode",
-      "JSON",
-      "Converter",
-      "Rust"
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
+    ]
+  },
+  {
+    "title": "Hash2Torrent - Retrieve Torrent Files Effortlessly!",
+    "slug": "hash2torrent-retrieve-torrent-files-effortlessly",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-09-05T10:00:00.000Z",
+    "coverImage": "/images/posts/hash2torrent-retrieve-torrent-files-effortlessly/hash2torrent-screenshot.png",
+    "excerpt": "Discover Hash2Torrent, a new tool to fetch torrent files (metainfo files) directly from their infohash! Simplify your torrent management and integrations with our easy-to-use service.",
+    "tags": [
+      "Service",
+      "Demo",
+      "Metainfo",
+      "Metadata",
+      "Sample"
     ]
   },
   {
@@ -42,17 +57,18 @@
     ]
   },
   {
-    "title": "Containerizing Rust Applications",
-    "slug": "containerizing-rust-applications-best-practices",
+    "title": "Bencode to JSON Converter in Rust",
+    "slug": "bencode-to-json-converter-in-rust",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2023-11-09T12:08:04.295Z",
-    "coverImage": "/images/posts/rust-crab-carrying-a-shipping-container.jpeg",
-    "excerpt": "Torrust services (Tracker and Index) support docker, we want to ensure that contributors understand our containerfile and we also want to share good practices for containerizing Rust applications.",
+    "date": "2024-11-01T11:57:37.926Z",
+    "coverImage": "/images/posts/bencode-to-json-converter-in-rust/bencode-to-json-converter-in-rust.webp",
+    "excerpt": "We're excited to introduce bencode2json, a crate that simplifies converting Bencode data to JSON, benefiting the Rust BitTorrent community.",
     "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
+      "Bencode",
+      "JSON",
+      "Converter",
+      "Rust"
     ]
   },
   {
@@ -83,22 +99,6 @@
     ]
   },
   {
-    "title": "Hash2Torrent - Retrieve Torrent Files Effortlessly!",
-    "slug": "hash2torrent-retrieve-torrent-files-effortlessly",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-09-05T10:00:00.000Z",
-    "coverImage": "/images/posts/hash2torrent-retrieve-torrent-files-effortlessly/hash2torrent-screenshot.png",
-    "excerpt": "Discover Hash2Torrent, a new tool to fetch torrent files (metainfo files) directly from their infohash! Simplify your torrent management and integrations with our easy-to-use service.",
-    "tags": [
-      "Service",
-      "Demo",
-      "Metainfo",
-      "Metadata",
-      "Sample"
-    ]
-  },
-  {
     "title": "How To Contribute To This Site",
     "slug": "how-to-contribute-to-this-site",
     "contributor": "",
@@ -125,20 +125,6 @@
     ]
   },
   {
-    "title": "How To Setup The Dev Env",
-    "slug": "how-to-setup-the-development-environment",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-07-11T12:29:04.295Z",
-    "coverImage": "/images/posts/development-environment.png",
-    "excerpt": "If you want to contribute to the Torrust Index, this article explains how to setup a development environment with the latest versions for all services.",
-    "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
-    ]
-  },
-  {
     "title": "Introducing the New Sample Torrent Migration Tool",
     "slug": "introducing-the-new-sample-torrent-migration-tool",
     "contributor": "Jose Celano",
@@ -152,17 +138,17 @@
     ]
   },
   {
-    "title": "Announcing the Beta v3.0.0 Live Demo",
-    "slug": "live-demo-beta-v3",
+    "title": "How To Setup The Dev Env",
+    "slug": "how-to-setup-the-development-environment",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2023-12-15T12:08:04.295Z",
-    "coverImage": "/images/posts/rust-crab-happy.jpg",
-    "excerpt": "We will release a new major version v3.0.0. We want the community to test it before the final release while it's still in Beta. You can contribute to make Torrust better.",
+    "date": "2023-07-11T12:29:04.295Z",
+    "coverImage": "/images/posts/development-environment.png",
+    "excerpt": "If you want to contribute to the Torrust Index, this article explains how to setup a development environment with the latest versions for all services.",
     "tags": [
-      "Announcement",
-      "Demo",
-      "Documentation"
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
     ]
   },
   {
@@ -180,6 +166,20 @@
       "Flamegraph",
       "Kcachegrind",
       "Valgrind"
+    ]
+  },
+  {
+    "title": "Announcing the Beta v3.0.0 Live Demo",
+    "slug": "live-demo-beta-v3",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-12-15T12:08:04.295Z",
+    "coverImage": "/images/posts/rust-crab-happy.jpg",
+    "excerpt": "We will release a new major version v3.0.0. We want the community to test it before the final release while it's still in Beta. You can contribute to make Torrust better.",
+    "tags": [
+      "Announcement",
+      "Demo",
+      "Documentation"
     ]
   },
   {
