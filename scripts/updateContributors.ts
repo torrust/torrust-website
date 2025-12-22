@@ -73,11 +73,17 @@ async function fetchContributorsForRepo(repoName: string): Promise<Contributor[]
 		try {
 			return JSON.parse(text);
 		} catch (parseError) {
-			console.error(`✗ Invalid JSON for ${repoName}:`, parseError instanceof Error ? parseError.message : parseError);
+			console.error(
+				`✗ Invalid JSON for ${repoName}:`,
+				parseError instanceof Error ? parseError.message : parseError
+			);
 			return [];
 		}
 	} catch (error) {
-		console.error(`✗ Error fetching contributors for ${repoName}:`, error instanceof Error ? error.message : error);
+		console.error(
+			`✗ Error fetching contributors for ${repoName}:`,
+			error instanceof Error ? error.message : error
+		);
 		return [];
 	}
 }
@@ -96,9 +102,7 @@ async function fetchAllContributors(): Promise<Contributor[]> {
 	const allContributors = contributorArrays.flat();
 
 	// Deduplicate by login
-	const uniqueContributors = Array.from(
-		new Map(allContributors.map((c) => [c.login, c])).values()
-	);
+	const uniqueContributors = Array.from(new Map(allContributors.map((c) => [c.login, c])).values());
 
 	console.log(`\n✓ Total unique contributors: ${uniqueContributors.length}`);
 	return uniqueContributors;
@@ -153,10 +157,7 @@ function updateConstantsFile(contributors: Contributor[]): void {
 
 	// Format contributors list
 	const contributorEntries = contributors
-		.map(
-			(c) =>
-				`\t{\n\t\thtml_url: '${c.login}',\n\t\tavatar_url: '${c.avatar_url}'\n\t}`
-		)
+		.map((c) => `\t{\n\t\thtml_url: '${c.login}',\n\t\tavatar_url: '${c.avatar_url}'\n\t}`)
 		.join(',\n');
 
 	const newList = `export const defaultContributorsList = [\n${contributorEntries}\n];`;
