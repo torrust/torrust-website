@@ -741,6 +741,10 @@ export const defaultContributorsList = [
 		avatar_url: 'https://avatars.githubusercontent.com/u/2010549?v=4'
 	},
 	{
+		html_url: 'dependabot[bot]',
+		avatar_url: 'https://avatars.githubusercontent.com/in/29110?v=4'
+	},
+	{
 		html_url: 'mario-nt',
 		avatar_url: 'https://avatars.githubusercontent.com/u/141633147?v=4'
 	},
@@ -749,12 +753,16 @@ export const defaultContributorsList = [
 		avatar_url: 'https://avatars.githubusercontent.com/u/167511750?v=4'
 	},
 	{
+		html_url: 'alexohneander',
+		avatar_url: 'https://avatars.githubusercontent.com/u/1469954?v=4'
+	},
+	{
 		html_url: 'pataquets',
 		avatar_url: 'https://avatars.githubusercontent.com/u/1286254?v=4'
 	},
 	{
-		html_url: 'alexohneander',
-		avatar_url: 'https://avatars.githubusercontent.com/u/1469954?v=4'
+		html_url: 'nuts-rice',
+		avatar_url: 'https://avatars.githubusercontent.com/u/5147364?v=4'
 	},
 	{
 		html_url: 'Binlogo',
@@ -769,8 +777,16 @@ export const defaultContributorsList = [
 		avatar_url: 'https://avatars.githubusercontent.com/u/115218?v=4'
 	},
 	{
+		html_url: 'eltociear',
+		avatar_url: 'https://avatars.githubusercontent.com/u/22633385?v=4'
+	},
+	{
 		html_url: 'ShrirangB',
 		avatar_url: 'https://avatars.githubusercontent.com/u/68811459?v=4'
+	},
+	{
+		html_url: 'victorb',
+		avatar_url: 'https://avatars.githubusercontent.com/u/459764?v=4'
 	},
 	{
 		html_url: 'abstralexis',
@@ -799,6 +815,10 @@ export const defaultContributorsList = [
 	{
 		html_url: 'danielroe',
 		avatar_url: 'https://avatars.githubusercontent.com/u/28706372?v=4'
+	},
+	{
+		html_url: 'grmbyrn',
+		avatar_url: 'https://avatars.githubusercontent.com/u/95353365?v=4'
 	},
 	{
 		html_url: 'pcarles',
@@ -835,10 +855,6 @@ export const defaultContributorsList = [
 	{
 		html_url: 'rimathia',
 		avatar_url: 'https://avatars.githubusercontent.com/u/7736877?v=4'
-	},
-	{
-		html_url: 'grmbyrn',
-		avatar_url: 'https://avatars.githubusercontent.com/u/95353365?v=4'
 	},
 	{
 		html_url: 'matfantinel',
@@ -885,10 +901,6 @@ export const defaultContributorsList = [
 		avatar_url: 'https://avatars.githubusercontent.com/u/5271?v=4'
 	},
 	{
-		html_url: '5225225',
-		avatar_url: 'https://avatars.githubusercontent.com/u/8584210?v=4'
-	},
-	{
 		html_url: 'adamhammes',
 		avatar_url: 'https://avatars.githubusercontent.com/u/5597274?v=4'
 	},
@@ -908,7 +920,10 @@ export const defaultContributorsList = [
 		html_url: 'letFunny',
 		avatar_url: 'https://avatars.githubusercontent.com/u/24965409?v=4'
 	},
-
+	{
+		html_url: 'dependabot-preview[bot]',
+		avatar_url: 'https://avatars.githubusercontent.com/in/2141?v=4'
+	},
 	{
 		html_url: 'svartalf',
 		avatar_url: 'https://avatars.githubusercontent.com/u/1279564?v=4'
@@ -924,10 +939,6 @@ export const defaultContributorsList = [
 	{
 		html_url: 'benbrandt',
 		avatar_url: 'https://avatars.githubusercontent.com/u/2111074?v=4'
-	},
-	{
-		html_url: 'Robbepop',
-		avatar_url: 'https://avatars.githubusercontent.com/u/8193155?v=4'
 	},
 	{
 		html_url: 'rye',
@@ -954,15 +965,23 @@ export const defaultContributorsList = [
 		avatar_url: 'https://avatars.githubusercontent.com/u/10912917?v=4'
 	},
 	{
+		html_url: 'MarcelCoding',
+		avatar_url: 'https://avatars.githubusercontent.com/u/34819524?v=4'
+	},
+	{
 		html_url: 'magecnion',
 		avatar_url: 'https://avatars.githubusercontent.com/u/5495235?v=4'
 	},
 	{
-		html_url: 'ty5e3a45',
-		avatar_url: 'https://avatars.githubusercontent.com/u/155493608?v=4'
-	},
-	{
 		html_url: 'TGlide',
 		avatar_url: 'https://avatars.githubusercontent.com/u/26071571?v=4'
+	},
+	{
+		html_url: 'jviall',
+		avatar_url: 'https://avatars.githubusercontent.com/u/6645999?v=4'
+	},
+	{
+		html_url: 'Copilot',
+		avatar_url: 'https://avatars.githubusercontent.com/in/1143301?v=4'
 	}
 ];
