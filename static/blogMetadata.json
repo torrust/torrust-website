@@ -13,6 +13,20 @@
     ]
   },
   {
+    "title": "Contributor Path",
+    "slug": "contributor-path",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-10-29T09:20:51.608Z",
+    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
+    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
+    "tags": [
+      "Community",
+      "Onboarding",
+      "Contributors"
+    ]
+  },
+  {
     "title": "Deploying Torrust To Production",
     "slug": "deploying-torrust-to-production",
     "contributor": "Jose Celano",
@@ -27,17 +41,19 @@
     ]
   },
   {
-    "title": "Contributor Path",
-    "slug": "contributor-path",
+    "title": "Hash2Torrent - Retrieve Torrent Files Effortlessly!",
+    "slug": "hash2torrent-retrieve-torrent-files-effortlessly",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2024-10-29T09:20:51.608Z",
-    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
-    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
+    "date": "2024-09-05T10:00:00.000Z",
+    "coverImage": "/images/posts/hash2torrent-retrieve-torrent-files-effortlessly/hash2torrent-screenshot.png",
+    "excerpt": "Discover Hash2Torrent, a new tool to fetch torrent files (metainfo files) directly from their infohash! Simplify your torrent management and integrations with our easy-to-use service.",
     "tags": [
-      "Community",
-      "Onboarding",
-      "Contributors"
+      "Service",
+      "Demo",
+      "Metainfo",
+      "Metadata",
+      "Sample"
     ]
   },
   {
@@ -67,22 +83,6 @@
       "Torrent",
       "Tracker",
       "BitTorrent"
-    ]
-  },
-  {
-    "title": "Hash2Torrent - Retrieve Torrent Files Effortlessly!",
-    "slug": "hash2torrent-retrieve-torrent-files-effortlessly",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-09-05T10:00:00.000Z",
-    "coverImage": "/images/posts/hash2torrent-retrieve-torrent-files-effortlessly/hash2torrent-screenshot.png",
-    "excerpt": "Discover Hash2Torrent, a new tool to fetch torrent files (metainfo files) directly from their infohash! Simplify your torrent management and integrations with our easy-to-use service.",
-    "tags": [
-      "Service",
-      "Demo",
-      "Metainfo",
-      "Metadata",
-      "Sample"
     ]
   },
   {
@@ -139,30 +139,17 @@
     ]
   },
   {
-    "title": "Introducing the New Sample Torrent Migration Tool",
-    "slug": "introducing-the-new-sample-torrent-migration-tool",
+    "title": "Introducing the Torrust Tracker Deployer",
+    "slug": "introducing-the-torrust-tracker-deployer",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2023-09-04T13:24:27.241Z",
-    "coverImage": "/images/posts/pexels-david-dibert-7177008.jpg",
-    "excerpt": "Looking to migrate to the Torrust Index? Dive into our Torrents Importer Sample to seamlessly transfer your torrents to Torrust.",
+    "date": "2025-12-22T00:00:00.000Z",
+    "coverImage": "/images/posts/introducing-the-torrust-tracker-deployer/torrust-tracker-deployer.png",
+    "excerpt": "We're excited to announce a new tool we've been working on: the Torrust Tracker Deployer. This tool aims to simplify the deployment process of the Torrust Tracker to virtual machines, making it as easy as running a single command.",
     "tags": [
-      "Migration Tool",
-      "Sample"
-    ]
-  },
-  {
-    "title": "Announcing the Beta v3.0.0 Live Demo",
-    "slug": "live-demo-beta-v3",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-12-15T12:08:04.295Z",
-    "coverImage": "/images/posts/rust-crab-happy.jpg",
-    "excerpt": "We will release a new major version v3.0.0. We want the community to test it before the final release while it's still in Beta. You can contribute to make Torrust better.",
-    "tags": [
-      "Announcement",
-      "Demo",
-      "Documentation"
+      "Deployment",
+      "Automation",
+      "Announcement"
     ]
   },
   {
@@ -183,17 +170,16 @@
     ]
   },
   {
-    "title": "Introducing the Torrust Tracker Deployer",
-    "slug": "introducing-the-torrust-tracker-deployer",
+    "title": "Introducing the New Sample Torrent Migration Tool",
+    "slug": "introducing-the-new-sample-torrent-migration-tool",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2025-12-22T00:00:00.000Z",
-    "coverImage": "/images/posts/introducing-the-torrust-tracker-deployer/torrust-tracker-deployer.png",
-    "excerpt": "We're excited to announce a new tool we've been working on: the Torrust Tracker Deployer. This tool aims to simplify the deployment process of the Torrust Tracker to virtual machines, making it as easy as running a single command.",
+    "date": "2023-09-04T13:24:27.241Z",
+    "coverImage": "/images/posts/pexels-david-dibert-7177008.jpg",
+    "excerpt": "Looking to migrate to the Torrust Index? Dive into our Torrents Importer Sample to seamlessly transfer your torrents to Torrust.",
     "tags": [
-      "Deployment",
-      "Automation",
-      "Announcement"
+      "Migration Tool",
+      "Sample"
     ]
   },
   {
@@ -204,6 +190,33 @@
     "date": "2024-09-03T14:30:38.554Z",
     "coverImage": "/images/posts/released-v3-0-0-beta/team.png",
     "excerpt": "We're excited to announce the release of v3.0.0-beta, marking a significant step towards our upcoming major release, v3.0.0. This release solidifies the features and prepares us for the beta phase.",
+    "tags": [
+      "Announcement",
+      "Release"
+    ]
+  },
+  {
+    "title": "Announcing the Beta v3.0.0 Live Demo",
+    "slug": "live-demo-beta-v3",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-12-15T12:08:04.295Z",
+    "coverImage": "/images/posts/rust-crab-happy.jpg",
+    "excerpt": "We will release a new major version v3.0.0. We want the community to test it before the final release while it's still in Beta. You can contribute to make Torrust better.",
+    "tags": [
+      "Announcement",
+      "Demo",
+      "Documentation"
+    ]
+  },
+  {
+    "title": "Released version v3.0.0",
+    "slug": "released-v3-0-0-beta",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-10-03T11:05:14.597Z",
+    "coverImage": "/images/posts/released-v3-0-0/team.png",
+    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
     "tags": [
       "Announcement",
       "Release"
@@ -225,29 +238,17 @@
     ]
   },
   {
-    "title": "Released version v3.0.0",
-    "slug": "released-v3-0-0-beta",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-10-03T11:05:14.597Z",
-    "coverImage": "/images/posts/released-v3-0-0/team.png",
-    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
+    "title": "Setting Up Torrust with Claude Code",
+    "slug": "setting-up-torrust-with-claude-code",
+    "contributor": "Graeme Byrne",
+    "contributorSlug": "graeme-byrne",
+    "date": "2025-07-09T19:53:17.990Z",
+    "coverImage": "/images/posts/setting-up-torrust-with-claude-code/setting-up-torrust-with-claude-code.png",
+    "excerpt": "Based on a real terminal session, this guide documents the complete process of setting up the Torrust BitTorrent index development environment using Claude Code, including all the challenges encountered and solutions applied.",
     "tags": [
-      "Announcement",
-      "Release"
-    ]
-  },
-  {
-    "title": "Torrust - Enhancing the BitTorrent Ecosystem",
-    "slug": "torrust-enhancing-the-bittorrent-ecosystem",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-05-31T09:33:14.163Z",
-    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
-    "excerpt": "Torrust, an open-source organization, is making significant contributions to the BitTorrent ecosystem by developing robust tools, improving documentation, and fostering community collaboration.",
-    "tags": [
-      "Introduction",
-      "Torrust"
+      "Tutorial",
+      "AI",
+      "Claude"
     ]
   },
   {
@@ -265,17 +266,16 @@
     ]
   },
   {
-    "title": "Setting Up Torrust with Claude Code",
-    "slug": "setting-up-torrust-with-claude-code",
-    "contributor": "Graeme Byrne",
-    "contributorSlug": "graeme-byrne",
-    "date": "2025-07-09T19:53:17.990Z",
-    "coverImage": "/images/posts/setting-up-torrust-with-claude-code/setting-up-torrust-with-claude-code.png",
-    "excerpt": "Based on a real terminal session, this guide documents the complete process of setting up the Torrust BitTorrent index development environment using Claude Code, including all the challenges encountered and solutions applied.",
+    "title": "Torrust - Enhancing the BitTorrent Ecosystem",
+    "slug": "torrust-enhancing-the-bittorrent-ecosystem",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-05-31T09:33:14.163Z",
+    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
+    "excerpt": "Torrust, an open-source organization, is making significant contributions to the BitTorrent ecosystem by developing robust tools, improving documentation, and fostering community collaboration.",
     "tags": [
-      "Tutorial",
-      "AI",
-      "Claude"
+      "Introduction",
+      "Torrust"
     ]
   },
   {
