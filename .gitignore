@@ -12,6 +12,7 @@
 /build
 /package
 node_modules
+repomix-output.xml
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 yarn.lock
