@@ -182,6 +182,49 @@ Optional fields:
 - Images with automatic optimization
 - Links with automatic external link handling
 
+## Managing Contributors List
+
+The contributors displayed on the homepage are maintained in a static list in `src/lib/constants/constants.ts`.
+
+**Why Static?**
+The GitHub API has a rate limit of 60 requests/hour for anonymous users, which would cause issues for a public website. Instead, we use a local script to update the list manually.
+
+**How to Update:**
+
+```bash
+# Update contributors list from GitHub API
+npm run update-contributors
+
+# With GitHub token for higher rate limits (REQUIRED for Torrust org)
+GITHUB_TOKEN=your_token_here npm run update-contributors
+```
+
+**Creating a GitHub Token:**
+
+The Torrust organization requires a **fine-grained personal access token** (classic tokens are not allowed).
+
+1. Go to GitHub Settings → Developer settings → Personal access tokens → Fine-grained tokens
+2. Click "Generate new token"
+3. Configure the token:
+   - **Token name**: "Torrust Contributors Script"
+   - **Expiration**: Your preference (90 days recommended)
+   - **Resource owner**: Select "torrust" from the dropdown
+   - **Repository access**: "Public Repositories (read-only)"
+   - **Permissions**:
+     - Repository permissions → Metadata: Read-only (automatically set)
+     - Organization permissions → Members: Read-only (for accessing org repos)
+4. Click "Generate token" and copy it
+5. Use it with: `GITHUB_TOKEN=your_token_here npm run update-contributors`
+
+**What the Script Does:**
+
+1. Fetches all repositories from the Torrust GitHub organization
+2. Fetches contributors from each repository
+3. Deduplicates contributors by username
+4. Updates the `defaultContributorsList` in `src/lib/constants/constants.ts`
+
+**Note:** Without a token, the script uses anonymous access (60 requests/hour), which may hit rate limits. With a fine-grained token, you get 5,000 requests/hour.
+
 ## Image Optimization
 
 - Use the `<Image />` component instead of `<img />` for automatic optimization

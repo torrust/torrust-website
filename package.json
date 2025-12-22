@@ -11,7 +11,8 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint --ignore-pattern .svelte-kit/output .",
-		"postbuild": "svelte-sitemap --domain https://torrust.com/"
+		"postbuild": "svelte-sitemap --domain https://torrust.com/",
+		"update-contributors": "tsx scripts/updateContributors.ts"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
