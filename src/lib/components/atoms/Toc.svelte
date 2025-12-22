@@ -16,7 +16,7 @@
 		elements: { item },
 		states: { activeHeadingIdxs, headingsTree }
 	} = createTableOfContents({
-		selector,
+		selector: (() => selector)(),
 		exclude: ['h3'],
 		activeType: 'highest',
 		pushStateFn: pushState,
