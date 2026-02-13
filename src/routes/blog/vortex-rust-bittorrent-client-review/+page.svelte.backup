@@ -1,0 +1,786 @@
+<script lang="ts">
+	let { data } = $props();
+	let currentPost = $derived(data.currentPost);
+	let allPosts = $derived(data.allPosts);
+	import BlogPreview from '$lib/components/molecules/BlogPreview.svelte';
+	import Toc from '$lib/components/atoms/Toc.svelte';
+	import Post from '$lib/components/organisms/Post.svelte';
+	import PagesWrapper from '$lib/components/atoms/PagesWrapper.svelte';
+	import PrevNextPost from '$lib/components/singletons/PrevNextPost.svelte';
+	import Callout from '$lib/components/molecules/Callout.svelte';
+	import CodeBlock from '$lib/components/molecules/CodeBlock.svelte';
+	import Image from '$lib/components/atoms/Image.svelte';
+</script>
+
+<Post
+	title={currentPost.title}
+	slug={currentPost.slug}
+	coverImage={currentPost.coverImage}
+	date={currentPost.date}
+	tags={currentPost.tags}
+	excerpt={currentPost.excerpt}
+	contributor={currentPost.contributor}
+	contributorSlug={currentPost.contributorSlug}
+>
+	<PagesWrapper>
+		<div class="wrapper">
+			<Toc class="toc" />
+			<div id="toc-contents" class="content-preview">
+				<h2 id="introduction">Introduction</h2>
+				<p>
+					When I first heard about Vortex, a new Rust-based BitTorrent client claiming to be 3x
+					faster than Transmission, I was skeptical. Bold performance claims are common, but real-world
+					results often disappoint. So I decided to put it to the test.
+				</p>
+				<p>
+					This is a hands-on review of <a href="https://github.com/Nehliin/vortex">Vortex</a>, where
+					I'll walk you through the complete installation process, test it with a real torrent from
+					the <a href="https://index.torrust-demo.com/">Torrust Demo Index</a>, and share my
+					honest thoughts about what works, what doesn't, and whether the performance promises hold up.
+				</p>
+
+				<h2 id="what-is-vortex">What is Vortex?</h2>
+				<p>
+					Vortex is an extremely fast, pure <code>io_uring</code> based BitTorrent library and client
+					built from the ground up for modern Linux systems. Unlike traditional BitTorrent clients
+					that rely on <code>epoll</code> for I/O, Vortex uses <code>io_uring</code>—the
+					next-generation Linux I/O API—to achieve exceptional throughput with minimal overhead.
+				</p>
+				<p>Key characteristics:</p>
+				<ul>
+					<li>
+						<strong>Repo:</strong>
+						<a href="https://github.com/Nehliin/vortex">https://github.com/Nehliin/vortex</a>
+					</li>
+					<li>
+						<strong>Author:</strong>
+						<a href="https://github.com/Nehliin">Oskar Nehlin</a>
+					</li>
+					<li><strong>Stars:</strong> Growing community interest.</li>
+					<li><strong>License:</strong> BSD-3-Clause</li>
+					<li><strong>Language:</strong> Rust</li>
+					<li><strong>Current Status:</strong> BETA</li>
+					<li>
+						<strong>Latest Releases:</strong>
+						<ul>
+							<li>vortex-bittorrent: v0.4.0 (January 25, 2026)</li>
+							<li>vortex-cli: v0.3.0 (January 25, 2026)</li>
+						</ul>
+					</li>
+				</ul>
+
+				<Callout type="info">
+					Vortex requires <strong>Linux Kernel 6.1 or newer</strong> due to its reliance on modern io_uring
+					features. This is a conscious design decision to optimize for cutting-edge performance rather
+					than broad compatibility.
+				</Callout>
+
+				<h3 id="overview">Overview</h3>
+				<p>
+					Vortex represents a fundamental rethinking of how BitTorrent clients should be built. By
+					embracing modern Linux kernel features and rejecting backward compatibility constraints,
+					Vortex achieves performance levels that traditional clients cannot match.
+				</p>
+				<p>
+					The project is designed for users who prioritize speed and efficiency over universal
+					platform support, making it ideal for server deployments, high-performance workstations,
+					and enthusiasts who run modern Linux distributions.
+				</p>
+
+				<h3 id="key-features">Key Features</h3>
+
+				<h4 id="vortex-cli">vortex-cli (TUI Client)</h4>
+				<ul>
+					<li><strong>Fully Trackerless:</strong> All peer discovery via DHT (mainline)</li>
+					<li><strong>TUI Interface:</strong> Terminal-based UI built with Ratatui</li>
+					<li>
+						<strong>Real-time Metrics:</strong> Live graphs showing download/upload throughput
+					</li>
+					<li><strong>Metadata Download:</strong> Support for downloading from info-hash alone</li>
+					<li><strong>Seeding Support:</strong> Continues seeding after download completion</li>
+					<li>
+						<strong>XDG Directory Support:</strong> Follows Linux standards for config/data paths
+					</li>
+				</ul>
+
+				<h4 id="vortex-bittorrent">vortex-bittorrent (Library)</h4>
+				<ul>
+					<li><strong>io_uring Based:</strong> Zero-copy I/O with minimal syscall overhead</li>
+					<li><strong>Custom Event Loop:</strong> No async runtime overhead</li>
+					<li><strong>Parallel Hash Computation:</strong> Offloaded to thread pool</li>
+					<li><strong>"Lockless" Design:</strong> Single I/O thread, leveraging Rust lifetimes</li>
+					<li><strong>SSD/NVMe Optimized:</strong> No HDD head optimization overhead</li>
+					<li><strong>Metrics Support:</strong> Integration with the metrics crate</li>
+					<li><strong>Well Tested:</strong> Unit, integration, and fuzz tests</li>
+				</ul>
+
+				<h4 id="bep-support">BitTorrent Enhancement Proposals (BEP) Support</h4>
+				<p>Vortex implements many core BitTorrent protocols:</p>
+				<ul>
+					<li><strong>BEP 3:</strong> The BitTorrent Protocol Specification ✓</li>
+					<li><strong>BEP 6:</strong> Fast Extension ✓</li>
+					<li><strong>BEP 9:</strong> Extension for Peers to Send Metadata Files ✓</li>
+					<li><strong>BEP 10:</strong> Extension Protocol ✓</li>
+					<li><strong>BEP 20:</strong> Peer ID Conventions ✓</li>
+					<li><strong>BEP 21:</strong> Extension for Partial Seeds ✓</li>
+				</ul>
+				<p>
+					Notable omissions include tracker support (BEP 7, 12), PEX (BEP 11), uTP (BEP 29), and
+					BitTorrent v2 (BEP 52). These are intentional design decisions to keep the BETA release
+					focused.
+				</p>
+
+				<h2 id="why-vortex">Why Vortex?</h2>
+
+				<h3 id="performance">Performance</h3>
+				<p>
+					The primary selling point of Vortex is its exceptional performance. According to the
+					author's benchmarks, <strong>vortex-cli is approximately 3x faster</strong> than transmission-cli
+					(4.0.6) when downloading the same torrent under identical network and hardware conditions.
+				</p>
+				<p>This performance advantage comes from several architectural decisions:</p>
+				<ul>
+					<li>
+						<strong>io_uring:</strong> Modern I/O interface that batches operations and reduces syscalls
+					</li>
+					<li>
+						<strong>No Async Runtime:</strong> Direct control over the event loop eliminates abstraction
+						overhead
+					</li>
+					<li>
+						<strong>Parallel Hashing:</strong> Piece verification happens on separate threads, keeping
+						I/O unblocked
+					</li>
+					<li>
+						<strong>Lockless I/O Thread:</strong> Single-threaded I/O with zero contention
+					</li>
+					<li>
+						<strong>Modern Hardware Assumptions:</strong> Optimized for SSDs/NVMe rather than spinning
+						disks
+					</li>
+				</ul>
+
+				<Callout type="tip">
+					If you have another BitTorrent implementation that's faster than Vortex on Linux, the
+					author considers it a bug! Performance is the core mission.
+				</Callout>
+
+				<h3 id="observability">Observability</h3>
+				<p>
+					Vortex includes first-class support for metrics via the <a
+						href="https://docs.rs/metrics/latest/metrics/">metrics crate</a
+					>. This allows integration with monitoring systems like Prometheus and Grafana for deep
+					visibility into client behavior. The project even includes an example Grafana dashboard.
+				</p>
+
+				<h3 id="code-quality">Code Quality and Testing</h3>
+				<p>
+					The codebase demonstrates high-quality Rust practices with extensive test coverage
+					including:
+				</p>
+				<ul>
+					<li>Unit tests for individual components</li>
+					<li>Integration tests for end-to-end workflows</li>
+					<li>Fuzz tests to catch edge cases</li>
+					<li>Continuous integration via GitHub Actions</li>
+				</ul>
+				<p>
+					The code is well-structured with clear separation between the peer communication layer,
+					piece selection, file storage, and event loop.
+				</p>
+
+				<h2 id="vortex-review">Vortex Review</h2>
+
+				<h3 id="architecture">Architecture and Design</h3>
+				<p>
+					Vortex's architecture is a breath of fresh air. By building a custom event loop around
+					<code>io_uring</code> rather than using an existing async runtime like Tokio, the project achieves
+					maximum control and efficiency. The single-threaded I/O model with "lockless" design is elegant—Rust's
+					ownership system ensures thread safety without runtime overhead.
+				</p>
+				<p>
+					The piece buffer pool and separate hash verification threads demonstrate careful attention
+					to performance bottlenecks. The design shows that the author deeply understands both the
+					BitTorrent protocol and modern systems programming.
+				</p>
+
+				<h3 id="documentation">Documentation and User Guides</h3>
+				<p>
+					The README is comprehensive and well-written. It clearly explains the project's goals,
+					performance characteristics, and design decisions. The documentation includes:
+				</p>
+				<ul>
+					<li>Clear system requirements</li>
+					<li>Installation instructions</li>
+					<li>Usage examples</li>
+					<li>Performance comparison methodology</li>
+					<li>BEP implementation status table</li>
+					<li>Integration test examples for library users</li>
+				</ul>
+				<p>
+					However, as a BETA project, there's room for improvement in tutorial content, advanced
+					configuration guides, and troubleshooting documentation. The project would benefit from
+					more examples of using the library in different scenarios.
+				</p>
+
+				<h3 id="community">Community and Development</h3>
+				<p>
+					Vortex is actively developed with regular commits and releases. The project shows healthy
+					development velocity with bug fixes and feature additions happening frequently. The author
+					is responsive to issues and open to contributions.
+				</p>
+				<p>
+					The project has an interesting AI policy statement, emphasizing code quality over speed:
+				</p>
+				<blockquote>
+					<p>
+						"LLMs should be used not as a speed multiplier but a quality multiplier. Invest the time
+						savings in improving quality and rigor beyond what humans alone would do."
+					</p>
+				</blockquote>
+				<p>
+					This philosophy is evident in the codebase—even with potential AI assistance, the code is
+					thoughtful and well-tested.
+				</p>
+
+				<h3 id="license">License and Contribution</h3>
+				<p>
+					Vortex is licensed under the BSD-3-Clause license, which is permissive and allows for
+					commercial use. This is more permissive than many BitTorrent projects that use AGPL or GPL
+					licenses.
+				</p>
+				<p>Contributions are welcome, and the project maintains high standards for code quality.</p>
+
+				<h3 id="limitations">Limitations and Trade-offs</h3>
+				<p>Vortex makes deliberate trade-offs that won't suit everyone:</p>
+				<ul>
+					<li><strong>Linux Only:</strong> Requires kernel 6.1+, no Windows or macOS support</li>
+					<li><strong>No Tracker Support:</strong> Fully trackerless (DHT only) by design</li>
+					<li><strong>SSD Optimized:</strong> May not be ideal for traditional HDDs</li>
+					<li><strong>BETA Status:</strong> Missing features like pause/resume and PEX</li>
+					<li><strong>CLI Only:</strong> No GUI, though the TUI is well-designed</li>
+				</ul>
+				<p>
+					These aren't bugs—they're conscious choices to focus on performance for a specific
+					audience.
+				</p>
+
+				<h2 id="getting-started">Getting Started with Vortex</h2>
+
+				<h3 id="installation">Installation</h3>
+
+				<h4 id="system-requirements">System Requirements</h4>
+				<ul>
+					<li><strong>OS:</strong> Linux with kernel 6.1 or newer</li>
+					<li><strong>Storage:</strong> SSD or NVMe recommended (HDD not optimized)</li>
+					<li>
+						<strong>Resource Limits:</strong> May need to adjust <code>ulimit</code> for maximum connections
+					</li>
+				</ul>
+
+				<h4 id="install-via-cargo">Install via Cargo</h4>
+				<p>The easiest way to install vortex-cli is through cargo:</p>
+
+				<CodeBlock lang="bash" code={`cargo install --locked vortex-cli`} />
+
+				<p>This will install the latest release from crates.io.</p>
+
+				<h4 id="build-from-source">Build from Source</h4>
+				<p>To build from source for the latest development version:</p>
+
+				<CodeBlock
+					lang="bash"
+					code={`# Clone the repository
+git clone https://github.com/Nehliin/vortex.git
+cd vortex
+
+# Build and install the CLI
+cargo install --path cli --locked
+
+# Or just build it
+cargo build --release
+./target/release/vortex-cli --version`}
+				/>
+
+				<h3 id="basic-usage">Basic Usage</h3>
+
+				<h4 id="download-from-info-hash">Download from Info Hash</h4>
+				<p>
+					Vortex supports downloading from just an info-hash. The metadata will be automatically
+					downloaded from the DHT:
+				</p>
+
+				<CodeBlock lang="bash" code={`vortex-cli --info-hash <INFO_HASH> -d downloads`} />
+
+				<h4 id="download-from-torrent">Download from Torrent File</h4>
+				<p>For faster startup, provide a complete torrent file:</p>
+
+				<CodeBlock lang="bash" code={`vortex-cli -t path/to/file.torrent -d downloads`} />
+
+				<h4 id="custom-port">Specify Custom Port</h4>
+
+				<CodeBlock lang="bash" code={`vortex-cli -t file.torrent -d downloads --port 6881`} />
+
+				<h3 id="configuration">Configuration</h3>
+				<p>
+					Vortex follows XDG directory standards. The config file is located at:
+					<code>~/.config/vortex/config.toml</code>
+				</p>
+				<p>
+					An example configuration with all available options can be found in the repository at
+					<code>cli/vortex.config.toml.example</code>. Key configuration options include:
+				</p>
+				<ul>
+					<li><strong>max_connections:</strong> Maximum peer connections</li>
+					<li><strong>max_unchoked:</strong> Maximum simultaneous unchoked peers</li>
+					<li><strong>piece_buffer_pool_size:</strong> Memory allocated for piece buffers</li>
+					<li><strong>tick_interval:</strong> Event loop tick duration</li>
+				</ul>
+
+				<Callout type="tip">
+					For maximum performance, tune these values for your hardware. More memory for buffers can
+					increase throughput, but watch your RAM usage.
+				</Callout>
+
+				<h3 id="monitoring">Monitoring with Metrics</h3>
+				<p>To enable Prometheus metrics, build with the <code>metrics</code> feature:</p>
+
+				<CodeBlock lang="bash" code={`cargo build --release --features metrics`} />
+
+				<p>
+					The project includes an example Grafana dashboard (<code>dashboard.json</code>) for
+					visualizing:
+				</p>
+				<ul>
+					<li>Download/upload throughput per peer</li>
+					<li>Piece completion progress</li>
+					<li>Connection statistics</li>
+					<li>RTT measurements</li>
+					<li>Buffer pool utilization</li>
+				</ul>
+
+				<h2 id="using-library">Using the vortex-bittorrent Library</h2>
+				<p>
+					For developers who want to integrate BitTorrent functionality into their own applications,
+					vortex-bittorrent can be used as a library.
+				</p>
+
+				<h3 id="basic-example">Basic Example</h3>
+				<p>
+					Here's a minimal example (adapted from the project's integration tests) showing how to use
+					the library:
+				</p>
+
+				<CodeBlock
+					lang="rust"
+					code={`use vortex_bittorrent::{Command, Config, State, Torrent, TorrentEvent};
+use std::path::PathBuf;
+
+// Create torrent state
+let info_hash = [0u8; 20]; // Your actual info hash
+let download_dir = PathBuf::from("./downloads");
+let config = Config::default();
+let state = State::unstarted(info_hash, download_dir, config);
+
+// Start the torrent
+let (command_tx, event_rx, torrent_handle) = Torrent::start(state)?;
+
+// Send commands
+command_tx.send(Command::Start)?;
+
+// Receive events
+loop {
+    if let Ok(event) = event_rx.recv() {
+        match event {
+            TorrentEvent::TorrentMetrics { pieces_completed, .. } => {
+                println!("Progress: {} pieces", pieces_completed);
+            }
+            TorrentEvent::Complete => {
+                println!("Download complete!");
+                break;
+            }
+            _ => {}
+        }
+    }
+}
+
+// Stop torrent
+command_tx.send(Command::Stop)?;
+torrent_handle.join()?;`}
+				/>
+
+				<h3 id="library-communication">Communication Pattern</h3>
+				<p>The library uses a message-passing architecture:</p>
+				<ul>
+					<li>
+						<strong>Commands:</strong> Sent via <code>command_tx</code> to control the torrent (Start,
+						Stop, AddPeers)
+					</li>
+					<li>
+						<strong>Events:</strong> Received via <code>event_rx</code> for updates (progress, completion,
+						errors)
+					</li>
+				</ul>
+				<p>This design allows for clean integration into any application event loop.</p>
+
+				<h2 id="performance-considerations">Performance Considerations</h2>
+
+				<h3 id="kernel-tunables">Kernel and System Tunables</h3>
+				<p>To achieve maximum performance with Vortex, consider tuning your system:</p>
+
+				<CodeBlock
+					lang="bash"
+					code={`# Increase file descriptor limits
+ulimit -n 65536
+
+# Check current io_uring settings
+cat /proc/sys/kernel/io_uring_disabled  # Should be 0
+
+# For production deployments, adjust sysctl values:
+# net.core.rmem_max
+# net.core.wmem_max
+# net.ipv4.tcp_rmem
+# net.ipv4.tcp_wmem`}
+				/>
+
+				<h3 id="hardware-recommendations">Hardware Recommendations</h3>
+				<ul>
+					<li><strong>Storage:</strong> NVMe SSD strongly recommended for best results</li>
+					<li><strong>RAM:</strong> More RAM allows larger buffer pools and more connections</li>
+					<li><strong>Network:</strong> Gigabit+ network to take advantage of the speed</li>
+					<li><strong>CPU:</strong> Modern multi-core CPU for parallel hash computation</li>
+				</ul>
+
+				<h2 id="comparison">Comparison with Other Clients</h2>
+
+				<h3 id="vs-transmission">Vortex vs Transmission</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Feature</th>
+							<th>Vortex</th>
+							<th>Transmission</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Performance</td>
+							<td>~3x faster (claimed)</td>
+							<td>Baseline</td>
+						</tr>
+						<tr>
+							<td>Platform Support</td>
+							<td>Linux only (6.1+)</td>
+							<td>Multi-platform</td>
+						</tr>
+						<tr>
+							<td>I/O Backend</td>
+							<td>io_uring</td>
+							<td>epoll/libevent</td>
+						</tr>
+						<tr>
+							<td>Interface</td>
+							<td>TUI only</td>
+							<td>CLI, GUI, Web UI</td>
+						</tr>
+						<tr>
+							<td>Tracker Support</td>
+							<td>No (DHT only)</td>
+							<td>Yes</td>
+						</tr>
+						<tr>
+							<td>Maturity</td>
+							<td>BETA</td>
+							<td>Stable</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3 id="vs-libtorrent">Vortex vs libtorrent-based Clients</h3>
+				<p>
+					Clients like qBittorrent and Deluge use libtorrent-rasterbar, which is mature and
+					feature-rich but uses traditional async I/O. Vortex trades features and compatibility for
+					raw speed on modern Linux systems.
+				</p>
+
+				<h3 id="vs-torrust">Vortex vs Torrust</h3>
+				<p>
+					Both are Rust-based BitTorrent implementations, but serve different purposes. Torrust
+					focuses on tracker and index software, while Vortex is a high-performance client/library.
+					They complement each other in the ecosystem.
+				</p>
+
+				<h2 id="use-cases">Ideal Use Cases</h2>
+
+				<h3 id="where-vortex-shines">Where Vortex Shines</h3>
+				<ul>
+					<li><strong>High-Speed Seedboxes:</strong> Modern Linux VPS with fast storage</li>
+					<li><strong>Data Center Downloads:</strong> Server-side torrent fetching</li>
+					<li><strong>Performance Testing:</strong> Benchmarking BitTorrent networks</li>
+					<li>
+						<strong>Embedded in Applications:</strong> Using the library for programmatic downloads
+					</li>
+					<li>
+						<strong>Enthusiast Workstations:</strong> Power users on cutting-edge Linux distributions
+					</li>
+				</ul>
+
+				<h3 id="where-to-use-alternatives">Where to Use Alternatives</h3>
+				<ul>
+					<li>You need Windows or macOS support</li>
+					<li>You must use trackers (not just DHT)</li>
+					<li>You need a GUI interface</li>
+					<li>Running on older hardware (HDDs) or older kernels</li>
+					<li>You need features like PEX or uTP</li>
+				</ul>
+
+				<h2 id="future-outlook">Future Outlook</h2>
+				<p>
+					Vortex is in active development with a clear roadmap. Based on GitHub issues and recent
+					commits, planned improvements include:
+				</p>
+				<ul>
+					<li><strong>Pause/Resume:</strong> Ability to pause torrents (Issue #92)</li>
+					<li><strong>PEX:</strong> Peer exchange protocol support (Issue #91)</li>
+					<li><strong>Magnet Links:</strong> Direct magnet link support in CLI</li>
+					<li><strong>More BEPs:</strong> Gradual expansion of protocol support</li>
+					<li><strong>Stability:</strong> Bug fixes as the user base grows</li>
+				</ul>
+				<p>
+					The project is well-positioned to become the go-to high-performance BitTorrent solution
+					for Linux.
+				</p>
+
+				<h2 id="conclusion">Conclusion</h2>
+				<p>
+					Vortex represents an exciting evolution in BitTorrent client design. By embracing modern
+					Linux kernel features and rejecting backward compatibility constraints, it achieves
+					performance levels that traditional clients cannot match. The clean Rust codebase, strong
+					testing practices, and thoughtful architecture make it a joy to work with.
+				</p>
+				<p>
+					While it's not suitable for everyone—the Linux-only requirement and BETA status are
+					significant limitations—for those running modern Linux systems and prioritizing speed,
+					Vortex is exceptional. The ~3x performance improvement over transmission is substantial
+					and makes a real difference for high-volume use cases.
+				</p>
+				<p>
+					We're excited to see where Oskar Nehlin takes this project. The BitTorrent ecosystem
+					benefits from innovative implementations like Vortex that push the boundaries of what's
+					possible. If you're a Rust developer interested in systems programming or a Linux power
+					user looking for the fastest BitTorrent client available, Vortex deserves your attention.
+				</p>
+
+				<Callout type="success">
+					Try Vortex if you're on Linux 6.1+ and want to experience the future of high-performance
+					BitTorrent. Just remember: it's BETA software, so don't use it for mission-critical
+					workloads without testing first.
+				</Callout>
+
+				<h3 id="links">Useful Links</h3>
+				<ul>
+					<li>
+						<strong>GitHub Repository:</strong>
+						<a href="https://github.com/Nehliin/vortex">https://github.com/Nehliin/vortex</a>
+					</li>
+					<li>
+						<strong>Library Documentation:</strong>
+						<a href="https://docs.rs/vortex-bittorrent/">https://docs.rs/vortex-bittorrent/</a>
+					</li>
+					<li>
+						<strong>Crates.io:</strong>
+						<a href="https://crates.io/crates/vortex-bittorrent">vortex-bittorrent</a> |
+						<a href="https://crates.io/crates/vortex-cli">vortex-cli</a>
+					</li>
+					<li>
+						<strong>Author:</strong>
+						<a href="https://github.com/Nehliin">Oskar Nehlin on GitHub</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</PagesWrapper>
+	<PrevNextPost currentPage={currentPost.slug} {allPosts} />
+	<div class="related-posts-container">
+		<h2>Related Posts:</h2>
+		<div class="grid">
+			{#each data.allPosts.slice(0, 3) as post}
+				<a href="/blog/{post.slug}">
+					<BlogPreview post_data={post} />
+				</a>
+			{/each}
+		</div>
+	</div>
+</Post>
+
+<style lang="scss">
+	@use '$lib/scss/breakpoints.scss' as bp;
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		position: relative;
+		max-width: 1150px;
+	}
+
+	.content-preview {
+		flex: 1;
+		word-break: keep-all;
+		padding-top: 2rem;
+	}
+
+	h2 {
+		font-size: 1.8rem;
+		font-weight: bold;
+	}
+
+	h2:not(:first-of-type) {
+		padding-top: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		font-weight: bold;
+		padding-top: 1.25rem;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+		font-weight: bold;
+		padding-top: 1rem;
+	}
+
+	p {
+		font-size: 1rem;
+		padding-top: 1rem;
+		color: rgba(245, 245, 245, 0.8);
+		word-break: keep-all;
+	}
+
+	a {
+		word-break: keep-all;
+		color: rgba(254, 13, 0, 1);
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		list-style-type: disc;
+		margin: 0;
+		padding-left: 1.5rem;
+		word-break: keep-all;
+	}
+
+	ul li {
+		margin: 0.25rem 0;
+		word-break: keep-all;
+	}
+
+	blockquote {
+		border-left: 4px solid rgba(254, 13, 0, 0.5);
+		padding-left: 1rem;
+		margin: 1rem 0;
+		font-style: italic;
+		color: rgba(245, 245, 245, 0.9);
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 1rem 0;
+	}
+
+	thead {
+		background-color: rgba(254, 13, 0, 0.1);
+	}
+
+	th,
+	td {
+		padding: 0.75rem;
+		text-align: left;
+		border: 1px solid rgba(245, 245, 245, 0.2);
+	}
+
+	th {
+		font-weight: bold;
+	}
+
+	tbody tr:hover {
+		background-color: rgba(254, 13, 0, 0.05);
+	}
+
+	code {
+		background-color: rgba(0, 0, 0, 0.3);
+		padding: 0.2rem 0.4rem;
+		border-radius: 3px;
+		font-family: 'Courier New', monospace;
+		font-size: 0.9em;
+	}
+
+	.content-preview > p,
+	.content-preview > ul,
+	.content-preview > h2,
+	.content-preview > h3,
+	.content-preview > h4 {
+		margin-bottom: 1rem;
+	}
+
+	h2:not(:first-of-type) {
+		padding-top: 1.5rem;
+	}
+
+	.related-posts-container {
+		display: flex;
+		flex-direction: column;
+		color: rgba(245, 245, 245, 0.96);
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 2rem;
+
+		@include bp.for-desktop-up {
+			max-width: 1176px;
+		}
+	}
+
+	.grid {
+		padding-top: 3rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 24px;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding-inline: 2.5rem;
+
+		@include bp.for-phone-only {
+			grid-template-columns: 1fr;
+		}
+
+		@include bp.for-tablet-landscape-up {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@include bp.for-desktop-up {
+			grid-template-columns: 1fr 1fr 1fr;
+			padding-inline: 0;
+		}
+	}
+
+	@include bp.for-desktop-up {
+		.wrapper {
+			flex-direction: row;
+			gap: 4rem;
+		}
+
+		.wrapper :global(.toc) {
+			position: sticky;
+			top: 4rem;
+			height: min-content;
+		}
+
+		.content-preview {
+			overflow-y: auto;
+			padding-top: 0rem;
+		}
+	}
+</style>
