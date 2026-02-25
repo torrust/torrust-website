@@ -13,17 +13,17 @@
     ]
   },
   {
-    "title": "Contributor Path",
-    "slug": "contributor-path",
+    "title": "Containerizing Rust Applications",
+    "slug": "containerizing-rust-applications-best-practices",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2024-10-29T09:20:51.608Z",
-    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
-    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
+    "date": "2023-11-09T12:08:04.295Z",
+    "coverImage": "/images/posts/rust-crab-carrying-a-shipping-container.jpeg",
+    "excerpt": "Torrust services (Tracker and Index) support docker, we want to ensure that contributors understand our containerfile and we also want to share good practices for containerizing Rust applications.",
     "tags": [
-      "Community",
-      "Onboarding",
-      "Contributors"
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
     ]
   },
   {
@@ -72,17 +72,17 @@
     ]
   },
   {
-    "title": "Containerizing Rust Applications",
-    "slug": "containerizing-rust-applications-best-practices",
+    "title": "Contributor Path",
+    "slug": "contributor-path",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2023-11-09T12:08:04.295Z",
-    "coverImage": "/images/posts/rust-crab-carrying-a-shipping-container.jpeg",
-    "excerpt": "Torrust services (Tracker and Index) support docker, we want to ensure that contributors understand our containerfile and we also want to share good practices for containerizing Rust applications.",
+    "date": "2024-10-29T09:20:51.608Z",
+    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
+    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
     "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
+      "Community",
+      "Onboarding",
+      "Contributors"
     ]
   },
   {
@@ -125,6 +125,47 @@
     ]
   },
   {
+    "title": "Introducing the New Sample Torrent Migration Tool",
+    "slug": "introducing-the-new-sample-torrent-migration-tool",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-09-04T13:24:27.241Z",
+    "coverImage": "/images/posts/pexels-david-dibert-7177008.jpg",
+    "excerpt": "Looking to migrate to the Torrust Index? Dive into our Torrents Importer Sample to seamlessly transfer your torrents to Torrust.",
+    "tags": [
+      "Migration Tool",
+      "Sample"
+    ]
+  },
+  {
+    "title": "Introducing the Torrust Tracker Deployer",
+    "slug": "introducing-the-torrust-tracker-deployer",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2025-12-22T00:00:00.000Z",
+    "coverImage": "/images/posts/introducing-the-torrust-tracker-deployer/torrust-tracker-deployer.png",
+    "excerpt": "We're excited to announce a new tool we've been working on: the Torrust Tracker Deployer. This tool aims to simplify the deployment process of the Torrust Tracker to virtual machines, making it as easy as running a single command.",
+    "tags": [
+      "Deployment",
+      "Automation",
+      "Announcement"
+    ]
+  },
+  {
+    "title": "Announcing the Beta v3.0.0 Live Demo",
+    "slug": "live-demo-beta-v3",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-12-15T12:08:04.295Z",
+    "coverImage": "/images/posts/rust-crab-happy.jpg",
+    "excerpt": "We will release a new major version v3.0.0. We want the community to test it before the final release while it's still in Beta. You can contribute to make Torrust better.",
+    "tags": [
+      "Announcement",
+      "Demo",
+      "Documentation"
+    ]
+  },
+  {
     "title": "How To Setup The Dev Env",
     "slug": "how-to-setup-the-development-environment",
     "contributor": "Jose Celano",
@@ -156,47 +197,6 @@
     ]
   },
   {
-    "title": "Announcing the Beta v3.0.0 Live Demo",
-    "slug": "live-demo-beta-v3",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-12-15T12:08:04.295Z",
-    "coverImage": "/images/posts/rust-crab-happy.jpg",
-    "excerpt": "We will release a new major version v3.0.0. We want the community to test it before the final release while it's still in Beta. You can contribute to make Torrust better.",
-    "tags": [
-      "Announcement",
-      "Demo",
-      "Documentation"
-    ]
-  },
-  {
-    "title": "Introducing the New Sample Torrent Migration Tool",
-    "slug": "introducing-the-new-sample-torrent-migration-tool",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-09-04T13:24:27.241Z",
-    "coverImage": "/images/posts/pexels-david-dibert-7177008.jpg",
-    "excerpt": "Looking to migrate to the Torrust Index? Dive into our Torrents Importer Sample to seamlessly transfer your torrents to Torrust.",
-    "tags": [
-      "Migration Tool",
-      "Sample"
-    ]
-  },
-  {
-    "title": "Introducing the Torrust Tracker Deployer",
-    "slug": "introducing-the-torrust-tracker-deployer",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2025-12-22T00:00:00.000Z",
-    "coverImage": "/images/posts/introducing-the-torrust-tracker-deployer/torrust-tracker-deployer.png",
-    "excerpt": "We're excited to announce a new tool we've been working on: the Torrust Tracker Deployer. This tool aims to simplify the deployment process of the Torrust Tracker to virtual machines, making it as easy as running a single command.",
-    "tags": [
-      "Deployment",
-      "Automation",
-      "Announcement"
-    ]
-  },
-  {
     "title": "Released version v3.0.0-beta",
     "slug": "released-v3-0-0",
     "contributor": "Jose Celano",
@@ -223,6 +223,20 @@
     ]
   },
   {
+    "title": "Setting Up Torrust with Claude Code",
+    "slug": "setting-up-torrust-with-claude-code",
+    "contributor": "Graeme Byrne",
+    "contributorSlug": "graeme-byrne",
+    "date": "2025-07-09T19:53:17.990Z",
+    "coverImage": "/images/posts/setting-up-torrust-with-claude-code/setting-up-torrust-with-claude-code.png",
+    "excerpt": "Based on a real terminal session, this guide documents the complete process of setting up the Torrust BitTorrent index development environment using Claude Code, including all the challenges encountered and solutions applied.",
+    "tags": [
+      "Tutorial",
+      "AI",
+      "Claude"
+    ]
+  },
+  {
     "title": "Review and Setup Guide for UNIT3D",
     "slug": "review-and-setup-guide-for-unit3d",
     "contributor": "Jose Celano",
@@ -235,20 +249,6 @@
       "Review",
       "Index",
       "Third-party"
-    ]
-  },
-  {
-    "title": "Setting Up Torrust with Claude Code",
-    "slug": "setting-up-torrust-with-claude-code",
-    "contributor": "Graeme Byrne",
-    "contributorSlug": "graeme-byrne",
-    "date": "2025-07-09T19:53:17.990Z",
-    "coverImage": "/images/posts/setting-up-torrust-with-claude-code/setting-up-torrust-with-claude-code.png",
-    "excerpt": "Based on a real terminal session, this guide documents the complete process of setting up the Torrust BitTorrent index development environment using Claude Code, including all the challenges encountered and solutions applied.",
-    "tags": [
-      "Tutorial",
-      "AI",
-      "Claude"
     ]
   },
   {
@@ -284,7 +284,7 @@
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
     "date": "2026-02-25T12:00:00.000Z",
-    "coverImage": "/images/posts/trackers-implemented-in-rust/cover.webp",
+    "coverImage": "/images/posts/trackers-implemented-in-rust/banner-rust-bitorrent-trackers.webp",
     "excerpt": "A curated overview of BitTorrent tracker implementations written in Rust. From actively maintained production-ready projects to educational experiments, this post maps the Rust tracker landscape so you can find the right tool for your needs.",
     "tags": [
       "Rust",
