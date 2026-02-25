@@ -13,16 +13,18 @@
 	let showDropdown: boolean = $state(false);
 
 	const encodedSubject = encodeURIComponent('I wanted you to see this blog post');
-	const encodedBody = encodeURIComponent(
-		`${props.title} is a really interesting blog post from Torrust. Check it out here: ${siteBaseUrl}/${props.slug}`
+	const encodedBody = $derived(
+		encodeURIComponent(
+			`${props.title} is a really interesting blog post from Torrust. Check it out here: ${siteBaseUrl}/${props.slug}`
+		)
 	);
-	const encodedSlug = encodeURIComponent(props.slug);
+	const encodedSlug = $derived(encodeURIComponent(props.slug));
 
 	const unescapedHref = (href: string) => {
 		return href;
 	};
 
-	const socialLinks = [
+	const socialLinks = $derived([
 		{
 			text: 'Share via email',
 			href: `mailto:?subject=${encodedSubject}&body=${encodedBody}`
@@ -39,7 +41,7 @@
 			text: 'Share on X',
 			href: `https://twitter.com/share?url=${siteBaseUrl}/${encodedSlug}&text=${props.title}`
 		}
-	];
+	]);
 
 	function toggleDropdown() {
 		showDropdown = !showDropdown;
