@@ -13,20 +13,6 @@
     ]
   },
   {
-    "title": "Deploying Torrust To Production",
-    "slug": "deploying-torrust-to-production",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-12-20T00:00:00.000Z",
-    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
-    "excerpt": "Dive into our step-by-step tutorial on deploying a BitTorrent Index and Tracker, written in Rust, on a Digital Ocean droplet. From initial server setup to advanced configurations, this guide is designed for both non-developers and tech-savvy users, ensuring a seamless, production-ready deployment.",
-    "tags": [
-      "Tutorial",
-      "Deployment",
-      "Production"
-    ]
-  },
-  {
     "title": "Contributor Path",
     "slug": "contributor-path",
     "contributor": "Jose Celano",
@@ -38,20 +24,6 @@
       "Community",
       "Onboarding",
       "Contributors"
-    ]
-  },
-  {
-    "title": "Containerizing Rust Applications",
-    "slug": "containerizing-rust-applications-best-practices",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-11-09T12:08:04.295Z",
-    "coverImage": "/images/posts/rust-crab-carrying-a-shipping-container.jpeg",
-    "excerpt": "Torrust services (Tracker and Index) support docker, we want to ensure that contributors understand our containerfile and we also want to share good practices for containerizing Rust applications.",
-    "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
     ]
   },
   {
@@ -83,6 +55,34 @@
       "Metainfo",
       "Metadata",
       "Sample"
+    ]
+  },
+  {
+    "title": "Deploying Torrust To Production",
+    "slug": "deploying-torrust-to-production",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-12-20T00:00:00.000Z",
+    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
+    "excerpt": "Dive into our step-by-step tutorial on deploying a BitTorrent Index and Tracker, written in Rust, on a Digital Ocean droplet. From initial server setup to advanced configurations, this guide is designed for both non-developers and tech-savvy users, ensuring a seamless, production-ready deployment.",
+    "tags": [
+      "Tutorial",
+      "Deployment",
+      "Production"
+    ]
+  },
+  {
+    "title": "Containerizing Rust Applications",
+    "slug": "containerizing-rust-applications-best-practices",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-11-09T12:08:04.295Z",
+    "coverImage": "/images/posts/rust-crab-carrying-a-shipping-container.jpeg",
+    "excerpt": "Torrust services (Tracker and Index) support docker, we want to ensure that contributors understand our containerfile and we also want to share good practices for containerizing Rust applications.",
+    "tags": [
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
     ]
   },
   {
@@ -166,6 +166,20 @@
     ]
   },
   {
+    "title": "Announcing the Beta v3.0.0 Live Demo",
+    "slug": "live-demo-beta-v3",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-12-15T12:08:04.295Z",
+    "coverImage": "/images/posts/rust-crab-happy.jpg",
+    "excerpt": "We will release a new major version v3.0.0. We want the community to test it before the final release while it's still in Beta. You can contribute to make Torrust better.",
+    "tags": [
+      "Announcement",
+      "Demo",
+      "Documentation"
+    ]
+  },
+  {
     "title": "Profiling the Torrust BitTorrent UDP Tracker",
     "slug": "profiling-the-torrust-bittorrent-udp-tracker",
     "contributor": "Jose Celano",
@@ -206,20 +220,6 @@
     "tags": [
       "Announcement",
       "Release"
-    ]
-  },
-  {
-    "title": "Announcing the Beta v3.0.0 Live Demo",
-    "slug": "live-demo-beta-v3",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-12-15T12:08:04.295Z",
-    "coverImage": "/images/posts/rust-crab-happy.jpg",
-    "excerpt": "We will release a new major version v3.0.0. We want the community to test it before the final release while it's still in Beta. You can contribute to make Torrust better.",
-    "tags": [
-      "Announcement",
-      "Demo",
-      "Documentation"
     ]
   },
   {
@@ -295,20 +295,6 @@
     ]
   },
   {
-    "title": "What is a BitTorrent tracker and types of trackers",
-    "slug": "what-is-a-bittorent-tracker",
-    "contributor": "",
-    "contributorSlug": "",
-    "date": "2023-10-05T13:42:25.671Z",
-    "coverImage": "/images/posts/tracker.jpg",
-    "excerpt": "Basic explanation of what a BitTorrent tracker is and the two types of trackers, public and private.",
-    "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
-    ]
-  },
-  {
     "title": "Vortex: A High-Performance Rust BitTorrent Client for Linux",
     "slug": "vortex-rust-bittorrent-client-review",
     "contributor": "Jose Celano",
@@ -322,6 +308,20 @@
       "BitTorrent",
       "Performance",
       "Third-party"
+    ]
+  },
+  {
+    "title": "What is a BitTorrent tracker and types of trackers",
+    "slug": "what-is-a-bittorent-tracker",
+    "contributor": "",
+    "contributorSlug": "",
+    "date": "2023-10-05T13:42:25.671Z",
+    "coverImage": "/images/posts/tracker.jpg",
+    "excerpt": "Basic explanation of what a BitTorrent tracker is and the two types of trackers, public and private.",
+    "tags": [
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
     ]
   }
 ]
