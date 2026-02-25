@@ -13,32 +13,31 @@
     ]
   },
   {
-    "title": "Contributor Path",
-    "slug": "contributor-path",
+    "title": "Containerizing Rust Applications",
+    "slug": "containerizing-rust-applications-best-practices",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2024-10-29T09:20:51.608Z",
-    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
-    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
+    "date": "2023-11-09T12:08:04.295Z",
+    "coverImage": "/images/posts/rust-crab-carrying-a-shipping-container.jpeg",
+    "excerpt": "Torrust services (Tracker and Index) support docker, we want to ensure that contributors understand our containerfile and we also want to share good practices for containerizing Rust applications.",
     "tags": [
-      "Community",
-      "Onboarding",
-      "Contributors"
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
     ]
   },
   {
-    "title": "Bencode to JSON Converter in Rust",
-    "slug": "bencode-to-json-converter-in-rust",
+    "title": "Deploying Torrust To Production",
+    "slug": "deploying-torrust-to-production",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2024-11-01T11:57:37.926Z",
-    "coverImage": "/images/posts/bencode-to-json-converter-in-rust/bencode-to-json-converter-in-rust.webp",
-    "excerpt": "We're excited to introduce bencode2json, a crate that simplifies converting Bencode data to JSON, benefiting the Rust BitTorrent community.",
+    "date": "2023-12-20T00:00:00.000Z",
+    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
+    "excerpt": "Dive into our step-by-step tutorial on deploying a BitTorrent Index and Tracker, written in Rust, on a Digital Ocean droplet. From initial server setup to advanced configurations, this guide is designed for both non-developers and tech-savvy users, ensuring a seamless, production-ready deployment.",
     "tags": [
-      "Bencode",
-      "JSON",
-      "Converter",
-      "Rust"
+      "Tutorial",
+      "Deployment",
+      "Production"
     ]
   },
   {
@@ -58,31 +57,32 @@
     ]
   },
   {
-    "title": "Deploying Torrust To Production",
-    "slug": "deploying-torrust-to-production",
+    "title": "Bencode to JSON Converter in Rust",
+    "slug": "bencode-to-json-converter-in-rust",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2023-12-20T00:00:00.000Z",
-    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
-    "excerpt": "Dive into our step-by-step tutorial on deploying a BitTorrent Index and Tracker, written in Rust, on a Digital Ocean droplet. From initial server setup to advanced configurations, this guide is designed for both non-developers and tech-savvy users, ensuring a seamless, production-ready deployment.",
+    "date": "2024-11-01T11:57:37.926Z",
+    "coverImage": "/images/posts/bencode-to-json-converter-in-rust/bencode-to-json-converter-in-rust.webp",
+    "excerpt": "We're excited to introduce bencode2json, a crate that simplifies converting Bencode data to JSON, benefiting the Rust BitTorrent community.",
     "tags": [
-      "Tutorial",
-      "Deployment",
-      "Production"
+      "Bencode",
+      "JSON",
+      "Converter",
+      "Rust"
     ]
   },
   {
-    "title": "Containerizing Rust Applications",
-    "slug": "containerizing-rust-applications-best-practices",
+    "title": "Contributor Path",
+    "slug": "contributor-path",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2023-11-09T12:08:04.295Z",
-    "coverImage": "/images/posts/rust-crab-carrying-a-shipping-container.jpeg",
-    "excerpt": "Torrust services (Tracker and Index) support docker, we want to ensure that contributors understand our containerfile and we also want to share good practices for containerizing Rust applications.",
+    "date": "2024-10-29T09:20:51.608Z",
+    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
+    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
     "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
+      "Community",
+      "Onboarding",
+      "Contributors"
     ]
   },
   {
@@ -139,19 +139,6 @@
     ]
   },
   {
-    "title": "Introducing the New Sample Torrent Migration Tool",
-    "slug": "introducing-the-new-sample-torrent-migration-tool",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-09-04T13:24:27.241Z",
-    "coverImage": "/images/posts/pexels-david-dibert-7177008.jpg",
-    "excerpt": "Looking to migrate to the Torrust Index? Dive into our Torrents Importer Sample to seamlessly transfer your torrents to Torrust.",
-    "tags": [
-      "Migration Tool",
-      "Sample"
-    ]
-  },
-  {
     "title": "Introducing the Torrust Tracker Deployer",
     "slug": "introducing-the-torrust-tracker-deployer",
     "contributor": "Jose Celano",
@@ -194,6 +181,19 @@
       "Flamegraph",
       "Kcachegrind",
       "Valgrind"
+    ]
+  },
+  {
+    "title": "Introducing the New Sample Torrent Migration Tool",
+    "slug": "introducing-the-new-sample-torrent-migration-tool",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-09-04T13:24:27.241Z",
+    "coverImage": "/images/posts/pexels-david-dibert-7177008.jpg",
+    "excerpt": "Looking to migrate to the Torrust Index? Dive into our Torrents Importer Sample to seamlessly transfer your torrents to Torrust.",
+    "tags": [
+      "Migration Tool",
+      "Sample"
     ]
   },
   {
@@ -252,6 +252,22 @@
     ]
   },
   {
+    "title": "Visualize Tracker Metrics with Prometheus and Grafana",
+    "slug": "visualize-tracker-metrics-prometheus-grafana",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-12-13T11:43:34.921Z",
+    "coverImage": "/images/posts/visualize-tracker-metrics-prometheus-grafana/tracker-stats-visualized-with-grafana.webp",
+    "excerpt": "Learn how to set up Prometheus and Grafana to monitor the Torrust Tracker's performance metrics and contribute to shaping future enhancements.",
+    "tags": [
+      "Torrust Tracker",
+      "Prometheus",
+      "Grafana",
+      "Statistics",
+      "Community"
+    ]
+  },
+  {
     "title": "The Enigmatic Torrent \"Source\" Field",
     "slug": "the-enigmatic-torrent-source-field",
     "contributor": "Jose Celano",
@@ -279,19 +295,17 @@
     ]
   },
   {
-    "title": "Visualize Tracker Metrics with Prometheus and Grafana",
-    "slug": "visualize-tracker-metrics-prometheus-grafana",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-12-13T11:43:34.921Z",
-    "coverImage": "/images/posts/visualize-tracker-metrics-prometheus-grafana/tracker-stats-visualized-with-grafana.webp",
-    "excerpt": "Learn how to set up Prometheus and Grafana to monitor the Torrust Tracker's performance metrics and contribute to shaping future enhancements.",
+    "title": "What is a BitTorrent tracker and types of trackers",
+    "slug": "what-is-a-bittorent-tracker",
+    "contributor": "",
+    "contributorSlug": "",
+    "date": "2023-10-05T13:42:25.671Z",
+    "coverImage": "/images/posts/tracker.jpg",
+    "excerpt": "Basic explanation of what a BitTorrent tracker is and the two types of trackers, public and private.",
     "tags": [
-      "Torrust Tracker",
-      "Prometheus",
-      "Grafana",
-      "Statistics",
-      "Community"
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
     ]
   },
   {
@@ -308,20 +322,6 @@
       "BitTorrent",
       "Performance",
       "Third-party"
-    ]
-  },
-  {
-    "title": "What is a BitTorrent tracker and types of trackers",
-    "slug": "what-is-a-bittorent-tracker",
-    "contributor": "",
-    "contributorSlug": "",
-    "date": "2023-10-05T13:42:25.671Z",
-    "coverImage": "/images/posts/tracker.jpg",
-    "excerpt": "Basic explanation of what a BitTorrent tracker is and the two types of trackers, public and private.",
-    "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
     ]
   }
 ]
