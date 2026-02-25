@@ -33,7 +33,9 @@ This website uses [image transmutation](https://github.com/matfantinel/image-tra
 
 ## Managing Posts
 
-All posts are Markdown files that are processed with [MDsveX](https://mdsvex.pngwn.io/) to allow using Svelte components inside them. In order to make it easier to manage posts, I highly recommend the [Front Matter VS Code extension](https://frontmatter.codes/), which gives you a nice CMS-like UI.
+All posts live in `src/routes/blog/` and are processed with [MDsveX](https://mdsvex.pngwn.io/). For step-by-step instructions on creating a new blog post, see [`.github/skills/add-blog-post/SKILL.md`](.github/skills/add-blog-post/SKILL.md).
+
+To make it easier to manage posts, the [Front Matter VS Code extension](https://frontmatter.codes/) gives you a nice CMS-like UI.
 
 ## Hosting
 

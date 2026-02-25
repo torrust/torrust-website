@@ -2,6 +2,18 @@
 
 This file provides context and instructions for AI coding agents working on the Torrust website.
 
+## Skills
+
+Common tasks are documented as [Agent Skills](https://agentskills.io/) in `.github/skills/`. When asked to perform one of these tasks, load the relevant skill for step-by-step instructions:
+
+- [**add-blog-post**](.github/skills/add-blog-post/SKILL.md) — Create or publish a new blog post
+- [**add-component**](.github/skills/add-component/SKILL.md) — Add a new Svelte UI component
+- [**update-contributors**](.github/skills/update-contributors/SKILL.md) — Refresh the contributors list from the Torrust GitHub org
+- [**deploy-site**](.github/skills/deploy-site/SKILL.md) — Deploy the site to GitHub Pages
+- [**run-checks**](.github/skills/run-checks/SKILL.md) — Run the full quality check suite before committing
+
+> **Authoring note:** skill `description` fields must be ≤ 160 characters (the Front Matter CMS enforces this as an SEO limit).
+
 ## Project Overview
 
 The Torrust website is a static site built with SvelteKit, featuring:
@@ -136,182 +148,11 @@ scripts/
 
 ## Managing Blog Posts
 
-**File Structure:**
-
-Blog posts live in `src/routes/blog/[post-slug]/`. Each post directory contains exactly three files:
-
-| File              | Purpose                                                        |
-| ----------------- | -------------------------------------------------------------- |
-| `metadata.ts`     | Typed post metadata (title, date, tags, etc.)                  |
-| `+page.server.ts` | Server-side data loader (identical boilerplate for every post) |
-| `+page.svelte`    | Post content written as a Svelte component                     |
-
-**`metadata.ts` format:**
-
-```typescript
-export const metadata = {
-  title: 'Post Title',
-  slug: 'post-slug', // must match the directory name
-  contributor: 'Author Name',
-  contributorSlug: 'author-slug', // matches a directory under src/routes/contributor/
-  date: '2024-01-15T12:00:00.000Z', // ISO 8601
-  coverImage: '/images/posts/post-slug/cover.webp',
-  excerpt: 'Brief description for listings and SEO.',
-  tags: ['Rust', 'BitTorrent'] // title-case tags
-};
-```
-
-**`+page.server.ts` boilerplate** (copy verbatim for every post):
-
-```typescript
-import { getMetadata } from '$lib/data/metadata';
-import type { PageServerLoad } from './$types';
-
-export const load: PageServerLoad = async ({ url }) => {
-  const slug = url.pathname.split('/').filter(Boolean).pop();
-  if (!slug) throw new Error('Slug could not be determined.');
-
-  const metadata = await getMetadata();
-  const currentPost = metadata.find((post) => post.slug === slug);
-
-  if (!currentPost) throw new Error(`Post not found: ${slug}`);
-
-  return { currentPost, allPosts: metadata };
-};
-```
-
-**`+page.svelte` structure:**
-
-```svelte
-<script lang="ts">
-  import BlogPreview from '$lib/components/molecules/BlogPreview.svelte';
-  import Toc from '$lib/components/atoms/Toc.svelte';
-  import Post from '$lib/components/organisms/Post.svelte';
-  import PagesWrapper from '$lib/components/atoms/PagesWrapper.svelte';
-  import PrevNextPost from '$lib/components/singletons/PrevNextPost.svelte';
-  import Callout from '$lib/components/molecules/Callout.svelte';
-
-  let { data } = $props();
-  let currentPost = $derived(data.currentPost);
-  let allPosts = $derived(data.allPosts);
-</script>
-
-<Post
-  title={currentPost.title}
-  slug={currentPost.slug}
-  coverImage={currentPost.coverImage}
-  date={currentPost.date}
-  tags={currentPost.tags}
-  excerpt={currentPost.excerpt}
-  contributor={currentPost.contributor}
-  contributorSlug={currentPost.contributorSlug}
->
-  <PagesWrapper>
-    <div class="wrapper">
-      <Toc class="toc" />
-      <div id="toc-contents" class="content-preview">
-        <!-- Post content goes here -->
-        <h2 id="introduction">Introduction</h2>
-        <p>...</p>
-      </div>
-    </div>
-  </PagesWrapper>
-  <PrevNextPost currentPage={currentPost.slug} {allPosts} />
-  <div class="related-posts-container">
-    <h2>Related Posts:</h2>
-    <div class="grid">
-      {#each data.allPosts.slice(0, 3) as post}
-        <a href="/blog/{post.slug}">
-          <BlogPreview post_data={post} />
-        </a>
-      {/each}
-    </div>
-  </div>
-</Post>
-
-<style lang="scss">
-  @use '$lib/scss/breakpoints.scss' as bp;
-  /* styles here */
-</style>
-```
-
-Look at an existing post (e.g. `src/routes/blog/vortex-rust-bittorrent-client-review/`) as a full reference implementation.
-
-**Heading IDs for the Table of Contents:**
-
-The `<Toc />` component auto-generates a table of contents from `<h2>` and `<h3>` elements inside the `id="toc-contents"` div. Every heading must have a matching `id` attribute:
-
-```svelte
-<h2 id="my-section">My Section</h2>
-```
-
-**Supported content components:**
-
-| Component     | Import                                       | Usage                                                                     |
-| ------------- | -------------------------------------------- | ------------------------------------------------------------------------- |
-| `<Callout>`   | `$lib/components/molecules/Callout.svelte`   | `<Callout type="info">...</Callout>` (types: `info`, `warning`, `danger`) |
-| `<CodeBlock>` | `$lib/components/molecules/CodeBlock.svelte` | Fenced code with syntax highlighting                                      |
-| `<Image>`     | `$lib/components/atoms/Image.svelte`         | Optimised images (preferred over `<img>`)                                 |
-
-**Images:**
-
-- Place images in `static/images/posts/my-new-post/`
-- Reference them as `/images/posts/my-new-post/image.png`
-- Use `<Image src="..." alt="..." />` for automatic WebP/AVIF optimisation
-- Cover image should be named `cover.webp` and placed in the same folder
-
-### ⚠️ Critical: regenerate metadata during development
-
-`static/blogMetadata.json` drives the blog listing page and search. It is generated automatically by `npm run build`, but during development you must run it manually after adding or modifying a post's `metadata.ts`:
-
-```bash
-npx tsx scripts/generateMetadata.ts
-```
-
-Without this step the new post will not appear at `/blog`.
+Blog posts live in `src/routes/blog/[post-slug]/`. See [`.github/skills/add-blog-post/SKILL.md`](.github/skills/add-blog-post/SKILL.md) for the full guide on creating a post, including file templates and metadata regeneration.
 
 ## Managing Contributors List
 
-The contributors displayed on the homepage are maintained in a static list in `src/lib/constants/constants.ts`.
-
-**Why Static?**
-The GitHub API has a rate limit of 60 requests/hour for anonymous users, which would cause issues for a public website. Instead, we use a local script to update the list manually.
-
-**How to Update:**
-
-```bash
-# Update contributors list from GitHub API
-npm run update-contributors
-
-# With GitHub token for higher rate limits (REQUIRED for Torrust org)
-GITHUB_TOKEN=your_token_here npm run update-contributors
-```
-
-**Creating a GitHub Token:**
-
-The Torrust organization requires a **fine-grained personal access token** (classic tokens are not allowed).
-
-1. Go to GitHub Settings → Developer settings → Personal access tokens → Fine-grained tokens
-2. Click "Generate new token"
-3. Configure the token:
-   - **Token name**: "Torrust Contributors Script"
-   - **Expiration**: Your preference (90 days recommended)
-   - **Resource owner**: Select "torrust" from the dropdown
-   - **Repository access**: "Public Repositories (read-only)"
-   - **Permissions**:
-     - Repository permissions → Metadata: Read-only (automatically set)
-     - Organization permissions → Members: Read-only (for accessing org repos)
-4. Click "Generate token" and copy it
-5. Use it with: `GITHUB_TOKEN=your_token_here npm run update-contributors`
-
-**What the Script Does:**
-
-1. Fetches all repositories from the Torrust GitHub organization
-2. Fetches contributors from each repository
-3. Deduplicates contributors by username
-4. Updates the `defaultContributorsList` in `src/lib/constants/constants.ts`
-
-**Note:** Without a token, the script uses anonymous access (60 requests/hour), which may hit rate limits. With a fine-grained token, you get 5,000 requests/hour.
+The contributors displayed on the homepage are maintained in a static list in `src/lib/constants/constants.ts`. See [`.github/skills/update-contributors/SKILL.md`](.github/skills/update-contributors/SKILL.md) for the full guide on refreshing the list, including token setup.
 
 ## Image Optimization
 
@@ -321,19 +162,7 @@ The Torrust organization requires a **fine-grained personal access token** (clas
 
 ## Testing Instructions
 
-Currently, the project uses:
-
-- Type checking via `npm run check`
-- Linting via `npm run lint`
-- Manual testing in development mode
-
-**When making changes:**
-
-1. Run `npm run dev` and test locally
-2. Run `npm run check` to verify types
-3. Run `npm run lint` to verify code style
-4. Build with `npm run build` to ensure production build works
-5. Test the production build with `npm run preview`
+See [`.github/skills/run-checks/SKILL.md`](.github/skills/run-checks/SKILL.md) for the full checklist to run before committing.
 
 ## Build Process
 
@@ -366,33 +195,7 @@ Output directory: `build/`
 
 ## Deployment
 
-**GitHub Pages (Automatic):**
-
-- Deployment triggered on push to `develop` branch
-- Workflow: `.github/workflows/deploy.yml`
-- Build artifact is uploaded and deployed to GitHub Pages
-- URL: <https://torrust.com/> (via CNAME)
-
-**Workflow Steps:**
-
-1. Checkout code
-2. Install dependencies with npm
-3. Run build (`npm run build`)
-4. Create `.nojekyll` file in `build/` directory
-5. Upload artifacts to GitHub Pages
-6. Deploy to production environment
-
-**Manual Deployment:**
-
-```bash
-npm run build && npm run deploy
-```
-
-**Deployment Requirements:**
-
-- GitHub Pages must be enabled in repository settings
-- CNAME file must exist in root for custom domain
-- Workflow has `pages: write` and `id-token: write` permissions
+See [`.github/skills/deploy-site/SKILL.md`](.github/skills/deploy-site/SKILL.md) for automatic and manual deployment instructions.
 
 ## Blog Metadata Generation
 
@@ -421,25 +224,11 @@ This metadata is used for:
 
 ### Adding a new blog post
 
-1. Create a new directory: `src/routes/blog/my-new-post/`
-2. Add `metadata.ts` with required fields (see **Managing Blog Posts** above)
-3. Add `+page.server.ts` (copy boilerplate verbatim from any existing post)
-4. Add `+page.svelte` with post content (use an existing post as a reference)
-5. Place cover image at `static/images/posts/my-new-post/cover.webp`
-6. Regenerate metadata so the post appears in the listing:
-
-   ```bash
-   npx tsx scripts/generateMetadata.ts
-   ```
-
-7. Run `npm run dev` and verify the post appears at `http://localhost:5173/blog`
-8. Run `npm run check` and `npm run lint` before committing
+See [`.github/skills/add-blog-post/SKILL.md`](.github/skills/add-blog-post/SKILL.md).
 
 ### Adding a new component
 
-1. Create component in `src/lib/components/`
-2. Consider adding a story in `src/lib/components/*.story.svelte` for Histoire
-3. Export from `src/lib/index.ts` if it should be publicly available
+See [`.github/skills/add-component/SKILL.md`](.github/skills/add-component/SKILL.md).
 
 ### Updating styles
 
