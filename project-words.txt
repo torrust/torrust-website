@@ -11,6 +11,7 @@ bencoded
 Bencoding
 binstall
 bitmagnet
+bitorrent
 Bragilevsky
 Bram
 buildtime

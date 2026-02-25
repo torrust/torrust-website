@@ -215,8 +215,8 @@
 					Torrust-Actix is a lightweight but feature-rich BitTorrent tracker built with the
 					<a href="https://actix.rs/">Actix</a> web framework. It originated from Torrust Tracker
 					code and was rebuilt from scratch by
-					<a href="https://power2all.com/">Power2All</a>. It is actively used in production at
-					<a href="https://www.gbitt.info/">gbitt.info</a>.
+					<a href="https://power2all.com/">Power2All</a>. More information is available on the
+					<a href="https://www.torrust-actix.com/">Torrust-Actix website</a>.
 				</p>
 				<p>Highlights:</p>
 				<ul>

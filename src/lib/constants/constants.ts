@@ -409,7 +409,7 @@ export const trackerTableData = [
 		language: 'Rust',
 		os: 'Linux,MacOs,Windows',
 		repo: 'https://github.com/Power2All/torrust-actix',
-		demo: 'https://www.gbitt.info'
+		demo: 'https://www.torrust-actix.com/'
 	},
 	{
 		name: 'opentracker',
