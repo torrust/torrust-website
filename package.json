@@ -12,7 +12,9 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint --ignore-pattern .svelte-kit/output .",
 		"postbuild": "svelte-sitemap --domain https://torrust.com/",
-		"update-contributors": "tsx scripts/updateContributors.ts"
+		"update-contributors": "tsx scripts/updateContributors.ts",
+		"pre-commit": "bash scripts/pre-commit.sh",
+		"prepare": "git config core.hooksPath .githooks && chmod +x .githooks/pre-commit"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.4.1",
@@ -61,7 +63,7 @@
 		"@tailwindcss/forms": "^0.5.11",
 		"@tailwindcss/typography": "^0.5.19",
 		"dateformat": "^5.0.3",
-		"flexsearch": "^0.7.43",
+		"flexsearch": "^0.8.212",
 		"highlight.js": "^11.11.1",
 		"reading-time": "^1.5.0",
 		"rehype-pretty-code": "^0.14.1",

@@ -1,4 +1,4 @@
-import FlexSearch from 'flexsearch';
+import { Index } from 'flexsearch';
 import type { BlogPost } from '$lib/utils/types';
 
 interface Post {
@@ -8,11 +8,11 @@ interface Post {
 	tags: string[];
 }
 
-let postsIndex: FlexSearch.Index;
+let postsIndex: Index;
 let posts: Post[];
 
 export function createPostsIndex(data: BlogPost[]) {
-	postsIndex = new FlexSearch.Index({ tokenize: 'forward' });
+	postsIndex = new Index({ tokenize: 'forward' });
 
 	const mappedPosts = data.map((post) => ({
 		slug: post.slug,
@@ -35,10 +35,10 @@ export function searchPostsIndex(searchTerm: string) {
 	}
 
 	const match = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-	const results = postsIndex.search(match);
+	const results = postsIndex.search(match) as number[];
 
 	return results
-		.map((index) => posts[index as number])
+		.map((index: number) => posts[index])
 		.map(({ slug, title = '', excerpt = '', tags = [] }) => {
 			return {
 				slug,
