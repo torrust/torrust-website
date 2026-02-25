@@ -83,6 +83,8 @@ nojekyll
 nologin
 Nuxt
 opentracker
+optimisation
+Optimised
 passcode
 pataquets
 pcarles
@@ -118,10 +120,12 @@ TMDB
 tornnab
 torrenting
 Torrust
+Torshare
 Torznab
 Troubleshoting
 Ttorrent
 Tzou
+UDPT
 usermod
 valgrind
 Verstappen
