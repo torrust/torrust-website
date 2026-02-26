@@ -1,4 +1,5 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 import type { UserConfig } from 'vite';
 import ViteImagemin from 'vite-plugin-imagemin';
@@ -6,6 +7,7 @@ import ViteImagemin from 'vite-plugin-imagemin';
 /** @type {import('vite').UserConfig} */
 const config: UserConfig = {
 	plugins: [
+		tailwindcss(),
 		sveltekit(),
 		ViteImagemin({
 			gifsicle: { optimizationLevel: 3 },
