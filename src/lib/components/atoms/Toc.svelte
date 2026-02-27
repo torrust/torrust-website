@@ -57,7 +57,7 @@
 			top: 0;
 			z-index: 100;
 			background-color: inherit;
-			max-width: 250px;
+			max-width: 220px;
 		}
 	}
 </style>
