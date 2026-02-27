@@ -1,5 +1,6 @@
 abstralexis
 adduser
+agentskills
 Ajeet
 alexohneander
 anujkumardarji
@@ -100,7 +101,9 @@ problably
 proto
 Radeon
 Raina
+realisation
 realpath
+recognised
 regr
 rehype
 roboto
@@ -112,10 +115,13 @@ Ryzen
 Seeberger
 Shrirang
 signup
+specialised
 Stackoverflow
 striptags
 struct
+sunsetting
 themoviedb
+Tinybird
 tlsv
 TMDB
 tornnab
@@ -130,7 +136,9 @@ UDPT
 usermod
 valgrind
 Verstappen
+virtualisation
 Vitaly
+Vite
 Webfeed
 webp
 webroot
