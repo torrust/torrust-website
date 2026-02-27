@@ -3,6 +3,7 @@
 !.yarn/releases
 .DS_Store
 .env
+.playwright-mcp
 .env.*
 .histoire
 .jampack
