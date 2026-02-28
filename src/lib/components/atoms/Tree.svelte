@@ -21,7 +21,7 @@
 					href="#{heading.id}"
 					use:melt={$item(heading.id)}
 					class="inline-flex items-start justify-start gap-1 text-sm text-gray-400 no-underline transition-colors
-		 hover:text-gray-100 data-[active]:text-red-400 break-keep leading-snug"
+		 hover:text-gray-100 data-[active]:[color:var(--color-link)] break-keep leading-snug"
 				>
 					<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 					{@html heading.node.innerHTML}

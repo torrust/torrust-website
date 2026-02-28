@@ -94,6 +94,6 @@
 	}
 
 	a:hover {
-		color: rgba(255, 49, 0, 0.96);
+		color: var(--color-link);
 	}
 </style>

@@ -9,12 +9,12 @@ a {
 
 	&:hover {
 		text-decoration: underline;
-		color: rgba(255, 49, 0, 0.96);
+		color: var(--color-link);
 	}
 }
 
 .active a {
-	color: rgba(255, 49, 0, 0.96);
+	color: var(--color-link);
 }
 
 ::selection {
@@ -34,7 +34,7 @@ i {
 }
 
 ul li::marker {
-	color: rgba(255, 49, 0, 0.96) !important;
+	color: var(--color-link) !important;
 }
 
 // #region Titles

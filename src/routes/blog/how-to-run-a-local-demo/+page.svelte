@@ -245,7 +245,7 @@ c10ad938b283   dockage/mailcatcher:0.8.2   "entrypoint mailcatcher"   5 seconds 
 
 	a {
 		word-break: keep-all;
-		color: rgba(254, 13, 0, 1);
+		color: var(--color-link);
 	}
 
 	.content-preview > p,

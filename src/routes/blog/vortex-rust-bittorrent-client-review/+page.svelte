@@ -551,7 +551,7 @@ archlinux-2026.02.01-x86_64.iso: ISO 9660 CD-ROM filesystem data (DOS/MBR boot s
 
 	a {
 		word-break: keep-all;
-		color: rgba(254, 13, 0, 1);
+		color: var(--color-link);
 	}
 
 	ul {

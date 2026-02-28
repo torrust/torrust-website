@@ -36,6 +36,6 @@
 	button:hover {
 		cursor: pointer;
 		text-decoration: underline;
-		color: rgba(254, 13, 0, 1);
+		color: var(--color-link);
 	}
 </style>

@@ -42,7 +42,7 @@
 	}
 
 	a:hover {
-		color: rgba(254, 13, 0, 1);
+		color: var(--color-link);
 	}
 
 	.grid {
@@ -82,7 +82,7 @@
 	}
 
 	.text-container:hover {
-		color: rgba(254, 13, 0, 1);
+		color: var(--color-link);
 	}
 
 	.text-container h2 {

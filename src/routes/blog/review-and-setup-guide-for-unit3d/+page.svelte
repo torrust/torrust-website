@@ -537,7 +537,7 @@ Killed`}
 
 	a {
 		word-break: keep-all;
-		color: rgba(254, 13, 0, 1);
+		color: var(--color-link);
 	}
 
 	ul {

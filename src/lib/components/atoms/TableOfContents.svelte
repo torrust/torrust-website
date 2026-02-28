@@ -97,13 +97,13 @@
 				word-break: keep-all;
 
 				&:hover {
-					color: rgba(255, 49, 0, 0.96) !important;
+					color: var(--color-link) !important;
 				}
 			}
 
 			&.active a {
 				font-weight: bold;
-				color: rgba(255, 49, 0, 0.96) !important;
+				color: var(--color-link) !important;
 			}
 		}
 	}

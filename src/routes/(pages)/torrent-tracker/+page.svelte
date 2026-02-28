@@ -195,7 +195,7 @@
 	}
 
 	a {
-		color: rgba(255, 49, 0, 0.96);
+		color: var(--color-link);
 	}
 
 	@include bp.for-tablet-portrait-up {
