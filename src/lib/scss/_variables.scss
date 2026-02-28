@@ -1,5 +1,8 @@
 :root {
-	--color-link: rgba(255, 49, 0, 0.96);
+	// Brand colours
+	// Primary red is reserved for backgrounds (header, hero, footer accent).
+	// Use --color-link for interactive text so it doesn't read as an alert.
+	--color-link: rgba(220, 100, 45, 1);
 
 	// Fonts
 	--font--default: 'Roboto Slab Variable', sans-serif;
