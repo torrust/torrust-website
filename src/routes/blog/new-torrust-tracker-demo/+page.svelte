@@ -373,12 +373,6 @@
 		padding-top: 1.25rem;
 	}
 
-	h4 {
-		font-size: 1.25rem;
-		font-weight: bold;
-		padding-top: 1rem;
-	}
-
 	p {
 		font-size: 1rem;
 		padding-top: 1rem;
@@ -391,8 +385,7 @@
 		color: rgba(254, 13, 0, 1);
 	}
 
-	ul,
-	ol {
+	ul {
 		display: flex;
 		flex-direction: column;
 		list-style-type: disc;
@@ -401,22 +394,9 @@
 		word-break: keep-all;
 	}
 
-	ol {
-		list-style-type: decimal;
-	}
-
-	ul li,
-	ol li {
+	ul li {
 		margin: 0.25rem 0;
 		word-break: keep-all;
-	}
-
-	blockquote {
-		border-left: 4px solid rgba(254, 13, 0, 0.6);
-		padding: 0.5rem 1rem;
-		margin: 1rem 0;
-		color: rgba(245, 245, 245, 0.7);
-		font-style: italic;
 	}
 
 	code {
@@ -427,44 +407,10 @@
 		font-size: 0.9em;
 	}
 
-	pre {
-		background-color: rgba(0, 0, 0, 0.3);
-		padding: 1rem;
-		border-radius: 6px;
-		overflow-x: auto;
-		margin: 1rem 0;
-
-		code {
-			background: none;
-			padding: 0;
-		}
-	}
-
-	table {
-		width: 100%;
-		border-collapse: collapse;
-		margin: 1rem 0;
-	}
-
-	th,
-	td {
-		padding: 0.6rem 1rem;
-		border: 1px solid rgba(255, 255, 255, 0.15);
-		text-align: left;
-		color: rgba(245, 245, 245, 0.8);
-	}
-
-	th {
-		background-color: rgba(0, 0, 0, 0.3);
-		font-weight: 600;
-	}
-
 	.content-preview > p,
 	.content-preview > ul,
-	.content-preview > ol,
 	.content-preview > h2,
-	.content-preview > h3,
-	.content-preview > h4 {
+	.content-preview > h3 {
 		margin-bottom: 1rem;
 	}
 
