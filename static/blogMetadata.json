@@ -13,6 +13,20 @@
     ]
   },
   {
+    "title": "Contributor Path",
+    "slug": "contributor-path",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-10-29T09:20:51.608Z",
+    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
+    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
+    "tags": [
+      "Community",
+      "Onboarding",
+      "Contributors"
+    ]
+  },
+  {
     "title": "Containerizing Rust Applications",
     "slug": "containerizing-rust-applications-best-practices",
     "contributor": "Jose Celano",
@@ -38,20 +52,6 @@
       "Tutorial",
       "Deployment",
       "Production"
-    ]
-  },
-  {
-    "title": "Contributor Path",
-    "slug": "contributor-path",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-10-29T09:20:51.608Z",
-    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
-    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
-    "tags": [
-      "Community",
-      "Onboarding",
-      "Contributors"
     ]
   },
   {
@@ -127,6 +127,20 @@
     ]
   },
   {
+    "title": "How To Run A Local Demo",
+    "slug": "how-to-run-a-local-demo",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-07-11T15:28:28.769Z",
+    "coverImage": "/images/posts/mandelbrot-set-periods-torrent-screenshot.png",
+    "excerpt": "You can easily run the Torrust Index demo on your computer easily with Git and Docker.",
+    "tags": [
+      "Demo",
+      "Tutorial",
+      "Guide"
+    ]
+  },
+  {
     "title": "How To Setup The Dev Env",
     "slug": "how-to-setup-the-development-environment",
     "contributor": "Jose Celano",
@@ -168,20 +182,6 @@
     ]
   },
   {
-    "title": "How To Run A Local Demo",
-    "slug": "how-to-run-a-local-demo",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-07-11T15:28:28.769Z",
-    "coverImage": "/images/posts/mandelbrot-set-periods-torrent-screenshot.png",
-    "excerpt": "You can easily run the Torrust Index demo on your computer easily with Git and Docker.",
-    "tags": [
-      "Demo",
-      "Tutorial",
-      "Guide"
-    ]
-  },
-  {
     "title": "Announcing the Beta v3.0.0 Live Demo",
     "slug": "live-demo-beta-v3",
     "contributor": "Jose Celano",
@@ -196,6 +196,39 @@
     ]
   },
   {
+    "title": "Profiling the Torrust BitTorrent UDP Tracker",
+    "slug": "profiling-the-torrust-bittorrent-udp-tracker",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-03-25T00:00:00.000Z",
+    "coverImage": "/images/posts/profiling-the-torrust-bittorrent-udp-tracker/profiling-the-torrust-bittorrent-udp-tracker.webp",
+    "excerpt": "Dive into the advanced profiling techniques driving the Torrust BitTorrent Tracker's performance. This post uncovers the tools and methods we leverage to ensure the tracker's efficiency, scalability, and our journey towards optimizing peer-to-peer file sharing.",
+    "tags": [
+      "Performance",
+      "Profiling",
+      "UDP Tracker",
+      "Flamegraph",
+      "Kcachegrind",
+      "Valgrind"
+    ]
+  },
+  {
+    "title": "The New Torrust Tracker Demo Is Live",
+    "slug": "new-torrust-tracker-demo",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-03-11T00:00:00.000Z",
+    "coverImage": "/images/posts/new-torrust-tracker-demo/cover.webp",
+    "excerpt": "We have launched a dedicated Torrust Tracker Demo on Hetzner, featuring HTTP and UDP trackers, MySQL storage, IPv6 support, and full observability via Prometheus and Grafana — and we are sharing every detail publicly.",
+    "tags": [
+      "Demo",
+      "Announcement",
+      "Deployment",
+      "Infrastructure",
+      "Torrust Tracker"
+    ]
+  },
+  {
     "title": "Released version v3.0.0-beta",
     "slug": "released-v3-0-0",
     "contributor": "Jose Celano",
@@ -203,6 +236,19 @@
     "date": "2024-09-03T14:30:38.554Z",
     "coverImage": "/images/posts/released-v3-0-0-beta/team.png",
     "excerpt": "We're excited to announce the release of v3.0.0-beta, marking a significant step towards our upcoming major release, v3.0.0. This release solidifies the features and prepares us for the beta phase.",
+    "tags": [
+      "Announcement",
+      "Release"
+    ]
+  },
+  {
+    "title": "Released version v3.0.0",
+    "slug": "released-v3-0-0-beta",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-10-03T11:05:14.597Z",
+    "coverImage": "/images/posts/released-v3-0-0/team.png",
+    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
     "tags": [
       "Announcement",
       "Release"
@@ -224,33 +270,17 @@
     ]
   },
   {
-    "title": "Profiling the Torrust BitTorrent UDP Tracker",
-    "slug": "profiling-the-torrust-bittorrent-udp-tracker",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-03-25T00:00:00.000Z",
-    "coverImage": "/images/posts/profiling-the-torrust-bittorrent-udp-tracker/profiling-the-torrust-bittorrent-udp-tracker.webp",
-    "excerpt": "Dive into the advanced profiling techniques driving the Torrust BitTorrent Tracker's performance. This post uncovers the tools and methods we leverage to ensure the tracker's efficiency, scalability, and our journey towards optimizing peer-to-peer file sharing.",
+    "title": "Setting Up Torrust with Claude Code",
+    "slug": "setting-up-torrust-with-claude-code",
+    "contributor": "Graeme Byrne",
+    "contributorSlug": "graeme-byrne",
+    "date": "2025-07-09T19:53:17.990Z",
+    "coverImage": "/images/posts/setting-up-torrust-with-claude-code/setting-up-torrust-with-claude-code.png",
+    "excerpt": "Based on a real terminal session, this guide documents the complete process of setting up the Torrust BitTorrent index development environment using Claude Code, including all the challenges encountered and solutions applied.",
     "tags": [
-      "Performance",
-      "Profiling",
-      "UDP Tracker",
-      "Flamegraph",
-      "Kcachegrind",
-      "Valgrind"
-    ]
-  },
-  {
-    "title": "Released version v3.0.0",
-    "slug": "released-v3-0-0-beta",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-10-03T11:05:14.597Z",
-    "coverImage": "/images/posts/released-v3-0-0/team.png",
-    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
-    "tags": [
-      "Announcement",
-      "Release"
+      "Tutorial",
+      "AI",
+      "Claude"
     ]
   },
   {
@@ -265,20 +295,6 @@
       "Torrent",
       "Tracker",
       "BitTorrent"
-    ]
-  },
-  {
-    "title": "Setting Up Torrust with Claude Code",
-    "slug": "setting-up-torrust-with-claude-code",
-    "contributor": "Graeme Byrne",
-    "contributorSlug": "graeme-byrne",
-    "date": "2025-07-09T19:53:17.990Z",
-    "coverImage": "/images/posts/setting-up-torrust-with-claude-code/setting-up-torrust-with-claude-code.png",
-    "excerpt": "Based on a real terminal session, this guide documents the complete process of setting up the Torrust BitTorrent index development environment using Claude Code, including all the challenges encountered and solutions applied.",
-    "tags": [
-      "Tutorial",
-      "AI",
-      "Claude"
     ]
   },
   {
