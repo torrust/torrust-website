@@ -329,10 +329,22 @@ Never invent names like `bp.md`, `bp.lg`, `bp.sm` — they will cause a Sass com
 
 ### 5. Add a cover image
 
-Place the cover image at:
+Place the cover image under `static/images/posts/<post-slug>/`. Use an **SEO-friendly filename** — a descriptive kebab-case name that reflects the post topic, not a generic name like `cover.webp`:
 
 ```
-static/images/posts/<post-slug>/cover.webp
+static/images/posts/<post-slug>/descriptive-kebab-case-name.webp
+```
+
+For example, for a post about submitting trackers to newTrackon:
+
+```
+static/images/posts/submitting-trackers-to-newtrackon/submitting-bittorrent-tracker-to-newtrackon.webp
+```
+
+Update `coverImage` in `metadata.ts` to match the exact filename you chose:
+
+```typescript
+coverImage: '/images/posts/<post-slug>/descriptive-kebab-case-name.webp',
 ```
 
 - Preferred format: WebP
