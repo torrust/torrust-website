@@ -13,20 +13,6 @@
     ]
   },
   {
-    "title": "Contributor Path",
-    "slug": "contributor-path",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-10-29T09:20:51.608Z",
-    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
-    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
-    "tags": [
-      "Community",
-      "Onboarding",
-      "Contributors"
-    ]
-  },
-  {
     "title": "Containerizing Rust Applications",
     "slug": "containerizing-rust-applications-best-practices",
     "contributor": "Jose Celano",
@@ -38,6 +24,20 @@
       "Torrent",
       "Tracker",
       "BitTorrent"
+    ]
+  },
+  {
+    "title": "Contributor Path",
+    "slug": "contributor-path",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-10-29T09:20:51.608Z",
+    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
+    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
+    "tags": [
+      "Community",
+      "Onboarding",
+      "Contributors"
     ]
   },
   {
@@ -168,20 +168,6 @@
     ]
   },
   {
-    "title": "Introducing the Torrust Tracker Deployer",
-    "slug": "introducing-the-torrust-tracker-deployer",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2025-12-22T00:00:00.000Z",
-    "coverImage": "/images/posts/introducing-the-torrust-tracker-deployer/torrust-tracker-deployer.png",
-    "excerpt": "We're excited to announce a new tool we've been working on: the Torrust Tracker Deployer. This tool aims to simplify the deployment process of the Torrust Tracker to virtual machines, making it as easy as running a single command.",
-    "tags": [
-      "Deployment",
-      "Automation",
-      "Announcement"
-    ]
-  },
-  {
     "title": "Announcing the Beta v3.0.0 Live Demo",
     "slug": "live-demo-beta-v3",
     "contributor": "Jose Celano",
@@ -196,20 +182,17 @@
     ]
   },
   {
-    "title": "Profiling the Torrust BitTorrent UDP Tracker",
-    "slug": "profiling-the-torrust-bittorrent-udp-tracker",
+    "title": "Introducing the Torrust Tracker Deployer",
+    "slug": "introducing-the-torrust-tracker-deployer",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2024-03-25T00:00:00.000Z",
-    "coverImage": "/images/posts/profiling-the-torrust-bittorrent-udp-tracker/profiling-the-torrust-bittorrent-udp-tracker.webp",
-    "excerpt": "Dive into the advanced profiling techniques driving the Torrust BitTorrent Tracker's performance. This post uncovers the tools and methods we leverage to ensure the tracker's efficiency, scalability, and our journey towards optimizing peer-to-peer file sharing.",
+    "date": "2025-12-22T00:00:00.000Z",
+    "coverImage": "/images/posts/introducing-the-torrust-tracker-deployer/torrust-tracker-deployer.png",
+    "excerpt": "We're excited to announce a new tool we've been working on: the Torrust Tracker Deployer. This tool aims to simplify the deployment process of the Torrust Tracker to virtual machines, making it as easy as running a single command.",
     "tags": [
-      "Performance",
-      "Profiling",
-      "UDP Tracker",
-      "Flamegraph",
-      "Kcachegrind",
-      "Valgrind"
+      "Deployment",
+      "Automation",
+      "Announcement"
     ]
   },
   {
@@ -239,6 +222,23 @@
     "tags": [
       "Announcement",
       "Release"
+    ]
+  },
+  {
+    "title": "Profiling the Torrust BitTorrent UDP Tracker",
+    "slug": "profiling-the-torrust-bittorrent-udp-tracker",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-03-25T00:00:00.000Z",
+    "coverImage": "/images/posts/profiling-the-torrust-bittorrent-udp-tracker/profiling-the-torrust-bittorrent-udp-tracker.webp",
+    "excerpt": "Dive into the advanced profiling techniques driving the Torrust BitTorrent Tracker's performance. This post uncovers the tools and methods we leverage to ensure the tracker's efficiency, scalability, and our journey towards optimizing peer-to-peer file sharing.",
+    "tags": [
+      "Performance",
+      "Profiling",
+      "UDP Tracker",
+      "Flamegraph",
+      "Kcachegrind",
+      "Valgrind"
     ]
   },
   {
@@ -284,6 +284,22 @@
     ]
   },
   {
+    "title": "Submitting Trackers to newTrackon",
+    "slug": "submitting-trackers-to-newtrackon",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-04-01T12:00:00.000Z",
+    "coverImage": "/images/posts/submitting-trackers-to-newtrackon/submitting-bittorrent-tracker-to-newtrackon.webp",
+    "excerpt": "A practical guide to submitting BitTorrent trackers to newTrackon, the popular third-party uptime monitoring service. Learn the prerequisites, how to work around the one-tracker-per-IP constraint using floating IPs, and how to configure DNS correctly with BEP34.",
+    "tags": [
+      "BitTorrent",
+      "Tracker",
+      "DevOps",
+      "DNS",
+      "Demo"
+    ]
+  },
+  {
     "title": "The Enigmatic Torrent \"Source\" Field",
     "slug": "the-enigmatic-torrent-source-field",
     "contributor": "Jose Celano",
@@ -295,19 +311,6 @@
       "Torrent",
       "Tracker",
       "BitTorrent"
-    ]
-  },
-  {
-    "title": "Torrust - Enhancing the BitTorrent Ecosystem",
-    "slug": "torrust-enhancing-the-bittorrent-ecosystem",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-05-31T09:33:14.163Z",
-    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
-    "excerpt": "Torrust, an open-source organization, is making significant contributions to the BitTorrent ecosystem by developing robust tools, improving documentation, and fostering community collaboration.",
-    "tags": [
-      "Introduction",
-      "Torrust"
     ]
   },
   {
@@ -323,6 +326,19 @@
       "BitTorrent",
       "Tracker",
       "Open Source"
+    ]
+  },
+  {
+    "title": "Torrust - Enhancing the BitTorrent Ecosystem",
+    "slug": "torrust-enhancing-the-bittorrent-ecosystem",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-05-31T09:33:14.163Z",
+    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
+    "excerpt": "Torrust, an open-source organization, is making significant contributions to the BitTorrent ecosystem by developing robust tools, improving documentation, and fostering community collaboration.",
+    "tags": [
+      "Introduction",
+      "Torrust"
     ]
   },
   {
