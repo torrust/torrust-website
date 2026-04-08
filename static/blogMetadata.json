@@ -27,20 +27,6 @@
     ]
   },
   {
-    "title": "Contributor Path",
-    "slug": "contributor-path",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-10-29T09:20:51.608Z",
-    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
-    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
-    "tags": [
-      "Community",
-      "Onboarding",
-      "Contributors"
-    ]
-  },
-  {
     "title": "Deploying Torrust To Production",
     "slug": "deploying-torrust-to-production",
     "contributor": "Jose Celano",
@@ -52,6 +38,20 @@
       "Tutorial",
       "Deployment",
       "Production"
+    ]
+  },
+  {
+    "title": "Contributor Path",
+    "slug": "contributor-path",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-10-29T09:20:51.608Z",
+    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
+    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
+    "tags": [
+      "Community",
+      "Onboarding",
+      "Contributors"
     ]
   },
   {
@@ -83,6 +83,20 @@
       "Torrust",
       "DevOps",
       "Tutorial"
+    ]
+  },
+  {
+    "title": "Deploying the Torrust Tracker Demo with the Torrust Tracker Deployer",
+    "slug": "deploying-torrust-tracker-with-the-deployer",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-04-08T00:00:00.000Z",
+    "coverImage": "/images/posts/deploying-torrust-tracker-with-the-deployer/torrust-tracker-deployer-hetzner-deployment.webp",
+    "excerpt": "Learn how we used the Torrust Tracker Deployer to deploy the Torrust Tracker Demo to Hetzner Cloud — a production-ready setup with HTTPS, MySQL, floating IPs, and Grafana monitoring — and what we discovered along the way.",
+    "tags": [
+      "Tutorial",
+      "Deployment",
+      "Automation"
     ]
   },
   {
@@ -168,20 +182,6 @@
     ]
   },
   {
-    "title": "Announcing the Beta v3.0.0 Live Demo",
-    "slug": "live-demo-beta-v3",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-12-15T12:08:04.295Z",
-    "coverImage": "/images/posts/rust-crab-happy.jpg",
-    "excerpt": "We will release a new major version v3.0.0. We want the community to test it before the final release while it's still in Beta. You can contribute to make Torrust better.",
-    "tags": [
-      "Announcement",
-      "Demo",
-      "Documentation"
-    ]
-  },
-  {
     "title": "Introducing the Torrust Tracker Deployer",
     "slug": "introducing-the-torrust-tracker-deployer",
     "contributor": "Jose Celano",
@@ -193,6 +193,20 @@
       "Deployment",
       "Automation",
       "Announcement"
+    ]
+  },
+  {
+    "title": "Announcing the Beta v3.0.0 Live Demo",
+    "slug": "live-demo-beta-v3",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-12-15T12:08:04.295Z",
+    "coverImage": "/images/posts/rust-crab-happy.jpg",
+    "excerpt": "We will release a new major version v3.0.0. We want the community to test it before the final release while it's still in Beta. You can contribute to make Torrust better.",
+    "tags": [
+      "Announcement",
+      "Demo",
+      "Documentation"
     ]
   },
   {
@@ -209,19 +223,6 @@
       "Deployment",
       "Infrastructure",
       "Torrust Tracker"
-    ]
-  },
-  {
-    "title": "Released version v3.0.0-beta",
-    "slug": "released-v3-0-0",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-09-03T14:30:38.554Z",
-    "coverImage": "/images/posts/released-v3-0-0-beta/team.png",
-    "excerpt": "We're excited to announce the release of v3.0.0-beta, marking a significant step towards our upcoming major release, v3.0.0. This release solidifies the features and prepares us for the beta phase.",
-    "tags": [
-      "Announcement",
-      "Release"
     ]
   },
   {
@@ -242,13 +243,13 @@
     ]
   },
   {
-    "title": "Released version v3.0.0",
-    "slug": "released-v3-0-0-beta",
+    "title": "Released version v3.0.0-beta",
+    "slug": "released-v3-0-0",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2024-10-03T11:05:14.597Z",
-    "coverImage": "/images/posts/released-v3-0-0/team.png",
-    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
+    "date": "2024-09-03T14:30:38.554Z",
+    "coverImage": "/images/posts/released-v3-0-0-beta/team.png",
+    "excerpt": "We're excited to announce the release of v3.0.0-beta, marking a significant step towards our upcoming major release, v3.0.0. This release solidifies the features and prepares us for the beta phase.",
     "tags": [
       "Announcement",
       "Release"
@@ -267,6 +268,19 @@
       "Review",
       "Index",
       "Third-party"
+    ]
+  },
+  {
+    "title": "Released version v3.0.0",
+    "slug": "released-v3-0-0-beta",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-10-03T11:05:14.597Z",
+    "coverImage": "/images/posts/released-v3-0-0/team.png",
+    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
+    "tags": [
+      "Announcement",
+      "Release"
     ]
   },
   {
@@ -314,6 +328,19 @@
     ]
   },
   {
+    "title": "Torrust - Enhancing the BitTorrent Ecosystem",
+    "slug": "torrust-enhancing-the-bittorrent-ecosystem",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-05-31T09:33:14.163Z",
+    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
+    "excerpt": "Torrust, an open-source organization, is making significant contributions to the BitTorrent ecosystem by developing robust tools, improving documentation, and fostering community collaboration.",
+    "tags": [
+      "Introduction",
+      "Torrust"
+    ]
+  },
+  {
     "title": "BitTorrent Trackers Implemented in Rust",
     "slug": "trackers-implemented-in-rust",
     "contributor": "Jose Celano",
@@ -326,19 +353,6 @@
       "BitTorrent",
       "Tracker",
       "Open Source"
-    ]
-  },
-  {
-    "title": "Torrust - Enhancing the BitTorrent Ecosystem",
-    "slug": "torrust-enhancing-the-bittorrent-ecosystem",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-05-31T09:33:14.163Z",
-    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
-    "excerpt": "Torrust, an open-source organization, is making significant contributions to the BitTorrent ecosystem by developing robust tools, improving documentation, and fostering community collaboration.",
-    "tags": [
-      "Introduction",
-      "Torrust"
     ]
   },
   {
