@@ -26,6 +26,18 @@
 		<div class="wrapper">
 			<Toc class="toc" />
 			<div id="toc-contents" class="content-preview">
+				<Callout type="info">
+					<strong>Update (April 2026):</strong> We now have the
+					<a href="/blog/deploying-torrust-tracker-with-the-deployer">Torrust Tracker Deployer</a>,
+					a tool that automates most of the steps described in this guide. If you are starting a new
+					deployment, we recommend reading
+					<a href="/blog/deploying-torrust-tracker-with-the-deployer"
+						>Deploying the Torrust Tracker Demo with the Torrust Tracker Deployer</a
+					>
+					instead. This guide remains useful as a reference for understanding what the deployer does under
+					the hood, or for deploying on providers the deployer does not yet support.
+				</Callout>
+
 				<h2 id="introduction">Introduction</h2>
 				<p>
 					Welcome to our guide on deploying a BitTorrent Index and Tracker. We&#39;ll walk you
