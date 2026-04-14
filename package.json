@@ -45,7 +45,7 @@
 		"svelte": "^5.55.4",
 		"svelte-check": "^4.4.6",
 		"svelte-eslint-parser": "^1.6.0",
-		"svelte-sitemap": "^2.8.0",
+		"svelte-sitemap": "^3.1.0",
 		"tailwindcss": "^4.2.2",
 		"tsx": "^4.21.0",
 		"typescript": "^5.9.3",

@@ -11,7 +11,7 @@ remaining major-version bump in a dedicated branch and PR.
 | Patch / minor updates (all except below) | various | latest minor | ✅ Done        | `chore/update-dependencies-2026-04` |
 | `vite`                                   | 8.x     | 8.x          | ✅ Done        | `chore/upgrade-vite-8`              |
 | `@sveltejs/vite-plugin-svelte`           | 7.x     | 7.x          | ✅ Done        | `chore/upgrade-vite-8`              |
-| `svelte-sitemap`                         | 2.x     | 3.x          | ⬜ Not started | —                                   |
+| `svelte-sitemap`                         | 3.x     | 3.x          | ✅ Done        | `chore/upgrade-svelte-sitemap-3`    |
 | `typescript`                             | 5.x     | 6.x          | ⬜ Not started | —                                   |
 | `@types/node`                            | 22.x    | 25.x         | ⬜ Not started | —                                   |
 
@@ -57,9 +57,13 @@ These two must be bumped together: `@sveltejs/vite-plugin-svelte` v7 requires `v
 
 ---
 
-## Phase 2 — svelte-sitemap 2 → 3
+## Phase 2 — svelte-sitemap 2 → 3 ✅
 
-This is a smaller, isolated change.
+This was a smaller, isolated change.
+
+**Branch:** `chore/upgrade-svelte-sitemap-3`
+
+**Result:** completed successfully. `npm run lint`, `npm run check`, and `npm run build` pass, and `build/sitemap.xml` is generated.
 
 **Steps:**
 
@@ -77,6 +81,7 @@ This is a smaller, isolated change.
 
 - CLI argument changes in v3
 - Output format differences in the generated sitemap
+- v3 suggests moving from CLI options to a config file (not required for current setup)
 
 ---
 
