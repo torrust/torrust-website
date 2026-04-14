@@ -9,8 +9,8 @@ remaining major-version bump in a dedicated branch and PR.
 | Package                                  | Current | Target       | Status         | Branch                              |
 | ---------------------------------------- | ------- | ------------ | -------------- | ----------------------------------- |
 | Patch / minor updates (all except below) | various | latest minor | ✅ Done        | `chore/update-dependencies-2026-04` |
-| `vite`                                   | 7.x     | 8.x          | ⬜ Not started | —                                   |
-| `@sveltejs/vite-plugin-svelte`           | 6.x     | 7.x          | ⬜ Not started | —                                   |
+| `vite`                                   | 8.x     | 8.x          | ✅ Done        | `chore/upgrade-vite-8`              |
+| `@sveltejs/vite-plugin-svelte`           | 7.x     | 7.x          | ✅ Done        | `chore/upgrade-vite-8`              |
 | `svelte-sitemap`                         | 2.x     | 3.x          | ⬜ Not started | —                                   |
 | `typescript`                             | 5.x     | 6.x          | ⬜ Not started | —                                   |
 | `@types/node`                            | 22.x    | 25.x         | ⬜ Not started | —                                   |
@@ -26,9 +26,13 @@ All non-breaking updates applied. All checks pass (`format`, `lint`, `check`, `b
 
 ---
 
-## Phase 1 — vite 7 → 8 + @sveltejs/vite-plugin-svelte 6 → 7
+## Phase 1 — vite 7 → 8 + @sveltejs/vite-plugin-svelte 6 → 7 ✅
 
 These two must be bumped together: `@sveltejs/vite-plugin-svelte` v7 requires `vite ^8`.
+
+**Branch:** `chore/upgrade-vite-8`
+
+**Result:** completed successfully. `npm run lint`, `npm run check`, and `npm run build` pass.
 
 **Steps:**
 
