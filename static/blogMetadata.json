@@ -13,6 +13,21 @@
     ]
   },
   {
+    "title": "Bencode to JSON Converter in Rust",
+    "slug": "bencode-to-json-converter-in-rust",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-11-01T11:57:37.926Z",
+    "coverImage": "/images/posts/bencode-to-json-converter-in-rust/bencode-to-json-converter-in-rust.webp",
+    "excerpt": "We're excited to introduce bencode2json, a crate that simplifies converting Bencode data to JSON, benefiting the Rust BitTorrent community.",
+    "tags": [
+      "Bencode",
+      "JSON",
+      "Converter",
+      "Rust"
+    ]
+  },
+  {
     "title": "Containerizing Rust Applications",
     "slug": "containerizing-rust-applications-best-practices",
     "contributor": "Jose Celano",
@@ -41,6 +56,20 @@
     ]
   },
   {
+    "title": "Deploying the Torrust Tracker Demo with the Torrust Tracker Deployer",
+    "slug": "deploying-torrust-tracker-with-the-deployer",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-04-08T00:00:00.000Z",
+    "coverImage": "/images/posts/deploying-torrust-tracker-with-the-deployer/torrust-tracker-deployer-hetzner-deployment.webp",
+    "excerpt": "Learn how we used the Torrust Tracker Deployer to deploy the Torrust Tracker Demo to Hetzner Cloud — a production-ready setup with HTTPS, MySQL, floating IPs, and Grafana monitoring — and what we discovered along the way.",
+    "tags": [
+      "Tutorial",
+      "Deployment",
+      "Automation"
+    ]
+  },
+  {
     "title": "Contributor Path",
     "slug": "contributor-path",
     "contributor": "Jose Celano",
@@ -52,21 +81,6 @@
       "Community",
       "Onboarding",
       "Contributors"
-    ]
-  },
-  {
-    "title": "Bencode to JSON Converter in Rust",
-    "slug": "bencode-to-json-converter-in-rust",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-11-01T11:57:37.926Z",
-    "coverImage": "/images/posts/bencode-to-json-converter-in-rust/bencode-to-json-converter-in-rust.webp",
-    "excerpt": "We're excited to introduce bencode2json, a crate that simplifies converting Bencode data to JSON, benefiting the Rust BitTorrent community.",
-    "tags": [
-      "Bencode",
-      "JSON",
-      "Converter",
-      "Rust"
     ]
   },
   {
@@ -83,20 +97,6 @@
       "Torrust",
       "DevOps",
       "Tutorial"
-    ]
-  },
-  {
-    "title": "Deploying the Torrust Tracker Demo with the Torrust Tracker Deployer",
-    "slug": "deploying-torrust-tracker-with-the-deployer",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2026-04-08T00:00:00.000Z",
-    "coverImage": "/images/posts/deploying-torrust-tracker-with-the-deployer/torrust-tracker-deployer-hetzner-deployment.webp",
-    "excerpt": "Learn how we used the Torrust Tracker Deployer to deploy the Torrust Tracker Demo to Hetzner Cloud — a production-ready setup with HTTPS, MySQL, floating IPs, and Grafana monitoring — and what we discovered along the way.",
-    "tags": [
-      "Tutorial",
-      "Deployment",
-      "Automation"
     ]
   },
   {
@@ -129,15 +129,17 @@
     ]
   },
   {
-    "title": "How To Contribute To This Site",
-    "slug": "how-to-contribute-to-this-site",
-    "contributor": "",
-    "contributorSlug": "",
-    "date": "2023-04-22T21:55:15.361Z",
-    "coverImage": "/images/posts/sample-post.jpg",
-    "excerpt": "How to manage existing blog posts and create new ones on this site.",
+    "title": "How To Setup The Dev Env",
+    "slug": "how-to-setup-the-development-environment",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-07-11T12:29:04.295Z",
+    "coverImage": "/images/posts/development-environment.png",
+    "excerpt": "If you want to contribute to the Torrust Index, this article explains how to setup a development environment with the latest versions for all services.",
     "tags": [
-      "Documentation"
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
     ]
   },
   {
@@ -155,17 +157,15 @@
     ]
   },
   {
-    "title": "How To Setup The Dev Env",
-    "slug": "how-to-setup-the-development-environment",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-07-11T12:29:04.295Z",
-    "coverImage": "/images/posts/development-environment.png",
-    "excerpt": "If you want to contribute to the Torrust Index, this article explains how to setup a development environment with the latest versions for all services.",
+    "title": "How To Contribute To This Site",
+    "slug": "how-to-contribute-to-this-site",
+    "contributor": "",
+    "contributorSlug": "",
+    "date": "2023-04-22T21:55:15.361Z",
+    "coverImage": "/images/posts/sample-post.jpg",
+    "excerpt": "How to manage existing blog posts and create new ones on this site.",
     "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
+      "Documentation"
     ]
   },
   {
@@ -243,13 +243,13 @@
     ]
   },
   {
-    "title": "Released version v3.0.0-beta",
-    "slug": "released-v3-0-0",
+    "title": "Released version v3.0.0",
+    "slug": "released-v3-0-0-beta",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2024-09-03T14:30:38.554Z",
-    "coverImage": "/images/posts/released-v3-0-0-beta/team.png",
-    "excerpt": "We're excited to announce the release of v3.0.0-beta, marking a significant step towards our upcoming major release, v3.0.0. This release solidifies the features and prepares us for the beta phase.",
+    "date": "2024-10-03T11:05:14.597Z",
+    "coverImage": "/images/posts/released-v3-0-0/team.png",
+    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
     "tags": [
       "Announcement",
       "Release"
@@ -271,16 +271,32 @@
     ]
   },
   {
-    "title": "Released version v3.0.0",
-    "slug": "released-v3-0-0-beta",
+    "title": "Released version v3.0.0-beta",
+    "slug": "released-v3-0-0",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2024-10-03T11:05:14.597Z",
-    "coverImage": "/images/posts/released-v3-0-0/team.png",
-    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
+    "date": "2024-09-03T14:30:38.554Z",
+    "coverImage": "/images/posts/released-v3-0-0-beta/team.png",
+    "excerpt": "We're excited to announce the release of v3.0.0-beta, marking a significant step towards our upcoming major release, v3.0.0. This release solidifies the features and prepares us for the beta phase.",
     "tags": [
       "Announcement",
       "Release"
+    ]
+  },
+  {
+    "title": "How to Run a UDP Tracker Behind a Floating IP on Ubuntu",
+    "slug": "setup-udp-tracker-behind-floating-ip",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-04-14T00:00:00.000Z",
+    "coverImage": "/images/posts/setup-udp-tracker-behind-floating-ip/udp-tracker-floating-ip-ipv6-docker-configuration.webp",
+    "excerpt": "A practical guide to running a UDP BitTorrent tracker behind floating IPs (also known as static, reserved, or elastic IPs) on Ubuntu, including policy routing, Docker IPv6 networking, and SNAT for correct reply paths.",
+    "tags": [
+      "BitTorrent",
+      "Tracker",
+      "Networking",
+      "IPv6",
+      "Deployment"
     ]
   },
   {
@@ -298,19 +314,16 @@
     ]
   },
   {
-    "title": "Submitting Trackers to newTrackon",
-    "slug": "submitting-trackers-to-newtrackon",
+    "title": "Torrust - Enhancing the BitTorrent Ecosystem",
+    "slug": "torrust-enhancing-the-bittorrent-ecosystem",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2026-04-01T12:00:00.000Z",
-    "coverImage": "/images/posts/submitting-trackers-to-newtrackon/submitting-bittorrent-tracker-to-newtrackon.webp",
-    "excerpt": "A practical guide to submitting BitTorrent trackers to newTrackon, the popular third-party uptime monitoring service. Learn the prerequisites, how to work around the one-tracker-per-IP constraint using floating IPs, and how to configure DNS correctly with BEP34.",
+    "date": "2024-05-31T09:33:14.163Z",
+    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
+    "excerpt": "Torrust, an open-source organization, is making significant contributions to the BitTorrent ecosystem by developing robust tools, improving documentation, and fostering community collaboration.",
     "tags": [
-      "BitTorrent",
-      "Tracker",
-      "DevOps",
-      "DNS",
-      "Demo"
+      "Introduction",
+      "Torrust"
     ]
   },
   {
@@ -328,19 +341,6 @@
     ]
   },
   {
-    "title": "Torrust - Enhancing the BitTorrent Ecosystem",
-    "slug": "torrust-enhancing-the-bittorrent-ecosystem",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-05-31T09:33:14.163Z",
-    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
-    "excerpt": "Torrust, an open-source organization, is making significant contributions to the BitTorrent ecosystem by developing robust tools, improving documentation, and fostering community collaboration.",
-    "tags": [
-      "Introduction",
-      "Torrust"
-    ]
-  },
-  {
     "title": "BitTorrent Trackers Implemented in Rust",
     "slug": "trackers-implemented-in-rust",
     "contributor": "Jose Celano",
@@ -353,6 +353,22 @@
       "BitTorrent",
       "Tracker",
       "Open Source"
+    ]
+  },
+  {
+    "title": "Submitting Trackers to newTrackon",
+    "slug": "submitting-trackers-to-newtrackon",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-04-01T12:00:00.000Z",
+    "coverImage": "/images/posts/submitting-trackers-to-newtrackon/submitting-bittorrent-tracker-to-newtrackon.webp",
+    "excerpt": "A practical guide to submitting BitTorrent trackers to newTrackon, the popular third-party uptime monitoring service. Learn the prerequisites, how to work around the one-tracker-per-IP constraint using floating IPs, and how to configure DNS correctly with BEP34.",
+    "tags": [
+      "BitTorrent",
+      "Tracker",
+      "DevOps",
+      "DNS",
+      "Demo"
     ]
   },
   {
