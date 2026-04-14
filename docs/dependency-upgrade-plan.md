@@ -6,14 +6,14 @@ remaining major-version bump in a dedicated branch and PR.
 
 ## Status Overview
 
-| Package                                  | Current | Target       | Status         | Branch                              |
-| ---------------------------------------- | ------- | ------------ | -------------- | ----------------------------------- |
-| Patch / minor updates (all except below) | various | latest minor | ✅ Done        | `chore/update-dependencies-2026-04` |
-| `vite`                                   | 8.x     | 8.x          | ✅ Done        | `chore/upgrade-vite-8`              |
-| `@sveltejs/vite-plugin-svelte`           | 7.x     | 7.x          | ✅ Done        | `chore/upgrade-vite-8`              |
-| `svelte-sitemap`                         | 3.x     | 3.x          | ✅ Done        | `chore/upgrade-svelte-sitemap-3`    |
-| `typescript`                             | 5.x     | 6.x          | ⬜ Not started | —                                   |
-| `@types/node`                            | 22.x    | 25.x         | ⬜ Not started | —                                   |
+| Package                                  | Current | Target       | Status  | Branch                              |
+| ---------------------------------------- | ------- | ------------ | ------- | ----------------------------------- |
+| Patch / minor updates (all except below) | various | latest minor | ✅ Done | `chore/update-dependencies-2026-04` |
+| `vite`                                   | 8.x     | 8.x          | ✅ Done | `chore/upgrade-vite-8`              |
+| `@sveltejs/vite-plugin-svelte`           | 7.x     | 7.x          | ✅ Done | `chore/upgrade-vite-8`              |
+| `svelte-sitemap`                         | 3.x     | 3.x          | ✅ Done | `chore/upgrade-svelte-sitemap-3`    |
+| `typescript`                             | 6.x     | 6.x          | ✅ Done | `chore/upgrade-typescript-6`        |
+| `@types/node`                            | 25.x    | 25.x         | ✅ Done | `chore/upgrade-typescript-6`        |
 
 ---
 
@@ -85,9 +85,13 @@ This was a smaller, isolated change.
 
 ---
 
-## Phase 3 — TypeScript 5 → 6
+## Phase 3 — TypeScript 5 → 6 ✅
 
 TypeScript 6 is a significant release with stricter type checking.
+
+**Branch:** `chore/upgrade-typescript-6`
+
+**Result:** completed successfully. `npm run lint`, `npm run check`, and `npm run build` pass with no additional code changes required.
 
 **Steps:**
 
