@@ -1598,7 +1598,7 @@ docker run --rm \\
 		color: rgba(245, 245, 245, 0.88);
 	}
 
-	h4 {
+	:global(h4) {
 		font-size: 1.25rem;
 		font-weight: bold;
 		padding-top: 1rem;
@@ -1679,7 +1679,7 @@ docker run --rm \\
 	.content-preview > ol,
 	.content-preview > h2,
 	.content-preview > h3,
-	.content-preview > h4 {
+	:global(.content-preview > h4) {
 		margin-bottom: 1rem;
 	}
 
