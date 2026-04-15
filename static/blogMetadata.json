@@ -13,6 +13,50 @@
     ]
   },
   {
+    "title": "Building with AI Agents, Building for AI Agents",
+    "slug": "building-with-ai-agents-building-for-ai-agents",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-02-27T12:00:00.000Z",
+    "coverImage": "/images/posts/building-with-ai-agents-building-for-ai-agents/ai-agent-developer-tools-workflow.webp",
+    "excerpt": "I spent months building the Torrust Tracker Deployer without writing a single line of code directly — every line came from a GitHub Copilot agent. But this post is about something bigger: the shift in thinking that came from that experience and what it taught us about designing tools that AI agents can actually use well.",
+    "tags": [
+      "AI",
+      "Rust",
+      "Torrust",
+      "DevOps",
+      "Tutorial"
+    ]
+  },
+  {
+    "title": "Deploying Torrust To Production",
+    "slug": "deploying-torrust-to-production",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-12-20T00:00:00.000Z",
+    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
+    "excerpt": "Dive into our step-by-step tutorial on deploying a BitTorrent Index and Tracker, written in Rust, on a Digital Ocean droplet. From initial server setup to advanced configurations, this guide is designed for both non-developers and tech-savvy users, ensuring a seamless, production-ready deployment.",
+    "tags": [
+      "Tutorial",
+      "Deployment",
+      "Production"
+    ]
+  },
+  {
+    "title": "Contributor Path",
+    "slug": "contributor-path",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-10-29T09:20:51.608Z",
+    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
+    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
+    "tags": [
+      "Community",
+      "Onboarding",
+      "Contributors"
+    ]
+  },
+  {
     "title": "Bencode to JSON Converter in Rust",
     "slug": "bencode-to-json-converter-in-rust",
     "contributor": "Jose Celano",
@@ -42,20 +86,6 @@
     ]
   },
   {
-    "title": "Deploying Torrust To Production",
-    "slug": "deploying-torrust-to-production",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-12-20T00:00:00.000Z",
-    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
-    "excerpt": "Dive into our step-by-step tutorial on deploying a BitTorrent Index and Tracker, written in Rust, on a Digital Ocean droplet. From initial server setup to advanced configurations, this guide is designed for both non-developers and tech-savvy users, ensuring a seamless, production-ready deployment.",
-    "tags": [
-      "Tutorial",
-      "Deployment",
-      "Production"
-    ]
-  },
-  {
     "title": "Deploying the Torrust Tracker Demo with the Torrust Tracker Deployer",
     "slug": "deploying-torrust-tracker-with-the-deployer",
     "contributor": "Jose Celano",
@@ -67,36 +97,6 @@
       "Tutorial",
       "Deployment",
       "Automation"
-    ]
-  },
-  {
-    "title": "Contributor Path",
-    "slug": "contributor-path",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-10-29T09:20:51.608Z",
-    "coverImage": "/images/posts/contributor-path/rust-crab-going-safe-into-water.webp",
-    "excerpt": "Ready to contribute to Torrust? Here's your guide to get started and make meaningful contributions, from small fixes to full-fledged features.",
-    "tags": [
-      "Community",
-      "Onboarding",
-      "Contributors"
-    ]
-  },
-  {
-    "title": "Building with AI Agents, Building for AI Agents",
-    "slug": "building-with-ai-agents-building-for-ai-agents",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2026-02-27T12:00:00.000Z",
-    "coverImage": "/images/posts/building-with-ai-agents-building-for-ai-agents/ai-agent-developer-tools-workflow.webp",
-    "excerpt": "I spent months building the Torrust Tracker Deployer without writing a single line of code directly — every line came from a GitHub Copilot agent. But this post is about something bigger: the shift in thinking that came from that experience and what it taught us about designing tools that AI agents can actually use well.",
-    "tags": [
-      "AI",
-      "Rust",
-      "Torrust",
-      "DevOps",
-      "Tutorial"
     ]
   },
   {
@@ -129,6 +129,18 @@
     ]
   },
   {
+    "title": "How To Contribute To This Site",
+    "slug": "how-to-contribute-to-this-site",
+    "contributor": "",
+    "contributorSlug": "",
+    "date": "2023-04-22T21:55:15.361Z",
+    "coverImage": "/images/posts/sample-post.jpg",
+    "excerpt": "How to manage existing blog posts and create new ones on this site.",
+    "tags": [
+      "Documentation"
+    ]
+  },
+  {
     "title": "How To Setup The Dev Env",
     "slug": "how-to-setup-the-development-environment",
     "contributor": "Jose Celano",
@@ -140,32 +152,6 @@
       "Torrent",
       "Tracker",
       "BitTorrent"
-    ]
-  },
-  {
-    "title": "How To Run A Local Demo",
-    "slug": "how-to-run-a-local-demo",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-07-11T15:28:28.769Z",
-    "coverImage": "/images/posts/mandelbrot-set-periods-torrent-screenshot.png",
-    "excerpt": "You can easily run the Torrust Index demo on your computer easily with Git and Docker.",
-    "tags": [
-      "Demo",
-      "Tutorial",
-      "Guide"
-    ]
-  },
-  {
-    "title": "How To Contribute To This Site",
-    "slug": "how-to-contribute-to-this-site",
-    "contributor": "",
-    "contributorSlug": "",
-    "date": "2023-04-22T21:55:15.361Z",
-    "coverImage": "/images/posts/sample-post.jpg",
-    "excerpt": "How to manage existing blog posts and create new ones on this site.",
-    "tags": [
-      "Documentation"
     ]
   },
   {
@@ -193,6 +179,20 @@
       "Deployment",
       "Automation",
       "Announcement"
+    ]
+  },
+  {
+    "title": "How To Run A Local Demo",
+    "slug": "how-to-run-a-local-demo",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-07-11T15:28:28.769Z",
+    "coverImage": "/images/posts/mandelbrot-set-periods-torrent-screenshot.png",
+    "excerpt": "You can easily run the Torrust Index demo on your computer easily with Git and Docker.",
+    "tags": [
+      "Demo",
+      "Tutorial",
+      "Guide"
     ]
   },
   {
@@ -243,16 +243,30 @@
     ]
   },
   {
-    "title": "Released version v3.0.0",
-    "slug": "released-v3-0-0-beta",
+    "title": "Released version v3.0.0-beta",
+    "slug": "released-v3-0-0",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2024-10-03T11:05:14.597Z",
-    "coverImage": "/images/posts/released-v3-0-0/team.png",
-    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
+    "date": "2024-09-03T14:30:38.554Z",
+    "coverImage": "/images/posts/released-v3-0-0-beta/team.png",
+    "excerpt": "We're excited to announce the release of v3.0.0-beta, marking a significant step towards our upcoming major release, v3.0.0. This release solidifies the features and prepares us for the beta phase.",
     "tags": [
       "Announcement",
       "Release"
+    ]
+  },
+  {
+    "title": "Released Torrust Tracker Deployer v0.1.0",
+    "slug": "released-torrust-tracker-deployer-v0-1-0",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-04-15T00:00:00.000Z",
+    "coverImage": "/images/posts/released-torrust-tracker-deployer-v0-1-0/torrust-tracker-deployer-v0-1-0-release-announcement-cover.webp",
+    "excerpt": "We're happy to announce the first stable release of the Torrust Tracker Deployer: v0.1.0. This milestone makes automated Torrust Tracker deployment publicly available, with production-tested workflows and comprehensive documentation.",
+    "tags": [
+      "Announcement",
+      "Release",
+      "Deployment"
     ]
   },
   {
@@ -271,32 +285,16 @@
     ]
   },
   {
-    "title": "Released version v3.0.0-beta",
-    "slug": "released-v3-0-0",
+    "title": "Released version v3.0.0",
+    "slug": "released-v3-0-0-beta",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2024-09-03T14:30:38.554Z",
-    "coverImage": "/images/posts/released-v3-0-0-beta/team.png",
-    "excerpt": "We're excited to announce the release of v3.0.0-beta, marking a significant step towards our upcoming major release, v3.0.0. This release solidifies the features and prepares us for the beta phase.",
+    "date": "2024-10-03T11:05:14.597Z",
+    "coverImage": "/images/posts/released-v3-0-0/team.png",
+    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
     "tags": [
       "Announcement",
       "Release"
-    ]
-  },
-  {
-    "title": "How to Run a UDP Tracker Behind a Floating IP on Ubuntu",
-    "slug": "setup-udp-tracker-behind-floating-ip",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2026-04-14T00:00:00.000Z",
-    "coverImage": "/images/posts/setup-udp-tracker-behind-floating-ip/udp-tracker-floating-ip-ipv6-docker-configuration.webp",
-    "excerpt": "A practical guide to running a UDP BitTorrent tracker behind floating IPs (also known as static, reserved, or elastic IPs) on Ubuntu, including policy routing, Docker IPv6 networking, and SNAT for correct reply paths.",
-    "tags": [
-      "BitTorrent",
-      "Tracker",
-      "Networking",
-      "IPv6",
-      "Deployment"
     ]
   },
   {
@@ -314,16 +312,35 @@
     ]
   },
   {
-    "title": "Torrust - Enhancing the BitTorrent Ecosystem",
-    "slug": "torrust-enhancing-the-bittorrent-ecosystem",
+    "title": "Submitting Trackers to newTrackon",
+    "slug": "submitting-trackers-to-newtrackon",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2024-05-31T09:33:14.163Z",
-    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
-    "excerpt": "Torrust, an open-source organization, is making significant contributions to the BitTorrent ecosystem by developing robust tools, improving documentation, and fostering community collaboration.",
+    "date": "2026-04-01T12:00:00.000Z",
+    "coverImage": "/images/posts/submitting-trackers-to-newtrackon/submitting-bittorrent-tracker-to-newtrackon.webp",
+    "excerpt": "A practical guide to submitting BitTorrent trackers to newTrackon, the popular third-party uptime monitoring service. Learn the prerequisites, how to work around the one-tracker-per-IP constraint using floating IPs, and how to configure DNS correctly with BEP34.",
     "tags": [
-      "Introduction",
-      "Torrust"
+      "BitTorrent",
+      "Tracker",
+      "DevOps",
+      "DNS",
+      "Demo"
+    ]
+  },
+  {
+    "title": "How to Run a UDP Tracker Behind a Floating IP on Ubuntu",
+    "slug": "setup-udp-tracker-behind-floating-ip",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-04-14T00:00:00.000Z",
+    "coverImage": "/images/posts/setup-udp-tracker-behind-floating-ip/udp-tracker-floating-ip-ipv6-docker-configuration.webp",
+    "excerpt": "A practical guide to running a UDP BitTorrent tracker behind floating IPs (also known as static, reserved, or elastic IPs) on Ubuntu, including policy routing, Docker IPv6 networking, and SNAT for correct reply paths.",
+    "tags": [
+      "BitTorrent",
+      "Tracker",
+      "Networking",
+      "IPv6",
+      "Deployment"
     ]
   },
   {
@@ -356,19 +373,16 @@
     ]
   },
   {
-    "title": "Submitting Trackers to newTrackon",
-    "slug": "submitting-trackers-to-newtrackon",
+    "title": "Torrust - Enhancing the BitTorrent Ecosystem",
+    "slug": "torrust-enhancing-the-bittorrent-ecosystem",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2026-04-01T12:00:00.000Z",
-    "coverImage": "/images/posts/submitting-trackers-to-newtrackon/submitting-bittorrent-tracker-to-newtrackon.webp",
-    "excerpt": "A practical guide to submitting BitTorrent trackers to newTrackon, the popular third-party uptime monitoring service. Learn the prerequisites, how to work around the one-tracker-per-IP constraint using floating IPs, and how to configure DNS correctly with BEP34.",
+    "date": "2024-05-31T09:33:14.163Z",
+    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
+    "excerpt": "Torrust, an open-source organization, is making significant contributions to the BitTorrent ecosystem by developing robust tools, improving documentation, and fostering community collaboration.",
     "tags": [
-      "BitTorrent",
-      "Tracker",
-      "DevOps",
-      "DNS",
-      "Demo"
+      "Introduction",
+      "Torrust"
     ]
   },
   {
