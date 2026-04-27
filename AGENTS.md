@@ -12,6 +12,7 @@ Common tasks are documented as [Agent Skills](https://agentskills.io/) in `.gith
 - [**deploy-site**](.github/skills/deploy-site/SKILL.md) — Deploy the site to GitHub Pages
 - [**run-checks**](.github/skills/run-checks/SKILL.md) — Run the full quality check suite before committing
 - [**dev-debug**](.github/skills/dev-debug/SKILL.md) — Debug and troubleshoot page changes using the Vite dev server
+- [**create-issue-branch**](.github/skills/create-issue-branch/SKILL.md) — Create a new git branch for a GitHub issue following naming conventions
 
 > **Authoring note:** skill `description` fields must be ≤ 160 characters (the Front Matter CMS enforces this as an SEO limit).
 
