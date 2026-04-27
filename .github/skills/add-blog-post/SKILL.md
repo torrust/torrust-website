@@ -9,6 +9,8 @@ description: Creates a new blog post for the Torrust website. Use when asked to 
 
 Use this skill when asked to create, write, or publish a new blog post on the Torrust website.
 
+Before implementation starts, a GitHub issue must exist for the article and you must create a branch from that issue using the [create-issue-branch](../create-issue-branch/SKILL.md) skill.
+
 ## Directory structure
 
 Each post lives in its own directory under `src/routes/blog/`:
@@ -22,7 +24,23 @@ src/routes/blog/<post-slug>/
 
 ## Steps
 
-### 1. Create the post directory
+### 1. Create and switch to the issue branch (required)
+
+Before creating any blog files, create a branch that starts with the issue number:
+
+```bash
+git checkout -b <issue-number>-<short-description>
+```
+
+Example:
+
+```bash
+git checkout -b 42-add-nf-conntrack-overflow-article
+```
+
+This ensures the blog post work is traceable to the issue from the start.
+
+### 2. Create the post directory
 
 ```bash
 mkdir src/routes/blog/<post-slug>
@@ -30,7 +48,7 @@ mkdir src/routes/blog/<post-slug>
 
 The slug must be kebab-case and must match the `slug` field in `metadata.ts`.
 
-### 2. Create `metadata.ts`
+### 3. Create `metadata.ts`
 
 ```typescript
 export const metadata = {
@@ -45,7 +63,7 @@ export const metadata = {
 };
 ```
 
-### 3. Create `+page.server.ts` (copy verbatim)
+### 4. Create `+page.server.ts` (copy verbatim)
 
 This boilerplate is identical for every post — never modify it:
 
@@ -66,7 +84,7 @@ export const load: PageServerLoad = async ({ url }) => {
 };
 ```
 
-### 4. Create `+page.svelte`
+### 5. Create `+page.svelte`
 
 Use this template as the starting point. **Copy it exactly** — do not reorder the script block or change the style section.
 
