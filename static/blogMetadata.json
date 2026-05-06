@@ -13,17 +13,19 @@
     ]
   },
   {
-    "title": "Containerizing Rust Applications",
-    "slug": "containerizing-rust-applications-best-practices",
+    "title": "Building with AI Agents, Building for AI Agents",
+    "slug": "building-with-ai-agents-building-for-ai-agents",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2023-11-09T12:08:04.295Z",
-    "coverImage": "/images/posts/rust-crab-carrying-a-shipping-container.jpeg",
-    "excerpt": "Torrust services (Tracker and Index) support docker, we want to ensure that contributors understand our containerfile and we also want to share good practices for containerizing Rust applications.",
+    "date": "2026-02-27T12:00:00.000Z",
+    "coverImage": "/images/posts/building-with-ai-agents-building-for-ai-agents/ai-agent-developer-tools-workflow.webp",
+    "excerpt": "I spent months building the Torrust Tracker Deployer without writing a single line of code directly — every line came from a GitHub Copilot agent. But this post is about something bigger: the shift in thinking that came from that experience and what it taught us about designing tools that AI agents can actually use well.",
     "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
+      "AI",
+      "Rust",
+      "Torrust",
+      "DevOps",
+      "Tutorial"
     ]
   },
   {
@@ -55,6 +57,20 @@
     ]
   },
   {
+    "title": "Containerizing Rust Applications",
+    "slug": "containerizing-rust-applications-best-practices",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-11-09T12:08:04.295Z",
+    "coverImage": "/images/posts/rust-crab-carrying-a-shipping-container.jpeg",
+    "excerpt": "Torrust services (Tracker and Index) support docker, we want to ensure that contributors understand our containerfile and we also want to share good practices for containerizing Rust applications.",
+    "tags": [
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
+    ]
+  },
+  {
     "title": "Bencode to JSON Converter in Rust",
     "slug": "bencode-to-json-converter-in-rust",
     "contributor": "Jose Celano",
@@ -67,22 +83,6 @@
       "JSON",
       "Converter",
       "Rust"
-    ]
-  },
-  {
-    "title": "Building with AI Agents, Building for AI Agents",
-    "slug": "building-with-ai-agents-building-for-ai-agents",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2026-02-27T12:00:00.000Z",
-    "coverImage": "/images/posts/building-with-ai-agents-building-for-ai-agents/ai-agent-developer-tools-workflow.webp",
-    "excerpt": "I spent months building the Torrust Tracker Deployer without writing a single line of code directly — every line came from a GitHub Copilot agent. But this post is about something bigger: the shift in thinking that came from that experience and what it taught us about designing tools that AI agents can actually use well.",
-    "tags": [
-      "AI",
-      "Rust",
-      "Torrust",
-      "DevOps",
-      "Tutorial"
     ]
   },
   {
@@ -155,19 +155,6 @@
     ]
   },
   {
-    "title": "Introducing the New Sample Torrent Migration Tool",
-    "slug": "introducing-the-new-sample-torrent-migration-tool",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-09-04T13:24:27.241Z",
-    "coverImage": "/images/posts/pexels-david-dibert-7177008.jpg",
-    "excerpt": "Looking to migrate to the Torrust Index? Dive into our Torrents Importer Sample to seamlessly transfer your torrents to Torrust.",
-    "tags": [
-      "Migration Tool",
-      "Sample"
-    ]
-  },
-  {
     "title": "How To Setup The Dev Env",
     "slug": "how-to-setup-the-development-environment",
     "contributor": "Jose Celano",
@@ -179,6 +166,36 @@
       "Torrent",
       "Tracker",
       "BitTorrent"
+    ]
+  },
+  {
+    "title": "How We Fixed a One-Core Packet Processing Bottleneck in Torrust Tracker",
+    "slug": "how-we-fixed-a-one-core-packet-processing-bottleneck-in-torrust-tracker",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-05-06T12:00:00.000Z",
+    "coverImage": "/images/posts/how-we-fixed-a-one-core-packet-processing-bottleneck-in-torrust-tracker/one-core-packet-processing-bottleneck-cover.webp",
+    "excerpt": "We investigated a one-core softirq hotspot in the Torrust Tracker demo, ran isolated HTTP/3 and RPS/RFS experiments, and documented why better CPU distribution did not fully solve overall host load.",
+    "tags": [
+      "Tracker Demo",
+      "Performance",
+      "Linux Networking",
+      "Softirq",
+      "RPS",
+      "RFS"
+    ]
+  },
+  {
+    "title": "Introducing the New Sample Torrent Migration Tool",
+    "slug": "introducing-the-new-sample-torrent-migration-tool",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-09-04T13:24:27.241Z",
+    "coverImage": "/images/posts/pexels-david-dibert-7177008.jpg",
+    "excerpt": "Looking to migrate to the Torrust Index? Dive into our Torrents Importer Sample to seamlessly transfer your torrents to Torrust.",
+    "tags": [
+      "Migration Tool",
+      "Sample"
     ]
   },
   {
@@ -243,17 +260,18 @@
     ]
   },
   {
-    "title": "Released Torrust Tracker Deployer v0.1.0",
-    "slug": "released-torrust-tracker-deployer-v0-1-0",
+    "title": "PostgreSQL Support in Torrust Tracker",
+    "slug": "postgresql-support-in-torrust-tracker",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2026-04-15T00:00:00.000Z",
-    "coverImage": "/images/posts/released-torrust-tracker-deployer-v0-1-0/torrust-tracker-deployer-v0-1-0-release-announcement-cover.webp",
-    "excerpt": "We're happy to announce the first stable release of the Torrust Tracker Deployer: v0.1.0. This milestone makes automated Torrust Tracker deployment publicly available, with production-tested workflows and comprehensive documentation.",
+    "date": "2026-05-01T12:00:00.000Z",
+    "coverImage": "/images/posts/postgresql-support-in-torrust-tracker/postgresql-support-in-torrust-tracker.webp",
+    "excerpt": "Torrust Tracker now supports PostgreSQL as a first-class database backend. Learn about the journey from a community feature request to a full persistence overhaul, the new tools built along the way, and what this means for the upcoming major release.",
     "tags": [
+      "Rust",
+      "PostgreSQL",
       "Announcement",
-      "Release",
-      "Deployment"
+      "Release"
     ]
   },
   {
@@ -274,18 +292,30 @@
     ]
   },
   {
-    "title": "PostgreSQL Support in Torrust Tracker",
-    "slug": "postgresql-support-in-torrust-tracker",
+    "title": "Released version v3.0.0",
+    "slug": "released-v3-0-0-beta",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2026-05-01T12:00:00.000Z",
-    "coverImage": "/images/posts/postgresql-support-in-torrust-tracker/postgresql-support-in-torrust-tracker.webp",
-    "excerpt": "Torrust Tracker now supports PostgreSQL as a first-class database backend. Learn about the journey from a community feature request to a full persistence overhaul, the new tools built along the way, and what this means for the upcoming major release.",
+    "date": "2024-10-03T11:05:14.597Z",
+    "coverImage": "/images/posts/released-v3-0-0/team.png",
+    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
     "tags": [
-      "Rust",
-      "PostgreSQL",
       "Announcement",
       "Release"
+    ]
+  },
+  {
+    "title": "Released Torrust Tracker Deployer v0.1.0",
+    "slug": "released-torrust-tracker-deployer-v0-1-0",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-04-15T00:00:00.000Z",
+    "coverImage": "/images/posts/released-torrust-tracker-deployer-v0-1-0/torrust-tracker-deployer-v0-1-0-release-announcement-cover.webp",
+    "excerpt": "We're happy to announce the first stable release of the Torrust Tracker Deployer: v0.1.0. This milestone makes automated Torrust Tracker deployment publicly available, with production-tested workflows and comprehensive documentation.",
+    "tags": [
+      "Announcement",
+      "Release",
+      "Deployment"
     ]
   },
   {
@@ -296,19 +326,6 @@
     "date": "2024-09-03T14:30:38.554Z",
     "coverImage": "/images/posts/released-v3-0-0-beta/team.png",
     "excerpt": "We're excited to announce the release of v3.0.0-beta, marking a significant step towards our upcoming major release, v3.0.0. This release solidifies the features and prepares us for the beta phase.",
-    "tags": [
-      "Announcement",
-      "Release"
-    ]
-  },
-  {
-    "title": "Released version v3.0.0",
-    "slug": "released-v3-0-0-beta",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-10-03T11:05:14.597Z",
-    "coverImage": "/images/posts/released-v3-0-0/team.png",
-    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
     "tags": [
       "Announcement",
       "Release"
@@ -330,6 +347,20 @@
     ]
   },
   {
+    "title": "Setting Up Torrust with Claude Code",
+    "slug": "setting-up-torrust-with-claude-code",
+    "contributor": "Graeme Byrne",
+    "contributorSlug": "graeme-byrne",
+    "date": "2025-07-09T19:53:17.990Z",
+    "coverImage": "/images/posts/setting-up-torrust-with-claude-code/setting-up-torrust-with-claude-code.png",
+    "excerpt": "Based on a real terminal session, this guide documents the complete process of setting up the Torrust BitTorrent index development environment using Claude Code, including all the challenges encountered and solutions applied.",
+    "tags": [
+      "Tutorial",
+      "AI",
+      "Claude"
+    ]
+  },
+  {
     "title": "How to Run a UDP Tracker Behind a Floating IP on Ubuntu",
     "slug": "setup-udp-tracker-behind-floating-ip",
     "contributor": "Jose Celano",
@@ -346,17 +377,19 @@
     ]
   },
   {
-    "title": "Setting Up Torrust with Claude Code",
-    "slug": "setting-up-torrust-with-claude-code",
-    "contributor": "Graeme Byrne",
-    "contributorSlug": "graeme-byrne",
-    "date": "2025-07-09T19:53:17.990Z",
-    "coverImage": "/images/posts/setting-up-torrust-with-claude-code/setting-up-torrust-with-claude-code.png",
-    "excerpt": "Based on a real terminal session, this guide documents the complete process of setting up the Torrust BitTorrent index development environment using Claude Code, including all the challenges encountered and solutions applied.",
+    "title": "Submitting Trackers to newTrackon",
+    "slug": "submitting-trackers-to-newtrackon",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-04-01T12:00:00.000Z",
+    "coverImage": "/images/posts/submitting-trackers-to-newtrackon/submitting-bittorrent-tracker-to-newtrackon.webp",
+    "excerpt": "A practical guide to submitting BitTorrent trackers to newTrackon, the popular third-party uptime monitoring service. Learn the prerequisites, how to work around the one-tracker-per-IP constraint using floating IPs, and how to configure DNS correctly with BEP34.",
     "tags": [
-      "Tutorial",
-      "AI",
-      "Claude"
+      "BitTorrent",
+      "Tracker",
+      "DevOps",
+      "DNS",
+      "Demo"
     ]
   },
   {
@@ -371,22 +404,6 @@
       "Torrent",
       "Tracker",
       "BitTorrent"
-    ]
-  },
-  {
-    "title": "Submitting Trackers to newTrackon",
-    "slug": "submitting-trackers-to-newtrackon",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2026-04-01T12:00:00.000Z",
-    "coverImage": "/images/posts/submitting-trackers-to-newtrackon/submitting-bittorrent-tracker-to-newtrackon.webp",
-    "excerpt": "A practical guide to submitting BitTorrent trackers to newTrackon, the popular third-party uptime monitoring service. Learn the prerequisites, how to work around the one-tracker-per-IP constraint using floating IPs, and how to configure DNS correctly with BEP34.",
-    "tags": [
-      "BitTorrent",
-      "Tracker",
-      "DevOps",
-      "DNS",
-      "Demo"
     ]
   },
   {

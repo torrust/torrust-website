@@ -23,6 +23,7 @@ certonly
 cgbosse
 Chatrooms
 Chihaya
+conntrack
 containerfile
 Containerfiles
 corepack
@@ -51,6 +52,7 @@ heaptrack
 Heiko
 Helpdesk
 Histoire
+hotspot
 hotspots
 hungfnt
 iconify
@@ -64,6 +66,7 @@ Katson
 kcachegrind
 keyrings
 Kimbatt
+ksoftirqd
 Laravel
 ldpr
 letsencrypt
@@ -79,6 +82,7 @@ mdsvex
 Metainfo
 mickvandijke
 mika
+mpstat
 Multiuser
 naim
 Newtrackon

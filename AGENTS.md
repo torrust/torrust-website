@@ -8,6 +8,7 @@ Common tasks are documented as [Agent Skills](https://agentskills.io/) in `.gith
 
 - [**add-blog-post**](.github/skills/add-blog-post/SKILL.md) — Create or publish a new blog post
 - [**add-component**](.github/skills/add-component/SKILL.md) — Add a new Svelte UI component
+- [**update-blog-cover-image**](.github/skills/update-blog-cover-image/SKILL.md) — Update a blog post cover image with metadata regeneration and validation
 - [**update-contributors**](.github/skills/update-contributors/SKILL.md) — Refresh the contributors list from the Torrust GitHub org
 - [**deploy-site**](.github/skills/deploy-site/SKILL.md) — Deploy the site to GitHub Pages
 - [**run-checks**](.github/skills/run-checks/SKILL.md) — Run the full quality check suite before committing
