@@ -17,3 +17,6 @@ yarn.lock
 
 src/routes/blog/**/*.md
 static/blogMetadata.json
+.github/**/*.md
+.github/**/*.yml
+.github/**/*.yaml
