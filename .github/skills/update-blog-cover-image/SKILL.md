@@ -1,3 +1,4 @@
+
 ---
 name: update-blog-cover-image
 description: Updates a blog post cover image path and file with SEO-friendly naming, then regenerates metadata and validates it in dev.
@@ -96,6 +97,14 @@ Expected:
 - New filename appears in `static/blogMetadata.json`
 - Image URL returns `200 OK`
 - Blog HTML references the new filename
+
+## Scope boundary
+
+This skill is intentionally limited to in-repo implementation tasks for coding agents.
+
+For standalone guidance on prompting external AI image models for blog banners, see:
+
+- `docs/blog-cover-image-prompting.md`
 
 ## Troubleshooting
 
