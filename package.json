@@ -14,7 +14,6 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint --ignore-pattern .svelte-kit/output .",
-		"postbuild": "svelte-sitemap --domain https://torrust.com/",
 		"update-contributors": "tsx scripts/updateContributors.ts",
 		"pre-commit": "bash scripts/pre-commit.sh",
 		"prepare": "git config core.hooksPath .githooks && chmod +x .githooks/pre-commit"
