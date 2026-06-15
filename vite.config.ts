@@ -1,4 +1,5 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import { svelteSitemap } from 'svelte-sitemap/vite';
 import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 import type { UserConfig } from 'vite';
@@ -9,6 +10,7 @@ const config: UserConfig = {
 	plugins: [
 		tailwindcss(),
 		sveltekit(),
+		svelteSitemap({ domain: 'https://torrust.com/' }),
 		ViteImagemin({
 			gifsicle: { optimizationLevel: 3 },
 			optipng: { optimizationLevel: 5 },
