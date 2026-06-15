@@ -50,7 +50,7 @@
 		"tsx": "^4.21.0",
 		"typescript": "^6.0.2",
 		"typescript-eslint": "^8.58.2",
-		"vite": "^8.0.8",
+		"vite": "^8.0.16",
 		"vite-plugin-imagemin": "^0.6.1"
 	},
 	"dependencies": {
