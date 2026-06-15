@@ -74,6 +74,29 @@
 					</li>
 				</ul>
 
+				<Callout type="warning">
+					<strong>Clarification (updated):</strong> Disabling HTTP/3 (QUIC) on the Caddy edge proxy
+					was <strong>not</strong> the root-cause fix for the one-core bottleneck. It was an earlier
+					experiment that had no material impact on the softirq hotspot. The actual remediation was
+					enabling RPS/RFS packet steering. See the
+					<a href="#phase-2-disable-http3">Phase 2</a> and
+					<a href="#phase-3-enable-rps-rfs">Phase 3</a> sections below for the evidence.
+					<br /><br />
+					<strong>Protocol boundary note:</strong> Clients can connect to the edge proxy via HTTP/3
+					while the proxy communicates with backend services over existing HTTP transport. Backend
+					native HTTP/3 support is <em>not</em> required to offer HTTP/3 at the edge. Whether to
+					enable or disable HTTP/3 at the proxy should be treated as a product/operations choice
+					guided by monitoring, not as a default performance lever.
+					<br /><br />
+					See
+					<a href="https://github.com/torrust/torrust-tracker-demo/issues/31"
+						>torrust-tracker-demo#31</a
+					>
+					for the rationale on re-enabling edge HTTP/3, and
+					<a href="https://github.com/torrust/torrust-tracker/issues/1736">torrust-tracker#1736</a>
+					for tracking native HTTP/3 support in the tracker.
+				</Callout>
+
 				<h2 id="what-problem-we-detected">What Problem We Detected</h2>
 				<p>
 					The tracker host was under sustained CPU pressure. Standard process-level checks showed
@@ -149,8 +172,13 @@ HTTP1/UDP1 external status: Working`}
 				/>
 
 				<p>
-					Conclusion: disabling HTTP/3 was good hygiene, but it did not change the one-core softirq
-					bottleneck.
+					Conclusion: disabling HTTP/3 did not change the one-core softirq bottleneck. This
+					experiment confirmed that QUIC packet processing on UDP 443 was not the driver of the
+					hotspot. Enabling or disabling HTTP/3 at the edge proxy should be treated as a separate
+					product/operations decision — see the
+					<a href="https://github.com/torrust/torrust-tracker-demo/issues/31">follow-up rationale</a
+					>
+					for re-enabling it.
 				</p>
 
 				<h2 id="phase-3-enable-rps-rfs">Phase 3: Enable RPS/RFS</h2>
@@ -274,6 +302,16 @@ HTTP1/UDP1 external status: Working`}
 					<li>Keep RPS/RFS enabled permanently on the current host.</li>
 					<li>Close the tuning scope in ISSUE-29 as completed.</li>
 					<li>Track capacity follow-up separately (scale-up planning in ISSUE-30).</li>
+					<li>
+						HTTP/3 at the edge proxy is a separate product/operations decision. See
+						<a href="https://github.com/torrust/torrust-tracker-demo/issues/31"
+							>torrust-tracker-demo#31</a
+						>
+						for the rationale on re-enabling it, and
+						<a href="https://github.com/torrust/torrust-tracker/issues/1736">torrust-tracker#1736</a
+						>
+						for tracking native HTTP/3 support.
+					</li>
 				</ol>
 				<p>
 					The practical outcome is clear: packet-path tuning fixed the single-core bottleneck, and
@@ -297,6 +335,17 @@ HTTP1/UDP1 external status: Working`}
 					<li>
 						<a href="/blog/nf-conntrack-overflow-docker-udp-tracker"
 							>Related post: nf_conntrack overflow incident and fix</a
+						>
+					</li>
+					<li>
+						<a href="https://github.com/torrust/torrust-tracker-demo/issues/31"
+							>torrust-tracker-demo#31 — Re-enable edge HTTP/3 and document rationale</a
+						>
+					</li>
+					<li>
+						<a href="https://github.com/torrust/torrust-tracker/issues/1736"
+							>torrust-tracker#1736 — Document HTTP/3 support via reverse proxy and track native
+							HTTP/3 follow-up</a
 						>
 					</li>
 				</ul>
