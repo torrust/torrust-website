@@ -13,19 +13,18 @@
     ]
   },
   {
-    "title": "Building with AI Agents, Building for AI Agents",
-    "slug": "building-with-ai-agents-building-for-ai-agents",
+    "title": "Bencode to JSON Converter in Rust",
+    "slug": "bencode-to-json-converter-in-rust",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2026-02-27T12:00:00.000Z",
-    "coverImage": "/images/posts/building-with-ai-agents-building-for-ai-agents/ai-agent-developer-tools-workflow.webp",
-    "excerpt": "I spent months building the Torrust Tracker Deployer without writing a single line of code directly — every line came from a GitHub Copilot agent. But this post is about something bigger: the shift in thinking that came from that experience and what it taught us about designing tools that AI agents can actually use well.",
+    "date": "2024-11-01T11:57:37.926Z",
+    "coverImage": "/images/posts/bencode-to-json-converter-in-rust/bencode-to-json-converter-in-rust.webp",
+    "excerpt": "We're excited to introduce bencode2json, a crate that simplifies converting Bencode data to JSON, benefiting the Rust BitTorrent community.",
     "tags": [
-      "AI",
-      "Rust",
-      "Torrust",
-      "DevOps",
-      "Tutorial"
+      "Bencode",
+      "JSON",
+      "Converter",
+      "Rust"
     ]
   },
   {
@@ -57,6 +56,22 @@
     ]
   },
   {
+    "title": "Building with AI Agents, Building for AI Agents",
+    "slug": "building-with-ai-agents-building-for-ai-agents",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-02-27T12:00:00.000Z",
+    "coverImage": "/images/posts/building-with-ai-agents-building-for-ai-agents/ai-agent-developer-tools-workflow.webp",
+    "excerpt": "I spent months building the Torrust Tracker Deployer without writing a single line of code directly — every line came from a GitHub Copilot agent. But this post is about something bigger: the shift in thinking that came from that experience and what it taught us about designing tools that AI agents can actually use well.",
+    "tags": [
+      "AI",
+      "Rust",
+      "Torrust",
+      "DevOps",
+      "Tutorial"
+    ]
+  },
+  {
     "title": "Containerizing Rust Applications",
     "slug": "containerizing-rust-applications-best-practices",
     "contributor": "Jose Celano",
@@ -71,21 +86,6 @@
     ]
   },
   {
-    "title": "Bencode to JSON Converter in Rust",
-    "slug": "bencode-to-json-converter-in-rust",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-11-01T11:57:37.926Z",
-    "coverImage": "/images/posts/bencode-to-json-converter-in-rust/bencode-to-json-converter-in-rust.webp",
-    "excerpt": "We're excited to introduce bencode2json, a crate that simplifies converting Bencode data to JSON, benefiting the Rust BitTorrent community.",
-    "tags": [
-      "Bencode",
-      "JSON",
-      "Converter",
-      "Rust"
-    ]
-  },
-  {
     "title": "Deploying the Torrust Tracker Demo with the Torrust Tracker Deployer",
     "slug": "deploying-torrust-tracker-with-the-deployer",
     "contributor": "Jose Celano",
@@ -97,6 +97,20 @@
       "Tutorial",
       "Deployment",
       "Automation"
+    ]
+  },
+  {
+    "title": "How to Get a Torrent File from a Magnet Link or Infohash",
+    "slug": "get-torrent-from-magnet-link-infohash",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-06-15T12:00:00.000Z",
+    "coverImage": "/images/posts/get-torrent-from-magnet-link-infohash/magnet-link-to-torrent-conversion.webp",
+    "excerpt": "A practical guide to converting magnet links and bare infohashes into .torrent files using aria2c, BitTorrent clients, and other methods. Learn how the metadata discovery process works and which approach is best for your needs.",
+    "tags": [
+      "BitTorrent",
+      "Tutorial",
+      "CLI"
     ]
   },
   {
@@ -155,20 +169,6 @@
     ]
   },
   {
-    "title": "How To Setup The Dev Env",
-    "slug": "how-to-setup-the-development-environment",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-07-11T12:29:04.295Z",
-    "coverImage": "/images/posts/development-environment.png",
-    "excerpt": "If you want to contribute to the Torrust Index, this article explains how to setup a development environment with the latest versions for all services.",
-    "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
-    ]
-  },
-  {
     "title": "How We Fixed a One-Core Packet Processing Bottleneck in Torrust Tracker",
     "slug": "how-we-fixed-a-one-core-packet-processing-bottleneck-in-torrust-tracker",
     "contributor": "Jose Celano",
@@ -183,6 +183,20 @@
       "Softirq",
       "RPS",
       "RFS"
+    ]
+  },
+  {
+    "title": "How To Setup The Dev Env",
+    "slug": "how-to-setup-the-development-environment",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-07-11T12:29:04.295Z",
+    "coverImage": "/images/posts/development-environment.png",
+    "excerpt": "If you want to contribute to the Torrust Index, this article explains how to setup a development environment with the latest versions for all services.",
+    "tags": [
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
     ]
   },
   {
@@ -213,6 +227,22 @@
     ]
   },
   {
+    "title": "The New Torrust Tracker Demo Is Live",
+    "slug": "new-torrust-tracker-demo",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-03-11T00:00:00.000Z",
+    "coverImage": "/images/posts/new-torrust-tracker-demo/cover.webp",
+    "excerpt": "We have launched a dedicated Torrust Tracker Demo on Hetzner, featuring HTTP and UDP trackers, MySQL storage, IPv6 support, and full observability via Prometheus and Grafana — and we are sharing every detail publicly.",
+    "tags": [
+      "Demo",
+      "Announcement",
+      "Deployment",
+      "Infrastructure",
+      "Torrust Tracker"
+    ]
+  },
+  {
     "title": "Announcing the Beta v3.0.0 Live Demo",
     "slug": "live-demo-beta-v3",
     "contributor": "Jose Celano",
@@ -227,19 +257,18 @@
     ]
   },
   {
-    "title": "The New Torrust Tracker Demo Is Live",
-    "slug": "new-torrust-tracker-demo",
+    "title": "PostgreSQL Support in Torrust Tracker",
+    "slug": "postgresql-support-in-torrust-tracker",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2026-03-11T00:00:00.000Z",
-    "coverImage": "/images/posts/new-torrust-tracker-demo/cover.webp",
-    "excerpt": "We have launched a dedicated Torrust Tracker Demo on Hetzner, featuring HTTP and UDP trackers, MySQL storage, IPv6 support, and full observability via Prometheus and Grafana — and we are sharing every detail publicly.",
+    "date": "2026-05-01T12:00:00.000Z",
+    "coverImage": "/images/posts/postgresql-support-in-torrust-tracker/postgresql-support-in-torrust-tracker.webp",
+    "excerpt": "Torrust Tracker now supports PostgreSQL as a first-class database backend. Learn about the journey from a community feature request to a full persistence overhaul, the new tools built along the way, and what this means for the upcoming major release.",
     "tags": [
-      "Demo",
+      "Rust",
+      "PostgreSQL",
       "Announcement",
-      "Deployment",
-      "Infrastructure",
-      "Torrust Tracker"
+      "Release"
     ]
   },
   {
@@ -260,21 +289,6 @@
     ]
   },
   {
-    "title": "PostgreSQL Support in Torrust Tracker",
-    "slug": "postgresql-support-in-torrust-tracker",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2026-05-01T12:00:00.000Z",
-    "coverImage": "/images/posts/postgresql-support-in-torrust-tracker/postgresql-support-in-torrust-tracker.webp",
-    "excerpt": "Torrust Tracker now supports PostgreSQL as a first-class database backend. Learn about the journey from a community feature request to a full persistence overhaul, the new tools built along the way, and what this means for the upcoming major release.",
-    "tags": [
-      "Rust",
-      "PostgreSQL",
-      "Announcement",
-      "Release"
-    ]
-  },
-  {
     "title": "Profiling the Torrust BitTorrent UDP Tracker",
     "slug": "profiling-the-torrust-bittorrent-udp-tracker",
     "contributor": "Jose Celano",
@@ -289,19 +303,6 @@
       "Flamegraph",
       "Kcachegrind",
       "Valgrind"
-    ]
-  },
-  {
-    "title": "Released version v3.0.0",
-    "slug": "released-v3-0-0-beta",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-10-03T11:05:14.597Z",
-    "coverImage": "/images/posts/released-v3-0-0/team.png",
-    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
-    "tags": [
-      "Announcement",
-      "Release"
     ]
   },
   {
@@ -347,6 +348,19 @@
     ]
   },
   {
+    "title": "Released version v3.0.0",
+    "slug": "released-v3-0-0-beta",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-10-03T11:05:14.597Z",
+    "coverImage": "/images/posts/released-v3-0-0/team.png",
+    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
+    "tags": [
+      "Announcement",
+      "Release"
+    ]
+  },
+  {
     "title": "Setting Up Torrust with Claude Code",
     "slug": "setting-up-torrust-with-claude-code",
     "contributor": "Graeme Byrne",
@@ -358,22 +372,6 @@
       "Tutorial",
       "AI",
       "Claude"
-    ]
-  },
-  {
-    "title": "How to Run a UDP Tracker Behind a Floating IP on Ubuntu",
-    "slug": "setup-udp-tracker-behind-floating-ip",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2026-04-14T00:00:00.000Z",
-    "coverImage": "/images/posts/setup-udp-tracker-behind-floating-ip/udp-tracker-floating-ip-ipv6-docker-configuration.webp",
-    "excerpt": "A practical guide to running a UDP BitTorrent tracker behind floating IPs (also known as static, reserved, or elastic IPs) on Ubuntu, including policy routing, Docker IPv6 networking, and SNAT for correct reply paths.",
-    "tags": [
-      "BitTorrent",
-      "Tracker",
-      "Networking",
-      "IPv6",
-      "Deployment"
     ]
   },
   {
@@ -390,6 +388,22 @@
       "DevOps",
       "DNS",
       "Demo"
+    ]
+  },
+  {
+    "title": "How to Run a UDP Tracker Behind a Floating IP on Ubuntu",
+    "slug": "setup-udp-tracker-behind-floating-ip",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-04-14T00:00:00.000Z",
+    "coverImage": "/images/posts/setup-udp-tracker-behind-floating-ip/udp-tracker-floating-ip-ipv6-docker-configuration.webp",
+    "excerpt": "A practical guide to running a UDP BitTorrent tracker behind floating IPs (also known as static, reserved, or elastic IPs) on Ubuntu, including policy routing, Docker IPv6 networking, and SNAT for correct reply paths.",
+    "tags": [
+      "BitTorrent",
+      "Tracker",
+      "Networking",
+      "IPv6",
+      "Deployment"
     ]
   },
   {
