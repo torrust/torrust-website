@@ -1,5 +1,18 @@
 [
   {
+    "title": "Benchmarking the Torrust BitTorrent Tracker",
+    "slug": "benchmarking-the-torrust-bittorrent-tracker",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-03-19T00:00:00.000Z",
+    "coverImage": "/images/posts/benchmarking-the-torrust-bittorrent-tracker/benchmarking-the-torrust-bittorrent-tracker-banner.webp",
+    "excerpt": "In the ever-evolving landscape of BitTorrent technology, performance and scalability are paramount. Torrust stands at the forefront, offering a suite of open-source software products designed to enhance peer-to-peer file sharing. At the heart of this suite is the Torrust BitTorrent Tracker, a Rust-based engine crafted for efficiency and speed. This post will introduce you to the benchmarking tools we are using at the moment for the tracker.",
+    "tags": [
+      "Performance",
+      "Benchmarking"
+    ]
+  },
+  {
     "title": "Building with AI Agents, Building for AI Agents",
     "slug": "building-with-ai-agents-building-for-ai-agents",
     "contributor": "Jose Celano",
@@ -13,6 +26,20 @@
       "Torrust",
       "DevOps",
       "Tutorial"
+    ]
+  },
+  {
+    "title": "Deploying Torrust To Production",
+    "slug": "deploying-torrust-to-production",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-12-20T00:00:00.000Z",
+    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
+    "excerpt": "Dive into our step-by-step tutorial on deploying a BitTorrent Index and Tracker, written in Rust, on a Digital Ocean droplet. From initial server setup to advanced configurations, this guide is designed for both non-developers and tech-savvy users, ensuring a seamless, production-ready deployment.",
+    "tags": [
+      "Tutorial",
+      "Deployment",
+      "Production"
     ]
   },
   {
@@ -30,17 +57,32 @@
     ]
   },
   {
-    "title": "Deploying Torrust To Production",
-    "slug": "deploying-torrust-to-production",
+    "title": "Containerizing Rust Applications",
+    "slug": "containerizing-rust-applications-best-practices",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2023-12-20T00:00:00.000Z",
-    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
-    "excerpt": "Dive into our step-by-step tutorial on deploying a BitTorrent Index and Tracker, written in Rust, on a Digital Ocean droplet. From initial server setup to advanced configurations, this guide is designed for both non-developers and tech-savvy users, ensuring a seamless, production-ready deployment.",
+    "date": "2023-11-09T12:08:04.295Z",
+    "coverImage": "/images/posts/rust-crab-carrying-a-shipping-container.jpeg",
+    "excerpt": "Torrust services (Tracker and Index) support docker, we want to ensure that contributors understand our containerfile and we also want to share good practices for containerizing Rust applications.",
     "tags": [
-      "Tutorial",
-      "Deployment",
-      "Production"
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
+    ]
+  },
+  {
+    "title": "Bencode to JSON Converter in Rust",
+    "slug": "bencode-to-json-converter-in-rust",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-11-01T11:57:37.926Z",
+    "coverImage": "/images/posts/bencode-to-json-converter-in-rust/bencode-to-json-converter-in-rust.webp",
+    "excerpt": "We're excited to introduce bencode2json, a crate that simplifies converting Bencode data to JSON, benefiting the Rust BitTorrent community.",
+    "tags": [
+      "Bencode",
+      "JSON",
+      "Converter",
+      "Rust"
     ]
   },
   {
@@ -127,19 +169,6 @@
     ]
   },
   {
-    "title": "Benchmarking the Torrust BitTorrent Tracker",
-    "slug": "benchmarking-the-torrust-bittorrent-tracker",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-03-19T00:00:00.000Z",
-    "coverImage": "/images/posts/benchmarking-the-torrust-bittorrent-tracker/benchmarking-the-torrust-bittorrent-tracker-banner.webp",
-    "excerpt": "In the ever-evolving landscape of BitTorrent technology, performance and scalability are paramount. Torrust stands at the forefront, offering a suite of open-source software products designed to enhance peer-to-peer file sharing. At the heart of this suite is the Torrust BitTorrent Tracker, a Rust-based engine crafted for efficiency and speed. This post will introduce you to the benchmarking tools we are using at the moment for the tracker.",
-    "tags": [
-      "Performance",
-      "Benchmarking"
-    ]
-  },
-  {
     "title": "How We Fixed a One-Core Packet Processing Bottleneck in Torrust Tracker",
     "slug": "how-we-fixed-a-one-core-packet-processing-bottleneck-in-torrust-tracker",
     "contributor": "Jose Celano",
@@ -167,6 +196,20 @@
     "tags": [
       "Migration Tool",
       "Sample"
+    ]
+  },
+  {
+    "title": "Introducing the Torrust Tracker Deployer",
+    "slug": "introducing-the-torrust-tracker-deployer",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2025-12-22T00:00:00.000Z",
+    "coverImage": "/images/posts/introducing-the-torrust-tracker-deployer/torrust-tracker-deployer.png",
+    "excerpt": "We're excited to announce a new tool we've been working on: the Torrust Tracker Deployer. This tool aims to simplify the deployment process of the Torrust Tracker to virtual machines, making it as easy as running a single command.",
+    "tags": [
+      "Deployment",
+      "Automation",
+      "Announcement"
     ]
   },
   {
@@ -200,35 +243,6 @@
     ]
   },
   {
-    "title": "Containerizing Rust Applications",
-    "slug": "containerizing-rust-applications-best-practices",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-11-09T12:08:04.295Z",
-    "coverImage": "/images/posts/rust-crab-carrying-a-shipping-container.jpeg",
-    "excerpt": "Torrust services (Tracker and Index) support docker, we want to ensure that contributors understand our containerfile and we also want to share good practices for containerizing Rust applications.",
-    "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
-    ]
-  },
-  {
-    "title": "Bencode to JSON Converter in Rust",
-    "slug": "bencode-to-json-converter-in-rust",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-11-01T11:57:37.926Z",
-    "coverImage": "/images/posts/bencode-to-json-converter-in-rust/bencode-to-json-converter-in-rust.webp",
-    "excerpt": "We're excited to introduce bencode2json, a crate that simplifies converting Bencode data to JSON, benefiting the Rust BitTorrent community.",
-    "tags": [
-      "Bencode",
-      "JSON",
-      "Converter",
-      "Rust"
-    ]
-  },
-  {
     "title": "How nf_conntrack Overflow Causes Intermittent UDP Tracker Downtime with Docker",
     "slug": "nf-conntrack-overflow-docker-udp-tracker",
     "contributor": "Jose Celano",
@@ -243,6 +257,21 @@
       "Docker",
       "Linux",
       "Deployment"
+    ]
+  },
+  {
+    "title": "PostgreSQL Support in Torrust Tracker",
+    "slug": "postgresql-support-in-torrust-tracker",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-05-01T12:00:00.000Z",
+    "coverImage": "/images/posts/postgresql-support-in-torrust-tracker/postgresql-support-in-torrust-tracker.webp",
+    "excerpt": "Torrust Tracker now supports PostgreSQL as a first-class database backend. Learn about the journey from a community feature request to a full persistence overhaul, the new tools built along the way, and what this means for the upcoming major release.",
+    "tags": [
+      "Rust",
+      "PostgreSQL",
+      "Announcement",
+      "Release"
     ]
   },
   {
@@ -263,6 +292,19 @@
     ]
   },
   {
+    "title": "Released version v3.0.0",
+    "slug": "released-v3-0-0-beta",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-10-03T11:05:14.597Z",
+    "coverImage": "/images/posts/released-v3-0-0/team.png",
+    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
+    "tags": [
+      "Announcement",
+      "Release"
+    ]
+  },
+  {
     "title": "Released Torrust Tracker Deployer v0.1.0",
     "slug": "released-torrust-tracker-deployer-v0-1-0",
     "contributor": "Jose Celano",
@@ -274,34 +316,6 @@
       "Announcement",
       "Release",
       "Deployment"
-    ]
-  },
-  {
-    "title": "PostgreSQL Support in Torrust Tracker",
-    "slug": "postgresql-support-in-torrust-tracker",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2026-05-01T12:00:00.000Z",
-    "coverImage": "/images/posts/postgresql-support-in-torrust-tracker/postgresql-support-in-torrust-tracker.webp",
-    "excerpt": "Torrust Tracker now supports PostgreSQL as a first-class database backend. Learn about the journey from a community feature request to a full persistence overhaul, the new tools built along the way, and what this means for the upcoming major release.",
-    "tags": [
-      "Rust",
-      "PostgreSQL",
-      "Announcement",
-      "Release"
-    ]
-  },
-  {
-    "title": "Released version v3.0.0",
-    "slug": "released-v3-0-0-beta",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-10-03T11:05:14.597Z",
-    "coverImage": "/images/posts/released-v3-0-0/team.png",
-    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
-    "tags": [
-      "Announcement",
-      "Release"
     ]
   },
   {
@@ -347,22 +361,6 @@
     ]
   },
   {
-    "title": "Submitting Trackers to newTrackon",
-    "slug": "submitting-trackers-to-newtrackon",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2026-04-01T12:00:00.000Z",
-    "coverImage": "/images/posts/submitting-trackers-to-newtrackon/submitting-bittorrent-tracker-to-newtrackon.webp",
-    "excerpt": "A practical guide to submitting BitTorrent trackers to newTrackon, the popular third-party uptime monitoring service. Learn the prerequisites, how to work around the one-tracker-per-IP constraint using floating IPs, and how to configure DNS correctly with BEP34.",
-    "tags": [
-      "BitTorrent",
-      "Tracker",
-      "DevOps",
-      "DNS",
-      "Demo"
-    ]
-  },
-  {
     "title": "How to Run a UDP Tracker Behind a Floating IP on Ubuntu",
     "slug": "setup-udp-tracker-behind-floating-ip",
     "contributor": "Jose Celano",
@@ -376,6 +374,22 @@
       "Networking",
       "IPv6",
       "Deployment"
+    ]
+  },
+  {
+    "title": "Submitting Trackers to newTrackon",
+    "slug": "submitting-trackers-to-newtrackon",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-04-01T12:00:00.000Z",
+    "coverImage": "/images/posts/submitting-trackers-to-newtrackon/submitting-bittorrent-tracker-to-newtrackon.webp",
+    "excerpt": "A practical guide to submitting BitTorrent trackers to newTrackon, the popular third-party uptime monitoring service. Learn the prerequisites, how to work around the one-tracker-per-IP constraint using floating IPs, and how to configure DNS correctly with BEP34.",
+    "tags": [
+      "BitTorrent",
+      "Tracker",
+      "DevOps",
+      "DNS",
+      "Demo"
     ]
   },
   {
@@ -393,6 +407,19 @@
     ]
   },
   {
+    "title": "Torrust - Enhancing the BitTorrent Ecosystem",
+    "slug": "torrust-enhancing-the-bittorrent-ecosystem",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-05-31T09:33:14.163Z",
+    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
+    "excerpt": "Torrust, an open-source organization, is making significant contributions to the BitTorrent ecosystem by developing robust tools, improving documentation, and fostering community collaboration.",
+    "tags": [
+      "Introduction",
+      "Torrust"
+    ]
+  },
+  {
     "title": "BitTorrent Trackers Implemented in Rust",
     "slug": "trackers-implemented-in-rust",
     "contributor": "Jose Celano",
@@ -405,19 +432,6 @@
       "BitTorrent",
       "Tracker",
       "Open Source"
-    ]
-  },
-  {
-    "title": "Torrust - Enhancing the BitTorrent Ecosystem",
-    "slug": "torrust-enhancing-the-bittorrent-ecosystem",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-05-31T09:33:14.163Z",
-    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
-    "excerpt": "Torrust, an open-source organization, is making significant contributions to the BitTorrent ecosystem by developing robust tools, improving documentation, and fostering community collaboration.",
-    "tags": [
-      "Introduction",
-      "Torrust"
     ]
   },
   {
@@ -437,20 +451,6 @@
     ]
   },
   {
-    "title": "What is a BitTorrent tracker and types of trackers",
-    "slug": "what-is-a-bittorent-tracker",
-    "contributor": "",
-    "contributorSlug": "",
-    "date": "2023-10-05T13:42:25.671Z",
-    "coverImage": "/images/posts/tracker.jpg",
-    "excerpt": "Basic explanation of what a BitTorrent tracker is and the two types of trackers, public and private.",
-    "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
-    ]
-  },
-  {
     "title": "Vortex: A High-Performance Rust BitTorrent Client for Linux",
     "slug": "vortex-rust-bittorrent-client-review",
     "contributor": "Jose Celano",
@@ -467,17 +467,17 @@
     ]
   },
   {
-    "title": "Introducing the Torrust Tracker Deployer",
-    "slug": "introducing-the-torrust-tracker-deployer",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2025-12-22T00:00:00.000Z",
-    "coverImage": "/images/posts/introducing-the-torrust-tracker-deployer/torrust-tracker-deployer.png",
-    "excerpt": "We're excited to announce a new tool we've been working on: the Torrust Tracker Deployer. This tool aims to simplify the deployment process of the Torrust Tracker to virtual machines, making it as easy as running a single command.",
+    "title": "What is a BitTorrent tracker and types of trackers",
+    "slug": "what-is-a-bittorent-tracker",
+    "contributor": "",
+    "contributorSlug": "",
+    "date": "2023-10-05T13:42:25.671Z",
+    "coverImage": "/images/posts/tracker.jpg",
+    "excerpt": "Basic explanation of what a BitTorrent tracker is and the two types of trackers, public and private.",
     "tags": [
-      "Deployment",
-      "Automation",
-      "Announcement"
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
     ]
   }
 ]
