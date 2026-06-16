@@ -100,17 +100,9 @@
 				<p>
 					<strong>The key insight:</strong> a bare infohash is all you truly need. If you remove
 					everything from the magnet link except <code>xt=urn:btih:&lt;infohash&gt;</code>, you can
-					still reconstruct the full magnet link manually:
-				</p>
-
-				<CodeBlock
-					lang="bash"
-					code={'echo "magnet:?xt=urn:btih:dafc8c076ca2f3ed376eeae7c76a0d6be2415c45"'}
-				/>
-
-				<p>
-					This means any tool or method that works with magnet links also works with bare infohashes
-					— you just need to wrap the infohash in a minimal magnet URI first.
+					still reconstruct the full magnet link manually. This means any tool or method that works
+					with magnet links also works with bare infohashes — you just need to wrap the infohash in
+					a minimal magnet URI first.
 				</p>
 
 				<h2 id="from-bare-infohash">From a Bare Infohash to a Magnet Link</h2>
@@ -130,7 +122,7 @@
 
 				<CodeBlock
 					lang="bash"
-					code={'MAGNET="magnet:?xt=urn:btih:dafc8c076ca2f3ed376eeae7c76a0d6be2415c45&amp;tr=https%3a%2f%2ftorrent.ubuntu.com%2fannounce&amp;tr=https%3a%2f%2fipv6.torrent.ubuntu.com%2fannounce"'}
+					code={'MAGNET="magnet:?xt=urn:btih:dafc8c076ca2f3ed376eeae7c76a0d6be2415c45&tr=https%3a%2f%2ftorrent.ubuntu.com%2fannounce&tr=https%3a%2f%2fipv6.torrent.ubuntu.com%2fannounce"'}
 				/>
 
 				<p>
