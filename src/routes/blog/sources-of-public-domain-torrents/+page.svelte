@@ -45,7 +45,7 @@
 					<a
 						href="https://github.com/torrust/awesome-legal-torrent-sources"
 						target="_blank"
-						rel="noreferrer">torrust/awesome-legal-torrent-sources</a
+						rel="noopener noreferrer">torrust/awesome-legal-torrent-sources</a
 					>. Pull requests to add or update sources are welcome!
 				</Callout>
 
@@ -55,12 +55,16 @@
 				<ul>
 					<li>
 						<strong>Website:</strong>
-						<a href="https://archive.org" target="_blank" rel="noreferrer">https://archive.org</a>
+						<a href="https://archive.org" target="_blank" rel="noopener noreferrer"
+							>https://archive.org</a
+						>
 					</li>
 					<li>
 						<strong>Torrents:</strong>
-						<a href="https://archive.org/details/bittorrent" target="_blank" rel="noreferrer"
-							>https://archive.org/details/bittorrent</a
+						<a
+							href="https://archive.org/details/bittorrent"
+							target="_blank"
+							rel="noopener noreferrer">https://archive.org/details/bittorrent</a
 						>
 					</li>
 				</ul>
@@ -75,7 +79,7 @@
 				<ul>
 					<li>
 						<strong>Website:</strong>
-						<a href="https://www.gutenberg.org" target="_blank" rel="noreferrer"
+						<a href="https://www.gutenberg.org" target="_blank" rel="noopener noreferrer"
 							>https://www.gutenberg.org</a
 						>
 					</li>
@@ -91,8 +95,10 @@
 				<ul>
 					<li>
 						<strong>Website:</strong>
-						<a href="https://www.publicdomaintorrents.info" target="_blank" rel="noreferrer"
-							>https://www.publicdomaintorrents.info</a
+						<a
+							href="https://www.publicdomaintorrents.info"
+							target="_blank"
+							rel="noopener noreferrer">https://www.publicdomaintorrents.info</a
 						>
 					</li>
 				</ul>
@@ -113,8 +119,10 @@
 				<ul>
 					<li>
 						<strong>Website:</strong>
-						<a href="https://www.debian.org/CD/torrent-cd/" target="_blank" rel="noreferrer"
-							>https://www.debian.org/CD/torrent-cd/</a
+						<a
+							href="https://www.debian.org/CD/torrent-cd/"
+							target="_blank"
+							rel="noopener noreferrer">https://www.debian.org/CD/torrent-cd/</a
 						>
 					</li>
 				</ul>
@@ -128,7 +136,7 @@
 				<ul>
 					<li>
 						<strong>Website:</strong>
-						<a href="https://ubuntu.com/download" target="_blank" rel="noreferrer"
+						<a href="https://ubuntu.com/download" target="_blank" rel="noopener noreferrer"
 							>https://ubuntu.com/download</a
 						>
 					</li>
@@ -142,7 +150,7 @@
 				<ul>
 					<li>
 						<strong>Website:</strong>
-						<a href="https://torrent.fedoraproject.org/" target="_blank" rel="noreferrer"
+						<a href="https://torrent.fedoraproject.org/" target="_blank" rel="noopener noreferrer"
 							>https://torrent.fedoraproject.org/</a
 						>
 					</li>
@@ -156,7 +164,7 @@
 				<ul>
 					<li>
 						<strong>Website:</strong>
-						<a href="https://linuxtracker.org" target="_blank" rel="noreferrer"
+						<a href="https://linuxtracker.org" target="_blank" rel="noopener noreferrer"
 							>https://linuxtracker.org</a
 						>
 					</li>
@@ -174,7 +182,7 @@
 				<ul>
 					<li>
 						<strong>Website:</strong>
-						<a href="https://studio.blender.org/films/" target="_blank" rel="noreferrer"
+						<a href="https://studio.blender.org/films/" target="_blank" rel="noopener noreferrer"
 							>https://studio.blender.org/films/</a
 						>
 					</li>
@@ -200,7 +208,7 @@
 				<ul>
 					<li>
 						<strong>Website:</strong>
-						<a href="https://www.etree.org" target="_blank" rel="noreferrer"
+						<a href="https://www.etree.org" target="_blank" rel="noopener noreferrer"
 							>https://www.etree.org</a
 						>
 					</li>
@@ -217,7 +225,7 @@
 				<ul>
 					<li>
 						<strong>Website:</strong>
-						<a href="https://academictorrents.com" target="_blank" rel="noreferrer"
+						<a href="https://academictorrents.com" target="_blank" rel="noopener noreferrer"
 							>https://academictorrents.com</a
 						>
 					</li>
@@ -249,7 +257,7 @@
 					<a
 						href="https://github.com/torrust/awesome-legal-torrent-sources"
 						target="_blank"
-						rel="noreferrer">torrust/awesome-legal-torrent-sources</a
+						rel="noopener noreferrer">torrust/awesome-legal-torrent-sources</a
 					>— check there for the most up-to-date status of each source.
 				</Callout>
 
@@ -267,7 +275,7 @@
 					<a
 						href="https://github.com/torrust/awesome-legal-torrent-sources"
 						target="_blank"
-						rel="noreferrer">contributions are welcome</a
+						rel="noopener noreferrer">contributions are welcome</a
 					>.
 				</p>
 				<p>
