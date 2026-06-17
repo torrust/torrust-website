@@ -13,32 +13,19 @@
     ]
   },
   {
-    "title": "Bencode to JSON Converter in Rust",
-    "slug": "bencode-to-json-converter-in-rust",
+    "title": "Building with AI Agents, Building for AI Agents",
+    "slug": "building-with-ai-agents-building-for-ai-agents",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2024-11-01T11:57:37.926Z",
-    "coverImage": "/images/posts/bencode-to-json-converter-in-rust/bencode-to-json-converter-in-rust.webp",
-    "excerpt": "We're excited to introduce bencode2json, a crate that simplifies converting Bencode data to JSON, benefiting the Rust BitTorrent community.",
+    "date": "2026-02-27T12:00:00.000Z",
+    "coverImage": "/images/posts/building-with-ai-agents-building-for-ai-agents/ai-agent-developer-tools-workflow.webp",
+    "excerpt": "I spent months building the Torrust Tracker Deployer without writing a single line of code directly — every line came from a GitHub Copilot agent. But this post is about something bigger: the shift in thinking that came from that experience and what it taught us about designing tools that AI agents can actually use well.",
     "tags": [
-      "Bencode",
-      "JSON",
-      "Converter",
-      "Rust"
-    ]
-  },
-  {
-    "title": "Deploying Torrust To Production",
-    "slug": "deploying-torrust-to-production",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-12-20T00:00:00.000Z",
-    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
-    "excerpt": "Dive into our step-by-step tutorial on deploying a BitTorrent Index and Tracker, written in Rust, on a Digital Ocean droplet. From initial server setup to advanced configurations, this guide is designed for both non-developers and tech-savvy users, ensuring a seamless, production-ready deployment.",
-    "tags": [
-      "Tutorial",
-      "Deployment",
-      "Production"
+      "AI",
+      "Rust",
+      "Torrust",
+      "DevOps",
+      "Tutorial"
     ]
   },
   {
@@ -56,19 +43,32 @@
     ]
   },
   {
-    "title": "Building with AI Agents, Building for AI Agents",
-    "slug": "building-with-ai-agents-building-for-ai-agents",
+    "title": "Deploying Torrust To Production",
+    "slug": "deploying-torrust-to-production",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2026-02-27T12:00:00.000Z",
-    "coverImage": "/images/posts/building-with-ai-agents-building-for-ai-agents/ai-agent-developer-tools-workflow.webp",
-    "excerpt": "I spent months building the Torrust Tracker Deployer without writing a single line of code directly — every line came from a GitHub Copilot agent. But this post is about something bigger: the shift in thinking that came from that experience and what it taught us about designing tools that AI agents can actually use well.",
+    "date": "2023-12-20T00:00:00.000Z",
+    "coverImage": "/images/posts/deploying-torrust-to-production/deploy-torrust-to-a-digital-ocean-droplet.png",
+    "excerpt": "Dive into our step-by-step tutorial on deploying a BitTorrent Index and Tracker, written in Rust, on a Digital Ocean droplet. From initial server setup to advanced configurations, this guide is designed for both non-developers and tech-savvy users, ensuring a seamless, production-ready deployment.",
     "tags": [
-      "AI",
-      "Rust",
-      "Torrust",
-      "DevOps",
-      "Tutorial"
+      "Tutorial",
+      "Deployment",
+      "Production"
+    ]
+  },
+  {
+    "title": "Bencode to JSON Converter in Rust",
+    "slug": "bencode-to-json-converter-in-rust",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-11-01T11:57:37.926Z",
+    "coverImage": "/images/posts/bencode-to-json-converter-in-rust/bencode-to-json-converter-in-rust.webp",
+    "excerpt": "We're excited to introduce bencode2json, a crate that simplifies converting Bencode data to JSON, benefiting the Rust BitTorrent community.",
+    "tags": [
+      "Bencode",
+      "JSON",
+      "Converter",
+      "Rust"
     ]
   },
   {
@@ -200,19 +200,6 @@
     ]
   },
   {
-    "title": "Introducing the New Sample Torrent Migration Tool",
-    "slug": "introducing-the-new-sample-torrent-migration-tool",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-09-04T13:24:27.241Z",
-    "coverImage": "/images/posts/pexels-david-dibert-7177008.jpg",
-    "excerpt": "Looking to migrate to the Torrust Index? Dive into our Torrents Importer Sample to seamlessly transfer your torrents to Torrust.",
-    "tags": [
-      "Migration Tool",
-      "Sample"
-    ]
-  },
-  {
     "title": "Introducing the Torrust Tracker Deployer",
     "slug": "introducing-the-torrust-tracker-deployer",
     "contributor": "Jose Celano",
@@ -224,6 +211,33 @@
       "Deployment",
       "Automation",
       "Announcement"
+    ]
+  },
+  {
+    "title": "Announcing the Beta v3.0.0 Live Demo",
+    "slug": "live-demo-beta-v3",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-12-15T12:08:04.295Z",
+    "coverImage": "/images/posts/rust-crab-happy.jpg",
+    "excerpt": "We will release a new major version v3.0.0. We want the community to test it before the final release while it's still in Beta. You can contribute to make Torrust better.",
+    "tags": [
+      "Announcement",
+      "Demo",
+      "Documentation"
+    ]
+  },
+  {
+    "title": "Introducing the New Sample Torrent Migration Tool",
+    "slug": "introducing-the-new-sample-torrent-migration-tool",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-09-04T13:24:27.241Z",
+    "coverImage": "/images/posts/pexels-david-dibert-7177008.jpg",
+    "excerpt": "Looking to migrate to the Torrust Index? Dive into our Torrents Importer Sample to seamlessly transfer your torrents to Torrust.",
+    "tags": [
+      "Migration Tool",
+      "Sample"
     ]
   },
   {
@@ -243,17 +257,20 @@
     ]
   },
   {
-    "title": "Announcing the Beta v3.0.0 Live Demo",
-    "slug": "live-demo-beta-v3",
+    "title": "How nf_conntrack Overflow Causes Intermittent UDP Tracker Downtime with Docker",
+    "slug": "nf-conntrack-overflow-docker-udp-tracker",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2023-12-15T12:08:04.295Z",
-    "coverImage": "/images/posts/rust-crab-happy.jpg",
-    "excerpt": "We will release a new major version v3.0.0. We want the community to test it before the final release while it's still in Beta. You can contribute to make Torrust better.",
+    "date": "2026-04-27T12:00:00.000Z",
+    "coverImage": "/images/posts/nf-conntrack-overflow-docker-udp-tracker/nf-conntrack-overflow-docker-udp-tracker.webp",
+    "excerpt": "A subtle Linux kernel resource exhaustion silently drops UDP packets when running a BitTorrent tracker behind Docker bridge networking. No application error, no socket counter — just intermittent timeouts and a self-recovery cycle. Here is how to diagnose it, fix it, and make sure the fix survives a reboot.",
     "tags": [
-      "Announcement",
-      "Demo",
-      "Documentation"
+      "BitTorrent",
+      "Tracker",
+      "Networking",
+      "Docker",
+      "Linux",
+      "Deployment"
     ]
   },
   {
@@ -269,23 +286,6 @@
       "PostgreSQL",
       "Announcement",
       "Release"
-    ]
-  },
-  {
-    "title": "How nf_conntrack Overflow Causes Intermittent UDP Tracker Downtime with Docker",
-    "slug": "nf-conntrack-overflow-docker-udp-tracker",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2026-04-27T12:00:00.000Z",
-    "coverImage": "/images/posts/nf-conntrack-overflow-docker-udp-tracker/nf-conntrack-overflow-docker-udp-tracker.webp",
-    "excerpt": "A subtle Linux kernel resource exhaustion silently drops UDP packets when running a BitTorrent tracker behind Docker bridge networking. No application error, no socket counter — just intermittent timeouts and a self-recovery cycle. Here is how to diagnose it, fix it, and make sure the fix survives a reboot.",
-    "tags": [
-      "BitTorrent",
-      "Tracker",
-      "Networking",
-      "Docker",
-      "Linux",
-      "Deployment"
     ]
   },
   {
@@ -333,6 +333,19 @@
     ]
   },
   {
+    "title": "Released version v3.0.0",
+    "slug": "released-v3-0-0-beta",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2024-10-03T11:05:14.597Z",
+    "coverImage": "/images/posts/released-v3-0-0/team.png",
+    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
+    "tags": [
+      "Announcement",
+      "Release"
+    ]
+  },
+  {
     "title": "Review and Setup Guide for UNIT3D",
     "slug": "review-and-setup-guide-for-unit3d",
     "contributor": "Jose Celano",
@@ -348,19 +361,6 @@
     ]
   },
   {
-    "title": "Released version v3.0.0",
-    "slug": "released-v3-0-0-beta",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2024-10-03T11:05:14.597Z",
-    "coverImage": "/images/posts/released-v3-0-0/team.png",
-    "excerpt": "We’re thrilled to announce the official release of version 3.0.0 of the Torrust software.",
-    "tags": [
-      "Announcement",
-      "Release"
-    ]
-  },
-  {
     "title": "Setting Up Torrust with Claude Code",
     "slug": "setting-up-torrust-with-claude-code",
     "contributor": "Graeme Byrne",
@@ -372,22 +372,6 @@
       "Tutorial",
       "AI",
       "Claude"
-    ]
-  },
-  {
-    "title": "Submitting Trackers to newTrackon",
-    "slug": "submitting-trackers-to-newtrackon",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2026-04-01T12:00:00.000Z",
-    "coverImage": "/images/posts/submitting-trackers-to-newtrackon/submitting-bittorrent-tracker-to-newtrackon.webp",
-    "excerpt": "A practical guide to submitting BitTorrent trackers to newTrackon, the popular third-party uptime monitoring service. Learn the prerequisites, how to work around the one-tracker-per-IP constraint using floating IPs, and how to configure DNS correctly with BEP34.",
-    "tags": [
-      "BitTorrent",
-      "Tracker",
-      "DevOps",
-      "DNS",
-      "Demo"
     ]
   },
   {
@@ -407,17 +391,34 @@
     ]
   },
   {
-    "title": "The Enigmatic Torrent \"Source\" Field",
-    "slug": "the-enigmatic-torrent-source-field",
+    "title": "Sources of Public Domain Torrents",
+    "slug": "sources-of-public-domain-torrents",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2023-08-08T13:56:28.769Z",
-    "coverImage": "/images/posts/deprecated-and-outdated-bittorrent-documentation.png",
-    "excerpt": "Delving into BitTorrent’s Mysteries. What is the \"source\" field in the torrent info used for?",
+    "date": "2026-06-17T00:00:00.000Z",
+    "coverImage": "/images/posts/sources-of-public-domain-torrents/public-domain-torrent-sources-collage.webp",
+    "excerpt": "A curated guide to finding and downloading legal, public-domain torrents from the Internet Archive, Project Gutenberg, open-source software projects, and other trusted sources.",
     "tags": [
-      "Torrent",
+      "Public Domain",
+      "BitTorrent",
+      "Open Source",
+      "Resources"
+    ]
+  },
+  {
+    "title": "Submitting Trackers to newTrackon",
+    "slug": "submitting-trackers-to-newtrackon",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2026-04-01T12:00:00.000Z",
+    "coverImage": "/images/posts/submitting-trackers-to-newtrackon/submitting-bittorrent-tracker-to-newtrackon.webp",
+    "excerpt": "A practical guide to submitting BitTorrent trackers to newTrackon, the popular third-party uptime monitoring service. Learn the prerequisites, how to work around the one-tracker-per-IP constraint using floating IPs, and how to configure DNS correctly with BEP34.",
+    "tags": [
+      "BitTorrent",
       "Tracker",
-      "BitTorrent"
+      "DevOps",
+      "DNS",
+      "Demo"
     ]
   },
   {
@@ -431,6 +432,20 @@
     "tags": [
       "Introduction",
       "Torrust"
+    ]
+  },
+  {
+    "title": "The Enigmatic Torrent \"Source\" Field",
+    "slug": "the-enigmatic-torrent-source-field",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-08-08T13:56:28.769Z",
+    "coverImage": "/images/posts/deprecated-and-outdated-bittorrent-documentation.png",
+    "excerpt": "Delving into BitTorrent’s Mysteries. What is the \"source\" field in the torrent info used for?",
+    "tags": [
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
     ]
   },
   {
