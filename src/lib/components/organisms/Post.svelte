@@ -27,10 +27,24 @@
 	import Image from '$lib/components/atoms/Image.svelte';
 	import ShareButton from '$lib/components/singletons/ShareButton.svelte';
 	import Tag from '$lib/components/atoms/Tag.svelte';
+	import { siteBaseUrl } from '$lib/data/meta';
 </script>
 
 <svelte:head>
 	<title>{title}</title>
+	<meta property="og:title" content={title} />
+	<meta name="twitter:title" content={title} />
+
+	<meta name="description" content={excerpt} />
+	<meta property="og:description" content={excerpt} />
+	<meta name="twitter:description" content={excerpt} />
+
+	<meta property="og:image" content={`${siteBaseUrl}${coverImage}`} />
+	<meta name="twitter:image" content={`${siteBaseUrl}${coverImage}`} />
+
+	<meta property="og:url" content={`${siteBaseUrl}/blog/${slug}`} />
+	<meta property="og:type" content="article" />
+	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <div class="container">
