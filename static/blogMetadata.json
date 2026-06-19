@@ -169,6 +169,33 @@
     ]
   },
   {
+    "title": "How To Setup The Dev Env",
+    "slug": "how-to-setup-the-development-environment",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-07-11T12:29:04.295Z",
+    "coverImage": "/images/posts/development-environment.png",
+    "excerpt": "If you want to contribute to the Torrust Index, this article explains how to setup a development environment with the latest versions for all services.",
+    "tags": [
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
+    ]
+  },
+  {
+    "title": "Introducing the New Sample Torrent Migration Tool",
+    "slug": "introducing-the-new-sample-torrent-migration-tool",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-09-04T13:24:27.241Z",
+    "coverImage": "/images/posts/pexels-david-dibert-7177008.jpg",
+    "excerpt": "Looking to migrate to the Torrust Index? Dive into our Torrents Importer Sample to seamlessly transfer your torrents to Torrust.",
+    "tags": [
+      "Migration Tool",
+      "Sample"
+    ]
+  },
+  {
     "title": "How We Fixed a One-Core Packet Processing Bottleneck in Torrust Tracker",
     "slug": "how-we-fixed-a-one-core-packet-processing-bottleneck-in-torrust-tracker",
     "contributor": "Jose Celano",
@@ -183,20 +210,6 @@
       "Softirq",
       "RPS",
       "RFS"
-    ]
-  },
-  {
-    "title": "How To Setup The Dev Env",
-    "slug": "how-to-setup-the-development-environment",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-07-11T12:29:04.295Z",
-    "coverImage": "/images/posts/development-environment.png",
-    "excerpt": "If you want to contribute to the Torrust Index, this article explains how to setup a development environment with the latest versions for all services.",
-    "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
     ]
   },
   {
@@ -225,19 +238,6 @@
       "Announcement",
       "Demo",
       "Documentation"
-    ]
-  },
-  {
-    "title": "Introducing the New Sample Torrent Migration Tool",
-    "slug": "introducing-the-new-sample-torrent-migration-tool",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2023-09-04T13:24:27.241Z",
-    "coverImage": "/images/posts/pexels-david-dibert-7177008.jpg",
-    "excerpt": "Looking to migrate to the Torrust Index? Dive into our Torrents Importer Sample to seamlessly transfer your torrents to Torrust.",
-    "tags": [
-      "Migration Tool",
-      "Sample"
     ]
   },
   {
@@ -391,6 +391,20 @@
     ]
   },
   {
+    "title": "The Enigmatic Torrent \"Source\" Field",
+    "slug": "the-enigmatic-torrent-source-field",
+    "contributor": "Jose Celano",
+    "contributorSlug": "jose-celano",
+    "date": "2023-08-08T13:56:28.769Z",
+    "coverImage": "/images/posts/deprecated-and-outdated-bittorrent-documentation.png",
+    "excerpt": "Delving into BitTorrent’s Mysteries. What is the \"source\" field in the torrent info used for?",
+    "tags": [
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
+    ]
+  },
+  {
     "title": "Sources of Public Domain Torrents",
     "slug": "sources-of-public-domain-torrents",
     "contributor": "Jose Celano",
@@ -403,22 +417,6 @@
       "BitTorrent",
       "Open Source",
       "Resources"
-    ]
-  },
-  {
-    "title": "Submitting Trackers to newTrackon",
-    "slug": "submitting-trackers-to-newtrackon",
-    "contributor": "Jose Celano",
-    "contributorSlug": "jose-celano",
-    "date": "2026-04-01T12:00:00.000Z",
-    "coverImage": "/images/posts/submitting-trackers-to-newtrackon/submitting-bittorrent-tracker-to-newtrackon.webp",
-    "excerpt": "A practical guide to submitting BitTorrent trackers to newTrackon, the popular third-party uptime monitoring service. Learn the prerequisites, how to work around the one-tracker-per-IP constraint using floating IPs, and how to configure DNS correctly with BEP34.",
-    "tags": [
-      "BitTorrent",
-      "Tracker",
-      "DevOps",
-      "DNS",
-      "Demo"
     ]
   },
   {
@@ -435,17 +433,19 @@
     ]
   },
   {
-    "title": "The Enigmatic Torrent \"Source\" Field",
-    "slug": "the-enigmatic-torrent-source-field",
+    "title": "Submitting Trackers to newTrackon",
+    "slug": "submitting-trackers-to-newtrackon",
     "contributor": "Jose Celano",
     "contributorSlug": "jose-celano",
-    "date": "2023-08-08T13:56:28.769Z",
-    "coverImage": "/images/posts/deprecated-and-outdated-bittorrent-documentation.png",
-    "excerpt": "Delving into BitTorrent’s Mysteries. What is the \"source\" field in the torrent info used for?",
+    "date": "2026-04-01T12:00:00.000Z",
+    "coverImage": "/images/posts/submitting-trackers-to-newtrackon/submitting-bittorrent-tracker-to-newtrackon.webp",
+    "excerpt": "A practical guide to submitting BitTorrent trackers to newTrackon, the popular third-party uptime monitoring service. Learn the prerequisites, how to work around the one-tracker-per-IP constraint using floating IPs, and how to configure DNS correctly with BEP34.",
     "tags": [
-      "Torrent",
+      "BitTorrent",
       "Tracker",
-      "BitTorrent"
+      "DevOps",
+      "DNS",
+      "Demo"
     ]
   },
   {
@@ -480,6 +480,20 @@
     ]
   },
   {
+    "title": "What is a BitTorrent tracker and types of trackers",
+    "slug": "what-is-a-bittorent-tracker",
+    "contributor": "",
+    "contributorSlug": "",
+    "date": "2023-10-05T13:42:25.671Z",
+    "coverImage": "/images/posts/tracker.jpg",
+    "excerpt": "Basic explanation of what a BitTorrent tracker is and the two types of trackers, public and private.",
+    "tags": [
+      "Torrent",
+      "Tracker",
+      "BitTorrent"
+    ]
+  },
+  {
     "title": "Vortex: A High-Performance Rust BitTorrent Client for Linux",
     "slug": "vortex-rust-bittorrent-client-review",
     "contributor": "Jose Celano",
@@ -493,20 +507,6 @@
       "BitTorrent",
       "Performance",
       "Third-party"
-    ]
-  },
-  {
-    "title": "What is a BitTorrent tracker and types of trackers",
-    "slug": "what-is-a-bittorent-tracker",
-    "contributor": "",
-    "contributorSlug": "",
-    "date": "2023-10-05T13:42:25.671Z",
-    "coverImage": "/images/posts/tracker.jpg",
-    "excerpt": "Basic explanation of what a BitTorrent tracker is and the two types of trackers, public and private.",
-    "tags": [
-      "Torrent",
-      "Tracker",
-      "BitTorrent"
     ]
   }
 ]
