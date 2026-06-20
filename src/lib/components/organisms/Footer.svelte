@@ -11,7 +11,7 @@
 		</div>
 		<div>
 			<p>CC-BY-SA 4.0</p>
-			<p>Nautilus Cyberneering S.L.U. 2024</p>
+			<p>Nautilus Cyberneering S.L.U. 2026</p>
 		</div>
 	</div>
 </footer>
