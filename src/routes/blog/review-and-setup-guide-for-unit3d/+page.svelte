@@ -66,7 +66,7 @@
 					</li>
 					<li>
 						<strong>Official Demo Site:</strong>
-						<a href="https://unit3d.dev/">https://unit3d.dev/</a> (currently not working).
+						<a href="https://unit3d.dev/">https://unit3d.dev/</a>.
 					</li>
 				</ul>
 				<p>
@@ -75,11 +75,15 @@
 					>.
 				</p>
 
-				<Callout type="info">
-					To write this post we have setup a new demo site on: <a
-						href="https://www.unit3d-demo.com/">https://www.unit3d-demo.com</a
-					>. Following the tutorial section you can also easily deploy your UNIT3D Index. The demo
-					site could be shutdown at any time.
+				<Callout type="warning">
+					<s
+						>To write this post we have setup a new demo site on: <a
+							href="https://www.unit3d-demo.com/">https://www.unit3d-demo.com</a
+						>. Following the tutorial section you can also easily deploy your UNIT3D Index. The demo
+						site could be shutdown at any time.</s
+					>
+					<br />
+					<strong>Update:</strong> The demo site has been shut down.
 				</Callout>
 
 				<h3 id="overview">Overview</h3>
@@ -246,7 +250,7 @@
 				<h4 id="external-services">External Services</h4>
 				<ul>
 					<li>
-						Domain: We registered a new one only for this purpose: <a
+						Domain: We registered a new one only for this purpose (now shut down): <a
 							href="https://unit3d-demo.com/">https://unit3d-demo.com/</a
 						>.
 					</li>
@@ -341,15 +345,15 @@
 
 				<CodeBlock
 					lang="console"
-					code={`ping unit3d-demo.com
-PING unit3d-demo.com (134.122.65.71) 56(84) bytes of data.\n
-ping <www.unit3d-demo.com>
-PING unit3d-demo.com (134.122.65.71) 56(84) bytes of data.`}
+					code={`ping your-domain.com
+PING your-domain.com (your-server-ip) 56(84) bytes of data.\n
+ping www.your-domain.com
+PING your-domain.com (your-server-ip) 56(84) bytes of data.`}
 				/>
 
 				<p>Also, check that you can login using SSH:</p>
 
-				<CodeBlock lang="console" code={`ssh root@134.122.65.71`} />
+				<CodeBlock lang="console" code={`ssh root@your-server-ip`} />
 
 				<h3 id="step-2-update-the-server">Step 2. Update the Server</h3>
 				<p>This is only a recommendation before running the installer.</p>
@@ -414,12 +418,16 @@ sudo ./install.sh`}
 
 				<p>You can use the owner account credentials you provided during the installation.</p>
 
-				<Callout type="info">
-					If the official demo is down you can apply for signing up in our demo on: <a
-						href="https://www.unit3d-demo.com/application"
-						>https://www.unit3d-demo.com/application</a
-					>. You don't need to provide real data, just a valid email so we can confirm it manually.
-					We want to highlight, however, that we may shut down this demo at any time.
+				<Callout type="warning">
+					<s
+						>If the official demo is down you can apply for signing up in our demo on: <a
+							href="https://www.unit3d-demo.com/application"
+							>https://www.unit3d-demo.com/application</a
+						>. You don't need to provide real data, just a valid email so we can confirm it
+						manually. We want to highlight, however, that we may shut down this demo at any time.</s
+					>
+					<br />
+					<strong>Update:</strong> The demo site has been shut down.
 				</Callout>
 
 				<h3 id="troubleshooting">Troubleshooting</h3>
