@@ -29,8 +29,15 @@ async function generateMetadata() {
 		metadataArray.push({ ...metadata, slug });
 	}
 
-	fs.writeFileSync(OUTPUT_FILE, JSON.stringify(metadataArray, null, 2));
+	fs.writeFileSync(OUTPUT_FILE, JSON.stringify(metadataArray.sort(comparator), null, 2));
 	console.log(`✅ Metadata generated: ${OUTPUT_FILE}`);
+}
+
+function comparator(a: BlogMetadata, b: BlogMetadata) {
+	// Sort by date descending (newest first), then by slug ascending for ties
+	const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
+	if (dateDiff !== 0) return dateDiff;
+	return a.slug.localeCompare(b.slug);
 }
 
 generateMetadata();

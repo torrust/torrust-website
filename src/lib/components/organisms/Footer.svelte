@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Nautilus from '$lib/icons/nautilus.svelte';
+	const currentYear = new Date().getFullYear();
 </script>
 
 <footer>
@@ -11,7 +12,7 @@
 		</div>
 		<div>
 			<p>CC-BY-SA 4.0</p>
-			<p>Nautilus Cyberneering S.L.U. 2026</p>
+			<p>Nautilus Cyberneering S.L.U. {currentYear}</p>
 		</div>
 	</div>
 </footer>
