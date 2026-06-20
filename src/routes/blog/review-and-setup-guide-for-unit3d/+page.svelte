@@ -77,8 +77,8 @@
 
 				<Callout type="warning">
 					<s
-						>To write this post we have setup a new demo site on: <a
-							href="https://www.unit3d-demo.com/">https://www.unit3d-demo.com</a
+						>To write this post we have setup a new demo site on: <code
+							>https://www.unit3d-demo.com</code
 						>. Following the tutorial section you can also easily deploy your UNIT3D Index. The demo
 						site could be shutdown at any time.</s
 					>
@@ -250,8 +250,8 @@
 				<h4 id="external-services">External Services</h4>
 				<ul>
 					<li>
-						Domain: We registered a new one only for this purpose (now shut down): <a
-							href="https://unit3d-demo.com/">https://unit3d-demo.com/</a
+						Domain: We registered a new one only for this purpose (now shut down): <code
+							>https://unit3d-demo.com</code
 						>.
 					</li>
 					<li>
@@ -348,7 +348,7 @@
 					code={`ping your-domain.com
 PING your-domain.com (your-server-ip) 56(84) bytes of data.\n
 ping www.your-domain.com
-PING your-domain.com (your-server-ip) 56(84) bytes of data.`}
+PING www.your-domain.com (your-server-ip) 56(84) bytes of data.`}
 				/>
 
 				<p>Also, check that you can login using SSH:</p>
@@ -420,9 +420,8 @@ sudo ./install.sh`}
 
 				<Callout type="warning">
 					<s
-						>If the official demo is down you can apply for signing up in our demo on: <a
-							href="https://www.unit3d-demo.com/application"
-							>https://www.unit3d-demo.com/application</a
+						>If the official demo is down you can apply for signing up in our demo on: <code
+							>https://www.unit3d-demo.com/application</code
 						>. You don't need to provide real data, just a valid email so we can confirm it
 						manually. We want to highlight, however, that we may shut down this demo at any time.</s
 					>
