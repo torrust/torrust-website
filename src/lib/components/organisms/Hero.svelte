@@ -14,14 +14,14 @@
 				title={'index'}
 				details={'The Index is a feature-rich torrent indexing site split between an API (backend) built with Rust, and our reference web app that consumes the API, built with Vue 3.'}
 				version={'https://github.com/torrust/torrust-index/releases'}
-				liveDemo={'https://index.torrust-demo.com/torrents'}
+				liveDemo={'https://github.com/torrust/torrust-website/issues/228'}
 				learnMore={'/torrent-index'}
 			/>
 			<HeroCard
 				title={'tracker'}
 				details={'A lightweight Rust-based BitTorrent tracker for efficient torrent serving to many peers with high performance, robustness, security, and community support.'}
 				version={'https://github.com/torrust/torrust-tracker/releases'}
-				liveDemo={'https://index.torrust-demo.com/torrents'}
+				liveDemo={'https://github.com/torrust/torrust-website/issues/228'}
 				learnMore={'/torrent-tracker'}
 			/>
 		</div>

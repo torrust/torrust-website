@@ -175,7 +175,7 @@ export const indexTableData = [
 		polls: 'No',
 		webfeed: 'No',
 		repo: 'https://github.com/torrust/torrust-index',
-		demo: 'https://index.torrust-demo.com/torrents'
+		demo: 'https://github.com/torrust/torrust-website/issues/228'
 	},
 	{
 		name: 'UNIT3D',
@@ -384,7 +384,7 @@ export const trackerTableData = [
 		language: 'Rust',
 		os: 'Linux,MacOs',
 		repo: 'https://github.com/torrust/torrust-tracker',
-		demo: 'udp://tracker.torrust-demo.com:6969/announce'
+		demo: 'https://github.com/torrust/torrust-website/issues/228'
 	},
 	{
 		name: 'Torrust-Actix',
