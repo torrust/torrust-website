@@ -54,10 +54,11 @@
 				<p>
 					For the past couple of years we have been running the
 					<a href="https://github.com/torrust/torrust-demo">Torrust Demo</a>, a combined Tracker +
-					Index solution hosted on a Digital Ocean droplet. The demo index is still available at
-					<a href="https://index.torrust-demo.com/torrents">index.torrust-demo.com/torrents</a>, and
-					the tracker it uses is linked to it so that every uploaded torrent automatically includes
-					the demo tracker URL.
+					Index solution hosted on a Digital Ocean droplet. The demo index was available at
+					<a href="https://github.com/torrust/torrust-website/issues/228"
+						>index.torrust-demo.com/torrents</a
+					>, and the tracker it used was linked to it so that every uploaded torrent automatically
+					included the demo tracker URL.
 				</p>
 
 				<p>

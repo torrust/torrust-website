@@ -38,8 +38,8 @@
 					beyond—I wanted to understand how Vortex works, what makes it different, and share my
 					findings with others who are curious about modern BitTorrent implementations. This is a
 					hands-on exploration where I install Vortex, test it with a real torrent from the
-					<a href="https://index.torrust-demo.com/">Torrust Demo Index</a>, and document everything
-					I learn along the way.
+					<a href="https://github.com/torrust/torrust-website/issues/228">Torrust Demo Index</a>,
+					and document everything I learn along the way.
 				</p>
 
 				<Callout type="info">
@@ -216,9 +216,7 @@
 					<li><strong>Name:</strong> Arch Linux 2026.02.01 x86_64 ISO</li>
 					<li>
 						<strong>Torrust Index Link:</strong>
-						<a
-							href="https://index.torrust-demo.com/torrent/8e3f4283d1c8360d2f18544a8b166813086675a1/archlinux-20260201-x86-64iso"
-						>
+						<a href="https://github.com/torrust/torrust-website/issues/228">
 							archlinux-20260201-x86-64iso
 						</a>
 					</li>
