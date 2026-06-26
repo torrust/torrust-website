@@ -13,6 +13,8 @@ type Contributor = {
 
 type Repo = {
 	name: string;
+	fork: boolean;
+	archived: boolean;
 };
 
 async function fetchWithAuth(url: string): Promise<Response> {
@@ -47,9 +49,12 @@ async function fetchRepos(): Promise<string[]> {
 	}
 
 	const repos: Repo[] = await response.json();
-	console.log(`✓ Found ${repos.length} repositories`);
+	const filteredRepos = repos.filter((repo) => !repo.fork && !repo.archived);
+	console.log(
+		`✓ Found ${repos.length} repositories (${filteredRepos.length} after excluding forks and archived)`
+	);
 
-	return repos.map((repo) => repo.name);
+	return filteredRepos.map((repo) => repo.name);
 }
 
 async function fetchContributorsForRepo(repoName: string): Promise<Contributor[]> {
@@ -157,7 +162,7 @@ function updateConstantsFile(contributors: Contributor[]): void {
 
 	// Format contributors list
 	const contributorEntries = contributors
-		.map((c) => `\t{\n\t\thtml_url: '${c.login}',\n\t\tavatar_url: '${c.avatar_url}'\n\t}`)
+		.map((c) => `\t{\n\t\tlogin: '${c.login}',\n\t\tavatar_url: '${c.avatar_url}'\n\t}`)
 		.join(',\n');
 
 	const newList = `export const defaultContributorsList = [\n${contributorEntries}\n];`;
