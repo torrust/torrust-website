@@ -19,9 +19,9 @@
 			{#each defaultContributorsList as contributor}
 				<div>
 					<a
-						href="https://github.com/{contributor.html_url}"
+						href="https://github.com/{contributor.login}"
 						target="_blank"
-						title={contributor.html_url}
+						title={contributor.login}
 					>
 						<img src={contributor.avatar_url} alt="contributor" />
 					</a>

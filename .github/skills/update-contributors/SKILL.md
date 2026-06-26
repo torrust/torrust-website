@@ -45,9 +45,10 @@ npm run update-contributors
 ### 3. What the script does
 
 1. Fetches all repositories from the Torrust GitHub organization
-2. Fetches contributors from each repository
-3. Deduplicates contributors by username
-4. Updates `defaultContributorsList` in `src/lib/constants/constants.ts`
+2. **Filters out forked and archived repositories** — forks include upstream contributors from projects Torrust doesn't own (e.g. `cargo-chef`, `grcov`), and archived repos are no longer active
+3. Fetches contributors from each remaining repository (using the GitHub `/contributors` endpoint, which returns users who have authored at least one commit)
+4. Deduplicates contributors by username
+5. Updates `defaultContributorsList` in `src/lib/constants/constants.ts`
 
 ### 4. Verify and commit
 
