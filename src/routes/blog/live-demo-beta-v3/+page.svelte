@@ -32,7 +32,8 @@
 				</p>
 
 				<Callout type="info"
-					>Live demo: <a href="http://index.torrust-demo.com">http://index.torrust-demo.com</a
+					>Live demo: <a href="https://github.com/torrust/torrust-website/issues/228"
+						>https://github.com/torrust/torrust-website/issues/228</a
 					></Callout
 				>
 
@@ -44,8 +45,8 @@
 				</p>
 
 				<p>
-					You can test it at: <a href="http://index.torrust-demo.com"
-						>http://index.torrust-demo.com</a
+					You can test it at: <a href="https://github.com/torrust/torrust-website/issues/228"
+						>https://github.com/torrust/torrust-website/issues/228</a
 					>
 				</p>
 

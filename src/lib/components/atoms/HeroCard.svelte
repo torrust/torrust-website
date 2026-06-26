@@ -10,6 +10,11 @@
 	}
 
 	let { title, details, version, liveDemo, learnMore }: Props = $props();
+
+	const isDemoUnavailable = $derived(
+		liveDemo === 'https://github.com/torrust/torrust-website/issues/228'
+	);
+	const demoLabel = $derived(isDemoUnavailable ? 'Unavailable' : 'Live demo');
 </script>
 
 <div class="details-card">
@@ -24,7 +29,9 @@
 		{details}
 	</p>
 	<div class="details-info">
-		<a href={liveDemo} class="live-demo" target="_blank">Live demo</a>
+		<a href={liveDemo} target="_blank" class="live-demo" class:unavailable={isDemoUnavailable}
+			>{demoLabel}</a
+		>
 		<a href={learnMore} class="learn-btn">Learn more</a>
 	</div>
 </div>
@@ -81,6 +88,13 @@
 
 		.live-demo {
 			background-color: rgba(254, 13, 0, 1);
+		}
+
+		.live-demo.unavailable {
+			background-color: rgba(100, 100, 100, 0.6);
+			cursor: default;
+			opacity: 0.7;
+			pointer-events: none;
 		}
 
 		.learn-btn {

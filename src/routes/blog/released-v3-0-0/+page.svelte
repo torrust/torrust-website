@@ -104,9 +104,11 @@
 				<h2 id="important-notice-demo-availability">Important Notice: Demo Availability</h2>
 
 				<Callout type="warning">
-					Please note that the <a href="https://index.torrust-demo.com/">demo</a> environment may experience
-					downtime or resets as part of our ongoing testing. As this is a beta version, data may be lost
-					during these phases. We appreciate your patience and understanding as we fine-tune the system.
+					Please note that the <a href="https://github.com/torrust/torrust-website/issues/228"
+						>demo</a
+					> environment may experience downtime or resets as part of our ongoing testing. As this is a
+					beta version, data may be lost during these phases. We appreciate your patience and understanding
+					as we fine-tune the system.
 				</Callout>
 
 				<h2 id="special-thanks">Special Thanks</h2>

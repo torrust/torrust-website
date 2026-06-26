@@ -39,7 +39,10 @@
 	<div class="demo-shutdown-banner">
 		<p>
 			All public demo services are currently shut down.
-			<a href="https://github.com/torrust/torrust-website/issues/228" target="_blank">Learn more</a
+			<a
+				href="https://github.com/torrust/torrust-website/issues/228"
+				target="_blank"
+				rel="noopener noreferrer">Learn more</a
 			>.
 		</p>
 	</div>

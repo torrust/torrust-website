@@ -24,11 +24,11 @@
 
 			<p>
 				We have also taken into consideration cloud environments, making it easy to deploy the index
-				to multiple hosting providers (using either VMs or containers). We run a <a
+				to multiple hosting providers (using either VMs or containers). We previously ran a <a
 					href="https://github.com/torrust/torrust-website/issues/228">demo site</a
 				>
-				on Digital Ocean to collect direct feedback about how easy it is to manage the application on
-				production. Our goal is to make sure sysadmins can:
+				on Digital Ocean to collect direct feedback, though all public demo services are currently shut
+				down. Our goal is to make sure sysadmins can:
 			</p>
 
 			<ul>
